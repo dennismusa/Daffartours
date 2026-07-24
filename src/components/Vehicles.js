@@ -97,7 +97,7 @@ function FleetShowcase() {
   const getWhatsAppLink = (vehicle) => {
     const message = `Hello, I want to book the ${vehicle.name} (${vehicle.type}) for $${vehicle.price} per day. Please assist me.`;
 
-    return `https://wa.me/+254717554177?text=${encodeURIComponent(
+    return `https://wa.me/+254112277671?text=${encodeURIComponent(
       message
     )}`;
   };
@@ -141,7 +141,7 @@ function FleetShowcase() {
           <div className="flex flex-wrap justify-center gap-4">
 
             <a
-              href="https://wa.me/+254717554177"
+              href="https://wa.me/+254112277671"
               target="_blank"
               rel="noreferrer"
               className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-2xl font-bold transition shadow-xl"
@@ -543,7 +543,7 @@ Compare Our Safari Vehicles
           </p>
 
           <a
-            href="https://wa.me/+254717554177"
+            href="https://wa.me/+254112277671"
             target="_blank"
             rel="noreferrer"
             className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-10 py-4 rounded-2xl transition shadow-lg"
@@ -766,13 +766,13 @@ Compare Our Safari Vehicles
         <h3 className="text-xl font-bold mb-5">Contact Info</h3>
   
         <ul className="space-y-4 text-gray-400">
-          <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254717554177</li>
+          <li>📍 Nairobi, Kenya</li>
+          <li>📞 +254112277671</li>
           <li>✉ renlentours@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254717554177"
+          href="https://wa.me/+254112277671"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"

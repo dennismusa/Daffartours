@@ -11,7 +11,7 @@ import image1 from "../assets/image1.jpg";
 import nakuru from "../assets/nakuru.jpg";
 import image16 from "../assets/image16.jpg";
 import image4 from "../assets/image4.jpg";
-import image22 from "../assets/image22.jpg";
+import image2 from "../assets/image2.jpg";
 import west from "../assets/west.jpg";
 import amboseli from "../assets/amboseli.jpg";
 import climbingkenya from "../assets/climbingkenya.jpg";
@@ -118,7 +118,7 @@ transform:i===index?"scale(1)":"scale(1.06)"
 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"/>
 <span className="text-[10px] md:text-xs uppercase tracking-[4px] text-emerald-200">
 
-Renlen Tours & Safaris
+DenGrey Tours & Safaris
 </span></div>
 <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight max-w-xl drop-shadow-xl">
 
@@ -195,7 +195,7 @@ i===index
         <div className="hidden md:block absolute -bottom-10 -right-10 w-[230px] h-[280px] overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl">
 
           <img
-            src={image22}
+            src={image2}
             alt={t("aboutTitle")}
             className="w-full h-full object-cover hover:scale-110 transition duration-[2000ms]"
           />
@@ -322,6 +322,221 @@ i===index
 
 </section>
 
+
+
+{/* ================= PREMIUM SERVICES ================= */}
+<section className="relative py-32 overflow-hidden bg-gradient-to-b from-[#F8F6F1] via-[#FCFBF8] to-[#EFE9DE]">
+
+  {/* Background */}
+  <div className="absolute -top-44 left-0 w-[500px] h-[500px] bg-emerald-300/20 blur-[140px] rounded-full"></div>
+  <div className="absolute -bottom-40 right-0 w-[500px] h-[500px] bg-yellow-300/20 blur-[140px] rounded-full"></div>
+
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    {/* Header */}
+    <div className="text-center max-w-3xl mx-auto mb-20">
+
+      <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
+        Premium Services
+      </span>
+
+      <h2 className="mt-6 text-5xl md:text-6xl font-black leading-tight">
+        Explore Our
+        <span className="block text-[#C8A94C]">
+          Luxury Travel Services
+        </span>
+      </h2>
+
+      <p className="mt-7 text-gray-600 text-lg leading-8">
+        From unforgettable safaris to luxury accommodation, executive transport
+        and tailor-made adventures, we provide complete travel experiences
+        across Kenya and East Africa.
+      </p>
+
+    </div>
+
+    {/* Cards */}
+    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+      {[
+        {
+    icon: "🦁",
+    title: "Safari & Tour Packages",
+    color: "from-emerald-500 to-green-700",
+    desc: "Discover East Africa through expertly planned wildlife safaris, luxury lodge stays, beach holidays, cultural tours, mountain expeditions, and personalized travel experiences across Kenya, Tanzania, Uganda, and Rwanda.",
+    features: [
+      "Luxury & Budget Safaris",
+      "Professional Safari Guides",
+      "Customized Itineraries",
+      "National Park Reservations"
+    ],
+    perfect: "Families • Couples • Honeymoon • Adventure Travellers"
+  },
+
+  {
+    icon: "🏨",
+    title: "Hotel & Lodge Booking",
+    color: "from-yellow-500 to-orange-500",
+    desc: "Reserve luxury safari lodges, boutique hotels, beach resorts, executive apartments and budget accommodation with carefully selected hospitality partners.",
+    features: [
+      "Luxury Lodges",
+      "Beach Resorts",
+      "Executive Apartments",
+      "Exclusive Rates"
+    ],
+    perfect: "Vacation • Business • Family Holidays"
+  },
+
+  {
+    icon: "🤝",
+    title: "Corporate Team Building",
+    color: "from-blue-500 to-cyan-600",
+    desc: "We organize unforgettable corporate retreats, conferences, incentive travel, leadership programs and outdoor team-building experiences across East Africa.",
+    features: [
+      "Conference Planning",
+      "Outdoor Activities",
+      "Corporate Retreats",
+      "Leadership Events"
+    ],
+    perfect: "Companies • NGOs • Schools • Institutions"
+  },
+
+  {
+    icon: "✈️",
+    title: "Airport & Hotel Transfers",
+    color: "from-purple-500 to-indigo-600",
+    desc: "Reliable airport pickups, hotel transfers, executive transportation, VIP travel and chauffeur-driven services with professional drivers available every day.",
+    features: [
+      "Airport Pickups",
+      "Hotel Transfers",
+      "VIP Transport",
+      "24/7 Service"
+    ],
+    perfect: "Tourists • Executives • Families"
+  },
+
+  {
+    icon: "🚙",
+    title: "Car Hire & Rentals",
+    color: "from-red-500 to-orange-600",
+    desc: "Choose from our fleet of safari Land Cruisers, luxury SUVs, executive sedans, tour vans and self-drive vehicles for every travel occasion.",
+    features: [
+      "4x4 Safari Vehicles",
+      "Self Drive",
+      "Professional Chauffeurs",
+      "Long-Term Rentals"
+    ],
+    perfect: "Safari • Business • Road Trips"
+  },
+
+  {
+    icon: "🌍",
+    title: "Tailor-Made Experiences",
+    color: "from-emerald-600 to-green-800",
+    desc: "Every journey is uniquely designed around your interests, schedule and budget to create unforgettable travel memories throughout East Africa.",
+    features: [
+      "Custom Itineraries",
+      "Travel Consultation",
+      "Flexible Scheduling",
+      "Complete Trip Planning"
+    ],
+    perfect: "Everyone"
+  }
+
+
+      ].map((service,index)=>(
+
+        <div
+        key={index}
+        className="group relative overflow-hidden rounded-[35px] bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-3">
+
+          {/* Gradient Border */}
+          <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br ${service.color}`}></div>
+
+          <div className="relative m-[1px] rounded-[34px] bg-white p-9">
+
+            {/* Icon */}
+            <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl shadow-lg group-hover:scale-110 transition duration-500`}>
+              {service.icon}
+            </div>
+
+            <h3 className="mt-8 text-2xl font-bold text-gray-900">
+              {service.title}
+            </h3>
+
+            <p className="mt-5 text-gray-600 leading-8">
+              {service.desc}
+            </p>
+
+            {/* Footer */}
+            
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+    {/* Bottom CTA */}
+    <div className="mt-24">
+
+      <div className="rounded-[40px] overflow-hidden bg-gradient-to-r from-[#092517] via-[#123B25] to-[#092517] p-12 md:p-16 shadow-2xl">
+
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+          <div>
+
+            <span className="uppercase tracking-[4px] text-yellow-400 text-sm font-bold">
+              Why Travel With Us
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-6 leading-tight">
+              Your Journey Begins Here
+            </h2>
+
+            <p className="mt-6 text-gray-300 leading-8 text-lg">
+              Whether you're planning a luxury safari, a corporate retreat,
+              airport transfers or a private holiday, our travel experts
+              ensure every detail is professionally handled from start to finish.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-2 gap-6">
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
+              <h3 className="text-5xl font-black text-yellow-400">10+</h3>
+              <p className="text-gray-300 mt-3">Years Experience</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
+              <h3 className="text-5xl font-black text-yellow-400">500+</h3>
+              <p className="text-gray-300 mt-3">Successful Trips</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
+              <h3 className="text-5xl font-black text-yellow-400">24/7</h3>
+              <p className="text-gray-300 mt-3">Customer Support</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
+              <h3 className="text-5xl font-black text-yellow-400">100%</h3>
+              <p className="text-gray-300 mt-3">Tailor Made Tours</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 {/* FEATURED DESTINATIONS */}
 <section className="relative py-32 bg-[#070B08] text-white overflow-hidden">
@@ -459,6 +674,8 @@ i===index
 
   </div>
 </section>
+
+
 
 
 
@@ -795,7 +1012,7 @@ i===index
       <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
         <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
         <p className="text-gray-700 italic leading-relaxed">
-          Renlen tour's it's the best tour operator now in Kenya which can book you safari on time and deliver excellent service.
+          DenGrey Tours  it's the best tour operator now in Kenya which can book you safari on time and deliver excellent service.
         </p>
         <div className="mt-8 flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">M</div>
@@ -965,7 +1182,7 @@ i===index
       </ul>
 
       <a
-        href="https://wa.me/+254717554177"
+        href="https://wa.me/+254112277671"
         target="_blank"
         rel="noreferrer"
         className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"

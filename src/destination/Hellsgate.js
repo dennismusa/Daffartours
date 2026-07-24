@@ -351,13 +351,13 @@ Plan Tour
         <h3 className="text-xl font-bold mb-5">Contact Info</h3>
   
         <ul className="space-y-4 text-gray-400">
-          <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254 717 554177</li>
+          <li>📍 Nairobi, Kenya</li>
+          <li>📞 +254112277671</li>
           <li>✉ renlentours@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254 717 554177"
+          href="https://wa.me/+254112277671"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"

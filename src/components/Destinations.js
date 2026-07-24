@@ -248,7 +248,7 @@ function Destinations() {
       {/* Brand */}
       <div>
         <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-          Renlen Tours and safaris
+          DenGrey Tours & Safaris
         </h2>
   
         <p className="text-xs text-gray-500 mb-1">
@@ -319,7 +319,7 @@ function Destinations() {
         <ul className="space-y-4 text-gray-400">
           <li>📍 Kajiado, Kenya</li>
           <li>📞 +254717554177</li>
-          <li>✉ renlentours@gmail.com</li>
+          <li>✉ dengreytours@gmail.com</li>
         </ul>
   
         <a
@@ -335,7 +335,7 @@ function Destinations() {
   
     {/* Bottom */}
     <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-      © 2026 Renlen Tours and safaris . All Rights Reserved.
+      © 2026 DenGrey Tours & Safaris . All Rights Reserved.
     </div>
   </footer>
     </div>

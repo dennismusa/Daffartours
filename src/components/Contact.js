@@ -79,13 +79,13 @@ function Contact() {
             </p>
 
             <div className="space-y-3 text-gray-300">
-              <p>📍 Kajiado, Kenya</p>
-              <p>📞  +254717554177</p>
-              <p>✉ info@renlentours.com</p>
+              <p>📍 Nairobi, Kenya</p>
+              <p>📞  +254112277671</p>
+              <p>✉ info@DenGreytours.com</p>
             </div>
 
             <a
-              href="https://wa.me/+254717554177"
+              href="https://wa.me/+254112277671"
               className="inline-block mt-10 bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl"
             >
               Chat on WhatsApp
@@ -165,7 +165,7 @@ function Contact() {
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-800">
             <iframe
               title="Map"
-               src="https://www.google.com/maps?q=Renlen%20Tours%20and%20Safaris%20Kajiado&output=embed"
+               src="https://www.google.com/maps?q=dengrey%20Tours%20and%20Safaris%20Kajiado&output=embed"
               className="w-full h-[450px]"
               loading="lazy"
             />
@@ -238,14 +238,14 @@ function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
             <a
-              href="https://wa.me/+254717554177"
+              href="https://wa.me/+254112277671"
               className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-xl"
             >
               Get Free Quote
             </a>
 
             <a
-              href="https://wa.me/+254717554177"
+              href="https://wa.me/+254112277671"
               className="bg-white/10 border border-white/20 hover:bg-white hover:text-black px-8 py-4 rounded-xl"
             >
               Speak to Expert
@@ -268,7 +268,7 @@ function Contact() {
       {/* Brand */}
       <div>
         <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-          Renlen Tours and safaris
+          DenGrey Tours & Safaris
         </h2>
   
         <p className="text-xs text-gray-500 mb-1">
@@ -337,13 +337,13 @@ function Contact() {
         <h3 className="text-xl font-bold mb-5">Contact Info</h3>
   
         <ul className="space-y-4 text-gray-400">
-          <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254717554177</li>
-          <li>✉ renlentours@gmail.com</li>
+          <li>📍 Nairobi, Kenya</li>
+          <li>📞 +254112277671</li>
+          <li>✉ dengrey@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254717554177"
+          href="https://wa.me/+254112277671"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
@@ -355,7 +355,7 @@ function Contact() {
   
     {/* Bottom */}
     <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-      © 2026 Renlen Tours and safaris . All Rights Reserved.
+      © 2026 DenGrey Tours & Safaris . All Rights Reserved.
     </div>
   </footer>
 

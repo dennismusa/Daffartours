@@ -89,7 +89,7 @@ function Navbar() {
               <img src={safarilinklogo} className="w-11 h-11 rounded-full border border-yellow-400 object-cover" />
 
               <div>
-                <h2 className="text-yellow-300 font-bold">Renlen Tours</h2>
+                <h2 className="text-yellow-300 font-bold">DenGrey </h2>
                 <p className="text-yellow-400 text-xs">Safari Adventures</p>
               </div>
             </Link>
@@ -156,7 +156,7 @@ function Navbar() {
 
               </div>
 
-              <a href="https://wa.me/254717554177" className="bg-yellow-400 text-black px-5 py-3 rounded-full font-bold">
+              <a href="https://wa.me/+254112277671" className="bg-yellow-400 text-black px-5 py-3 rounded-full font-bold">
                 {t("book")}
               </a>
 
@@ -216,7 +216,7 @@ function Navbar() {
             <img src={safarilinklogo} className="w-12 h-12 rounded-full border border-yellow-400" />
 
             <div>
-              <h2 className="text-white font-bold">Renlen Tours</h2>
+              <h2 className="text-white font-bold">DenGrey </h2>
               <p className="text-yellow-400 text-xs">Safari Adventures</p>
             </div>
           </div>

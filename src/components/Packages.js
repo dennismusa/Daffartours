@@ -317,8 +317,8 @@ return (
          <h3 className="text-xl font-bold mb-5">Contact Info</h3>
    
          <ul className="space-y-4 text-gray-400">
-           <li>📍 Kajiado, Kenya</li>
-           <li>📞 +254717554177</li>
+           <li>📍 Nairobi, Kenya</li>
+           <li>📞 +254112277671</li>
            <li>✉ renlentours@gmail.com</li>
          </ul>
    

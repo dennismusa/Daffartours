@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 import image21 from "../assets/image21.jpg";
 import image22 from "../assets/image22.jpg";
 //import image3 from "../assets/image3.jpg";
-//import image4 from "../assets/image4.jpg";
+import image178 from "../assets/image178.jpg";
+import image15 from "../assets/image15.jpg";
+import image14 from "../assets/image14.jpg";
+import image18 from "../assets/image18.jpg";
+import image177 from "../assets/image177.jpg";
 import image10 from "../assets/image10.jpg";
-import image11 from "../assets/image11.jpg";
-import image12 from "../assets/image12.jpg";
-import image13 from "../assets/image13.jpg";
-import image9 from "../assets/image9.jpg";
-import image7 from "../assets/image7.jpg";
+//import image166 from "../assets/image166.jpg";
 
 
 function Gallery() {
   // HERO SLIDER
-  const slides = [image21, image22];
+  const slides = [image177, image178];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Gallery() {
   // EXPERIENCES DATA
  const experiences = [
   {
-    image: image7,
+    image: image21,
     title: "Sunrise Wildlife Game Drive",
     description:
       "Start the day with an early morning safari where predators return from night hunts and herbivores gather in open plains. The golden sunrise creates perfect lighting for wildlife photography.",
@@ -39,7 +39,7 @@ function Gallery() {
     highlights: ["Early Morning Safari", "Big Five Sightings", "Photography Moments"],
   },
   {
-    image: image7,
+    image: image22,
     title: "Elephant & Kilimanjaro Experience",
     description:
       "Get close to large elephant herds roaming freely in Amboseli National Park with the breathtaking backdrop of Mount Kilimanjaro.",
@@ -48,7 +48,7 @@ function Gallery() {
     highlights: ["Elephant Herds", "Kilimanjaro Views", "Scenic Stops"],
   },
   {
-    image: image7,
+    image: image15,
     title: "Golden Hour Safari Drive",
     description:
       "Experience the savannah during sunset when the landscape transforms into warm golden colors and wildlife becomes active again after the heat of the day.",
@@ -141,7 +141,7 @@ wildlife encounters and unforgettable moments.
 <div className="md:col-span-2 md:row-span-2 rounded-[35px] overflow-hidden group relative">
 
 <img
-src={image9}
+src={image10}
 alt=""
 className="w-full h-full object-cover min-h-[620px] group-hover:scale-110 transition duration-[1500ms]"
 />
@@ -165,10 +165,10 @@ Experience Africa's beauty
 {/* Right Images */}
 
 {[
-image10,
-image11,
-image12,
-image13
+image15,
+image18,
+image14,
+image178
 ].map((img,index)=>(
 
 <div
@@ -300,7 +300,7 @@ Explore
           </p>
 
           <a
-            href="https://wa.me/+254717554177"
+            href="https://wa.me/+254112277671"
             target="_blank"
             rel="noreferrer"
             className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 sm:px-10 py-4 rounded-xl shadow-lg transition"
@@ -318,7 +318,7 @@ Explore
        {/* Brand */}
        <div>
          <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-           Renlen Tours and safaris
+           DenGrey Tours & Safaris
          </h2>
    
          <p className="text-xs text-gray-500 mb-1">
@@ -387,13 +387,13 @@ Explore
          <h3 className="text-xl font-bold mb-5">Contact Info</h3>
    
          <ul className="space-y-4 text-gray-400">
-           <li>📍 Kajiado, Kenya</li>
-           <li>📞 +254717554177</li>
-           <li>✉ renlentours@gmail.com</li>
+           <li>📍 Nairobi, Kenya</li>
+           <li>📞 +254112277671</li>
+           <li>✉ dengrey@gmail.com</li>
          </ul>
    
          <a
-           href="https://wa.me/+254717554177"
+           href="https://wa.me/+254112277671"
            target="_blank"
            rel="noreferrer"
            className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
@@ -405,7 +405,7 @@ Explore
    
      {/* Bottom */}
      <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-       © 2026 Renlen Tours and safaris . All Rights Reserved.
+       © 2026 DenGrey Tours & Safaris . All Rights Reserved.
      </div>
    </footer>
 
