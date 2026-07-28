@@ -260,23 +260,18 @@ function CTA() {
 /* ---------------- FOOTER ---------------- */
 function Footer() {
   return (
-   <footer className="relative overflow-hidden bg-black text-white py-16">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-     
-         {/* Brand */}
+ <footer className="relative overflow-hidden bg-black text-white py-16">
+       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+ 
          <div>
            <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-             Renlen Tours and safaris
+             DenGrey Tours and Safaris
            </h2>
-     
-           <p className="text-xs text-gray-500 mb-1">
+ 
+           <p className="text-gray-400 text-sm mb-4">
              Website designed & developed by Dennis Musa
            </p>
-     
-           <p className="text-gray-400 leading-8 mb-3">
-             Professional safari vehicle hire services in kajiado ,kenya. Safe, comfortable, and unforgettable safari experiences.
-           </p>
-     
+ 
            <a
              href="https://dennismusa.netlify.app/"
              target="_blank"
@@ -286,74 +281,48 @@ function Footer() {
              View Developer Portfolio
            </a>
          </div>
-     
-         {/* Links */}
+ 
          <div>
            <h3 className="text-xl font-bold mb-5">Quick Links</h3>
-     
-           <ul className="space-y-4 text-gray-400">
-             <li>
-               <Link to="/" className="hover:text-yellow-500 transition">
-                 Home
-               </Link>
-             </li>
-     
-             <li>
-               <Link to="/vehicles" className="hover:text-yellow-500 transition">
-                 Fleet
-               </Link>
-             </li>
-     
-             <li>
-               <Link to="/gallery" className="hover:text-yellow-500 transition">
-                 Gallery
-               </Link>
-             </li>
-     
-             <li>
-               <Link to="/contact" className="hover:text-yellow-500 transition">
-                 Contact
-               </Link>
-             </li>
+           <ul className="space-y-3 text-gray-400">
+             <li><Link to="/">Home</Link></li>
+             <li><Link to="/vehicles">Fleet</Link></li>
+             <li><Link to="/gallery">Gallery</Link></li>
+             <li><Link to="/contact">Contact</Link></li>
            </ul>
          </div>
-     
-         {/* Services */}
+ 
          <div>
            <h3 className="text-xl font-bold mb-5">Services</h3>
-     
-           <ul className="space-y-4 text-gray-400">
+           <ul className="space-y-3 text-gray-400">
              <li>Safari Vehicle Hire</li>
              <li>Airport Transfers</li>
              <li>Group Tours</li>
              <li>Private Safari Trips</li>
            </ul>
          </div>
-     
-         {/* Contact */}
+ 
          <div>
-           <h3 className="text-xl font-bold mb-5">Contact Info</h3>
-     
-           <ul className="space-y-4 text-gray-400">
-             <li>📍 Nairobi, Kenya</li>
-             <li>📞 +254112277671</li>
-             <li>✉ renlentours@gmail.com</li>
+           <h3 className="text-xl font-bold mb-5">Contact</h3>
+           <ul className="space-y-3 text-gray-400">
+             <li>Nairobi, Kenya</li>
+             <li>+254112277671</li>
+             <li>renlentours@gmail.com</li>
            </ul>
-     
+ 
            <a
              href="https://wa.me/+254112277671"
              target="_blank"
              rel="noreferrer"
-             className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
+             className="inline-block mt-6 bg-green-500 text-black px-6 py-3 rounded-lg font-bold"
            >
              WhatsApp Booking
            </a>
          </div>
        </div>
-     
-       {/* Bottom */}
+ 
        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-         © 2026 Renlen Tours and safaris . All Rights Reserved.
+         © 2026 Renlen Tours and Safaris. All Rights Reserved.
        </div>
      </footer>
   );

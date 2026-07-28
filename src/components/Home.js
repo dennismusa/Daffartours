@@ -973,112 +973,266 @@ i===index
 
 </section>
 
-<section className="relative py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50 overflow-hidden">
 
-  <div className="absolute top-0 left-0 w-72 h-72 bg-green-200/30 rounded-full blur-3xl"></div>
-  <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-200/30 rounded-full blur-3xl"></div>
 
-  <div className="max-w-7xl mx-auto px-6 relative z-10">
+{/* ===================== REVIEWSS ===================== */}
+<section className="relative py-28 bg-gradient-to-b from-[#F8F6F1] via-white to-[#F2EEE5] overflow-hidden">
 
-    {/* HEADER */}
-    <div className="text-center mb-16">
+  {/* Background Effects */}
+  <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[140px]" />
+  <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[140px]" />
 
-      <span className="inline-block px-5 py-2 rounded-full bg-green-100 text-green-700 font-semibold text-sm mb-5">
-        Reviews
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    {/* Header */}
+    <div className="text-center max-w-3xl mx-auto">
+
+      <span className="inline-flex items-center bg-green-100 text-green-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
+        Client Testimonials
       </span>
 
-      <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900">
-        What Our Clients Say
+      <h2 className="mt-6 text-5xl font-black text-gray-900">
+        What Our Guests
+        <span className="block text-[#C8A94C]">
+          Say About Us
+        </span>
       </h2>
 
-      <p className="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">
-        Real feedback from travelers who experienced our safaris and tours.
+      <p className="mt-6 text-gray-600 text-lg leading-8">
+        Every safari is more than a trip—it's a lifetime memory. Read what our
+        happy guests say after exploring Kenya with Dengray Adventures.
       </p>
 
-      <div className="mt-6">
-        <div className="text-yellow-400 text-4xl tracking-widest">
-          ★★★★★
+    </div>
+
+    {/* Google Rating */}
+    <div className="mt-16 flex justify-center">
+
+      <div className="bg-white rounded-3xl shadow-xl border border-gray-100 px-10 py-8 flex flex-col md:flex-row items-center gap-8">
+
+        <div className="text-center">
+
+          <h3 className="text-6xl font-black text-green-700">
+            5.0
+          </h3>
+
+          <div className="text-yellow-400 text-3xl mt-2">
+            ★★★★★
+          </div>
+
+          <p className="text-gray-600 mt-2">
+            Based on 6 Google Reviews
+          </p>
+
         </div>
-        <p className="mt-2 font-bold text-gray-800">
-          4.8 Average Rating
-        </p>
+
+        <div className="hidden md:block h-20 w-px bg-gray-200"></div>
+
+        <div>
+
+          <h3 className="text-2xl font-bold text-gray-900">
+            Trusted by Travellers Worldwide
+          </h3>
+
+          <p className="mt-3 text-gray-600 leading-7 max-w-lg">
+            Our guests consistently rate us 5 stars for our professionalism,
+            knowledgeable guides, personalized itineraries and unforgettable
+            safari experiences across Kenya.
+          </p>
+
+        </div>
+
       </div>
 
     </div>
 
-    {/* REVIEWS */}
-    <div className="grid md:grid-cols-3 gap-8">
+    {/* Reviews */}
+    <div className="grid md:grid-cols-3 gap-8 mt-20">
 
-      <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
-        <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
-        <p className="text-gray-700 italic leading-relaxed">
-          DenGrey Tours  it's the best tour operator now in Kenya which can book you safari on time and deliver excellent service.
-        </p>
-        <div className="mt-8 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">M</div>
-          <div>
-            <h4 className="font-bold text-gray-900">Mohamed Mamo</h4>
-            <p className="text-sm text-gray-500">Google Reviewer</p>
+      {/* Review 1 */}
+      <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+
+        <div className="flex items-center justify-between">
+
+          <div className="text-yellow-400 text-2xl">
+            ★★★★★
           </div>
+
+          <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
+            Verified Google Review
+          </span>
+
         </div>
+
+        <p className="mt-6 text-gray-600 leading-8 italic">
+          "We've travelled the world and the safari with Denis is by far the
+          most memorable, beautiful and magical experience we've ever had.
+          His passion, kindness and knowledge made every moment unforgettable."
+        </p>
+
+        <div className="mt-8 flex items-center gap-4">
+
+          <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
+            A
+          </div>
+
+          <div>
+
+            <h4 className="font-bold text-gray-900">
+              Andrea Milán
+            </h4>
+
+            <p className="text-sm text-gray-500">
+              Verified Google Reviewer
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
-        <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
-        <p className="text-gray-700 italic leading-relaxed">
-          Excellent👌. You better try their services, very professional and reliable tour operator.
-        </p>
-        <div className="mt-8 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">S</div>
-          <div>
-            <h4 className="font-bold text-gray-900">Steve Ndilai</h4>
-            <p className="text-sm text-gray-500">Client</p>
+      {/* Review 2 */}
+      <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+
+        <div className="flex items-center justify-between">
+
+          <div className="text-yellow-400 text-2xl">
+            ★★★★★
           </div>
+
+          <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
+            Verified Google Review
+          </span>
+
         </div>
+
+        <p className="mt-6 text-gray-600 leading-8 italic">
+          "Our 2-night, 3-day Maasai Mara safari was perfectly organised.
+          Denis was an outstanding guide and made the trip unforgettable.
+          I highly recommend Dengray Adventures."
+        </p>
+
+        <div className="mt-8 flex items-center gap-4">
+
+          <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
+            O
+          </div>
+
+          <div>
+
+            <h4 className="font-bold text-gray-900">
+              Antoine Obunde
+            </h4>
+
+            <p className="text-sm text-gray-500">
+              Verified Google Reviewer
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="bg-white/80 backdrop-blur-lg border border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition">
-        <div className="text-yellow-400 text-2xl mb-5">★★★★★</div>
-        <p className="text-gray-700 italic leading-relaxed">
-          Good service and reliable communication. Highly recommended for safari bookings.
-        </p>
-        <div className="mt-8 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">J</div>
-          <div>
-            <h4 className="font-bold text-gray-900">Jeff Ndilai</h4>
-            <p className="text-sm text-gray-500">Local Guide</p>
+      {/* Review 3 */}
+      <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+
+        <div className="flex items-center justify-between">
+
+          <div className="text-yellow-400 text-2xl">
+            ★★★★★
           </div>
+
+          <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
+            Verified Google Review
+          </span>
+
         </div>
+
+        <p className="mt-6 text-gray-600 leading-8 italic">
+          "The safari was beautifully organised. The guide was friendly,
+          knowledgeable and reliable. We are happy to come back again.
+          Thank you for the amazing experience."
+        </p>
+
+        <div className="mt-8 flex items-center gap-4">
+
+          <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
+            S
+          </div>
+
+          <div>
+
+            <h4 className="font-bold text-gray-900">
+              Steinert Liesel
+            </h4>
+
+            <p className="text-sm text-gray-500">
+              Verified Google Reviewer
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
-    {/* BUTTONS */}
-    <div className="flex flex-wrap justify-center gap-6 mt-16">
+    {/* Trust Statistics */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
 
-      <a
-        href="https://search.google.com/local/writereview?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
-        target="_blank"
-        rel="noreferrer"
-        className="bg-green-700 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition"
-      >
-        Write a Review
-      </a>
+      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <h3 className="text-5xl font-black text-green-700">5.0</h3>
+        <p className="mt-2 text-gray-600">Google Rating</p>
+      </div>
 
-      <a
-        href="https://search.google.com/local/reviews?placeid=ChIJj5Qk8H7FLxgR_6uAYZFoTn4"
-        target="_blank"
-        rel="noreferrer"
-        className="border-2 border-green-700 text-green-700 px-10 py-4 rounded-full font-bold hover:bg-green-700 hover:text-white hover:scale-105 transition"
-      >
-        View All Reviews
-      </a>
+      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <h3 className="text-5xl font-black text-green-700">6+</h3>
+        <p className="mt-2 text-gray-600">Verified Reviews</p>
+      </div>
+
+      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <h3 className="text-5xl font-black text-green-700">100%</h3>
+        <p className="mt-2 text-gray-600">Satisfied Guests</p>
+      </div>
+
+      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <h3 className="text-5xl font-black text-green-700">24/7</h3>
+        <p className="mt-2 text-gray-600">Travel Support</p>
+      </div>
 
     </div>
+
+    {/* Buttons */}
+<div className="mt-16 flex flex-wrap justify-center gap-6">
+
+  {/* Write Google Review */}
+  <a
+    href="https://search.google.com/local/writereview?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-3 px-8 py-4 bg-green-700 text-white font-semibold rounded-2xl shadow-lg hover:bg-green-800 hover:-translate-y-1 transition-all duration-300"
+  >
+    ⭐ Write a Review
+  </a>
+
+  {/* View Google Reviews */}
+  <a
+    href="https://search.google.com/local/reviews?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-3 px-8 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-2xl hover:bg-green-700 hover:text-white hover:-translate-y-1 transition-all duration-300"
+  >
+    💬 View All Reviews
+  </a>
+
+</div>
 
   </div>
-</section>
 
+</section>
 
 {/* FOOTER */}
 <footer className="relative overflow-hidden bg-black text-white py-16">

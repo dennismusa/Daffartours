@@ -172,7 +172,7 @@ function Footer() {
 
         <div>
           <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-            Renlen Tours and Safaris
+            DenGrey Tours and Safaris
           </h2>
 
           <p className="text-gray-400 text-sm mb-4">
