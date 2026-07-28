@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://Renlentourssafari.com/</loc>
-    <priority>1.0</priority>
-  </url>
+    <!-- Home -->
+    <url>
+        <loc>https://dengrayadventures.com/</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <url>
-    <loc>https://Renlentourssafari.com/vehicles</loc>
-    <priority>0.8</priority>
-  </url>
+    <!-- Destinations -->
+    <url>
+        <loc>https://dengrayadventures.com/destinations</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://Renlentourssafari.com/Destinations</loc>
-    <priority>0.7</priority>
-  </url>
+    <!-- Safari Vehicles -->
+    <url>
+        <loc>https://dengrayadventures.com/vehicles</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://Renlentourssafari.com/gallery</loc>
-    <priority>0.7</priority>
-  </url>
+    <!-- Gallery -->
+    <url>
+        <loc>https://dengrayadventures.com/gallery</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://Renlentourssafari.com/contact</loc>
-    <priority>0.7</priority>
-  </url>
+    <!-- Contact -->
+    <url>
+        <loc>https://dengrayadventures.com/contact</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
 </urlset>
