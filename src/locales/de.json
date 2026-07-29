@@ -190,6 +190,107 @@
 
   "contactInfo": "Kontaktinformationen",
 
+
+
+
+
+  "servicesBadge": "Premium-Dienstleistungen",
+  "servicesTitle1": "Entdecken Sie unsere",
+  "servicesTitle2": "Luxus-Reisedienstleistungen",
+  "servicesDescription": "Von unvergesslichen Safaris bis hin zu Luxusunterkünften, Executive-Transport und maßgeschneiderten Abenteuern bieten wir komplette Reiseerlebnisse in Kenia und Ostafrika.",
+
+  "serviceSafariTitle": "Safari- & Reisepakete",
+  "serviceSafariDesc": "Entdecken Sie Ostafrika mit professionell geplanten Wildtiersafaris, luxuriösen Lodges, Strandurlauben, Kulturtouren und individuellen Reiseerlebnissen.",
+  "serviceSafariFeature1": "Luxus- & Budget-Safaris",
+  "serviceSafariFeature2": "Professionelle Safari-Guides",
+  "serviceSafariFeature3": "Individuelle Reiserouten",
+  "serviceSafariFeature4": "Nationalpark-Reservierungen",
+  "serviceSafariPerfect": "Familien • Paare • Flitterwochen • Abenteuerreisende",
+
+  "serviceHotelTitle": "Hotel- & Lodgebuchungen",
+  "serviceHotelDesc": "Buchen Sie luxuriöse Safari-Lodges, Boutique-Hotels, Strandresorts und Apartments zu exklusiven Preisen.",
+  "serviceHotelFeature1": "Luxus-Lodges",
+  "serviceHotelFeature2": "Strandresorts",
+  "serviceHotelFeature3": "Executive Apartments",
+  "serviceHotelFeature4": "Exklusive Preise",
+  "serviceHotelPerfect": "Urlaub • Geschäftsreisen • Familien",
+
+  "serviceCorporateTitle": "Firmen-Teambuilding",
+  "serviceCorporateDesc": "Professionelle Firmen-Retreats, Konferenzen, Incentive-Reisen und Outdoor-Teambuilding in Ostafrika.",
+  "serviceCorporateFeature1": "Konferenzplanung",
+  "serviceCorporateFeature2": "Outdoor-Aktivitäten",
+  "serviceCorporateFeature3": "Firmen-Retreats",
+  "serviceCorporateFeature4": "Leadership-Programme",
+  "serviceCorporatePerfect": "Unternehmen • NGOs • Schulen",
+
+  "serviceTransferTitle": "Flughafen- & Hoteltransfers",
+  "serviceTransferDesc": "Zuverlässige Flughafentransfers, Hoteltransfers und VIP-Fahrdienste mit professionellen Fahrern.",
+  "serviceTransferFeature1": "Flughafen-Abholung",
+  "serviceTransferFeature2": "Hoteltransfers",
+  "serviceTransferFeature3": "VIP-Transport",
+  "serviceTransferFeature4": "24/7 Service",
+  "serviceTransferPerfect": "Touristen • Geschäftsreisende",
+
+  "serviceCarTitle": "Autovermietung",
+  "serviceCarDesc": "Mieten Sie Safari-Land Cruiser, SUVs, Limousinen und Tour-Vans für jede Reise.",
+  "serviceCarFeature1": "4x4 Safari-Fahrzeuge",
+  "serviceCarFeature2": "Selbstfahrer",
+  "serviceCarFeature3": "Chauffeur-Service",
+  "serviceCarFeature4": "Langzeitmiete",
+  "serviceCarPerfect": "Safari • Business • Roadtrip",
+
+  "serviceCustomTitle": "Maßgeschneiderte Reisen",
+  "serviceCustomDesc": "Jede Reise wird individuell nach Ihren Interessen, Ihrem Budget und Ihrem Zeitplan geplant.",
+  "serviceCustomFeature1": "Individuelle Reiserouten",
+  "serviceCustomFeature2": "Reiseberatung",
+  "serviceCustomFeature3": "Flexible Planung",
+  "serviceCustomFeature4": "Komplette Reiseplanung",
+  "serviceCustomPerfect": "Für jeden Reisenden",
+
+  "journeyLabel": "Warum mit uns reisen",
+  "journeyTitle": "Ihre Reise beginnt hier",
+  "journeyDescription": "Ob Luxussafari, Firmenveranstaltung, Flughafentransfer oder privater Urlaub – unsere Reiseexperten kümmern sich professionell um jedes Detail.",
+
+  "statExperience": "Jahre Erfahrung",
+  "statTrips": "Erfolgreiche Reisen",
+  "statSupport": "Kundensupport",
+  "statCustom": "Maßgeschneiderte Safaris",
+   "premiumServices": "Premium Services",
+  "servicesHeading1": "Explore Our",
+  "servicesHeading2": "Luxury Travel Services",
+  
+  "perfectFor": "Perfect For",
+
+  "whyTravel": "Why Travel With Us",
+ 
+  "experienceYears": "Years Experience",
+  "successfulTrips": "Successful Trips",
+  "support247": "Customer Support",
+  "tailorMade": "Tailor Made Tours",
+
+  
+  "testimonialsBadge": "Kundenbewertungen",
+  "testimonialsTitle1": "Was unsere Gäste",
+  "testimonialsTitle2": "über uns sagen",
+  "testimonialsDescription": "Jede Safari ist mehr als nur eine Reise – sie ist eine Erinnerung fürs Leben. Lesen Sie, was unsere zufriedenen Gäste nach ihrer Reise mit DenGrey Tours & Safaris über ihre Erlebnisse berichten.",
+
+  "googleBased": "Basierend auf 6 Google-Bewertungen",
+
+  "trustedTitle": "Von Reisenden weltweit geschätzt",
+  "trustedDescription": "Unsere Gäste bewerten uns regelmäßig mit 5 Sternen für unseren professionellen Service, erfahrene Reiseleiter, individuell gestaltete Safaris und unvergessliche Erlebnisse in Kenia.",
+
+  "verifiedReview": "Verifizierte Google-Bewertung",
+
+  "googleRating": "Google-Bewertung",
+  "verifiedReviews": "Verifizierte Bewertungen",
+  "satisfiedGuests": "Zufriedene Gäste",
+  "travelSupport": "24/7 Reise-Support",
+
+  
+  "viewAllReviews": "Alle Bewertungen ansehen",
+
+
+
   "location": "📍 Nairobi, Kenia",
   "phone": "📞 +254112277671",
   "email": "✉ DenGrey@gmail.com",

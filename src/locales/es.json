@@ -261,6 +261,96 @@
   "contactInfo": "Información de contacto",
 
 
+
+    "premiumServices": "Servicios Premium",
+
+  "servicesHeading1": "Explora Nuestros",
+  "servicesHeading2": "Servicios de Viaje de Lujo",
+
+  "servicesDescription": "Desde safaris inolvidables hasta alojamientos de lujo, transporte ejecutivo y experiencias personalizadas, ofrecemos experiencias de viaje completas por Kenia y África Oriental.",
+
+  "serviceSafariTitle": "Paquetes de Safari y Tours",
+  "serviceSafariDesc": "Descubre África Oriental con safaris cuidadosamente planificados, alojamientos de lujo, vacaciones en la playa, recorridos culturales, expediciones de montaña y viajes personalizados por Kenia, Tanzania, Uganda y Ruanda.",
+  "serviceSafariFeature1": "Safaris de Lujo y Económicos",
+  "serviceSafariFeature2": "Guías Profesionales de Safari",
+  "serviceSafariFeature3": "Itinerarios Personalizados",
+  "serviceSafariFeature4": "Reservas en Parques Nacionales",
+  "serviceSafariPerfect": "Familias • Parejas • Luna de Miel • Aventureros",
+
+  "serviceHotelTitle": "Reservas de Hoteles y Lodges",
+  "serviceHotelDesc": "Reserva lodges de safari de lujo, hoteles boutique, resorts de playa, apartamentos ejecutivos y alojamientos económicos con nuestros socios cuidadosamente seleccionados.",
+  "serviceHotelFeature1": "Lodges de Lujo",
+  "serviceHotelFeature2": "Resorts de Playa",
+  "serviceHotelFeature3": "Apartamentos Ejecutivos",
+  "serviceHotelFeature4": "Tarifas Exclusivas",
+  "serviceHotelPerfect": "Vacaciones • Negocios • Viajes Familiares",
+
+  "serviceCorporateTitle": "Team Building Corporativo",
+  "serviceCorporateDesc": "Organizamos retiros corporativos, conferencias, viajes de incentivos, programas de liderazgo y actividades al aire libre en toda África Oriental.",
+  "serviceCorporateFeature1": "Planificación de Conferencias",
+  "serviceCorporateFeature2": "Actividades al Aire Libre",
+  "serviceCorporateFeature3": "Retiros Corporativos",
+  "serviceCorporateFeature4": "Eventos de Liderazgo",
+  "serviceCorporatePerfect": "Empresas • ONG • Escuelas • Instituciones",
+
+  "serviceTransferTitle": "Traslados de Aeropuerto y Hotel",
+  "serviceTransferDesc": "Traslados confiables desde y hacia el aeropuerto, hoteles, transporte ejecutivo, viajes VIP y servicios con conductor profesional disponibles todos los días.",
+  "serviceTransferFeature1": "Recogidas en el Aeropuerto",
+  "serviceTransferFeature2": "Traslados al Hotel",
+  "serviceTransferFeature3": "Transporte VIP",
+  "serviceTransferFeature4": "Servicio 24/7",
+  "serviceTransferPerfect": "Turistas • Ejecutivos • Familias",
+
+  "serviceCarTitle": "Alquiler de Vehículos",
+  "serviceCarDesc": "Elige entre nuestra flota de Land Cruisers para safari, SUV de lujo, sedanes ejecutivos, furgonetas turísticas y vehículos de alquiler para cualquier ocasión.",
+  "serviceCarFeature1": "Vehículos Safari 4x4",
+  "serviceCarFeature2": "Conducción por Cuenta Propia",
+  "serviceCarFeature3": "Chóferes Profesionales",
+  "serviceCarFeature4": "Alquileres de Larga Duración",
+  "serviceCarPerfect": "Safari • Negocios • Viajes por Carretera",
+
+  "serviceCustomTitle": "Experiencias Personalizadas",
+  "serviceCustomDesc": "Cada viaje se diseña de acuerdo con tus intereses, horarios y presupuesto para crear recuerdos inolvidables en toda África Oriental.",
+  "serviceCustomFeature1": "Itinerarios Personalizados",
+  "serviceCustomFeature2": "Asesoría de Viaje",
+  "serviceCustomFeature3": "Programación Flexible",
+  "serviceCustomFeature4": "Planificación Completa del Viaje",
+  "serviceCustomPerfect": "Para Todos",
+
+  "perfectFor": "Ideal Para",
+
+  "whyTravel": "¿Por Qué Viajar Con Nosotros?",
+  "journeyTitle": "Tu Viaje Comienza Aquí",
+  "journeyDescription": "Ya sea que estés planeando un safari de lujo, un retiro corporativo, traslados al aeropuerto o unas vacaciones privadas, nuestros expertos se encargan de cada detalle de principio a fin.",
+
+  "experienceYears": "Años de Experiencia",
+  "successfulTrips": "Viajes Exitosos",
+  "support247": "Atención al Cliente 24/7",
+  "tailorMade": "Tours Personalizados",
+
+
+   "testimonialsBadge": "Testimonios de Clientes",
+  "testimonialsTitle1": "Lo que dicen",
+  "testimonialsTitle2": "Nuestros viajeros",
+  "testimonialsDescription": "Cada safari es más que un viaje: es un recuerdo para toda la vida. Descubre lo que nuestros clientes dicen después de explorar Kenia con DenGrey Tours & Safaris.",
+
+  "googleBased": "Basado en 6 reseñas de Google",
+
+  "trustedTitle": "Con la confianza de viajeros de todo el mundo",
+
+  "trustedDescription": "Nuestros clientes nos califican constantemente con 5 estrellas por nuestro profesionalismo, guías expertos, itinerarios personalizados y experiencias de safari inolvidables en Kenia.",
+
+  "verifiedReview": "Reseña verificada de Google",
+
+  "googleRating": "Calificación de Google",
+  "verifiedReviews": "Reseñas verificadas",
+  "satisfiedGuests": "Clientes satisfechos",
+  "travelSupport": "Asistencia de viaje 24/7",
+
+  "writeReview": "Escribir una reseña",
+  "viewAllReviews": "Ver todas las reseñas",
+
+
   "location": "📍 Nairobi, Kenia",
 
   "phone": "📞 +254112277671",

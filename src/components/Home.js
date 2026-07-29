@@ -334,113 +334,108 @@ i===index
   <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
 
     {/* Header */}
+    {/* Header */}
+
     <div className="text-center max-w-3xl mx-auto mb-20">
 
       <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
-        Premium Services
+        {t("premiumServices")}
       </span>
 
-      <h2 className="mt-6 text-5xl md:text-6xl font-black leading-tight">
-        Explore Our
+      <h2 className="mt-6 text-5xl md:text-6xl font-black">
+        {t("servicesHeading1")}
         <span className="block text-[#C8A94C]">
-          Luxury Travel Services
+          {t("servicesHeading2")}
         </span>
       </h2>
 
       <p className="mt-7 text-gray-600 text-lg leading-8">
-        From unforgettable safaris to luxury accommodation, executive transport
-        and tailor-made adventures, we provide complete travel experiences
-        across Kenya and East Africa.
+        {t("servicesDescription")}
       </p>
 
     </div>
-
     {/* Cards */}
     <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 
       {[
-        {
+        
+  {
     icon: "🦁",
-    title: "Safari & Tour Packages",
     color: "from-emerald-500 to-green-700",
-    desc: "Discover East Africa through expertly planned wildlife safaris, luxury lodge stays, beach holidays, cultural tours, mountain expeditions, and personalized travel experiences across Kenya, Tanzania, Uganda, and Rwanda.",
+    title: t("serviceSafariTitle"),
+    desc: t("serviceSafariDesc"),
     features: [
-      "Luxury & Budget Safaris",
-      "Professional Safari Guides",
-      "Customized Itineraries",
-      "National Park Reservations"
+      t("serviceSafariFeature1"),
+      t("serviceSafariFeature2"),
+      t("serviceSafariFeature3"),
+      t("serviceSafariFeature4"),
     ],
-    perfect: "Families • Couples • Honeymoon • Adventure Travellers"
+    perfect: t("serviceSafariPerfect"),
   },
-
   {
     icon: "🏨",
-    title: "Hotel & Lodge Booking",
     color: "from-yellow-500 to-orange-500",
-    desc: "Reserve luxury safari lodges, boutique hotels, beach resorts, executive apartments and budget accommodation with carefully selected hospitality partners.",
+    title: t("serviceHotelTitle"),
+    desc: t("serviceHotelDesc"),
     features: [
-      "Luxury Lodges",
-      "Beach Resorts",
-      "Executive Apartments",
-      "Exclusive Rates"
+      t("serviceHotelFeature1"),
+      t("serviceHotelFeature2"),
+      t("serviceHotelFeature3"),
+      t("serviceHotelFeature4"),
     ],
-    perfect: "Vacation • Business • Family Holidays"
+    perfect: t("serviceHotelPerfect"),
   },
-
   {
     icon: "🤝",
-    title: "Corporate Team Building",
     color: "from-blue-500 to-cyan-600",
-    desc: "We organize unforgettable corporate retreats, conferences, incentive travel, leadership programs and outdoor team-building experiences across East Africa.",
+    title: t("serviceCorporateTitle"),
+    desc: t("serviceCorporateDesc"),
     features: [
-      "Conference Planning",
-      "Outdoor Activities",
-      "Corporate Retreats",
-      "Leadership Events"
+      t("serviceCorporateFeature1"),
+      t("serviceCorporateFeature2"),
+      t("serviceCorporateFeature3"),
+      t("serviceCorporateFeature4"),
     ],
-    perfect: "Companies • NGOs • Schools • Institutions"
+    perfect: t("serviceCorporatePerfect"),
   },
-
   {
     icon: "✈️",
-    title: "Airport & Hotel Transfers",
     color: "from-purple-500 to-indigo-600",
-    desc: "Reliable airport pickups, hotel transfers, executive transportation, VIP travel and chauffeur-driven services with professional drivers available every day.",
+    title: t("serviceTransferTitle"),
+    desc: t("serviceTransferDesc"),
     features: [
-      "Airport Pickups",
-      "Hotel Transfers",
-      "VIP Transport",
-      "24/7 Service"
+      t("serviceTransferFeature1"),
+      t("serviceTransferFeature2"),
+      t("serviceTransferFeature3"),
+      t("serviceTransferFeature4"),
     ],
-    perfect: "Tourists • Executives • Families"
+    perfect: t("serviceTransferPerfect"),
   },
-
   {
     icon: "🚙",
-    title: "Car Hire & Rentals",
     color: "from-red-500 to-orange-600",
-    desc: "Choose from our fleet of safari Land Cruisers, luxury SUVs, executive sedans, tour vans and self-drive vehicles for every travel occasion.",
+    title: t("serviceCarTitle"),
+    desc: t("serviceCarDesc"),
     features: [
-      "4x4 Safari Vehicles",
-      "Self Drive",
-      "Professional Chauffeurs",
-      "Long-Term Rentals"
+      t("serviceCarFeature1"),
+      t("serviceCarFeature2"),
+      t("serviceCarFeature3"),
+      t("serviceCarFeature4"),
     ],
-    perfect: "Safari • Business • Road Trips"
+    perfect: t("serviceCarPerfect"),
   },
-
   {
     icon: "🌍",
-    title: "Tailor-Made Experiences",
     color: "from-emerald-600 to-green-800",
-    desc: "Every journey is uniquely designed around your interests, schedule and budget to create unforgettable travel memories throughout East Africa.",
+    title: t("serviceCustomTitle"),
+    desc: t("serviceCustomDesc"),
     features: [
-      "Custom Itineraries",
-      "Travel Consultation",
-      "Flexible Scheduling",
-      "Complete Trip Planning"
+      t("serviceCustomFeature1"),
+      t("serviceCustomFeature2"),
+      t("serviceCustomFeature3"),
+      t("serviceCustomFeature4"),
     ],
-    perfect: "Everyone"
+    perfect: t("serviceCustomPerfect"),
   }
 
 
@@ -480,6 +475,7 @@ i===index
     </div>
 
     {/* Bottom CTA */}
+    
     <div className="mt-24">
 
       <div className="rounded-[40px] overflow-hidden bg-gradient-to-r from-[#092517] via-[#123B25] to-[#092517] p-12 md:p-16 shadow-2xl">
@@ -489,17 +485,15 @@ i===index
           <div>
 
             <span className="uppercase tracking-[4px] text-yellow-400 text-sm font-bold">
-              Why Travel With Us
+              {t("whyTravel")}
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-6 leading-tight">
-              Your Journey Begins Here
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-6">
+              {t("journeyTitle")}
             </h2>
 
             <p className="mt-6 text-gray-300 leading-8 text-lg">
-              Whether you're planning a luxury safari, a corporate retreat,
-              airport transfers or a private holiday, our travel experts
-              ensure every detail is professionally handled from start to finish.
+              {t("journeyDescription")}
             </p>
 
           </div>
@@ -508,22 +502,30 @@ i===index
 
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
               <h3 className="text-5xl font-black text-yellow-400">10+</h3>
-              <p className="text-gray-300 mt-3">Years Experience</p>
+              <p className="text-gray-300 mt-3">
+                {t("experienceYears")}
+              </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
               <h3 className="text-5xl font-black text-yellow-400">500+</h3>
-              <p className="text-gray-300 mt-3">Successful Trips</p>
+              <p className="text-gray-300 mt-3">
+                {t("successfulTrips")}
+              </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
               <h3 className="text-5xl font-black text-yellow-400">24/7</h3>
-              <p className="text-gray-300 mt-3">Customer Support</p>
+              <p className="text-gray-300 mt-3">
+                {t("support247")}
+              </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
               <h3 className="text-5xl font-black text-yellow-400">100%</h3>
-              <p className="text-gray-300 mt-3">Tailor Made Tours</p>
+              <p className="text-gray-300 mt-3">
+                {t("tailorMade")}
+              </p>
             </div>
 
           </div>
@@ -821,7 +823,7 @@ i===index
   </div>
 </section>
 
-
+{/*Treking and climbing*/}
 <section className="relative py-28 bg-gradient-to-b from-black via-[#06130D] to-black text-white overflow-hidden">
 
   <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full"></div>
@@ -979,256 +981,272 @@ i===index
 <section className="relative py-28 bg-gradient-to-b from-[#F8F6F1] via-white to-[#F2EEE5] overflow-hidden">
 
   {/* Background Effects */}
-  <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[140px]" />
-  <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[140px]" />
+   {/* Background Effects */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[140px]" />
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[140px]" />
 
-  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
 
-    {/* Header */}
-    <div className="text-center max-w-3xl mx-auto">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto">
 
-      <span className="inline-flex items-center bg-green-100 text-green-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
-        Client Testimonials
-      </span>
-
-      <h2 className="mt-6 text-5xl font-black text-gray-900">
-        What Our Guests
-        <span className="block text-[#C8A94C]">
-          Say About Us
-        </span>
-      </h2>
-
-      <p className="mt-6 text-gray-600 text-lg leading-8">
-        Every safari is more than a trip—it's a lifetime memory. Read what our
-        happy guests say after exploring Kenya with Dengray Adventures.
-      </p>
-
-    </div>
-
-    {/* Google Rating */}
-    <div className="mt-16 flex justify-center">
-
-      <div className="bg-white rounded-3xl shadow-xl border border-gray-100 px-10 py-8 flex flex-col md:flex-row items-center gap-8">
-
-        <div className="text-center">
-
-          <h3 className="text-6xl font-black text-green-700">
-            5.0
-          </h3>
-
-          <div className="text-yellow-400 text-3xl mt-2">
-            ★★★★★
-          </div>
-
-          <p className="text-gray-600 mt-2">
-            Based on 6 Google Reviews
-          </p>
-
-        </div>
-
-        <div className="hidden md:block h-20 w-px bg-gray-200"></div>
-
-        <div>
-
-          <h3 className="text-2xl font-bold text-gray-900">
-            Trusted by Travellers Worldwide
-          </h3>
-
-          <p className="mt-3 text-gray-600 leading-7 max-w-lg">
-            Our guests consistently rate us 5 stars for our professionalism,
-            knowledgeable guides, personalized itineraries and unforgettable
-            safari experiences across Kenya.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    {/* Reviews */}
-    <div className="grid md:grid-cols-3 gap-8 mt-20">
-
-      {/* Review 1 */}
-      <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-
-        <div className="flex items-center justify-between">
-
-          <div className="text-yellow-400 text-2xl">
-            ★★★★★
-          </div>
-
-          <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-            Verified Google Review
+          <span className="inline-flex items-center bg-green-100 text-green-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
+            {t("testimonialsBadge")}
           </span>
 
+          <h2 className="mt-6 text-5xl font-black text-gray-900">
+            {t("testimonialsTitle1")}
+            <span className="block text-[#C8A94C]">
+              {t("testimonialsTitle2")}
+            </span>
+          </h2>
+
+          <p className="mt-6 text-gray-600 text-lg leading-8">
+            {t("testimonialsDescription")}
+          </p>
+
         </div>
 
-        <p className="mt-6 text-gray-600 leading-8 italic">
-          "We've travelled the world and the safari with Denis is by far the
-          most memorable, beautiful and magical experience we've ever had.
-          His passion, kindness and knowledge made every moment unforgettable."
-        </p>
+        {/* Google Rating */}
+        <div className="mt-16 flex justify-center">
 
-        <div className="mt-8 flex items-center gap-4">
+          <div className="bg-white rounded-3xl shadow-xl border border-gray-100 px-10 py-8 flex flex-col md:flex-row items-center gap-8">
 
-          <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
-            A
+            <div className="text-center">
+
+              <h3 className="text-6xl font-black text-green-700">
+                5.0
+              </h3>
+
+              <div className="text-yellow-400 text-3xl mt-2">
+                ★★★★★
+              </div>
+
+              <p className="text-gray-600 mt-2">
+                {t("googleBased")}
+              </p>
+
+            </div>
+
+            <div className="hidden md:block h-20 w-px bg-gray-200"></div>
+
+            <div>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                {t("trustedTitle")}
+              </h3>
+
+              <p className="mt-3 text-gray-600 leading-7 max-w-lg">
+                {t("trustedDescription")}
+              </p>
+
+            </div>
+
           </div>
 
-          <div>
+        </div>
 
-            <h4 className="font-bold text-gray-900">
-              Andrea Milán
-            </h4>
+        {/* Reviews */}
+        <div className="grid md:grid-cols-3 gap-8 mt-20">
 
-            <p className="text-sm text-gray-500">
-              Verified Google Reviewer
+          {/* Review 1 */}
+          <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+
+            <div className="flex items-center justify-between">
+
+              <div className="text-yellow-400 text-2xl">
+                ★★★★★
+              </div>
+
+              <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
+                {t("verifiedReview")}
+              </span>
+
+            </div>
+
+            <p className="mt-6 text-gray-600 leading-8 italic">
+              "We've travelled the world and the safari with Denis is by far the
+              most memorable, beautiful and magical experience we've ever had.
+              His passion, kindness and knowledge made every moment unforgettable."
             </p>
 
-          </div>
+            <div className="mt-8 flex items-center gap-4">
+
+              <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
+                A
+              </div>
+
+              <div>
+
+                <h4 className="font-bold text-gray-900">
+                  Andrea Milán
+                </h4>
+
+                <p className="text-sm text-gray-500">
+                  {t("verifiedReview")}
+                </p>
+
+              </div>
 
         </div>
 
       </div>
 
       {/* Review 2 */}
-      <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+      {/* Review 2 */}
+          <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
-        <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between">
 
-          <div className="text-yellow-400 text-2xl">
-            ★★★★★
-          </div>
+              <div className="text-yellow-400 text-2xl">
+                ★★★★★
+              </div>
 
-          <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-            Verified Google Review
-          </span>
+              <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
+                {t("verifiedReview")}
+              </span>
 
-        </div>
+            </div>
 
-        <p className="mt-6 text-gray-600 leading-8 italic">
-          "Our 2-night, 3-day Maasai Mara safari was perfectly organised.
-          Denis was an outstanding guide and made the trip unforgettable.
-          I highly recommend Dengray Adventures."
-        </p>
-
-        <div className="mt-8 flex items-center gap-4">
-
-          <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
-            O
-          </div>
-
-          <div>
-
-            <h4 className="font-bold text-gray-900">
-              Antoine Obunde
-            </h4>
-
-            <p className="text-sm text-gray-500">
-              Verified Google Reviewer
+            <p className="mt-6 text-gray-600 leading-8 italic">
+              "Our 2-night, 3-day Maasai Mara safari was perfectly organised.
+              Denis was an outstanding guide and made the trip unforgettable.
+              I highly recommend Dengray Adventures."
             </p>
 
+            <div className="mt-8 flex items-center gap-4">
+
+              <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
+                O
+              </div>
+
+              <div>
+
+                <h4 className="font-bold text-gray-900">
+                  Antoine Obunde
+                </h4>
+
+                <p className="text-sm text-gray-500">
+                  {t("verifiedReview")}
+                </p>
+
+              </div>
+
+            </div>
+
           </div>
 
-        </div>
+          {/* Review 3 */}
+          <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
-      </div>
+            <div className="flex items-center justify-between">
 
-      {/* Review 3 */}
-      <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="text-yellow-400 text-2xl">
+                ★★★★★
+              </div>
 
-        <div className="flex items-center justify-between">
+              <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
+                {t("verifiedReview")}
+              </span>
 
-          <div className="text-yellow-400 text-2xl">
-            ★★★★★
-          </div>
+            </div>
 
-          <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-            Verified Google Review
-          </span>
-
-        </div>
-
-        <p className="mt-6 text-gray-600 leading-8 italic">
-          "The safari was beautifully organised. The guide was friendly,
-          knowledgeable and reliable. We are happy to come back again.
-          Thank you for the amazing experience."
-        </p>
-
-        <div className="mt-8 flex items-center gap-4">
-
-          <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
-            S
-          </div>
-
-          <div>
-
-            <h4 className="font-bold text-gray-900">
-              Steinert Liesel
-            </h4>
-
-            <p className="text-sm text-gray-500">
-              Verified Google Reviewer
+            <p className="mt-6 text-gray-600 leading-8 italic">
+              "The safari was beautifully organised. The guide was friendly,
+              knowledgeable and reliable. We are happy to come back again.
+              Thank you for the amazing experience."
             </p>
 
+            <div className="mt-8 flex items-center gap-4">
+
+              <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
+                S
+              </div>
+
+              <div>
+
+                <h4 className="font-bold text-gray-900">
+                  Steinert Liesel
+                </h4>
+
+                <p className="text-sm text-gray-500">
+                  {t("verifiedReview")}
+                </p>
+
+              </div>
+
+            </div>
+
           </div>
 
         </div>
 
-      </div>
+        {/* Trust Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
 
-    </div>
+          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+            <h3 className="text-5xl font-black text-green-700">
+              5.0
+            </h3>
+            <p className="mt-2 text-gray-600">
+              {t("googleRating")}
+            </p>
+          </div>
 
-    {/* Trust Statistics */}
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+            <h3 className="text-5xl font-black text-green-700">
+              6+
+            </h3>
+            <p className="mt-2 text-gray-600">
+              {t("verifiedReviews")}
+            </p>
+          </div>
 
-      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-        <h3 className="text-5xl font-black text-green-700">5.0</h3>
-        <p className="mt-2 text-gray-600">Google Rating</p>
-      </div>
+          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+            <h3 className="text-5xl font-black text-green-700">
+              100%
+            </h3>
+            <p className="mt-2 text-gray-600">
+              {t("satisfiedGuests")}
+            </p>
+          </div>
 
-      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-        <h3 className="text-5xl font-black text-green-700">6+</h3>
-        <p className="mt-2 text-gray-600">Verified Reviews</p>
-      </div>
-
-      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-        <h3 className="text-5xl font-black text-green-700">100%</h3>
-        <p className="mt-2 text-gray-600">Satisfied Guests</p>
-      </div>
-
-      <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-        <h3 className="text-5xl font-black text-green-700">24/7</h3>
-        <p className="mt-2 text-gray-600">Travel Support</p>
-      </div>
+          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
+            <h3 className="text-5xl font-black text-green-700">
+              24/7
+            </h3>
+            <p className="mt-2 text-gray-600">
+              {t("travelSupport")}
+            </p>
+          </div>
 
     </div>
 
     {/* Buttons */}
-<div className="mt-16 flex flex-wrap justify-center gap-6">
+ {/* Action Buttons */}
+        <div className="mt-16 flex flex-wrap justify-center gap-6">
 
-  {/* Write Google Review */}
-  <a
-    href="https://search.google.com/local/writereview?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-3 px-8 py-4 bg-green-700 text-white font-semibold rounded-2xl shadow-lg hover:bg-green-800 hover:-translate-y-1 transition-all duration-300"
-  >
-    ⭐ Write a Review
-  </a>
+          {/* Write Google Review */}
+          <a
+            href="https://search.google.com/local/writereview?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-green-700 text-white font-semibold rounded-2xl shadow-lg hover:bg-green-800 hover:-translate-y-1 transition-all duration-300"
+          >
+            ⭐ {t("writeReview")}
+          </a>
 
-  {/* View Google Reviews */}
-  <a
-    href="https://search.google.com/local/reviews?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-3 px-8 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-2xl hover:bg-green-700 hover:text-white hover:-translate-y-1 transition-all duration-300"
-  >
-    💬 View All Reviews
-  </a>
+          {/* View Google Reviews */}
+          <a
+            href="https://search.google.com/local/reviews?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-2xl hover:bg-green-700 hover:text-white hover:-translate-y-1 transition-all duration-300"
+          >
+            💬 {t("viewAllReviews")}
+          </a>
 
-</div>
+        </div>
 
   </div>
 

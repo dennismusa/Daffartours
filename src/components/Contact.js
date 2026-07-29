@@ -11,27 +11,28 @@ function Contact() {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        e.target,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        () => {
-          alert("Request sent successfully!");
-        },
-        () => {
-          alert("Failed to send. Try again.");
-        }
-      );
+  const form = e.target;
 
-    e.target.reset();
-  };
+  try {
+    await emailjs.sendForm(
+      "service_jrb9hou",      // Your Service ID
+      "template_al8bqot",     // Your Template ID
+      form,
+      "5T09y2nLb5R4gilCJ"      // Your Public Key
+    );
+
+    alert("✅ Your safari request has been sent successfully!");
+
+    form.reset();
+  } catch (error) {
+    console.error(error);
+
+    alert("❌ Failed to send request. Please try again.");
+  }
+};
 
   const faqs = [
     {
@@ -165,7 +166,7 @@ function Contact() {
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-800">
             <iframe
               title="Map"
-               src="https://www.google.com/maps?q=dengrey%20Tours%20and%20Safaris%20Kajiado&output=embed"
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8121989644346!2d34.76524771073757!3d-0.10036579989821968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa50a19822da1%3A0xed5a397ac38f77eb!2sDENGRAY%20ADVENTURES!5e0!3m2!1sen!2ske!4v1785064870527!5m2!1sen!2ske"
               className="w-full h-[450px]"
               loading="lazy"
             />

@@ -195,6 +195,97 @@
 
   "services": "Services",
 
+
+"testimonialsBadge": "Client Testimonials",
+  "testimonialsTitle1": "What Our Guests",
+  "testimonialsTitle2": "Say About Us",
+  "testimonialsDescription": "Every safari is more than a trip—it's a lifetime memory. Read what our happy guests say after exploring Kenya with DenGrey Tours & Safaris.",
+
+  "googleBased": "Based on 6 Google Reviews",
+
+  "trustedTitle": "Trusted by Travellers Worldwide",
+
+  "trustedDescription": "Our guests consistently rate us 5 stars for our professionalism, knowledgeable guides, personalized itineraries and unforgettable safari experiences across Kenya.",
+
+  "verifiedReview": "Verified Google Review",
+
+  "googleRating": "Google Rating",
+  "verifiedReviews": "Verified Reviews",
+  "satisfiedGuests": "Satisfied Guests",
+  "travelSupport": "Travel Support",
+
+  "writeReview": "Write a Review",
+  "viewAllReviews": "View All Reviews",
+
+
+
+  "premiumServices": "Premium Services",
+  "servicesHeading1": "Explore Our",
+  "servicesHeading2": "Luxury Travel Services",
+  "servicesDescription": "From unforgettable safaris to luxury accommodation, executive transport, and tailor-made adventures, we provide complete travel experiences across Kenya and East Africa.",
+
+  "serviceSafariTitle": "Safari & Tour Packages",
+  "serviceSafariDesc": "Discover East Africa through expertly planned wildlife safaris, luxury lodge stays, beach holidays, cultural tours, mountain expeditions, and personalized travel experiences across Kenya, Tanzania, Uganda, and Rwanda.",
+  "serviceSafariFeature1": "Luxury & Budget Safaris",
+  "serviceSafariFeature2": "Professional Safari Guides",
+  "serviceSafariFeature3": "Customized Itineraries",
+  "serviceSafariFeature4": "National Park Reservations",
+  "serviceSafariPerfect": "Families • Couples • Honeymoon • Adventure Travellers",
+
+  "serviceHotelTitle": "Hotel & Lodge Booking",
+  "serviceHotelDesc": "Reserve luxury safari lodges, boutique hotels, beach resorts, executive apartments, and budget accommodation with carefully selected hospitality partners.",
+  "serviceHotelFeature1": "Luxury Lodges",
+  "serviceHotelFeature2": "Beach Resorts",
+  "serviceHotelFeature3": "Executive Apartments",
+  "serviceHotelFeature4": "Exclusive Rates",
+  "serviceHotelPerfect": "Vacation • Business • Family Holidays",
+
+  "serviceCorporateTitle": "Corporate Team Building",
+  "serviceCorporateDesc": "We organize unforgettable corporate retreats, conferences, incentive travel, leadership programs, and outdoor team-building experiences across East Africa.",
+  "serviceCorporateFeature1": "Conference Planning",
+  "serviceCorporateFeature2": "Outdoor Activities",
+  "serviceCorporateFeature3": "Corporate Retreats",
+  "serviceCorporateFeature4": "Leadership Events",
+  "serviceCorporatePerfect": "Companies • NGOs • Schools • Institutions",
+
+  "serviceTransferTitle": "Airport & Hotel Transfers",
+  "serviceTransferDesc": "Reliable airport pickups, hotel transfers, executive transportation, VIP travel, and chauffeur-driven services with professional drivers available every day.",
+  "serviceTransferFeature1": "Airport Pickups",
+  "serviceTransferFeature2": "Hotel Transfers",
+  "serviceTransferFeature3": "VIP Transport",
+  "serviceTransferFeature4": "24/7 Service",
+  "serviceTransferPerfect": "Tourists • Executives • Families",
+
+  "serviceCarTitle": "Car Hire & Rentals",
+  "serviceCarDesc": "Choose from our fleet of safari Land Cruisers, luxury SUVs, executive sedans, tour vans, and self-drive vehicles for every travel occasion.",
+  "serviceCarFeature1": "4×4 Safari Vehicles",
+  "serviceCarFeature2": "Self Drive",
+  "serviceCarFeature3": "Professional Chauffeurs",
+  "serviceCarFeature4": "Long-Term Rentals",
+  "serviceCarPerfect": "Safari • Business • Road Trips",
+
+  "serviceCustomTitle": "Tailor-Made Experiences",
+  "serviceCustomDesc": "Every journey is uniquely designed around your interests, schedule, and budget to create unforgettable travel memories throughout East Africa.",
+  "serviceCustomFeature1": "Custom Itineraries",
+  "serviceCustomFeature2": "Travel Consultation",
+  "serviceCustomFeature3": "Flexible Scheduling",
+  "serviceCustomFeature4": "Complete Trip Planning",
+  "serviceCustomPerfect": "Everyone",
+
+  "perfectFor": "Perfect For",
+
+  "whyTravel": "Why Travel With Us",
+  "journeyTitle": "Your Journey Begins Here",
+  "journeyDescription": "Whether you're planning a luxury safari, a corporate retreat, airport transfers, or a private holiday, our travel experts ensure every detail is professionally handled from start to finish.",
+
+  "experienceYears": "Years Experience",
+  "successfulTrips": "Successful Trips",
+  "support247": "24/7 Customer Support",
+  "tailorMade": "Tailor-Made Tours",
+
+
+
+
   "service1": "Safari Vehicle Hire",
   "service2": "Airport Transfers",
   "service3": "Group Tours",

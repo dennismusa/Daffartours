@@ -190,6 +190,97 @@
   "service3": "Tours de groupe",
   "service4": "Voyages safari privés",
 
+
+  "premiumServices": "Services Premium",
+
+  "servicesHeading1": "Découvrez Nos",
+  "servicesHeading2": "Services de Voyage de Luxe",
+
+  "servicesDescription": "Des safaris inoubliables aux hébergements de luxe, en passant par les transports exécutifs et les voyages sur mesure, nous proposons des expériences de voyage complètes à travers le Kenya et l'Afrique de l'Est.",
+
+  "serviceSafariTitle": "Safaris & Circuits",
+  "serviceSafariDesc": "Découvrez l'Afrique de l'Est grâce à des safaris soigneusement organisés, des séjours dans des lodges de luxe, des vacances balnéaires, des circuits culturels, des expéditions en montagne et des voyages personnalisés au Kenya, en Tanzanie, en Ouganda et au Rwanda.",
+  "serviceSafariFeature1": "Safaris de Luxe et Économiques",
+  "serviceSafariFeature2": "Guides Professionnels",
+  "serviceSafariFeature3": "Itinéraires Personnalisés",
+  "serviceSafariFeature4": "Réservations des Parcs Nationaux",
+  "serviceSafariPerfect": "Familles • Couples • Lunes de Miel • Aventuriers",
+
+  "serviceHotelTitle": "Réservation d'Hôtels & Lodges",
+  "serviceHotelDesc": "Réservez des lodges de safari de luxe, des hôtels de charme, des stations balnéaires, des appartements exécutifs et des hébergements économiques auprès de partenaires sélectionnés.",
+  "serviceHotelFeature1": "Lodges de Luxe",
+  "serviceHotelFeature2": "Stations Balnéaires",
+  "serviceHotelFeature3": "Appartements Exécutifs",
+  "serviceHotelFeature4": "Tarifs Exclusifs",
+  "serviceHotelPerfect": "Vacances • Voyages d'Affaires • Séjours en Famille",
+
+  "serviceCorporateTitle": "Team Building d'Entreprise",
+  "serviceCorporateDesc": "Nous organisons des retraites d'entreprise, des conférences, des voyages de motivation, des programmes de leadership et des activités de team building en plein air dans toute l'Afrique de l'Est.",
+  "serviceCorporateFeature1": "Organisation de Conférences",
+  "serviceCorporateFeature2": "Activités de Plein Air",
+  "serviceCorporateFeature3": "Retraites d'Entreprise",
+  "serviceCorporateFeature4": "Événements de Leadership",
+  "serviceCorporatePerfect": "Entreprises • ONG • Écoles • Institutions",
+
+  "serviceTransferTitle": "Transferts Aéroport & Hôtel",
+  "serviceTransferDesc": "Profitez de transferts fiables entre l'aéroport et votre hôtel, de transports exécutifs, de services VIP et de chauffeurs professionnels disponibles tous les jours.",
+  "serviceTransferFeature1": "Accueil à l'Aéroport",
+  "serviceTransferFeature2": "Transferts Hôtel",
+  "serviceTransferFeature3": "Transport VIP",
+  "serviceTransferFeature4": "Service 24h/24 et 7j/7",
+  "serviceTransferPerfect": "Touristes • Dirigeants • Familles",
+
+  "serviceCarTitle": "Location de Voitures",
+  "serviceCarDesc": "Choisissez parmi notre flotte de Land Cruisers de safari, SUV de luxe, berlines exécutives, vans touristiques et véhicules en libre conduite adaptés à tous vos besoins.",
+  "serviceCarFeature1": "Véhicules Safari 4x4",
+  "serviceCarFeature2": "Location Sans Chauffeur",
+  "serviceCarFeature3": "Chauffeurs Professionnels",
+  "serviceCarFeature4": "Locations Longue Durée",
+  "serviceCarPerfect": "Safari • Affaires • Voyages Routiers",
+
+  "serviceCustomTitle": "Expériences Sur Mesure",
+  "serviceCustomDesc": "Chaque voyage est conçu selon vos centres d'intérêt, votre emploi du temps et votre budget afin de créer des souvenirs inoubliables à travers l'Afrique de l'Est.",
+  "serviceCustomFeature1": "Itinéraires Personnalisés",
+  "serviceCustomFeature2": "Conseils de Voyage",
+  "serviceCustomFeature3": "Planification Flexible",
+  "serviceCustomFeature4": "Organisation Complète du Voyage",
+  "serviceCustomPerfect": "Pour Tous",
+
+  "perfectFor": "Idéal Pour",
+
+  "whyTravel": "Pourquoi Voyager Avec Nous",
+  "journeyTitle": "Votre Aventure Commence Ici",
+  "journeyDescription": "Que vous planifiez un safari de luxe, une retraite d'entreprise, un transfert aéroportuaire ou des vacances privées, nos experts s'occupent de chaque détail avec professionnalisme.",
+
+  "experienceYears": "Années d'Expérience",
+  "successfulTrips": "Voyages Réussis",
+  "support247": "Assistance Client 24h/24 et 7j/7",
+  "tailorMade": "Voyages Entièrement Personnalisés",
+
+
+
+  "testimonialsBadge": "Témoignages des clients",
+  "testimonialsTitle1": "Ce que disent",
+  "testimonialsTitle2": "Nos voyageurs",
+  "testimonialsDescription": "Chaque safari est plus qu'un voyage : c'est un souvenir pour la vie. Découvrez ce que nos clients disent de leur expérience avec DenGrey Tours & Safaris.",
+
+  "googleBased": "Basé sur 6 avis Google",
+
+  "trustedTitle": "Approuvé par les voyageurs du monde entier",
+
+  "trustedDescription": "Nos clients nous attribuent régulièrement 5 étoiles pour notre professionnalisme, nos guides expérimentés, nos itinéraires personnalisés et nos safaris inoubliables au Kenya.",
+
+  "verifiedReview": "Avis Google vérifié",
+
+  "googleRating": "Note Google",
+  "verifiedReviews": "Avis vérifiés",
+  "satisfiedGuests": "Clients satisfaits",
+  "travelSupport": "Assistance voyage 24h/24",
+
+  "writeReview": "Écrire un avis",
+  "viewAllReviews": "Voir tous les avis",
+
+
   "contactInfo": "Informations de contact",
 
   "location": "📍 Nairobi, Kenya",
