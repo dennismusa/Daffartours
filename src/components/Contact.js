@@ -82,7 +82,7 @@ function Contact() {
             <div className="space-y-3 text-gray-300">
               <p>📍 Nairobi, Kenya</p>
               <p>📞  +254112277671</p>
-              <p>✉ info@DenGreytours.com</p>
+              <p>✉ dengrayadventures@gmail.com</p>
             </div>
 
             <a
@@ -277,7 +277,7 @@ function Contact() {
         </p>
   
         <p className="text-gray-400 leading-8 mb-3">
-          Professional safari vehicle hire services in kajiado ,kenya. Safe, comfortable, and unforgettable safari experiences.
+          Professional safari vehicle hire services in Nairobi ,kenya. Safe, comfortable, and unforgettable safari experiences.
         </p>
   
         <a
@@ -340,7 +340,7 @@ function Contact() {
         <ul className="space-y-4 text-gray-400">
           <li>📍 Nairobi, Kenya</li>
           <li>📞 +254112277671</li>
-          <li>✉ dengrey@gmail.com</li>
+          <li>✉ dengrayadventures@gmail.com</li>
         </ul>
   
         <a
@@ -356,7 +356,7 @@ function Contact() {
   
     {/* Bottom */}
     <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-      © 2026 DenGrey Tours & Safaris . All Rights Reserved.
+      © 2026 DenGray Tours & Safaris . All Rights Reserved.
     </div>
   </footer>
 
