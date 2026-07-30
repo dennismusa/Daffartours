@@ -304,7 +304,7 @@ Ready For Your Adventure?
 
 <p className="mt-6 text-white/80">
 
-Experience Amboseli with Renlen Tours & Safaris
+Experience Amboseli with DenGray Tours & Safaris
 
 </p>
 
@@ -369,7 +369,7 @@ Plan Safari
           <ul className="space-y-3 text-gray-400">
             <li>Nairobi, Kenya</li>
             <li>+254112277671</li>
-            <li>renlentours@gmail.com</li>
+            <li>dengrayadventures@gmail.com</li>
           </ul>
 
           <a
@@ -384,7 +384,7 @@ Plan Safari
       </div>
 
       <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-        © 2026 Renlen Tours and Safaris. All Rights Reserved.
+        © 2026 DenGray Tours and Safaris. All Rights Reserved.
       </div>
     </footer>
 

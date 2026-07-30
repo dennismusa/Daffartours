@@ -705,7 +705,7 @@ Compare Our Safari Vehicles
         </p>
   
         <p className="text-gray-400 leading-8 mb-3">
-          Professional safari vehicle hire services in kajiado ,kenya. Safe, comfortable, and unforgettable safari experiences.
+          Professional safari vehicle hire services in kenya. Safe, comfortable, and unforgettable safari experiences.
         </p>
   
         <a
