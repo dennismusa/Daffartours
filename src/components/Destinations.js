@@ -192,7 +192,7 @@ function Destinations() {
 
             {/* CTA BUTTON */}
             <a
-              href={`https://wa.me/+254717554177?text=${encodeURIComponent(
+              href={`https://wa.me/+254112277671?text=${encodeURIComponent(
                 `Hello, I want to visit ${dest.name}. Please help me plan a safari trip.`
               )}`}
               target="_blank"
@@ -230,7 +230,7 @@ function Destinations() {
     </p>
 
     <a
-      href="https://wa.me/+254717554177"
+      href="https://wa.me/+254112277671"
       target="_blank"
       rel="noreferrer"
       className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 sm:px-10 py-4 rounded-xl shadow-lg transition"
@@ -248,7 +248,7 @@ function Destinations() {
       {/* Brand */}
       <div>
         <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-          DenGrey Tours & Safaris
+          DenGray Tours & Safaris
         </h2>
   
         <p className="text-xs text-gray-500 mb-1">
@@ -256,7 +256,7 @@ function Destinations() {
         </p>
   
         <p className="text-gray-400 leading-8 mb-3">
-          Professional safari vehicle hire services in kajiado ,kenya. Safe, comfortable, and unforgettable safari experiences.
+          Professional safari vehicle hire services in Nairobi ,kenya. Safe, comfortable, and unforgettable safari experiences.
         </p>
   
         <a
@@ -317,13 +317,13 @@ function Destinations() {
         <h3 className="text-xl font-bold mb-5">Contact Info</h3>
   
         <ul className="space-y-4 text-gray-400">
-          <li>📍 Kajiado, Kenya</li>
-          <li>📞 +254717554177</li>
-          <li>✉ dengreytours@gmail.com</li>
+          <li>📍 Nairobi, Kenya</li>
+          <li>📞 +254112277671</li>
+          <li>✉ dengrayadventures@gmail.com</li>
         </ul>
   
         <a
-          href="https://wa.me/+254717554177"
+          href="https://wa.me/+254112277671"
           target="_blank"
           rel="noreferrer"
           className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
@@ -335,7 +335,7 @@ function Destinations() {
   
     {/* Bottom */}
     <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-      © 2026 DenGrey Tours & Safaris . All Rights Reserved.
+      © 2026 DenGray Tours & Safaris . All Rights Reserved.
     </div>
   </footer>
     </div>
