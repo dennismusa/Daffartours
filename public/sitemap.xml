@@ -1,40 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- =========================================================
+         DAFFAR TOURS AND TRAVEL — XML SITEMAP
+         ========================================================= -->
 
     <!-- Home -->
     <url>
-        <loc>https://dengrayadventures.com/</loc>
-        <lastmod>2026-07-28</lastmod>
+        <loc>https://daffartoursandtravel.com/</loc>
+        <lastmod>2026-08-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Destinations -->
-    
-
-    <!-- Safari Vehicles -->
+    <!-- About -->
     <url>
-        <loc>https://dengrayadventures.com/vehicles</loc>
-        <lastmod>2026-07-28</lastmod>
+        <loc>https://daffartoursandtravel.com/about</loc>
+        <lastmod>2026-08-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Gallery -->
+    <!-- Safaris -->
     <url>
-        <loc>https://dengrayadventures.com/gallery</loc>
-        <lastmod>2026-07-28</lastmod>
+        <loc>https://daffartoursandtravel.com/safaris</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Safari Categories -->
+    <url>
+        <loc>https://daffartoursandtravel.com/tailor-made-safaris</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/honeymoon-safaris</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/wildebeest-safaris</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/birding-safaris</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/photography-safaris</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/beach-holidays</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/mountain-trekking</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- =========================================================
+         DESTINATIONS
+         ========================================================= -->
+
+    <!-- Kenya -->
+    <url>
+        <loc>https://daffartoursandtravel.com/maasai-mara</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/lake-nakuru</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/amboseli</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Tanzania -->
+    <url>
+        <loc>https://daffartoursandtravel.com/serengeti</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/ngorongoro</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/tarangire</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Beach -->
+    <url>
+        <loc>https://daffartoursandtravel.com/diani</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/zanzibar</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Mountains -->
+    <url>
+        <loc>https://daffartoursandtravel.com/mount-kenya</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://daffartoursandtravel.com/mount-kilimanjaro</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- =========================================================
+         GALLERY
+         ========================================================= -->
+
+    <url>
+        <loc>https://daffartoursandtravel.com/gallery</loc>
+        <lastmod>2026-08-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Contact -->
+    <!-- =========================================================
+         COMMUNITY
+         ========================================================= -->
+
     <url>
-        <loc>https://dengrayadventures.com/contact</loc>
-        <lastmod>2026-07-28</lastmod>
+        <loc>https://daffartoursandtravel.com/community</loc>
+        <lastmod>2026-08-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <!-- =========================================================
+         BLOG
+         ========================================================= -->
+
+    <url>
+        <loc>https://daffartoursandtravel.com/blog</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+
+    <url>
+        <loc>https://daffartoursandtravel.com/contact</loc>
+        <lastmod>2026-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
 </urlset>
