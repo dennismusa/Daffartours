@@ -1,72 +1,61 @@
 /* eslint-disable jsx-a11y/alt-text */
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import i18n from "i18next";
 
 import safarilinklogo from "../assets/safarilinklogo.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [destOpen, setDestOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const langRef = useRef();
-  const { t } = useTranslation();
-
-  const languages = [
-    { code: "en", name: "English", flag: "🇬🇧" },
-    { code: "fr", name: "French", flag: "🇫🇷" },
-    { code: "de", name: "German", flag: "🇩🇪" },
-    { code: "es", name: "Spanish", flag: "🇪🇸" }
-  ];
-
   const destinations = [
-    ["Aberdare National Park", "/aberdare"],
-    ["Meru National Park", "/meru"],
-    ["Amboseli National Park", "/amboseli"],
-    ["Nairobi National Park", "/nairobipark"],
+    ["Maasai Mara", "/maasaimara"],
+    ["Lake Nakuru", "/lakenakuru"],
+    ["Amboseli", "/amboseli"],
+    ["Serengeti", "/serengeti"],
+    ["Ngorongoro", "/ngorongoro"],
+    ["Tarangire", "/tarangire"],
+    ["Diani", "/diani"],
+    ["Zanzibar", "/zanzibar"],
     ["Mount Kenya", "/mountkenya"],
-    ["Hell’s Gate", "/hellsgate"],
-    ["Tsavo East", "/tsavoeast"],
-    ["Tsavo West", "/tsavowest"],
-    ["Lake Nakuru", "/lakenakuru"]
+    ["Mount Kilimanjaro", "/mountkilimanjaro"],
+    
   ];
 
   useEffect(() => {
-    const scroll = () => {
-      const height = document.documentElement.scrollHeight - window.innerHeight;
+    const handleScroll = () => {
+      const height =
+        document.documentElement.scrollHeight - window.innerHeight;
 
-      setProgress((window.scrollY / height) * 100);
+      const scrollProgress =
+        height > 0 ? (window.scrollY / height) * 100 : 0;
+
+      setProgress(scrollProgress);
       setScrolled(window.scrollY > 40);
     };
 
-    const close = (e) => {
-      if (langRef.current && !langRef.current.contains(e.target)) {
-        setLangOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", scroll);
-    document.addEventListener("click", close);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", scroll);
-      document.removeEventListener("click", close);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const changeLanguage = (code, e) => {
-    e.stopPropagation();
-    i18n.changeLanguage(code);
-    localStorage.setItem("lang", code);
-    setLangOpen(false);
-  };
+  // Prevent background page from scrolling when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
-  const current = languages.find((x) => x.code === i18n.language) || languages[0];
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   const closeMobile = () => {
     setMenuOpen(false);
@@ -75,261 +64,795 @@ function Navbar() {
 
   return (
     <>
-      {/* SCROLL BAR */}
+      {/* =====================================================
+          SCROLL PROGRESS
+      ====================================================== */}
       <div className="fixed top-0 left-0 w-full h-[3px] z-[999]">
-        <div className="h-full bg-yellow-400 transition-all" style={{ width: `${progress}%` }} />
+        <div
+          className="h-full bg-[#F39A08] transition-all duration-200"
+          style={{ width: `${progress}%` }}
+        />
       </div>
 
-      <nav className={`fixed top-0 left-0 w-full z-[100] border-b border-white/10 backdrop-blur-xl transition-all duration-500 ${scrolled ? "bg-[#151515] py-2" : "bg-[#151515] py-4"}`}>
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="h-20 flex items-center justify-between">
+      {/* =====================================================
+          NAVBAR
+      ====================================================== */}
+      <nav
+        className={`
+          fixed top-0 left-0 w-full z-[100]
+          border-b border-white/10
+          backdrop-blur-xl
+          transition-all duration-500
+          ${
+            scrolled
+              ? "bg-[#0D4825]/98 py-1 shadow-xl"
+              : "bg-[#0D4825]/90 py-2 sm:py-3"
+          }
+        `}
+      >
+        <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
+          <div
+            className="
+              min-h-[72px]
+              sm:min-h-[76px]
+              lg:min-h-[82px]
+              flex
+              items-center
+              justify-between
+            "
+          >
 
-            {/* LOGO */}
-            <Link to="/" className="flex items-center gap-3">
-              <img src={safarilinklogo} className="w-11 h-11 rounded-full border border-yellow-400 object-cover" />
+            {/* =================================================
+                LOGO
+            ================================================== */}
+            <Link
+              to="/"
+              onClick={closeMobile}
+              className="
+                flex
+                items-center
+                gap-2
+                sm:gap-3
+                min-w-0
+              "
+            >
+              <img
+                src={safarilinklogo}
+                className="
+                  w-10
+                  h-10
+                  sm:w-12
+                  sm:h-12
+                  lg:w-14
+                  lg:h-14
+                  object-contain
+                  rounded-full
+                  bg-[#F7F4EA]
+                  p-1
+                  border
+                  border-[#F39A08]/70
+                  flex-shrink-0
+                  transition-transform
+                  duration-300
+                  hover:scale-105
+                "
+              />
 
-              <div>
-                <h2 className="text-yellow-300 font-bold">DenGrey </h2>
-                <p className="text-yellow-400 text-xs">Safari Adventures</p>
+              <div className="hidden xs:block sm:block min-w-0">
+                <h2
+                  className="
+                    text-white
+                    font-serif
+                    font-bold
+                    text-base
+                    sm:text-lg
+                    lg:text-xl
+                    tracking-wide
+                  "
+                >
+                  DAFFAR
+                </h2>
+
+                <p
+                  className="
+                    text-[#F39A08]
+                    text-[8px]
+                    sm:text-[10px]
+                    lg:text-xs
+                    tracking-[0.12em]
+                    sm:tracking-[0.2em]
+                    uppercase
+                    whitespace-nowrap
+                  "
+                >
+                  Tours & Travel
+                </p>
               </div>
             </Link>
 
-            {/* DESKTOP */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* =================================================
+                DESKTOP NAVIGATION
+            ================================================== */}
+            <div
+              className="
+                hidden
+                lg:flex
+                items-center
+                gap-1
+                xl:gap-2
+              "
+            >
+              <Link to="/" className="navBtn">
+                Home
+              </Link>
 
-              <Link to="/" className="navBtn">{t("home")}</Link>
+              <Link to="/about" className="navBtn">
+                About Us
+              </Link>
 
-              <div className="relative" onMouseEnter={() => setDestOpen(true)} onMouseLeave={() => setDestOpen(false)}>
+              <Link to="/safaris" className="navBtn">
+                Safaris
+              </Link>
 
-                <button className="navBtn">
-                  {t("destinations")} ▾
+              {/* DESTINATIONS */}
+              <div
+                className="relative"
+                onMouseEnter={() => setDestOpen(true)}
+                onMouseLeave={() => setDestOpen(false)}
+              >
+                <button className="navBtn flex items-center gap-1">
+                  Destinations
+
+                  <span
+                    className={`
+                      text-[#F39A08]
+                      transition-transform
+                      duration-300
+                      ${destOpen ? "rotate-180" : ""}
+                    `}
+                  >
+                    ▾
+                  </span>
                 </button>
 
                 {destOpen && (
-                  <div className="dropMenu">
-                    <div className="titleDrop">Explore Parks</div>
+                  <div className="dropMenu left-0 w-64">
+                    <div className="titleDrop">
+                      Explore Destinations
+                    </div>
 
-                    {destinations.map(([name, path]) => (
-                      <Link key={path} to={path} className="dropItem">
-                        {name}
-                      </Link>
-                    ))}
+                    <div className="max-h-[70vh] overflow-y-auto">
+                      {destinations.map(([name, path]) => (
+                        <Link
+                          key={path}
+                          to={path}
+                          className="dropItem"
+                          onClick={() => setDestOpen(false)}
+                        >
+                          <span className="text-[#F39A08] mr-2">
+                            •
+                          </span>
+
+                          {name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
-
               </div>
 
-              <Link to="/gallery" className="navBtn">{t("gallery")}</Link>
-
-              <Link to="/packages" className="navBtn">
-                Packages
+              <Link to="/activities" className="navBtn">
+                Activities
               </Link>
 
-              <Link to="/vehicles" className="navBtn">{t("vehicles")}</Link>
+              <Link to="/communitywork" className="navBtn">
+                Community
+              </Link>
 
-              <Link to="/contact" className="navBtn">{t("contact")}</Link>
+              <Link to="/faqs" className="navBtn">
+                FAQs
+              </Link>
 
-              {/* LANGUAGE */}
-              <div ref={langRef} className="relative">
+              <Link to="/tourafricablog" className="navBtn">
+                Blog
+              </Link>
 
-                <button
-                  className="navBtn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setLangOpen(!langOpen);
-                  }}
-                >
-                  {current.flag} {current.name}
-                </button>
+              <Link to="/contact" className="navBtn">
+                Contact
+              </Link>
 
-                <div className={`dropMenu right-0 w-40 ${langOpen ? "show" : "hide"}`}>
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      className="dropItem w-full text-left"
-                      onClick={(e) => changeLanguage(lang.code, e)}
-                    >
-                      {lang.flag} {lang.name}
-                    </button>
-                  ))}
-                </div>
+              {/* DESKTOP CTA */}
+              <a
+                href="https://wa.me/+254708164662"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  ml-1
+                  xl:ml-2
+                  bg-[#F39A08]
+                  hover:bg-[#ffad20]
+                  text-[#0D4825]
+                  px-4
+                  xl:px-5
+                  py-2.5
+                  xl:py-3
+                  rounded-full
+                  font-bold
+                  text-xs
+                  xl:text-sm
+                  whitespace-nowrap
+                  shadow-lg
+                  shadow-[#F39A08]/20
+                  transition-all
+                  duration-300
+                  hover:scale-105
+                "
+              >
+                Plan Your Safari
+              </a>
+            </div>
 
-              </div>
-
-              <a href="https://wa.me/+254112277671" className="bg-yellow-400 text-black px-5 py-3 rounded-full font-bold">
-                {t("book")}
+            {/* =================================================
+                TABLET / MOBILE CONTROLS
+            ================================================== */}
+            <div
+              className="
+                flex
+                lg:hidden
+                items-center
+                gap-2
+                sm:gap-3
+              "
+            >
+              {/* BOOK BUTTON */}
+              <a
+                href="https://wa.me/+254708164662"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  bg-[#F39A08]
+                  text-[#0D4825]
+                  px-3
+                  sm:px-4
+                  py-2
+                  rounded-full
+                  font-bold
+                  text-[11px]
+                  sm:text-xs
+                  whitespace-nowrap
+                  shadow-lg
+                  hover:bg-[#ffad20]
+                  transition
+                "
+              >
+                Book Now
               </a>
 
-            </div>
-
-            {/* MOBILE */}
-            <div className="md:hidden flex items-center gap-3">
-
-              <div ref={langRef} className="relative">
-
-                <button
-                  className="mobileLang"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setLangOpen(!langOpen);
-                  }}
-                >
-                  {current.flag} {current.code.toUpperCase()}
-                </button>
-
-                <div className={`dropMenu right-0 w-40 ${langOpen ? "show" : "hide"}`}>
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      className="dropItem w-full text-left"
-                      onClick={(e) => changeLanguage(lang.code, e)}
-                    >
-                      {lang.flag} {lang.name}
-                    </button>
-                  ))}
-                </div>
-
-              </div>
-
-              <button onClick={() => setMenuOpen(true)} className="text-white text-3xl">
-                ☰
+              {/* MENU BUTTON */}
+              <button
+                type="button"
+                onClick={() => setMenuOpen(true)}
+                className="
+                  w-10
+                  h-10
+                  sm:w-11
+                  sm:h-11
+                  flex
+                  items-center
+                  justify-center
+                  rounded-xl
+                  bg-white/10
+                  border
+                  border-white/10
+                  text-white
+                  hover:bg-white/20
+                  transition
+                "
+                aria-label="Open navigation menu"
+                aria-expanded={menuOpen}
+              >
+                <span className="text-2xl leading-none">
+                  ☰
+                </span>
               </button>
-
             </div>
-
           </div>
         </div>
       </nav>
 
-      {/* OVERLAY */}
+      {/* =====================================================
+          MOBILE OVERLAY
+      ====================================================== */}
       <div
         onClick={closeMobile}
-        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-[180] transition-all duration-500 md:hidden ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`
+          fixed
+          inset-0
+          bg-black/70
+          backdrop-blur-sm
+          z-[180]
+          lg:hidden
+          transition-all
+          duration-300
+          ${
+            menuOpen
+              ? "opacity-100 visible"
+              : "opacity-0 invisible pointer-events-none"
+          }
+        `}
       />
 
-      {/* MOBILE DRAWER */}
-      <div className={`fixed top-0 right-0 h-screen w-full bg-[#0d0d0d] z-[200] transition-all duration-500 overflow-y-auto md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
+      {/* =====================================================
+          MOBILE DRAWER
+      ====================================================== */}
+      <aside
+        className={`
+          fixed
+          top-0
+          right-0
+          h-[100dvh]
+          w-[88%]
+          max-w-[420px]
+          bg-[#0D4825]
+          z-[200]
+          lg:hidden
+          shadow-2xl
+          overflow-hidden
+          transition-transform
+          duration-500
+          ease-out
+          ${
+            menuOpen
+              ? "translate-x-0"
+              : "translate-x-full"
+          }
+        `}
+      >
+        {/* MOBILE HEADER */}
+        <div
+          className="
+            h-[76px]
+            sm:h-[82px]
+            px-4
+            sm:px-5
+            flex
+            items-center
+            justify-between
+            border-b
+            border-white/10
+            bg-[#08391D]
+          "
+        >
+          <Link
+            to="/"
+            onClick={closeMobile}
+            className="flex items-center gap-3 min-w-0"
+          >
+            <img
+              src={safarilinklogo}
+              className="
+                w-11
+                h-11
+                sm:w-12
+                sm:h-12
+                object-contain
+                rounded-full
+                bg-[#F7F4EA]
+                p-1
+                border
+                border-[#F39A08]
+                flex-shrink-0
+              "
+            />
 
-        <div className="p-5 flex justify-between items-center border-b border-white/10">
+            <div className="min-w-0">
+              <h2 className="text-white font-bold tracking-wide">
+                DAFFAR
+              </h2>
 
-          <div className="flex items-center gap-3">
-            <img src={safarilinklogo} className="w-12 h-12 rounded-full border border-yellow-400" />
-
-            <div>
-              <h2 className="text-white font-bold">DenGrey </h2>
-              <p className="text-yellow-400 text-xs">Safari Adventures</p>
+              <p
+                className="
+                  text-[#F39A08]
+                  text-[9px]
+                  sm:text-xs
+                  tracking-[0.15em]
+                  uppercase
+                  whitespace-nowrap
+                "
+              >
+                Tours & Travel
+              </p>
             </div>
-          </div>
+          </Link>
 
-          <button onClick={closeMobile} className="text-white text-4xl">
+          <button
+            type="button"
+            onClick={closeMobile}
+            className="
+              w-10
+              h-10
+              sm:w-11
+              sm:h-11
+              flex
+              items-center
+              justify-center
+              rounded-full
+              text-white
+              text-2xl
+              sm:text-3xl
+              hover:bg-white/10
+              transition
+              flex-shrink-0
+            "
+            aria-label="Close navigation menu"
+          >
             ✕
           </button>
-
         </div>
 
-        <div className="p-6 space-y-4">
+        {/* MOBILE SCROLLABLE CONTENT */}
+        <div
+          className="
+            h-[calc(100dvh-76px)]
+            sm:h-[calc(100dvh-82px)]
+            overflow-y-auto
+            overscroll-contain
+            px-4
+            sm:px-5
+            py-5
+            pb-8
+          "
+        >
+          <div className="space-y-2">
 
-          <Link to="/" onClick={closeMobile} className="menuBtn">
-            🏠 {t("home")}
-          </Link>
+            {/* HOME */}
+            <Link
+              to="/"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Home</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
-          <button onClick={() => setDestOpen(!destOpen)} className="menuBtn justify-between">
-            🌍 {t("destinations")} <span>⌄</span>
-          </button>
+            {/* ABOUT */}
+            <Link
+              to="/about"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>About Us</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
-          {destOpen && (
-            <div className="bg-[#1a1a1a] p-4 rounded-2xl">
+            {/* SAFARIS */}
+            <Link
+              to="/safaris"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Safaris</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
-              {destinations.map(([name, path]) => (
-                <Link key={path} to={path} onClick={closeMobile} className="block py-3 text-gray-300">
-                  🦁 {name}
-                </Link>
-              ))}
+            {/* DESTINATIONS */}
+            <button
+              type="button"
+              onClick={() => setDestOpen(!destOpen)}
+              className="
+                mobileMenuBtn
+                w-full
+                justify-between
+              "
+              aria-expanded={destOpen}
+            >
+              <span>Destinations</span>
 
+              <span
+                className={`
+                  text-[#F39A08]
+                  text-xl
+                  transition-transform
+                  duration-300
+                  ${destOpen ? "rotate-180" : ""}
+                `}
+              >
+                ⌄
+              </span>
+            </button>
+
+            {/* DESTINATION LIST */}
+            <div
+              className={`
+                overflow-hidden
+                transition-all
+                duration-300
+                ${
+                  destOpen
+                    ? "max-h-[700px] opacity-100 mt-2"
+                    : "max-h-0 opacity-0"
+                }
+              `}
+            >
+              <div
+                className="
+                  bg-[#08391D]
+                  p-2
+                  rounded-2xl
+                  border
+                  border-white/5
+                  space-y-1
+                "
+              >
+                {destinations.map(([name, path]) => (
+                  <Link
+                    key={path}
+                    to={path}
+                    onClick={closeMobile}
+                    className="
+                      flex
+                      items-center
+                      gap-3
+                      py-3
+                      px-3
+                      sm:px-4
+                      rounded-xl
+                      text-gray-200
+                      text-sm
+                      hover:bg-white/10
+                      hover:text-[#F39A08]
+                      transition
+                    "
+                  >
+                    <span className="text-[#F39A08]">
+                      •
+                    </span>
+
+                    <span>{name}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
-          )}
 
-          <Link to="/gallery" onClick={closeMobile} className="menuBtn">
-            📸 {t("gallery")}
-          </Link>
+            {/* ACTIVITIES */}
+            <Link
+              to="/activities"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Activities</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
-          <Link to="/packages" onClick={closeMobile} className="menuBtn">
-            📦 Packages
-          </Link>
+            {/* COMMUNITY */}
+            <Link
+              to="/communitywork"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Community Work</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
-          <Link to="/vehicles" onClick={closeMobile} className="menuBtn">
-            🚙 {t("vehicles")}
-          </Link>
+            {/* FAQS */}
+            <Link
+              to="/faqs"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>FAQs</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
-          <Link to="/contact" onClick={closeMobile} className="menuBtn">
-            📞 {t("contact")}
-          </Link>
+            {/* BLOG */}
+            <Link
+              to="/tourafricablog"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Tour Africa Blog</span>
+              <span className="mobileArrow">→</span>
+            </Link>
 
+            {/* GALLERY */}
+            <Link
+              to="/gallery"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Gallery</span>
+              <span className="mobileArrow">→</span>
+            </Link>
+
+            {/* CONTACT */}
+            <Link
+              to="/contact"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Contact</span>
+              <span className="mobileArrow">→</span>
+            </Link>
+
+            {/* MOBILE CTA */}
+            <a
+              href="https://wa.me/+254708164662"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex
+                items-center
+                justify-center
+                w-full
+                mt-5
+                bg-[#F39A08]
+                text-[#0D4825]
+                py-4
+                rounded-2xl
+                font-bold
+                text-sm
+                shadow-lg
+                shadow-black/20
+                hover:bg-[#ffad20]
+                transition
+              "
+            >
+              Plan Your Safari
+            </a>
+
+            {/* SMALL BRAND MESSAGE */}
+            <p
+              className="
+                text-center
+                text-white/40
+                text-xs
+                pt-3
+              "
+            >
+              Go further with Daffar.
+            </p>
+          </div>
         </div>
+      </aside>
 
-      </div>
-
+      {/* =====================================================
+          STYLES
+      ====================================================== */}
       <style>{`
-        .navBtn{
-          color:white;
-          padding:10px 14px;
-          border-radius:12px;
-          background:#222;
-          transition:.3s;
+        .navBtn {
+          position: relative;
+          color: white;
+          padding: 9px 10px;
+          border-radius: 10px;
+          font-size: 13px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          white-space: nowrap;
         }
 
-        .navBtn:hover{
-          background:#333;
-          color:#facc15;
+        @media (min-width: 1280px) {
+          .navBtn {
+            padding: 10px 12px;
+            font-size: 14px;
+          }
         }
 
-        .mobileLang{
-          background:#222;
-          padding:8px 14px;
-          border-radius:999px;
-          color:white;
-          font-size:12px;
-          border:1px solid rgba(255,255,255,.2);
+        .navBtn::after {
+          content: "";
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          bottom: 4px;
+          height: 2px;
+          background: #F39A08;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
         }
 
-        .dropMenu{
-          position:absolute;
-          top:48px;
-          background:#151515;
-          border-radius:14px;
-          overflow:hidden;
-          border:1px solid rgba(255,255,255,.1);
-          box-shadow:0 20px 40px #000;
+        .navBtn:hover {
+          color: #F39A08;
+          background: rgba(255,255,255,0.06);
         }
 
-        .dropItem{
-          display:block;
-          padding:12px 16px;
-          color:#ddd;
+        .navBtn:hover::after {
+          transform: scaleX(1);
         }
 
-        .dropItem:hover{
-          background:#fff;
-          color:#111;
+        .dropMenu {
+          position: absolute;
+          top: calc(100% + 8px);
+          background: #0D4825;
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+          padding: 8px;
+          animation: dropdown 0.2s ease-out;
         }
 
-        .menuBtn{
-          display:flex;
-          align-items:center;
-          padding:18px;
-          border-radius:18px;
-          background:#1b1b1b;
-          color:white;
-          border:1px solid rgba(255,255,255,.08);
+        .titleDrop {
+          padding: 12px 14px;
+          color: #F39A08;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          margin-bottom: 4px;
         }
 
-        .show{
-          opacity:1;
+        .dropItem {
+          display: block;
+          padding: 11px 14px;
+          border-radius: 10px;
+          color: #E5E7EB;
+          font-size: 14px;
+          transition: all 0.2s ease;
         }
 
-        .hide{
-          opacity:0;
-          pointer-events:none;
+        .dropItem:hover {
+          background: rgba(243,154,8,0.12);
+          color: #F39A08;
+          padding-left: 18px;
+        }
+
+        .mobileMenuBtn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 15px 16px;
+          border-radius: 15px;
+          background: rgba(255,255,255,0.055);
+          color: white;
+          border: 1px solid rgba(255,255,255,0.07);
+          font-size: 14px;
+          font-weight: 500;
+          transition: all 0.25s ease;
+        }
+
+        .mobileMenuBtn:hover,
+        .mobileMenuBtn:active {
+          background: rgba(243,154,8,0.12);
+          border-color: rgba(243,154,8,0.25);
+          color: #F39A08;
+        }
+
+        .mobileArrow {
+          color: #F39A08;
+          font-size: 16px;
+          transition: transform 0.2s ease;
+        }
+
+        .mobileMenuBtn:hover .mobileArrow {
+          transform: translateX(3px);
+        }
+
+        @keyframes dropdown {
+          from {
+            opacity: 0;
+            transform: translateY(-8px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Mobile scrollbar */
+        aside ::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        aside ::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        aside ::-webkit-scrollbar-thumb {
+          background: rgba(243,154,8,0.35);
+          border-radius: 10px;
         }
       `}</style>
     </>

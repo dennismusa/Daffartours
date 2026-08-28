@@ -1,1043 +1,1702 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import useLanguageSync from "../hooks/useLanguageSync";
-import { useTranslation } from "react-i18next";
 
-//import cruiser1 from "../assets/cruiser1.jpg";
-import cruiser2 from "../assets/cruiser2.jpg";
-import image1 from "../assets/image1.jpg";
-import nakuru from "../assets/nakuru.jpg";
-import image16 from "../assets/image16.jpg";
-import image4 from "../assets/image4.jpg";
-import image2 from "../assets/image2.jpg";
-import west from "../assets/west.jpg";
 import amboseli from "../assets/amboseli.jpg";
-import climbingkenya from "../assets/climbingkenya.jpg";
-import climbinglongonot from "../assets/climbinglongonot.jpg";
-import climbingkili from "../assets/climbingkili.jpg";
-import meru from "../assets/meru.jpg";
-import hellsgate from "../assets/hellsgate.jpg";
-import gorilla from "../assets/gorilla.jpg";
-import serengeti from "../assets/serengeti.jpg";
-import tanzania from "../assets/tanzania.jpg";
 import Wilderbeast from "../assets/Wilderbeast.jpg";
-import kenya from "../assets/kenya.jpg";
+import serengeti from "../assets/serengeti.jpg";
+//import meru from "../assets/meru.jpg";
+import nakuru from "../assets/nakuru.jpg";
+import kili1 from "../assets/kili1.jpg";
+import ngorongori1 from "../assets/ngorongoro1.jpg";
+import mara1 from "../assets/mara1.jpg";
+//import west from "../assets/west.jpg";
+//import tanzania from "../assets/tanzania.jpg";
+import image16 from "../assets/image16.jpg";
 import image17 from "../assets/image17.jpg";
-function Home() {
-  useLanguageSync();
-  const images = [meru, kenya,amboseli,Wilderbeast];
-  const [index, setIndex] = useState(0);
-const aboutImages = [cruiser2,image17,image16,nakuru,west,amboseli];
-const [aboutIndex,setAboutIndex]=useState(0);
-const [smallAboutIndex,setSmallAboutIndex]=useState(1);
+import cruiser2 from "../assets/cruiser2.jpg";
+import climbingkenya from "../assets/climbingkenya.jpg";
+
+/* ============================================================
+   HERO SLIDES
+============================================================ */
+
+const heroSlides = [
+  {
+    image: amboseli,
+    eyebrow: "KENYA • WILDLIFE • ADVENTURE",
+    title: "Discover",
+    highlight: "Wild Kenya",
+    description:
+      "Experience extraordinary wildlife, breathtaking landscapes and authentic African adventures designed around the way you love to travel.",
+  },
+  {
+    image: Wilderbeast,
+    eyebrow: "MAASAI MARA • SAFARI • WILDLIFE",
+    title: "Into The",
+    highlight: "Wild",
+    description:
+      "Follow the rhythm of the wilderness and discover Kenya's iconic landscapes, wildlife and unforgettable safari moments.",
+  },
+  {
+    image: serengeti,
+    eyebrow: "TANZANIA • EAST AFRICA",
+    title: "Adventure",
+    highlight: "Without Limits",
+    description:
+      "From endless savannahs to spectacular landscapes, experience East Africa through a journey created especially for you.",
+  },
+];
+
+/* ============================================================
+   SAFARI PACKAGES
+============================================================ */
+
+const safariPackages = [
+  {
+    image: amboseli,
+    title: "Amboseli Safari",
+    days: "3 Days",
+    location: "Kenya",
+    description:
+      "Wildlife, open plains and spectacular views of Mount Kilimanjaro.",
+    tag: "Iconic",
+  },
+  {
+    image: Wilderbeast,
+    title: "Maasai Mara Adventure",
+    days: "4 Days",
+    location: "Kenya",
+    description:
+      "Discover Kenya's legendary reserve and experience unforgettable wildlife encounters.",
+    tag: "Wildlife",
+  },
+  {
+    image: serengeti,
+    title: "Serengeti Safari",
+    days: "5 Days",
+    location: "Tanzania",
+    description:
+      "Explore the legendary Serengeti and experience Africa at its wildest.",
+    tag: "Classic",
+  },
+];
+
+/* ============================================================
+   DESTINATIONS
+============================================================ */
+
+const destinations = [
+  {
+    image: amboseli,
+    name: "Amboseli",
+    country: "Kenya",
+    path: "/amboseli",
+    description: "Discover magnificent elephants, open savannahs, rich Maasai culture and breathtaking views of Mount Kilimanjaro.",
+  },
+  {
+    image: nakuru,
+    name: "Lake Nakuru",
+    country: "Kenya",
+    path: "/lakenakuru",
+    description: "A beautiful Rift Valley destination known for rhinos, spectacular landscapes, diverse wildlife and unforgettable birdwatching experiences.",
+  },
+  {
+    image: mara1,
+    name: "Maasai Mara",
+    country: "Kenya",
+    path: "/maasaimara",
+    description: "Endless savannahs, incredible wildlife, the Great Migration, and unforgettable African safari experiences",
+  },
+  {
+    image: ngorongori1,
+    name: "Ngorongoro Crater",
+    country: "Tanzania",
+    path: "/ngorongoro",
+    description: "Ngorongoro provides exceptional opportunities to see a wide variety of wildlife within a spectacular natural setting",
+  },
+  {
+    image: kili1,
+    name: "Mount kilimanjaro",
+    country: "East Africa",
+    path: "/mountkilimanjaro",
+    description: "Africa's highest mountain, breathtaking landscapes, unforgettable trekking adventures, and the journey toward Uhuru Peak.",
+  },
+];
 
 
-  // ================= REVIEWS STATE =================
-  const [reviews, setReviews] = useState([]);
-   const { t, i18n } = useTranslation();
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-  const [rating, setRating] = useState(5);
-  
-const [loading, setLoading] = useState(false);
-const [loadingReviews, setLoadingReviews] = useState(false);
-const [success, setSuccess] = useState(false);
 
+/* ============================================================
+   FOOTER HELPERS
+   These are intentionally above Home()
+============================================================ */
 
-  // ================= SLIDER =================
-  useEffect(()=>{
-
-const slider=setInterval(()=>{
-
-// HERO SLIDER
-setIndex(prev=>(prev + 1) % images.length);
-
-// ABOUT SLIDER
-setAboutIndex(prev=>(prev + 1) % aboutImages.length);
-setSmallAboutIndex(prev=>(prev + 1) % aboutImages.length);
-
-},4000);
-
-
-
-    return () => clearInterval(slider);
-  }, [aboutImages.length, images.length]);
-
-  // ================= SUBMIT REVIEW (IMPORTANT PART 2) =================
- 
-// instantly update UI
-
-  
+function FooterHeading({ children }) {
   return (
-    <div className="bg-white text-gray-800 overflow-x-hidden">
+    <h3 className="relative mb-5 inline-block text-sm font-bold uppercase tracking-[0.18em]">
+      {children}
+
+      <span className="absolute -bottom-2 left-0 h-0.5 w-8 rounded-full bg-[#F39A08]" />
+    </h3>
+  );
+}
+
+function FooterColumn({ title, children }) {
+  return (
+    <div>
+      <FooterHeading>
+        {title}
+      </FooterHeading>
+
+      <div className="space-y-2.5">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function FooterLink({ to, children }) {
+  return (
+    <Link
+      to={to}
+      className="block w-fit text-sm text-white/50 transition-all hover:translate-x-1 hover:text-[#F39A08]"
+    >
+      {children}
+    </Link>
+  );
+}
+
+/* ============================================================
+   SECTION LABEL
+============================================================ */
+
+function SectionLabel({ children, dark = false }) {
+  return (
+    <span
+      className={`text-xs font-bold uppercase tracking-[3px] ${
+        dark ? "text-[#dba33a]" : "text-[#dba33a]"
+      }`}
+    >
+      {children}
+    </span>
+  );
+}
+
+/* ============================================================
+   SECTION INTRO
+============================================================ */
+
+function SectionIntro({ label, title, text }) {
+  return (
+    <div className="max-w-3xl text-left">
+      <SectionLabel>
+        {label}
+      </SectionLabel>
+
+      <h2 className="mt-4 text-3xl font-serif font-bold leading-tight text-[#0b4224] sm:text-4xl lg:text-5xl">
+        {title}
+      </h2>
+
+      <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
+        {text}
+      </p>
+    </div>
+  );
+}
+
+/* ============================================================
+   QUICK STAT
+============================================================ */
+
+function QuickStat({ icon, number, label }) {
+  return (
+    <div className="flex items-center gap-3 border-r border-white/10 px-4 py-5 sm:px-6">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#dba33a]/10 text-sm text-[#dba33a]">
+        {icon}
+      </span>
+
+      <div>
+        <p className="text-xs font-bold text-white sm:text-sm">
+          {number}
+        </p>
+
+        <p className="mt-0.5 text-[10px] text-white/45 sm:text-xs">
+          {label}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/* ============================================================
+   INFO ITEM
+============================================================ */
+
+function InfoItem({ text }) {
+  return (
+    <div className="flex items-center gap-3">
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0b4224] text-xs font-bold text-white">
+        ✓
+      </span>
+
+      <span className="text-sm font-semibold text-gray-700">
+        {text}
+      </span>
+    </div>
+  );
+}
+
+/* ============================================================
+   WHY CARD
+============================================================ */
+
+function WhyCard({ icon, title, text }) {
+  return (
+    <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 hover:-translate-y-1 hover:bg-white/10">
+      <span className="text-xs font-bold text-[#dba33a]">
+        {icon}
+      </span>
+
+      <h3 className="mt-3 font-bold text-white">
+        {title}
+      </h3>
+
+      <p className="mt-2 text-xs leading-6 text-white/50">
+        {text}
+      </p>
+    </div>
+  );
+}
+
+/* ============================================================
+   EXPERIENCE STEP
+============================================================ */
+
+function ExperienceStep({ number, title, text }) {
+  return (
+    <div className="relative z-10 text-left">
+      <div className="flex justify-start">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0b4224] text-sm font-bold text-[#dba33a] shadow-lg">
+          {number}
+        </div>
+      </div>
+
+      <h3 className="mt-5 text-lg font-bold text-[#0b4224]">
+        {title}
+      </h3>
+
+      <p className="mt-2 text-sm leading-7 text-gray-600">
+        {text}
+      </p>
+    </div>
+  );
+}
+
+/* ============================================================
+   HOME
+============================================================ */
+
+function Home() {
+  const [heroIndex, setHeroIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [activeSafari, setActiveSafari] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+
+  /* ==========================================================
+     HERO SLIDER
+  ========================================================== */
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % heroSlides.length);
+    }, 6500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  /* ==========================================================
+     TESTIMONIAL SLIDER
+  ========================================================== */
 
 
-      
-<section id="home" className="relative min-h-[65vh] lg:min-h-[75vh] flex items-center overflow-hidden">
-{/* IMAGE SLIDER */}
-<div className="absolute inset-0">
-{images.map((img,i)=>(
-<div
-key={i}
-className="absolute inset-0 transition-all duration-[3500ms] ease-in-out"
-style={{
-backgroundImage:`url(${img})`,
-backgroundSize:"cover",
-backgroundPosition:"center",
-opacity:i===index?1:0,
-transform:i===index?"scale(1)":"scale(1.06)"
-}}
-/>
+  /* ==========================================================
+     SCROLL
+  ========================================================== */
 
-))}
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-</div>
-{/* DARK LAYERS */}
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
-<div className="absolute inset-0 bg-black/50"/>
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-<div className="absolute inset-0 bg-gradient-to-r from-[#022c22]/95 via-black/60 to-transparent"/>
+  const hero = heroSlides[heroIndex];
+ // const testimonial = testimonials[testimonialIndex];
 
-<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"/>
-{/* ANIMATED LIGHT */}
+  return (
+    <main className="min-h-screen overflow-hidden bg-white text-[#17251d]">
 
-<div className="absolute -top-32 -left-32 w-[450px] h-[450px] bg-emerald-500/20 rounded-full blur-[120px] animate-pulse"/>
+      {/* ======================================================
+          HERO
+      ====================================================== */}
 
-<div className="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[130px]"/>
-{/* CONTENT */}
+      <section className="relative h-[72vh] min-h-[560px] max-h-[760px] overflow-hidden">
 
-<div className="relative z-20 max-w-7xl mx-auto px-5 md:px-8 w-full">
+        {/* HERO IMAGES */}
 
+        {heroSlides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-all duration-[1800ms] ease-out ${
+              index === heroIndex
+                ? "scale-100 opacity-100"
+                : "scale-110 opacity-0"
+            }`}
+          >
+            <img
+              src={slide.image}
+              alt={slide.highlight}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        ))}
 
-<div className="max-w-2xl text-white">
-{/* BADGE */}
+        {/* OVERLAYS */}
 
-<div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 backdrop-blur-xl border border-emerald-300/30 mb-5 animate-bounce">
-<div className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"/>
-<span className="text-[10px] md:text-xs uppercase tracking-[4px] text-emerald-200">
+        <div className="absolute inset-0 bg-black/30" />
 
-DenGrey Tours & Safaris
-</span></div>
-<h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight max-w-xl drop-shadow-xl">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#041b10]/95 via-[#07321d]/60 to-transparent" />
 
-{t("heroTitle")}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/10" />
 
-</h1>
-<p className="mt-4 text-gray-200 text-sm sm:text-base leading-7 max-w-lg">
+        {/* DECORATIVE LIGHT */}
 
-{t("heroDesc")}
+        <div className="absolute -right-32 top-10 h-[350px] w-[350px] rounded-full bg-[#dba33a]/10 blur-[100px]" />
 
-</p>{/* ACTION BUTTONS */}
-<div className="mt-6 flex flex-col sm:flex-row gap-3">
+        {/* HERO CONTENT */}
 
-</div>
-{/* TRUST TAGS */}
-<div className="mt-8 flex flex-wrap gap-3">
-</div></div></div>
-{/* SLIDER DOTS */}
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 sm:px-8 lg:px-12">
 
-<div className="absolute right-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3">
+          <div
+            key={heroIndex}
+            className="max-w-2xl text-left text-white animate-[heroText_.9s_ease-out]"
+          >
 
-{images.map((_,i)=>(
+            {/* EYEBROW */}
 
-<button
+            <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-xl">
 
-key={i}
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#dba33a]" />
 
-onClick={()=>setIndex(i)}
+              <span className="text-[9px] font-bold uppercase tracking-[3px] text-white/80 sm:text-xs">
+                {hero.eyebrow}
+              </span>
 
-className={`rounded-full transition-all duration-700 ${
-i===index
-?
-"h-12 w-2 bg-yellow-400 shadow-lg shadow-yellow-400/50"
-:
-"h-2 w-2 bg-white/40 hover:bg-white"
-}`}
+            </div>
 
-/>
+            {/* TITLE */}
 
-))}
-</div>
-{/* BOTTOM GLASS PANEL */}
+            <h1 className="max-w-3xl text-4xl font-black leading-[0.95] tracking-[-1.5px] sm:text-5xl md:text-6xl lg:text-[72px]">
 
-</section>
+              {hero.title}
 
+              <span className="mt-2 block text-[#dba33a]">
+                {hero.highlight}
+              </span>
 
-      {/* ABOUT / EXPERIENCE SECTION */}
-{/* ABOUT / EXPERIENCE SECTION */}
-<section className="relative py-28 overflow-hidden bg-[#F6FAF8]">
+            </h1>
 
-  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40"></div>
+            {/* DESCRIPTION */}
 
-  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl"></div>
+            <p className="mt-6 max-w-xl text-sm leading-7 text-white/75 sm:text-base lg:text-lg">
+              {hero.description}
+            </p>
 
-  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+            {/* BUTTONS */}
 
-    <div className="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
 
-      {/* IMAGE SIDE */}
-      <div className="relative">
+              <Link
+                to="/safaris"
+                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#dba33a] px-7 py-3.5 text-sm font-bold text-[#092a18] shadow-2xl transition duration-300 hover:-translate-y-1 hover:bg-[#e9b84f]"
+              >
+                Explore Safaris
 
-        <div className="group overflow-hidden rounded-[40px] shadow-2xl relative">
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
 
-          <img
-            src={aboutImages[aboutIndex]}
-            alt={t("aboutTitle")}
-            className="w-full h-[520px] object-cover transition-all duration-[2000ms] group-hover:scale-110"
-          />
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#092a18]"
+              >
+                Plan My Journey
+              </Link>
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent"></div>
+            </div>
+
+            {/* TRUST */}
+
+            <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] text-white/60 sm:text-xs">
+
+              <span>✓ Local Expertise</span>
+              <span>✓ Tailor-Made Journeys</span>
+              <span>✓ Personal Support</span>
+
+            </div>
+
+          </div>
 
         </div>
 
-        <div className="hidden md:block absolute -bottom-10 -right-10 w-[230px] h-[280px] overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl">
+        {/* SLIDER */}
 
-          <img
-            src={image2}
-            alt={t("aboutTitle")}
-            className="w-full h-full object-cover hover:scale-110 transition duration-[2000ms]"
+        <div className="absolute bottom-7 left-5 z-20 flex items-center gap-2 sm:left-8 lg:left-12">
+
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => setHeroIndex(index)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                index === heroIndex
+                  ? "w-10 bg-[#dba33a]"
+                  : "w-4 bg-white/40 hover:bg-white/70"
+              }`}
+            />
+          ))}
+
+        </div>
+
+        {/* BRAND */}
+
+        <div className="absolute bottom-7 right-7 z-20 hidden items-center gap-4 text-white/50 lg:flex">
+
+          <span className="text-[9px] uppercase tracking-[3px]">
+            Daffar Tours & Travel
+          </span>
+
+          <div className="h-px w-12 bg-white/30" />
+
+        </div>
+
+        {/* SCROLL */}
+
+        <div className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-white/50 md:flex">
+
+          <span className="text-[8px] uppercase tracking-[3px]">
+            Scroll
+          </span>
+
+          <div className="h-7 w-px bg-gradient-to-b from-white/60 to-transparent" />
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          STATS
+      ====================================================== */}
+
+      <section className="relative z-20 bg-[#082d19] shadow-2xl">
+
+        <div className="mx-auto grid max-w-7xl grid-cols-2 lg:grid-cols-4">
+
+          <QuickStat
+            icon="✦"
+            number="Safari"
+            label="Experiences"
+          />
+
+          <QuickStat
+            icon="◎"
+            number="Kenya"
+            label="Local Expertise"
+          />
+
+          <QuickStat
+            icon="◆"
+            number="Tailor-Made"
+            label="Journeys"
+          />
+
+          <QuickStat
+            icon="↗"
+            number="24/7"
+            label="Travel Support"
           />
 
         </div>
 
-        <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-xl px-6 py-5 rounded-3xl shadow-xl">
+      </section>
 
-          <h2 className="text-4xl font-black text-emerald-500">
-            10+
+      {/* ======================================================
+          INTRODUCTION
+      ====================================================== */}
+
+      <section className="relative py-24 lg:py-32">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+
+            {/* IMAGES */}
+
+            <div className="relative">
+
+              <div className="relative h-[430px] overflow-hidden rounded-[2rem] shadow-2xl sm:h-[570px]">
+
+                <img
+                  src={image17}
+                  alt="Daffar Tours and Travel"
+                  className="h-full w-full object-cover transition duration-1000 hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+              </div>
+
+              <div className="absolute -bottom-8 -right-4 h-48 w-40 overflow-hidden rounded-3xl border-8 border-white shadow-2xl sm:-right-8 sm:h-60 sm:w-52">
+
+                <img
+                  src={cruiser2}
+                  alt="Safari vehicle"
+                  className="h-full w-full object-cover"
+                />
+
+              </div>
+
+              <div className="absolute left-6 top-7 rounded-2xl bg-[#dba33a] px-6 py-4 text-[#092a18] shadow-xl">
+
+                <p className="text-2xl font-black">
+                  Africa
+                </p>
+
+                <p className="text-[10px] font-bold uppercase tracking-[2px]">
+                  Starts Here
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CONTENT */}
+
+            <div className="text-left">
+
+              <SectionLabel>
+                Welcome To Daffar
+              </SectionLabel>
+
+              <h2 className="mt-4 text-4xl font-serif font-bold leading-tight text-[#0b4224] sm:text-5xl lg:text-6xl">
+
+                Travel Deeper.
+
+                <span className="mt-2 block text-[#dba33a]">
+                  Experience More.
+                </span>
+
+              </h2>
+
+              <p className="mt-7 text-sm leading-8 text-gray-600 sm:text-base">
+                Daffar Tours & Travel creates meaningful journeys across
+                Kenya and East Africa. We believe travel is not simply about
+                visiting a destination — it is about connecting with wildlife,
+                people, culture and extraordinary landscapes.
+              </p>
+
+              <p className="mt-5 text-sm leading-8 text-gray-600 sm:text-base">
+                Whether you dream of a classic wildlife safari, a private
+                adventure or a completely tailor-made African escape, our team
+                transforms your ideas into a journey worth remembering.
+              </p>
+
+              <div className="mt-9 grid gap-5 sm:grid-cols-2">
+
+                <InfoItem text="Tailor-made itineraries" />
+                <InfoItem text="Local travel knowledge" />
+                <InfoItem text="Experienced safari guides" />
+                <InfoItem text="Personal travel support" />
+
+              </div>
+
+              <Link
+                to="/about"
+                className="group mt-10 inline-flex items-center gap-3 font-bold text-[#0b4224]"
+              >
+                Discover Daffar
+
+                <span className="text-[#dba33a] transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          FEATURED SAFARIS
+      ====================================================== */}
+
+      <section className="bg-[#f7f5ee] py-24 lg:py-32">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+
+            <SectionIntro
+              label="Featured Safaris"
+              title="Journeys Into The Wild"
+              text="Carefully designed safari experiences created around wildlife, discovery and unforgettable moments."
+            />
+
+            <Link
+              to="/safaris"
+              className="hidden items-center gap-2 font-bold text-[#0b4224] lg:inline-flex"
+            >
+              View All Safaris
+
+              <span className="text-[#dba33a]">
+                →
+              </span>
+            </Link>
+
+          </div>
+
+          <div className="mt-14 grid gap-7 md:grid-cols-3">
+
+            {safariPackages.map((safari, index) => (
+
+              <div
+                key={index}
+                onMouseEnter={() => setActiveSafari(index)}
+                className={`group overflow-hidden rounded-[1.7rem] bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
+                  activeSafari === index ? "-translate-y-1" : ""
+                }`}
+              >
+
+                <div className="relative h-80 overflow-hidden">
+
+                  <img
+                    src={safari.image}
+                    alt={safari.title}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+
+                  <div className="absolute left-4 top-4 rounded-full bg-[#dba33a] px-4 py-2 text-xs font-bold text-[#092a18]">
+                    {safari.days}
+                  </div>
+
+                  <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+                    {safari.tag}
+                  </div>
+
+                  <div className="absolute bottom-6 left-6 right-6">
+
+                    <p className="text-xs font-bold uppercase tracking-[2px] text-[#dba33a]">
+                      {safari.location}
+                    </p>
+
+                    <h3 className="mt-2 text-2xl font-serif font-bold text-white sm:text-3xl">
+                      {safari.title}
+                    </h3>
+
+                  </div>
+
+                </div>
+
+                <div className="p-6">
+
+                  <p className="text-sm leading-7 text-gray-600">
+                    {safari.description}
+                  </p>
+
+                  <Link
+                    to="/amboseli"
+                    className="group/link mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b4224]"
+                  >
+                    Explore Safari
+
+                    <span className="text-[#dba33a] transition-transform group-hover/link:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          DESTINATIONS
+      ====================================================== */}
+
+      <section className="py-24 lg:py-32">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <SectionIntro
+            label="Featured Destinations"
+            title="Africa Is Calling"
+            text="From the shadow of Kilimanjaro to the endless Serengeti plains, discover destinations that stay with you long after you leave."
+          />
+
+          <div className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
+
+            {destinations.map((destination, index) => (
+
+              <Link
+                key={index}
+                to={destination.path}
+                className={`group relative overflow-hidden rounded-[1.5rem] ${
+                  index === 0
+                    ? "col-span-2 row-span-2 h-[430px]"
+                    : "h-[205px] sm:h-[240px]"
+                }`}
+              >
+
+                <img
+                  src={destination.image}
+                  alt={destination.name}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-5 text-left sm:p-6">
+
+                  <p className="text-[10px] font-bold uppercase tracking-[2px] text-[#dba33a]">
+                    {destination.country}
+                  </p>
+
+                  <h3 className="mt-1 text-xl font-serif font-bold text-white sm:text-2xl">
+                    {destination.name}
+                  </h3>
+
+                  <p className="mt-2 max-w-xs text-xs leading-5 text-white/60">
+                    {destination.description}
+                  </p>
+
+                  <span className="mt-3 block text-xs font-semibold text-white/70 transition group-hover:text-[#dba33a]">
+                    Explore destination →
+                  </span>
+
+                </div>
+
+              </Link>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          WHY DAFFAR
+      ====================================================== */}
+
+      <section className="relative overflow-hidden bg-[#082d19] py-24 lg:py-32">
+
+        <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-[#dba33a]/5 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+
+            {/* CONTENT */}
+
+            <div className="text-left">
+
+              <SectionLabel dark>
+                Why Choose Daffar
+              </SectionLabel>
+
+              <h2 className="mt-4 text-4xl font-serif font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+
+                Your Journey.
+
+                <span className="mt-2 block text-[#dba33a]">
+                  Our Responsibility.
+                </span>
+
+              </h2>
+
+              <p className="mt-6 max-w-xl text-sm leading-8 text-white/60 sm:text-base">
+                From the first conversation to the final sunset, we focus on
+                the details that make your African journey comfortable,
+                authentic and memorable.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+
+                <WhyCard
+                  icon="01"
+                  title="Local Knowledge"
+                  text="Travel with people who understand the destinations."
+                />
+
+                <WhyCard
+                  icon="02"
+                  title="Tailor-Made"
+                  text="Build an itinerary around your interests and pace."
+                />
+
+                <WhyCard
+                  icon="03"
+                  title="Personal Service"
+                  text="Receive dedicated support throughout your journey."
+                />
+
+                <WhyCard
+                  icon="04"
+                  title="Authentic Experiences"
+                  text="Go beyond the ordinary tourist experience."
+                />
+
+              </div>
+
+            </div>
+
+            {/* IMAGE */}
+
+            <div className="relative">
+
+              <div className="h-[470px] overflow-hidden rounded-[2rem] shadow-2xl sm:h-[560px]">
+
+                <img
+                  src={image16}
+                  alt="Safari experience"
+                  className="h-full w-full object-cover transition duration-1000 hover:scale-105"
+                />
+
+              </div>
+
+              <div className="absolute -bottom-7 -left-4 max-w-[230px] rounded-2xl bg-white p-5 text-left shadow-2xl sm:-left-8">
+
+                <div className="text-sm tracking-widest text-[#dba33a]">
+                  ★★★★★
+                </div>
+
+                <p className="mt-2 font-bold text-[#0b4224]">
+                  Designed Around You
+                </p>
+
+                <p className="mt-1 text-xs leading-5 text-gray-500">
+                  Every journey deserves a personal touch.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          EXPERIENCE
+      ====================================================== */}
+
+      <section className="bg-[#f7f5ee] py-24 lg:py-32">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <SectionIntro
+            label="The Daffar Experience"
+            title="From Dream To Journey"
+            text="Planning an African adventure should feel exciting, not complicated."
+          />
+
+          <div className="relative mt-16 grid gap-12 md:grid-cols-4 md:gap-8">
+
+            <div className="absolute left-[12%] right-[12%] top-6 hidden h-px bg-[#0b4224]/15 md:block" />
+
+            <ExperienceStep
+              number="01"
+              title="Tell Us Your Dream"
+              text="Share your interests, dates and the kind of experience you want."
+            />
+
+            <ExperienceStep
+              number="02"
+              title="We Design"
+              text="Our team builds a detailed itinerary around your travel style."
+            />
+
+            <ExperienceStep
+              number="03"
+              title="You Explore"
+              text="Enjoy your journey while we take care of the important details."
+            />
+
+            <ExperienceStep
+              number="04"
+              title="Make Memories"
+              text="Return home with stories and moments you will treasure."
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          LARGE CTA
+      ====================================================== */}
+
+      <section className="relative overflow-hidden py-28 lg:py-36">
+
+        <img
+          src={climbingkenya}
+          alt="African adventure"
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{
+            transform: `translateY(${scrollY * 0.04}px)`,
+          }}
+        />
+
+        <div className="absolute inset-0 bg-[#062b18]/85" />
+
+        <div className="relative z-10 mx-auto max-w-4xl px-5 text-center text-white">
+
+          <SectionLabel dark>
+            Your African Adventure
+          </SectionLabel>
+
+          <h2 className="mt-5 text-4xl font-serif font-bold leading-tight sm:text-5xl lg:text-7xl">
+
+            Africa Is Waiting.
+
+            <span className="mt-3 block text-[#dba33a]">
+              Are You Ready?
+            </span>
+
           </h2>
 
-          <p className="text-gray-700 text-sm">
-            {t("yearsExperience")}
+          <p className="mx-auto mt-7 max-w-2xl text-sm leading-8 text-white/70 sm:text-base">
+            Tell us where you want to go, what you want to experience and
+            when you want to travel. We will help turn your ideas into an
+            unforgettable journey.
+          </p>
+
+          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+
+            <Link
+              to="/contact"
+              className="rounded-full bg-[#dba33a] px-8 py-4 font-bold text-[#07351d] shadow-xl transition hover:-translate-y-1 hover:bg-[#e9b84f]"
+            >
+              Plan My Safari →
+            </Link>
+
+            <a
+              href="https://wa.me/+254708164662"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/30 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-md transition hover:bg-white hover:text-[#07351d]"
+            >
+              WhatsApp Us
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          TESTIMONIALS
+      ====================================================== */}
+
+      ```jsx
+{/* =====================================================
+    GOOGLE REVIEWS
+===================================================== */}
+<section className="bg-[#f7f5ee] py-20 sm:py-24 lg:py-28">
+
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    {/* HEADER */}
+    <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+
+      <div className="max-w-2xl">
+
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#dba33a]">
+          Guest Reviews
+        </p>
+
+        <h2 className="mt-3 font-serif text-4xl font-bold leading-tight text-[#0b4224] sm:text-5xl">
+          Experiences Shared
+          <span className="block text-[#dba33a]">
+            By Our Travelers
+          </span>
+        </h2>
+
+        <p className="mt-5 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
+          Every journey matters to us. Discover what travelers have
+          shared about their experiences with Daffar Tours and Travel
+          on Google.
+        </p>
+
+      </div>
+
+
+      {/* GOOGLE RATING CARD */}
+      <div className="flex w-full max-w-sm items-center gap-5 rounded-2xl bg-white p-5 shadow-sm lg:w-auto">
+
+        <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-[#0b4224] text-2xl font-bold text-[#dba33a]">
+          G
+        </div>
+
+        <div>
+
+          <p className="text-sm font-bold text-[#0b4224]">
+            Google Reviews
+          </p>
+
+          <div className="mt-1 flex items-center gap-2">
+
+            <span className="text-lg font-bold text-[#0b4224]">
+              ★★★★★
+            </span>
+
+          </div>
+
+          <p className="mt-1 text-xs text-gray-500">
+            Daffar Tours and Travel Ltd
           </p>
 
         </div>
 
       </div>
 
-      {/* CONTENT SIDE */}
-      <div>
+    </div>
 
-        <span className="uppercase tracking-[5px] text-emerald-500 font-bold">
 
-          {t("aboutLabel")}
+    {/* REVIEW CONTENT */}
+    <div className="mt-14 grid gap-6 lg:grid-cols-3">
 
-        </span>
+      {/* REVIEW CARD 1 */}
+      <div className="rounded-[1.5rem] bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-        <h2 className="text-4xl md:text-6xl font-black leading-tight mt-6 text-gray-900">
+        <div className="flex items-center justify-between">
 
-          {t("aboutHeading1")}
+          <div className="flex items-center gap-3">
 
-          <span className="block text-emerald-500">
+            <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#0b4224] font-bold text-white">
+              G
+            </div>
 
-            {t("aboutHeading2")}
+            <div>
 
+              <p className="font-bold text-[#0b4224]">
+                Google Traveler
+              </p>
+
+              <p className="text-xs text-gray-400">
+                Verified Google Review
+              </p>
+
+            </div>
+
+          </div>
+
+          <span className="text-lg text-[#dba33a]">
+            ★★★★★
           </span>
 
-        </h2>
+        </div>
 
-        <p className="mt-8 text-gray-600 leading-8 text-lg">
-
-          {t("aboutDescription")}
-
-          <br />
-          <br />
-
-          {t("aboutDescription2")}
-
+        <p className="mt-6 text-sm leading-7 text-gray-600">
+          Discover experiences shared by travelers who have explored
+          Kenya and East Africa with Daffar Tours and Travel.
         </p>
 
-        {/* FEATURES */}
+      </div>
 
-        <div className="space-y-6 mt-10">
 
-          <div className="flex items-start gap-4">
+      {/* REVIEW CARD 2 */}
+      <div className="rounded-[1.5rem] bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
-              🚙
+        <div className="flex items-center justify-between">
+
+          <div className="flex items-center gap-3">
+
+            <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#0b4224] font-bold text-white">
+              G
             </div>
 
             <div>
 
-              <h3 className="font-bold text-lg">
-                {t("luxuryVehicles")}
-              </h3>
+              <p className="font-bold text-[#0b4224]">
+                Traveler Experience
+              </p>
 
-              <p className="text-gray-600">
-                {t("luxuryVehiclesDesc")}
+              <p className="text-xs text-gray-400">
+                Google Reviews
               </p>
 
             </div>
 
           </div>
 
-          <div className="flex items-start gap-4">
-
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
-              🦁
-            </div>
-
-            <div>
-
-              <h3 className="font-bold text-lg">
-                {t("professionalGuides")}
-              </h3>
-
-              <p className="text-gray-600">
-                {t("professionalGuidesDesc")}
-              </p>
-
-            </div>
-
-          </div>
-
-          <div className="flex items-start gap-4">
-
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
-              🌍
-            </div>
-
-            <div>
-
-              <h3 className="font-bold text-lg">
-                {t("eastAfricaAdventure")}
-              </h3>
-
-              <p className="text-gray-600">
-                {t("eastAfricaAdventureDesc")}
-              </p>
-
-            </div>
-
-          </div>
+          <span className="text-lg text-[#dba33a]">
+            ★★★★★
+          </span>
 
         </div>
 
+        <p className="mt-6 text-sm leading-7 text-gray-600">
+          See more experiences, feedback and recommendations from
+          guests who have travelled with our team.
+        </p>
+
       </div>
+
+
+      {/* REVIEW CARD 3 */}
+      <div className="rounded-[1.5rem] bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+        <div className="flex items-center justify-between">
+
+          <div className="flex items-center gap-3">
+
+            <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#0b4224] font-bold text-white">
+              G
+            </div>
+
+            <div>
+
+              <p className="font-bold text-[#0b4224]">
+                Your Experience Matters
+              </p>
+
+              <p className="text-xs text-gray-400">
+                Daffar Tours and Travel
+              </p>
+
+            </div>
+
+          </div>
+
+          <span className="text-lg text-[#dba33a]">
+            ★★★★★
+          </span>
+
+        </div>
+
+        <p className="mt-6 text-sm leading-7 text-gray-600">
+          Planning your next adventure? Read our latest Google reviews
+          and see why travelers choose Daffar Tours and Travel.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    {/* ACTION BUTTONS */}
+    {/* =====================================================
+    GOOGLE REVIEW BUTTONS
+===================================================== */}
+
+<div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+
+  {/* VIEW REVIEWS */}
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJLTXRSCwRLxgRe3ybbA23-UQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex
+      w-full
+      items-center
+      justify-center
+      gap-2
+      rounded-full
+      bg-[#0b4224]
+      px-7
+      py-4
+      text-sm
+      font-bold
+      text-white
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:bg-[#176b35]
+      hover:shadow-xl
+      sm:w-auto
+    "
+  >
+    View Google Reviews
+
+    <span className="text-[#dba33a]">
+      →
+    </span>
+  </a>
+
+
+  {/* WRITE A REVIEW */}
+  <a
+    href="https://search.google.com/local/writereview?placeid=ChIJLTXRSCwRLxgRe3ybbA23-UQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex
+      w-full
+      items-center
+      justify-center
+      gap-2
+      rounded-full
+      border
+      border-[#0b4224]/20
+      bg-white
+      px-7
+      py-4
+      text-sm
+      font-bold
+      text-[#0b4224]
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:border-[#dba33a]
+      hover:text-[#dba33a]
+      hover:shadow-lg
+      sm:w-auto
+    "
+  >
+    Write a Review
+
+    <span className="text-[#dba33a]">
+      ★
+    </span>
+  </a>
+
+</div>
+
+
+    {/* SMALL LOCATION NOTE */}
+    <div className="mt-8 flex items-center justify-center gap-2 text-center text-xs text-gray-500">
+
+      <span className="h-2 w-2 flex-shrink-0 rounded-full bg-[#dba33a]" />
+
+      <span>
+        Daffar Tours and Travel Ltd · Muindi Mbingu St, Nairobi
+      </span>
 
     </div>
 
   </div>
 
 </section>
+```
 
+      {/* ======================================================
+          FINAL BOOKING CTA
+      ====================================================== */}
 
+      <section className="px-5 pb-24 sm:px-8 lg:px-12 lg:pb-32">
 
-{/* ================= PREMIUM SERVICES ================= */}
-<section className="relative py-32 overflow-hidden bg-gradient-to-b from-[#F8F6F1] via-[#FCFBF8] to-[#EFE9DE]">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#0b4224] px-6 py-12 shadow-2xl sm:px-10 lg:px-16 lg:py-16">
 
-  {/* Background */}
-  <div className="absolute -top-44 left-0 w-[500px] h-[500px] bg-emerald-300/20 blur-[140px] rounded-full"></div>
-  <div className="absolute -bottom-40 right-0 w-[500px] h-[500px] bg-yellow-300/20 blur-[140px] rounded-full"></div>
+          <div className="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-[#dba33a]/10 blur-3xl" />
 
-  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="absolute -bottom-32 right-10 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
 
-    {/* Header */}
-    {/* Header */}
+          <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
 
-    <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="text-left">
 
-      <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
-        {t("premiumServices")}
-      </span>
-
-      <h2 className="mt-6 text-5xl md:text-6xl font-black">
-        {t("servicesHeading1")}
-        <span className="block text-[#C8A94C]">
-          {t("servicesHeading2")}
-        </span>
-      </h2>
-
-      <p className="mt-7 text-gray-600 text-lg leading-8">
-        {t("servicesDescription")}
-      </p>
-
-    </div>
-    {/* Cards */}
-    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-      {[
-        
-  {
-    icon: "🦁",
-    color: "from-emerald-500 to-green-700",
-    title: t("serviceSafariTitle"),
-    desc: t("serviceSafariDesc"),
-    features: [
-      t("serviceSafariFeature1"),
-      t("serviceSafariFeature2"),
-      t("serviceSafariFeature3"),
-      t("serviceSafariFeature4"),
-    ],
-    perfect: t("serviceSafariPerfect"),
-  },
-  {
-    icon: "🏨",
-    color: "from-yellow-500 to-orange-500",
-    title: t("serviceHotelTitle"),
-    desc: t("serviceHotelDesc"),
-    features: [
-      t("serviceHotelFeature1"),
-      t("serviceHotelFeature2"),
-      t("serviceHotelFeature3"),
-      t("serviceHotelFeature4"),
-    ],
-    perfect: t("serviceHotelPerfect"),
-  },
-  {
-    icon: "🤝",
-    color: "from-blue-500 to-cyan-600",
-    title: t("serviceCorporateTitle"),
-    desc: t("serviceCorporateDesc"),
-    features: [
-      t("serviceCorporateFeature1"),
-      t("serviceCorporateFeature2"),
-      t("serviceCorporateFeature3"),
-      t("serviceCorporateFeature4"),
-    ],
-    perfect: t("serviceCorporatePerfect"),
-  },
-  {
-    icon: "✈️",
-    color: "from-purple-500 to-indigo-600",
-    title: t("serviceTransferTitle"),
-    desc: t("serviceTransferDesc"),
-    features: [
-      t("serviceTransferFeature1"),
-      t("serviceTransferFeature2"),
-      t("serviceTransferFeature3"),
-      t("serviceTransferFeature4"),
-    ],
-    perfect: t("serviceTransferPerfect"),
-  },
-  {
-    icon: "🚙",
-    color: "from-red-500 to-orange-600",
-    title: t("serviceCarTitle"),
-    desc: t("serviceCarDesc"),
-    features: [
-      t("serviceCarFeature1"),
-      t("serviceCarFeature2"),
-      t("serviceCarFeature3"),
-      t("serviceCarFeature4"),
-    ],
-    perfect: t("serviceCarPerfect"),
-  },
-  {
-    icon: "🌍",
-    color: "from-emerald-600 to-green-800",
-    title: t("serviceCustomTitle"),
-    desc: t("serviceCustomDesc"),
-    features: [
-      t("serviceCustomFeature1"),
-      t("serviceCustomFeature2"),
-      t("serviceCustomFeature3"),
-      t("serviceCustomFeature4"),
-    ],
-    perfect: t("serviceCustomPerfect"),
-  }
-
-
-      ].map((service,index)=>(
-
-        <div
-        key={index}
-        className="group relative overflow-hidden rounded-[35px] bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-3">
-
-          {/* Gradient Border */}
-          <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br ${service.color}`}></div>
-
-          <div className="relative m-[1px] rounded-[34px] bg-white p-9">
-
-            {/* Icon */}
-            <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl shadow-lg group-hover:scale-110 transition duration-500`}>
-              {service.icon}
-            </div>
-
-            <h3 className="mt-8 text-2xl font-bold text-gray-900">
-              {service.title}
-            </h3>
-
-            <p className="mt-5 text-gray-600 leading-8">
-              {service.desc}
-            </p>
-
-            {/* Footer */}
-            
-
-          </div>
-
-        </div>
-
-      ))}
-
-    </div>
-
-    {/* Bottom CTA */}
-    
-    <div className="mt-24">
-
-      <div className="rounded-[40px] overflow-hidden bg-gradient-to-r from-[#092517] via-[#123B25] to-[#092517] p-12 md:p-16 shadow-2xl">
-
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-
-          <div>
-
-            <span className="uppercase tracking-[4px] text-yellow-400 text-sm font-bold">
-              {t("whyTravel")}
-            </span>
-
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-6">
-              {t("journeyTitle")}
-            </h2>
-
-            <p className="mt-6 text-gray-300 leading-8 text-lg">
-              {t("journeyDescription")}
-            </p>
-
-          </div>
-
-          <div className="grid grid-cols-2 gap-6">
-
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
-              <h3 className="text-5xl font-black text-yellow-400">10+</h3>
-              <p className="text-gray-300 mt-3">
-                {t("experienceYears")}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
-              <h3 className="text-5xl font-black text-yellow-400">500+</h3>
-              <p className="text-gray-300 mt-3">
-                {t("successfulTrips")}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
-              <h3 className="text-5xl font-black text-yellow-400">24/7</h3>
-              <p className="text-gray-300 mt-3">
-                {t("support247")}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 text-center">
-              <h3 className="text-5xl font-black text-yellow-400">100%</h3>
-              <p className="text-gray-300 mt-3">
-                {t("tailorMade")}
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-{/* FEATURED DESTINATIONS */}
-<section className="relative py-32 bg-[#070B08] text-white overflow-hidden">
-
-  {/* Background glow */}
-  <div className="absolute -top-40 left-[-120px] w-[600px] h-[600px] bg-yellow-400/10 blur-[140px] rounded-full"></div>
-  <div className="absolute -bottom-40 right-[-120px] w-[600px] h-[600px] bg-emerald-400/10 blur-[140px] rounded-full"></div>
-
-  <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-
-    {/* HEADER */}
-    <div className="text-center max-w-3xl mx-auto mb-16">
-
-      <span className="text-xs tracking-[0.4em] uppercase text-yellow-400 border border-yellow-400/20 px-5 py-2 rounded-full bg-white/5">
-        {t("unveilingTitle")}
-      </span>
-
-      <h2 className="text-4xl md:text-6xl font-black mt-6 leading-[1.1]">
-        {t("exploreAfrica")}
-        <span className="block text-yellow-400">
-          {t("iconicDestinations")}
-        </span>
-      </h2>
-
-      <p className="mt-6 text-gray-300 leading-8">
-        {t("scrollDescription")}
-      </p>
-
-    </div>
-
-    {/* HORIZONTAL SCROLL */}
-    <div className="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth scrollbar-hide">
-
-      {[
-        {
-          img: Wilderbeast,
-          title: t("migrationTitle"),
-          trips: t("migrationTrips"),
-          desc: t("migrationDesc"),
-          tag: t("premium")
-        },
-        {
-          img: gorilla,
-          title: t("gorillaTitle"),
-          trips: t("gorillaTrips"),
-          desc: t("gorillaDesc"),
-          tag: t("adventure")
-        },
-        {
-          img: kenya,
-          title: t("kenyaTitle"),
-          trips: t("kenyaTrips"),
-          desc: t("kenyaDesc"),
-          tag: t("popular")
-        },
-        {
-          img: serengeti,
-          title: t("serengetiTitle"),
-          trips: t("serengetiTrips"),
-          desc: t("serengetiDesc"),
-          tag: t("iconic")
-        },
-        {
-          img: climbinglongonot,
-          title: t("rwenzoriTitle"),
-          trips: t("rwenzoriTrips"),
-          desc: t("rwenzoriDesc"),
-          tag: t("hiking")
-        },
-        {
-          img: tanzania,
-          title: t("tanzaniaTitle"),
-          trips: t("tanzaniaTrips"),
-          desc: t("tanzaniaDesc"),
-          tag: t("premium")
-        }
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="min-w-[320px] md:min-w-[420px] snap-start group relative rounded-[30px] overflow-hidden shadow-2xl hover:scale-[1.02] transition duration-700"
-        >
-
-          {/* IMAGE */}
-          <div className="relative h-[520px] overflow-hidden">
-
-            <img
-              src={item.img}
-              alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-110 transition duration-[1200ms]"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_60%)]"></div>
-
-            <div className="absolute top-5 left-5">
-              <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
-                {item.tag}
-              </span>
-            </div>
-
-            <div className="absolute bottom-0 p-6 md:p-8 w-full">
-
-              <span className="text-xs text-white/70 border border-white/20 px-3 py-1 rounded-full backdrop-blur">
-                {item.trips}
-              </span>
-
-              <h3 className="text-2xl font-bold mt-4">
-                {item.title}
-              </h3>
-
-              <p className="text-sm text-white/70 mt-2">
-                {item.desc}
+              <p className="text-xs font-bold uppercase tracking-[3px] text-[#dba33a]">
+                Ready To Travel?
               </p>
 
-              <div className="flex items-center justify-between mt-6">
+              <h2 className="mt-3 text-3xl font-serif font-bold text-white sm:text-4xl lg:text-5xl">
 
-                <span className="text-xs text-white/50">
-                  {t("swipeMore")}
+                Let's Plan Your{" "}
+
+                <span className="text-[#dba33a]">
+                  Next Adventure.
                 </span>
 
-                <div className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-yellow-300 group-hover:bg-yellow-400 group-hover:text-black transition">
-                  →
+              </h2>
+
+              <p className="mt-4 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
+                Speak to our travel team and start creating your perfect
+                African journey.
+              </p>
+
+            </div>
+
+            <Link
+              to="/contact"
+              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#dba33a] px-8 py-4 font-bold text-[#07351d] shadow-xl transition hover:-translate-y-1 hover:bg-[#e9b84f]"
+            >
+              Start Planning
+
+              <span>
+                →
+              </span>
+
+            </Link>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          FOOTER
+      ====================================================== */}
+
+      <footer className="overflow-hidden bg-[#082D19] text-white">
+
+        <div className="relative mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-8 sm:pt-16 lg:px-12">
+
+          {/* DECORATIVE BACKGROUND */}
+
+          <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#F39A08]/10 blur-3xl" />
+
+          <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-emerald-400/5 blur-3xl" />
+
+          <div className="relative z-10">
+
+            {/* ==================================================
+                FOOTER MAIN
+            ================================================== */}
+
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] lg:gap-12">
+
+              {/* BRAND */}
+
+              <div>
+
+                <Link
+                  to="/"
+                  className="group inline-block"
+                >
+
+                  <h2 className="font-serif text-3xl font-bold text-white transition-colors group-hover:text-[#F39A08] sm:text-4xl">
+                    Daffar
+                  </h2>
+
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.35em] text-[#F39A08]">
+                    Tours & Travel
+                  </p>
+
+                </Link>
+
+                <p className="mt-5 max-w-sm text-sm leading-6 text-white/55">
+                  Discover Africa through unforgettable safari adventures,
+                  authentic cultural experiences, breathtaking landscapes
+                  and carefully crafted journeys.
+                </p>
+
+                {/* SOCIAL */}
+
+             <div className="mt-6 flex items-center gap-2.5">
+
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/dafartoursandtravel"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
+    >
+      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
+    </svg>
+  </a>
+
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/dafartoursandtravel"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#833AB4] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#E1306C]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[18px] w-[18px] fill-none stroke-current"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        className="fill-current stroke-none"
+      />
+    </svg>
+  </a>
+
+
+  {/* TikTok */}
+  <a
+    href="https://www.tiktok.com/@dafartoursandtravel"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-black/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[17px] w-[17px] fill-current"
+      aria-hidden="true"
+    >
+      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
+    </svg>
+  </a>
+
+
+  {/* YouTube */}
+  <a
+    href="https://www.youtube.com/@dafartoursandtravel"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF0000] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#FF0000]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
+    >
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.9V8.1l6.5 3.9-6.5 3.9z" />
+    </svg>
+  </a>
+
+</div>
+
+              </div>
+
+              {/* EXPLORE */}
+
+              <FooterColumn title="Explore">
+
+                <FooterLink to="/">
+                  Home
+                </FooterLink>
+
+                <FooterLink to="/about">
+                  About Us
+                </FooterLink>
+
+                <FooterLink to="/safaris">
+                  Safaris
+                </FooterLink>
+
+                <FooterLink to="/destinations">
+                  Destinations
+                </FooterLink>
+
+                <FooterLink to="/activities">
+                  Activities
+                </FooterLink>
+
+                <FooterLink to="/contact">
+                  Contact
+                </FooterLink>
+
+              </FooterColumn>
+
+              {/* DISCOVER */}
+
+              <FooterColumn title="Discover">
+
+                <FooterLink to="/communitywork">
+                  Community Work
+                </FooterLink>
+
+                <FooterLink to="/tourafricablog">
+                  Tour Africa Blog
+                </FooterLink>
+
+                <FooterLink to="/faqs">
+                  FAQs
+                </FooterLink>
+
+                <FooterLink to="/safaris">
+                  Tailor-Made Safaris
+                </FooterLink>
+
+                <FooterLink to="/safaris">
+                  Honeymoon Safaris
+                </FooterLink>
+
+                <FooterLink to="/contact">
+                  Plan Your Trip
+                </FooterLink>
+
+              </FooterColumn>
+
+              {/* CONTACT */}
+
+              <div>
+
+                <FooterHeading>
+                  Contact Us
+                </FooterHeading>
+
+                <div className="space-y-4">
+
+                  {/* LOCATION */}
+
+                  <div className="flex items-start gap-3">
+
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#F39A08]">
+                      📍
+                    </div>
+
+                    <div>
+
+                      <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
+                        Location
+                      </p>
+
+                      <p className="mt-1 text-sm text-white/60">
+                        Kenya • East Africa
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  {/* EMAIL */}
+
+                  <div className="flex items-start gap-3">
+
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#F39A08]">
+                      ✉
+                    </div>
+
+                    <div>
+
+                      <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
+                        Email
+                      </p>
+
+                      <a
+                        href="mailto:info@daffartours.com"
+                        className="mt-1 block text-sm text-white/60 transition hover:text-[#F39A08]"
+                      >
+                        info@daffartours.com
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                  {/* PHONE */}
+
+                  <div className="flex items-start gap-3">
+
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#F39A08]">
+                      ☎
+                    </div>
+
+                    <div>
+
+                      <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
+                        Phone
+                      </p>
+
+                      <a
+                        href="tel:+254708164662"
+                        className="mt-1 block text-sm text-white/60 transition hover:text-[#F39A08]"
+                      >
+                        +254708164662
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                  {/* WHATSAPP */}
+
+                  
+
                 </div>
 
               </div>
 
             </div>
 
-          </div>
-        </div>
-      ))}
-
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-{/* DESTINATIONS & EXPERIENCES */}
-<section className="py-28 bg-gradient-to-b from-[#F8F7F3] via-white to-[#F3F3EF] relative overflow-hidden">
-
-  <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#D4AF37]/15 blur-[120px] rounded-full" />
-  <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-green-900/10 blur-[120px] rounded-full" />
-
-  <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-
-    {/* HEADER */}
-    <div className="text-center mb-20">
-
-      <span className="uppercase tracking-[0.4em] text-[#D4AF37] text-xs font-semibold">
-        {t("exploreEastAfrica") || "Explore East Africa"}
-      </span>
-
-      <h2 className="text-4xl md:text-5xl font-bold mt-5 leading-tight">
-        {t("destinationsTitlePart1") || "Destinations Crafted for"}{" "}
-        <span className="text-[#D4AF37]">
-          {t("destinationsTitleHighlight") || "Unforgettable Adventure"}
-        </span>
-      </h2>
-
-      <p className="mt-6 max-w-3xl mx-auto text-gray-600 leading-8">
-        {t("destinationsDesc")}
-      </p>
-
-    </div>
-
-    {/* GRID CARDS */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-      {[
-        {
-          img: tanzania,
-          title: t("maasaiMara") || "Maasai Mara",
-          icon: "🦁",
-          color: "from-yellow-400/20",
-          desc: t("maasaiMaraDesc")
-        },
-        {
-          img: amboseli,
-          title: t("amboseli"),
-          icon: "🐘",
-          color: "from-emerald-400/20",
-          desc: t("amboseliDesc")
-        },
-        {
-          img: nakuru,
-          title: t("lakeNakuru"),
-          icon: "🦩",
-          color: "from-pink-400/20",
-          desc: t("nakuruDesc")
-        },
-        {
-          img: west,
-          title: t("tsavo"),
-          icon: "🐆",
-          color: "from-red-400/20",
-          desc: t("tsavoDesc")
-        },
-        {
-          img: serengeti,
-          title: t("serengeti"),
-          icon: "🌍",
-          color: "from-sky-400/20",
-          desc: t("serengetiDesc")
-        }
-      ].map((place, index) => (
-        <div
-          key={index}
-          className="group relative rounded-[30px] overflow-hidden shadow-lg hover:shadow-2xl transition duration-700 bg-white border border-gray-100 hover:-translate-y-2"
-        >
-
-          <div className="relative h-[260px] overflow-hidden">
-            <img
-              src={place.img}
-              alt={place.title}
-              className="w-full h-full object-cover group-hover:scale-110 transition duration-[1500ms]"
-            />
-
-            <div className={`absolute inset-0 bg-gradient-to-t ${place.color} via-black/20 to-black/50`} />
-
-            <div className="absolute top-4 left-4 bg-white/90 text-black text-lg px-3 py-1 rounded-full shadow-md">
-              {place.icon}
-            </div>
-          </div>
-
-          <div className="p-7">
-            <h3 className="text-xl font-bold mb-3 group-hover:text-[#D4AF37] transition">
-              {place.title}
-            </h3>
-
-            <p className="text-gray-600 text-sm leading-7">
-              {place.desc}
-            </p>
-          </div>
-
-        </div>
-      ))}
-    </div>
-
-    {/* FOOTER STRIP */}
-    <div className="mt-20 bg-gradient-to-r from-[#0F2418] via-[#102315] to-[#0B1A12] rounded-[40px] p-12 text-white shadow-2xl">
-
-      <div className="grid md:grid-cols-3 gap-10 text-center">
-
-        <div>
-          <h3 className="text-[#D4AF37] text-3xl font-bold">
-            {t("tailoredSafaris")}
-          </h3>
-          <p className="text-gray-300 mt-3">
-            {t("tailoredSafarisDesc")}
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-[#D4AF37] text-3xl font-bold">
-            {t("kenyaTanzania")}
-          </h3>
-          <p className="text-gray-300 mt-3">
-            {t("kenyaTanzaniaDesc")}
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-[#D4AF37] text-3xl font-bold">
-            {t("expertGuides")}
-          </h3>
-          <p className="text-gray-300 mt-3">
-            {t("expertGuidesDesc")}
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-{/*Treking and climbing*/}
-<section className="relative py-28 bg-gradient-to-b from-black via-[#06130D] to-black text-white overflow-hidden">
-
-  <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full"></div>
-  <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-yellow-500/10 blur-[120px] rounded-full"></div>
-
-  <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className="text-4xl md:text-5xl font-bold">{t("trekTitle") || "Trek & Climb East Africa"}</h2>
-      <p className="mt-5 text-white/70 leading-8">{t("trekDesc")}</p>
-    </div>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      {[
-        {image:"climbingkili.jpg",title:"kilimanjaro",desc:"Experience Africa’s highest peak with breathtaking landscapes, glaciers, and unforgettable sunrise views above the clouds.",location:"Tanzania",height:"5,895m",duration:"5 - 9 Days",level:"Challenging",season:"June - October"},
-        {image:"climbingkenya.jpg",title:"mountKenya",desc:"Explore Kenya’s legendary mountain with dramatic valleys, alpine scenery, and stunning views from Point Lenana.",location:"Kenya",height:"5,199m",duration:"4 - 6 Days",level:"Moderate",season:"January - March"},
-        {image:"climbinglongonot.jpg",title:"longonot",desc:"A perfect day adventure hiking through volcanic terrain, crater trails, and panoramic views of the Great Rift Valley.",location:"Naivasha, Kenya",height:"2,776m",duration:"1 Day",level:"Easy - Moderate",season:"All Year"},
-        {image:"hellsgate.jpg",title:"hellsGate",desc:"Enjoy an active outdoor adventure with hiking, cycling, cliffs, wildlife, and spectacular volcanic landscapes.",location:"Nakuru, Kenya",height:"2,190m",duration:"1 Day",level:"Easy",season:"All Year"}
-      ].map((item,index)=>(
-
-        <div key={index} className="group rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-yellow-400/40 transition-all duration-500 hover:-translate-y-2">
-
-          <div className="h-56 overflow-hidden relative">
-            <img src={require(`../assets/${item.image}`)} alt={t(item.title)} className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"/>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <h3 className="absolute bottom-4 left-5 text-2xl font-bold text-yellow-300">{t(item.title)}</h3>
-          </div>
-
-          <div className="p-6">
-
-            <p className="text-sm text-white/70 leading-7 mb-5">{item.desc}</p>
-
-            <div className="space-y-3 text-sm text-white/80">
-              <div className="flex justify-between"><span>📍 Location</span><span>{item.location}</span></div>
-              <div className="flex justify-between"><span>⛰ Height</span><span>{item.height}</span></div>
-              <div className="flex justify-between"><span>🕒 Duration</span><span>{item.duration}</span></div>
-              <div className="flex justify-between"><span>🥾 Difficulty</span><span>{item.level}</span></div>
-              <div className="flex justify-between"><span>☀ Best Time</span><span>{item.season}</span></div>
-            </div>
-
-           
-
-          </div>
-
-        </div>
-
-      ))}
-
-    </div>
-
-  </div>
-
-</section>
-
-{/* WHY TRAVEL WITH US */}
-<section className="py-24 bg-[#102315] text-white relative overflow-hidden">
-
-  <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-3xl"></div>
-
-  <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-
-    {/* HEADER */}
-    <div className="text-center mb-16">
-
-      <span className="uppercase tracking-[5px] text-[#D4AF37] font-semibold">
-        {t("whyChooseUs")}
-      </span>
-
-      <h2 className="text-4xl md:text-5xl font-bold mt-4">
-        {t("whyTitlePart1")}{" "}
-        <span className="text-[#D4AF37]">
-          {t("whyTitleHighlight")}
-        </span>
-      </h2>
-
-      <p className="max-w-3xl mx-auto mt-6 text-gray-300 leading-8">
-        {t("whyDescription")}
-      </p>
-
-    </div>
-
-    {/* FEATURE CARDS */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      {/* Card 1 */}
-      <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
-
-        <div className="text-5xl mb-5">🦁</div>
-
-        <h3 className="text-2xl font-bold mb-4">
-          {t("expertGuidesTitle")}
-        </h3>
-
-        <p className="text-gray-300 leading-7">
-          {t("expertGuidesDesc")}
-        </p>
-
-      </div>
-
-      {/* Card 2 */}
-      <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
-
-        <div className="text-5xl mb-5">🚙</div>
-
-        <h3 className="text-2xl font-bold mb-4">
-          {t("luxuryTravelTitle")}
-        </h3>
-
-        <p className="text-gray-300 leading-7">
-          {t("luxuryTravelDesc")}
-        </p>
-
-      </div>
-
-      {/* Card 3 */}
-      <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
-
-        <div className="text-5xl mb-5">🌍</div>
-
-        <h3 className="text-2xl font-bold mb-4">
-          {t("ecoTourismTitle")}
-        </h3>
-
-        <p className="text-gray-300 leading-7">
-          {t("ecoTourismDesc")}
-        </p>
-
-      </div>
-
-      {/* Card 4 */}
-      <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[30px] border border-white/10 hover:-translate-y-2 transition duration-500">
-
-        <div className="text-5xl mb-5">⭐</div>
-
-        <h3 className="text-2xl font-bold mb-4">
-          {t("trustedServiceTitle")}
-        </h3>
-
-        <p className="text-gray-300 leading-7">
-          {t("trustedServiceDesc")}
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-{/* ===================== REVIEWSS ===================== */}
-<section className="relative py-28 bg-gradient-to-b from-[#F8F6F1] via-white to-[#F2EEE5] overflow-hidden">
-
-  {/* Background Effects */}
-   {/* Background Effects */}
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[140px]" />
-      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[140px]" />
-
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto">
-
-          <span className="inline-flex items-center bg-green-100 text-green-700 px-5 py-2 rounded-full uppercase tracking-[3px] text-xs font-bold">
-            {t("testimonialsBadge")}
-          </span>
-
-          <h2 className="mt-6 text-5xl font-black text-gray-900">
-            {t("testimonialsTitle1")}
-            <span className="block text-[#C8A94C]">
-              {t("testimonialsTitle2")}
-            </span>
-          </h2>
-
-          <p className="mt-6 text-gray-600 text-lg leading-8">
-            {t("testimonialsDescription")}
-          </p>
-
-        </div>
-
-        {/* Google Rating */}
-        <div className="mt-16 flex justify-center">
-
-          <div className="bg-white rounded-3xl shadow-xl border border-gray-100 px-10 py-8 flex flex-col md:flex-row items-center gap-8">
-
-            <div className="text-center">
-
-              <h3 className="text-6xl font-black text-green-700">
-                5.0
-              </h3>
-
-              <div className="text-yellow-400 text-3xl mt-2">
-                ★★★★★
-              </div>
-
-              <p className="text-gray-600 mt-2">
-                {t("googleBased")}
+            {/* ==================================================
+                BOTTOM BAR
+            ================================================== */}
+
+            <div className="flex flex-col gap-3 pt-6 md:flex-row md:items-center md:justify-between">
+
+              <p className="text-xs text-white/35">
+                © {new Date().getFullYear()} Daffar Tours & Travel.
+                All rights reserved.
               </p>
 
-            </div>
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/35">
 
-            <div className="hidden md:block h-20 w-px bg-gray-200"></div>
+                <Link
+                  to="/terms"
+                  className="transition hover:text-[#F39A08]"
+                >
+                  Terms & Conditions
+                </Link>
 
-            <div>
+                <Link
+                  to="/privacy"
+                  className="transition hover:text-[#F39A08]"
+                >
+                  Privacy Policy
+                </Link>
 
-              <h3 className="text-2xl font-bold text-gray-900">
-                {t("trustedTitle")}
-              </h3>
+                <Link
+                  to="/contact"
+                  className="transition hover:text-[#F39A08]"
+                >
+                  Contact
+                </Link>
 
-              <p className="mt-3 text-gray-600 leading-7 max-w-lg">
-                {t("trustedDescription")}
+              </div>
+
+              <p className="text-xs text-white/25">
+                Kenya • Africa
               </p>
 
             </div>
@@ -1046,334 +1705,15 @@ i===index
 
         </div>
 
-        {/* Reviews */}
-        <div className="grid md:grid-cols-3 gap-8 mt-20">
+      </footer>
 
-          {/* Review 1 */}
-          <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-
-            <div className="flex items-center justify-between">
-
-              <div className="text-yellow-400 text-2xl">
-                ★★★★★
-              </div>
-
-              <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-                {t("verifiedReview")}
-              </span>
-
-            </div>
-
-            <p className="mt-6 text-gray-600 leading-8 italic">
-              "We've travelled the world and the safari with Denis is by far the
-              most memorable, beautiful and magical experience we've ever had.
-              His passion, kindness and knowledge made every moment unforgettable."
-            </p>
-
-            <div className="mt-8 flex items-center gap-4">
-
-              <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
-                A
-              </div>
-
-              <div>
-
-                <h4 className="font-bold text-gray-900">
-                  Andrea Milán
-                </h4>
-
-                <p className="text-sm text-gray-500">
-                  {t("verifiedReview")}
-                </p>
-
-              </div>
-
-        </div>
-
-      </div>
-
-      {/* Review 2 */}
-      {/* Review 2 */}
-          <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-
-            <div className="flex items-center justify-between">
-
-              <div className="text-yellow-400 text-2xl">
-                ★★★★★
-              </div>
-
-              <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-                {t("verifiedReview")}
-              </span>
-
-            </div>
-
-            <p className="mt-6 text-gray-600 leading-8 italic">
-              "Our 2-night, 3-day Maasai Mara safari was perfectly organised.
-              Denis was an outstanding guide and made the trip unforgettable.
-              I highly recommend Dengray Adventures."
-            </p>
-
-            <div className="mt-8 flex items-center gap-4">
-
-              <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
-                O
-              </div>
-
-              <div>
-
-                <h4 className="font-bold text-gray-900">
-                  Antoine Obunde
-                </h4>
-
-                <p className="text-sm text-gray-500">
-                  {t("verifiedReview")}
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Review 3 */}
-          <div className="group bg-white rounded-3xl border border-gray-100 p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-
-            <div className="flex items-center justify-between">
-
-              <div className="text-yellow-400 text-2xl">
-                ★★★★★
-              </div>
-
-              <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold">
-                {t("verifiedReview")}
-              </span>
-
-            </div>
-
-            <p className="mt-6 text-gray-600 leading-8 italic">
-              "The safari was beautifully organised. The guide was friendly,
-              knowledgeable and reliable. We are happy to come back again.
-              Thank you for the amazing experience."
-            </p>
-
-            <div className="mt-8 flex items-center gap-4">
-
-              <div className="w-14 h-14 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">
-                S
-              </div>
-
-              <div>
-
-                <h4 className="font-bold text-gray-900">
-                  Steinert Liesel
-                </h4>
-
-                <p className="text-sm text-gray-500">
-                  {t("verifiedReview")}
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* Trust Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-
-          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-            <h3 className="text-5xl font-black text-green-700">
-              5.0
-            </h3>
-            <p className="mt-2 text-gray-600">
-              {t("googleRating")}
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-            <h3 className="text-5xl font-black text-green-700">
-              6+
-            </h3>
-            <p className="mt-2 text-gray-600">
-              {t("verifiedReviews")}
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-            <h3 className="text-5xl font-black text-green-700">
-              100%
-            </h3>
-            <p className="mt-2 text-gray-600">
-              {t("satisfiedGuests")}
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
-            <h3 className="text-5xl font-black text-green-700">
-              24/7
-            </h3>
-            <p className="mt-2 text-gray-600">
-              {t("travelSupport")}
-            </p>
-          </div>
-
-    </div>
-
-    {/* Buttons */}
- {/* Action Buttons */}
-        <div className="mt-16 flex flex-wrap justify-center gap-6">
-
-          {/* Write Google Review */}
-          <a
-            href="https://search.google.com/local/writereview?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-green-700 text-white font-semibold rounded-2xl shadow-lg hover:bg-green-800 hover:-translate-y-1 transition-all duration-300"
-          >
-            ⭐ {t("writeReview")}
-          </a>
-
-          {/* View Google Reviews */}
-          <a
-            href="https://search.google.com/local/reviews?placeid=ChIJoS2CGQqlKhgR63ePw3o5Wu0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-2xl hover:bg-green-700 hover:text-white hover:-translate-y-1 transition-all duration-300"
-          >
-            💬 {t("viewAllReviews")}
-          </a>
-
-        </div>
-
-  </div>
-
-</section>
-
-{/* FOOTER */}
-<footer className="relative overflow-hidden bg-black text-white py-16">
-
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-    {/* BRAND */}
-    <div>
-
-      <h2 className="text-3xl font-bold text-yellow-500 mb-2">
-        {t("footerBrand")}
-      </h2>
-
-      <p className="text-xs text-gray-500 mb-1">
-        {t("footerDeveloper")}
-      </p>
-
-      <p className="text-gray-400 leading-8 mb-3">
-        {t("footerDescription")}
-      </p>
-
-      <a
-        href="https://dennismusa.netlify.app/"
-        target="_blank"
-        rel="noreferrer"
-        className="text-yellow-500 hover:underline text-sm font-semibold"
-      >
-        {t("footerPortfolio")}
-      </a>
-
-    </div>
-
-    {/* LINKS */}
-    <div>
-
-      <h3 className="text-xl font-bold mb-5">
-        {t("quickLinks")}
-      </h3>
-
-      <ul className="space-y-4 text-gray-400">
-
-        <li>
-          <Link to="/" className="hover:text-yellow-500 transition">
-            {t("home")}
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/vehicles" className="hover:text-yellow-500 transition">
-            {t("fleet")}
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/gallery" className="hover:text-yellow-500 transition">
-            {t("gallery")}
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/contact" className="hover:text-yellow-500 transition">
-            {t("contact")}
-          </Link>
-        </li>
-
-      </ul>
-
-    </div>
-
-    {/* SERVICES */}
-    <div>
-
-      <h3 className="text-xl font-bold mb-5">
-        {t("services")}
-      </h3>
-
-      <ul className="space-y-4 text-gray-400">
-
-        <li>{t("service1")}</li>
-        <li>{t("service2")}</li>
-        <li>{t("service3")}</li>
-        <li>{t("service4")}</li>
-
-      </ul>
-
-    </div>
-
-    {/* CONTACT */}
-    <div>
-
-      <h3 className="text-xl font-bold mb-5">
-        {t("contactInfo")}
-      </h3>
-
-      <ul className="space-y-4 text-gray-400">
-
-        <li>{t("location")}</li>
-        <li>{t("phone")}</li>
-        <li>{t("email")}</li>
-
-      </ul>
-
-      <a
-        href="https://wa.me/+254112277671"
-        target="_blank"
-        rel="noreferrer"
-        className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-black font-bold px-6 py-3 rounded-lg transition"
-      >
-        {t("whatsappBooking")}
-      </a>
-
-    </div>
-
-  </div>
-
-  {/* BOTTOM */}
-  <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-    {t("footerBottom")}
-  </div>
-
-</footer>
-    </div>
+      
+    </main>
   );
 }
+
+/* ============================================================
+   EXPORT
+============================================================ */
 
 export default Home;
