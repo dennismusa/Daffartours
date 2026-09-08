@@ -14,6 +14,7 @@ import Vehicles from "./components/Vehicles";
 import Destinations from "./components/Destinations";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+//import  Itinerariessearch from "./components/Itinerariessearch";
 
 import Aberdare from "./destination/Aberdare";
 import Diani from "./destination/Diani";
@@ -24,10 +25,22 @@ import Ngorongoro from "./destination/Ngorongoro";
 import Serengeti from "./destination/Serengeti";
 import Tarangire from "./destination/Tarangire";
 import Zanzibar from "./destination/Zanzibar";
+
+import Amboseliitineraries from "./destination/Amboseliitineraries";
+import Serengetiitineraries from "./destination/Serengetiitineraries";
+import Maasaimaraitineraries from "./destination/Maasaimaraitineraries";
+import Mountkilimanjaroitineraries from "./destination/Mountkilimanjaroitineraries";
+import Sychellesitineraries from "./destination/Sychellesitineraries";
+import Dianiitineraries from "./destination/Dianiitineraries";
+import Samburuitineraries from "./destination/Samburuitineraries";
+import Ndutucalvingitineraries from "./destination/Ndutucalvingitineraries";
+
+
+
 import Nairobipark from "./destination/Nairobipark";
 import Mountkenya from "./destination/Mountkenya";
 import Hellsgate from "./destination/Hellsgate";
-import Tsavoeast from "./destination/Tsavoeast";
+//import Sychellesitineraries from "./destination/Sychellesitineraries";
 import Tsavowest from "./destination/Tsavowest";
 import LakeNakuru from "./destination/LakeNakuru";
 import Meru from "./destination/Meru";
@@ -61,15 +74,22 @@ function App() {
             <Route path="/vehicles" element={<Vehicles />} />
             <Route path="/contact" element={<Contact />} />
 
+            <Route  path="/maasaimaraitineraries"  element={<Maasaimaraitineraries />}/>
+          <Route  path="/serengetiitineraries"  element={<Serengetiitineraries />}/>
+           <Route  path="/mountkilimanjaroitineraries"  element={<Mountkilimanjaroitineraries />}/>
+          <Route  path="/amboseliitineraries"  element={<Amboseliitineraries />}/>
+          <Route  path="/sychellesitineraries"  element={<Sychellesitineraries />}/>
+          <Route  path="/dianiitineraries"  element={<Dianiitineraries />}/>
+          <Route  path="/samburuitineraries"  element={<Samburuitineraries />}/>
+          <Route  path="/ndutucalvingitineraries"  element={<Ndutucalvingitineraries />}/>
+
+
             {/* DESTINATIONS */}
             <Route path="/aberdare" element={<Aberdare />} />
             <Route path="/amboseli" element={<Amboseli />} />
             <Route path="/diani" element={<Diani />} />
             <Route path="/maasaimara" element={<Maasaimara />} />
-            <Route
-              path="/mountkilimanjaro"
-              element={<Mountkilimanjaro />}
-            />
+            <Route path="/mountkilimanjaro" element={<Mountkilimanjaro />} />
             <Route path="/mountkenya" element={<Mountkenya />} />
             <Route path="/ngorongoro" element={<Ngorongoro />} />
             <Route path="/serengeti" element={<Serengeti />} />
@@ -77,7 +97,7 @@ function App() {
             <Route path="/zanzibar" element={<Zanzibar />} />
             <Route path="/nairobipark" element={<Nairobipark />} />
             <Route path="/hellsgate" element={<Hellsgate />} />
-            <Route path="/tsavoeast" element={<Tsavoeast />} />
+            
             <Route path="/tsavowest" element={<Tsavowest />} />
             <Route path="/lakenakuru" element={<LakeNakuru />} />
             <Route path="/meru" element={<Meru />} />

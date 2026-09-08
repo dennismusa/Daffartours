@@ -830,14 +830,7 @@ function LakeNakuru() {
               Plan Your Nakuru Safari
             </Link>
 
-            <a
-              href="https://wa.me/+254708164662"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
-            >
-              WhatsApp Us
-            </a>
+           
 
           </div>
 
@@ -996,12 +989,7 @@ function LakeNakuru() {
               Safaris
             </Link>
 
-            <Link
-              to="/destinations"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Destinations
-            </Link>
+            
 
             <Link
               to="/activities"

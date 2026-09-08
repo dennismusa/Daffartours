@@ -1,14 +1,18 @@
+/* eslint-disable no-unused-vars */
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import amboseli from "../assets/amboseli.jpg";
 import Wilderbeast from "../assets/Wilderbeast.jpg";
 import serengeti from "../assets/serengeti.jpg";
+import serengeti3 from "../assets/serengeti3.jpg";
 //import meru from "../assets/meru.jpg";
 import nakuru from "../assets/nakuru.jpg";
 import kili1 from "../assets/kili1.jpg";
 import ngorongori1 from "../assets/ngorongoro1.jpg";
 import mara1 from "../assets/mara1.jpg";
+import diani1 from "../assets/diani1.jpg";
 //import west from "../assets/west.jpg";
 //import tanzania from "../assets/tanzania.jpg";
 import image16 from "../assets/image16.jpg";
@@ -16,9 +20,867 @@ import image17 from "../assets/image17.jpg";
 import cruiser2 from "../assets/cruiser2.jpg";
 import climbingkenya from "../assets/climbingkenya.jpg";
 
+
+
+
+
+
+
+
 /* ============================================================
    HERO SLIDES
 ============================================================ */
+
+export const itineraries = [
+  // =========================================================
+  // 5-DAY MARANGU ROUTE
+  // =========================================================
+  {
+    id: "marangu-5-day",
+    title: "5-Day Kilimanjaro Adventure",
+    route: "Marangu Route",
+    duration: "5 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 64 km",
+    description:
+      "A classic Kilimanjaro climb via the Marangu Route, popularly known as the Coca-Cola Route, featuring mountain huts and diverse landscapes.",
+    keywords: [
+      "marangu",
+      "marangu route",
+      "coca cola route",
+      "coca-cola route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "5 day",
+      
+    ],
+    href: "/Mountkilimanjaro#marangu-5-day",
+  },
+
+  // =========================================================
+  // 6-DAY MARANGU ROUTE
+  // =========================================================
+  {
+    id: "marangu-6-day",
+    title: "6-Day Kilimanjaro Trek",
+    route: "Marangu Route",
+    duration: "6 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 64 km",
+    description:
+      "An extended Marangu Route itinerary designed with additional acclimatization time to improve comfort and summit success.",
+    keywords: [
+      "marangu",
+      "marangu route",
+      "coca cola route",
+      "coca-cola route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "6 day",
+      
+    ],
+    href: "/Mountkilimanjaro#marangu-6-day",
+  },
+
+  // =========================================================
+  // 6-DAY RONGAI ROUTE
+  // =========================================================
+  {
+    id: "rongai-6-day",
+    title: "6-Day Kilimanjaro Adventure",
+    route: "Rongai Route",
+    duration: "6 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 65 km",
+    description:
+      "A peaceful northern approach to Mount Kilimanjaro via the Rongai Route, known for gradual altitude gain, scenic landscapes, and fewer crowds.",
+    keywords: [
+      "rongai",
+      "rongai route",
+      "northern route",
+      "northern trail",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "6 day",
+      "6 days",
+      
+    ],
+    href: "/Mountkilimanjaro#rongai-6-day",
+  },
+
+  // =========================================================
+  // 7-DAY RONGAI ROUTE
+  // =========================================================
+  {
+    id: "rongai-7-day",
+    title: "7-Day Kilimanjaro Expedition",
+    route: "Rongai Route",
+    duration: "7 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 65 km",
+    description:
+      "A tranquil seven-day Kilimanjaro expedition via the remote northern Rongai Route, offering gradual altitude gain, spectacular views and a peaceful wilderness experience.",
+    keywords: [
+      "rongai",
+      "rongai route",
+      "northern route",
+      "northern wilderness trail",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "7 day",
+      "7 days",
+      "kilimanjaro expedition",
+      "kilimanjaro adventure",
+      "kilimanjaro trek",
+      "kilimanjaro trekking",
+      "kilimanjaro climbing",
+      "uhuru peak",
+      "tanzania",
+      "tanzania trekking",
+      "mountain trekking",
+      "kenya border",
+      "wilderness",
+    ],
+    href: "/Mountkilimanjaro#rongai-7-day",
+  },
+
+  // =========================================================
+  // 6-DAY LEMOSHO ROUTE
+  // =========================================================
+  {
+    id: "lemosho-6-day",
+    title: "6-Day Lemosho Route Trek",
+    route: "Lemosho Route",
+    duration: "6 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 46 km",
+    description:
+      "A challenging and scenic six-day ascent through rainforest, moorland, alpine desert and icy summit zones, designed for physically fit trekkers.",
+    keywords: [
+      "lemosho",
+      "lemosho route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "6 day",
+      "6 days",
+      "kilimanjaro trek",
+      "kilimanjaro trekking",
+      "kilimanjaro climbing",
+      "uhuru peak",
+      "tanzania",
+      "tanzania trekking",
+      "mountain trekking",
+      "rainforest",
+      "moorland",
+      "alpine desert",
+      "summit",
+    ],
+    href: "/Mountkilimanjaro#lemosho-6-day",
+  },
+
+  // =========================================================
+  // 7-DAY LEMOSHO ROUTE
+  // =========================================================
+  {
+    id: "lemosho-7-day",
+    title: "7-Day Kilimanjaro Adventure",
+    route: "Lemosho Route",
+    duration: "7 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 46 km",
+    description:
+      "A scenic seven-day Lemosho Route journey offering breathtaking landscapes, low foot traffic, gradual ascent and excellent acclimatization.",
+    keywords: [
+      "lemosho",
+      "lemosho route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "7 day",
+      
+    ],
+    href: "/Mountkilimanjaro#lemosho-7-day",
+  },
+
+  // =========================================================
+  // 8-DAY LEMOSHO ROUTE
+  // =========================================================
+  {
+    id: "lemosho-8-day",
+    title: "8-Day Kilimanjaro Expedition",
+    route: "Lemosho Route",
+    duration: "8 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 46 km",
+    description:
+      "A scenic and gradual Kilimanjaro expedition via the Lemosho Route, offering excellent acclimatization, spectacular landscapes and quieter trails.",
+    keywords: [
+      "lemosho",
+      "lemosho route",
+      "kilimanjaro",
+      
+    ],
+    href: "/Mountkilimanjaro#lemosho-8-day",
+  },
+
+  // =========================================================
+  // 7-DAY MACHAME ROUTE
+  // =========================================================
+  {
+    id: "machame-7-day",
+    title: "7-Day Kilimanjaro Ascent Adventure",
+    route: "Machame Route",
+    duration: "7 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 65 km",
+    description:
+      "A spectacular seven-day climb via the Machame Route, also known as the Whiskey Route, featuring varied landscapes and a steady altitude profile.",
+    keywords: [
+      "machame",
+      "machame route",
+      "whiskey route",
+      "whiskey trail",
+      "kilimanjaro",
+      
+    ],
+    href: "/mountkilimanjaro#machame-7-day",
+  },
+
+  // =========================================================
+  // 3-DAY WATAMU
+  // =========================================================
+  {
+    id: "watamu-3-day",
+    title: "3-Day Watamu Beach Escape",
+    route: "Watamu Beach",
+    duration: "3 Days",
+    location: "Watamu, Kenya",
+    altitude: "Coastal",
+    distance: "Beach Escape",
+    description:
+      "A relaxing three-day coastal getaway featuring pristine beaches, coral reefs, marine adventures, snorkeling, dolphin watching and Swahili culture.",
+    keywords: [
+      "watamu",
+      "watamu beach",
+      "kenya coast",
+      
+    ],
+    href: "/Diani#watamu-3-day",
+  },
+
+  // =========================================================
+  // 4-DAY DIANI
+  // =========================================================
+  {
+    id: "diani-4-day",
+    title: "4-Day Diani Beach Holiday",
+    route: "Diani Beach",
+    duration: "4 Days",
+    location: "Diani, Kenya",
+    altitude: "Coastal",
+    distance: "Beach Holiday",
+    description:
+      "A four-day coastal retreat combining Diani's white-sand beaches, turquoise waters, relaxation and optional marine and cultural excursions.",
+    keywords: [
+      "diani",
+      "diani beach",
+      "kenya coast",
+      
+    ],
+    href: "/Diani#diani-4-day",
+  },
+
+  // =========================================================
+  // 4-DAY ZANZIBAR
+  // =========================================================
+  {
+    id: "zanzibar-4-day",
+    title: "4-Day Zanzibar Beach Getaway",
+    route: "Zanzibar",
+    duration: "4 Days",
+    location: "Zanzibar, Tanzania",
+    altitude: "Coastal",
+    distance: "Island Escape",
+    description:
+      "A four-day Zanzibar getaway combining dreamy beaches with spice farms, coconut plantations, traditional villages, forest trails and Swahili culture.",
+    keywords: [
+      "zanzibar",
+      "zanzibar beach",
+      "zanzibar holiday",
+      "zanzibar getaway",
+      "4 day",
+      
+    ],
+    href: "/zanzibar#zanzibar-4-day",
+  },
+
+  {
+  id: "5-day-maasaimara",
+  title: "5-Day Maasai Mara & Amboseli Safari",
+  route: "Maasai Mara • Amboseli",
+  duration: "5 Days",
+  location: "Kenya",
+  altitude: "Approx. 1,100–2,200m",
+  distance: "Safari Experience",
+  description:
+    "A five-day Kenya safari combining the legendary Maasai Mara with Amboseli National Park, offering unforgettable wildlife encounters, Big Five sightings, spectacular savannah landscapes, Maasai culture and breathtaking views of Mount Kilimanjaro.",
+  keywords: [
+    "maasai mara",
+    "masai mara",
+    "mara",
+    "amboseli",
+    "amboseli national park",
+    "maasai mara amboseli",
+    "amboseli maasai mara",
+    "maasai mara and amboseli",
+    "kenya safari",
+ 
+  ],
+  href: "/safaris#5-daymaasaimara",
+},
+{
+  id: "5-day-maasaimaranakuru",
+  title: "5-Day Masai Mara, Nakuru & Naivasha Safari",
+  route: "Masai Mara • Lake Nakuru • Naivasha",
+  duration: "5 Days",
+  location: "Kenya",
+  altitude: "Approx. 1,800–2,200m",
+  distance: "Safari Experience",
+  description:
+    "A five-day Kenya safari combining the legendary Masai Mara with the wildlife-rich Lake Nakuru and scenic Lake Naivasha.",
+  keywords: [
+    "Masai Mara",
+    "Lake Nakuru",
+    "Naivasha",
+  ],
+  href: "/maasaimara#5-day-maasaimaranakuru",
+},
+
+{
+  id: "3-day-mountkilimanjaro",
+  title: "3-Day Best of Mount Kilimanjaro",
+  route: "Mount Kilimanjaro",
+  duration: "3 Days",
+  location: "Mount Kilimanjaro, Tanzania",
+  altitude: "5,895m",
+  distance: "Mountain Trekking",
+  description:
+    "A three-day Mount Kilimanjaro adventure offering an exciting introduction to Africa's highest mountain, spectacular landscapes and an unforgettable trekking experience.",
+  keywords: [
+    "Mount Kilimanjaro",
+    "Kilimanjaro",
+    "3 Days",
+  ],
+  href: "/Mountkilimanjaro#3-day-mountkilimanjaro",
+},
+
+{
+  id: "ndutu-8-day",
+  title: "8-Day Ndutu Safari",
+  route: "Ndutu",
+  duration: "8 Days",
+  location: "Ndutu, Tanzania",
+  altitude: "Approx. 1,600m",
+  distance: "Safari Experience",
+  description:
+    "An eight-day Ndutu safari offering exceptional wildlife viewing, the Great Migration, spectacular landscapes and unforgettable experiences across Tanzania's southern Serengeti ecosystem.",
+  keywords: [
+    "Ndutu",
+    "Serengeti",
+    "8 Days",
+  ],
+  href: "/serengeti#ndutu-8-day",
+},
+
+ {
+    id: "9-day-serengetimigration",
+    title: "9-Day Serengeti Migration Footsteps",
+    route: "Tarangire • Ngorongoro • Serengeti",
+    duration: "9 Days",
+    location: "Serengeti, Tanzania",
+    altitude: "Approx. 1,400–2,000m",
+    distance: "Safari Experience",
+    description:
+      "Follow the legendary Great Wildebeest Migration across Tanzania on a nine-day safari through Tarangire, Ngorongoro and the Serengeti. Depending on the season, explore the southern Ndutu area, Central Serengeti, Western Serengeti or Northern Serengeti while experiencing exceptional wildlife viewing and spectacular landscapes.",
+    keywords: [
+      "serengeti",
+      "serengeti migration",
+      "great migration",
+      "great wildebeest migration",
+      "wildebeest migration",
+      
+    ],
+    href: "/serengeti#9-day-serengetimigration",
+  },
+
+   {
+    id: "3-day-maasaimarasafari",
+    title: "3-Day Masai Mara Luxury Safari",
+    route: "Masai Mara National Reserve",
+    duration: "3 Days",
+    location: "Masai Mara, Kenya",
+    altitude: "Approx. 1,500–2,000m",
+    distance: "Safari Experience",
+    description:
+      "Experience the magic of Kenya's legendary Masai Mara on a three-day luxury safari. Explore sweeping savannahs in search of lions, leopards, elephants, giraffes, zebras and wildebeest while enjoying exceptional game drives, spectacular landscapes and comfortable accommodation at Amani Mara Camp.",
+    keywords: [
+      "masai mara",
+      "maasai mara",
+      "masai mara safari",
+      "maasai mara safari",
+      "masai mara luxury safari",
+      "maasai mara luxury safari",
+      "3 day",
+      
+    ],
+    href: "/maasaimara#3-day-maasaimarasafari",
+  },
+
+  {
+    id: "5-day-maasaimaranakurunaivasha",
+    title: "5-Day Masai Mara, Lake Nakuru & Lake Naivasha Luxury Safari",
+    route: "Masai Mara • Lake Nakuru • Lake Naivasha",
+    duration: "5 Days",
+    location: "Kenya",
+    description:
+      "Experience three of Kenya's remarkable destinations on a luxury safari combining the wildlife-rich Masai Mara, scenic Lake Nakuru, and tranquil Lake Naivasha.",
+    keywords: [
+      "masai mara",
+      "lake nakuru",
+      "lake naivasha",
+      "kenya safari",
+      "luxury safari",
+      "big five",
+      "wildlife safari",
+      "5 day safari",
+    ],
+    href: "/kenya#5-day-maasaimaranakurunaivasha",
+  },
+
+  // =========================================================
+  // 2 — 5-DAY MASAI MARA & AMBOSELI
+  // =========================================================
+  {
+    id: "5-day-maasaimara",
+    title: "5-Day Masai Mara & Amboseli Luxury Safari",
+    route: "Masai Mara • Amboseli",
+    duration: "5 Days",
+    location: "Kenya",
+    description:
+      "Discover two of Kenya's most iconic wildlife destinations, from the wildlife-rich plains of the Masai Mara to Amboseli's spectacular elephant country beneath Mount Kilimanjaro.",
+    keywords: [
+      "masai mara",
+      "amboseli",
+      "mount kilimanjaro",
+      "kenya safari",
+      "luxury safari",
+      "elephants",
+      "big five",
+      "5 day safari",
+    ],
+    href: "/kenya#5-day-maasaimara",
+  },
+
+  // =========================================================
+  // 3 — 3-DAY AMBOSELI
+  // =========================================================
+  {
+    id: "3-day-mountkilimanjaro",
+    title: "3-Day Amboseli National Park Safari",
+    route: "Amboseli National Park",
+    duration: "3 Days",
+    location: "Amboseli, Kenya",
+    description:
+      "Explore Amboseli National Park, famous for its large elephant herds, open savannah landscapes, and spectacular views of Mount Kilimanjaro.",
+    keywords: [
+      "amboseli",
+      "amboseli national park",
+      "mount kilimanjaro",
+      "elephants",
+      "kenya safari",
+      "wildlife safari",
+      "3 day safari",
+    ],
+    href: "/amboseli#3-day-mountkilimanjaro",
+  },
+
+  // =========================================================
+  // 4 — 9-DAY SERENGETI MIGRATION
+  // =========================================================
+  {
+    id: "9-day-serengetimigration",
+    title: "9-Day Serengeti Migration Footsteps Safari",
+    route: "Northern Tanzania Safari Circuit",
+    duration: "9 Days",
+    location: "Serengeti, Tanzania",
+    description:
+      "Follow the footsteps of the Great Wildebeest Migration through Tanzania's legendary wildlife destinations, with extended time in the Serengeti and opportunities to witness dramatic wildlife encounters.",
+    keywords: [
+      "serengeti",
+      "great migration",
+      "wildebeest migration",
+      "tanzania safari",
+      "migration safari",
+      "big five",
+      "wildlife safari",
+      "9 day safari",
+    ],
+    href: "/serengeti#9-day-serengetimigration",
+  },
+
+  // =========================================================
+  // 5 — 3-DAY MASAI MARA LUXURY SAFARI
+  // =========================================================
+  {
+    id: "3-day-maasaimarasafari",
+    title: "3-Day Masai Mara Luxury Safari",
+    route: "Masai Mara National Reserve",
+    duration: "3 Days",
+    location: "Masai Mara, Kenya",
+    description:
+      "Experience the legendary Masai Mara on a luxury three-day safari filled with exceptional game viewing, Big Five encounters, dramatic landscapes, and unforgettable African sunsets.",
+    keywords: [
+      "masai mara",
+      "masai mara safari",
+      "luxury safari",
+      "big five",
+      "kenya safari",
+      "wildlife",
+      "3 day safari",
+    ],
+    href: "/maasaimara#3-day-maasaimarasafari",
+  },
+
+  // =========================================================
+  // 6 — 8-DAY NDUTU CALVING SEASON
+  // =========================================================
+  {
+    id: "ndutu-8-day",
+    title: "8-Day Ndutu Calving Season Serengeti Migration",
+    route: "Tarangire • Ngorongoro • Serengeti • Ndutu",
+    duration: "8 Days",
+    location: "Northern Tanzania",
+    description:
+      "Witness the spectacular Ndutu Calving Season as thousands of wildebeest give birth across the Serengeti ecosystem, with exceptional opportunities to observe predators and dramatic wildlife interactions.",
+    keywords: [
+      "ndutu",
+      "ndutu calving season",
+      "great migration",
+      "wildebeest migration",
+      "serengeti",
+      "ngorongoro",
+      "tarangire",
+      "tanzania safari",
+      "8 day safari",
+    ],
+    href: "/serengeti#ndutu-8-day",
+  },
+
+  // =========================================================
+  // 7 — 7-DAY MACHAME ROUTE
+  // =========================================================
+  {
+    id: "machame-7-day",
+    title: "7-Day Kilimanjaro Adventure via Machame Route",
+    route: "Machame Route",
+    duration: "7 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    description:
+      "Climb Africa's highest mountain via the spectacular Machame Route, trekking through rainforest, heathland, moorland, alpine desert, and the summit zone before reaching Uhuru Peak.",
+    keywords: [
+      "machame",
+      "machame route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "uhuru peak",
+      "5,895m",
+      "whiskey route",
+      "mountain trekking",
+      "7 day",
+    ],
+    href: "/Mountkilimanjaro#machame-7-day",
+  },
+
+  // =========================================================
+  // 8 — 6-DAY NDUTU CALVING SEASON
+  // =========================================================
+  {
+    id: "ndutu-6-day",
+    title: "6-Day Ndutu Calving Season Serengeti Migration",
+    route: "Tarangire • Serengeti • Ngorongoro",
+    duration: "6 Days",
+    location: "Northern Tanzania",
+    description:
+      "Journey into the heart of Tanzania during the Ndutu Calving Season, witnessing newborn wildebeest, dramatic predator encounters, and spectacular wildlife across Tarangire, Serengeti, and Ngorongoro.",
+    keywords: [
+      "ndutu",
+      "ndutu calving",
+      "calving season",
+      "great migration",
+      "serengeti",
+      "ngorongoro",
+      "tarangire",
+      "big five",
+      "tanzania safari",
+      "6 day safari",
+    ],
+    href: "/serengeti#ndutu-6-day",
+  },
+
+  // =========================================================
+  // 9 — 3-DAY WATAMU BEACH ESCAPE
+  // =========================================================
+  {
+    id: "watamu-3-day",
+    title: "3-Day Watamu Beach Escape",
+    route: "Watamu Beach",
+    duration: "3 Days",
+    location: "Watamu, Kenya",
+    description:
+      "Escape to Kenya's beautiful north coast and unwind beside the turquoise waters of Watamu with pristine beaches, marine adventures, coral reefs, coastal culture, and spectacular Indian Ocean sunsets.",
+    keywords: [
+      "watamu",
+      "watamu beach",
+      "kenya coast",
+      "watamu marine park",
+      "indian ocean",
+      "beach holiday",
+      "coastal escape",
+      "3 day beach holiday",
+    ],
+    href: "/watamu#watamu-3-day",
+  },
+
+  // =========================================================
+  // 10 — 4-DAY ZANZIBAR BEACH GETAWAY
+  // =========================================================
+  {
+    id: "zanzibar-4-day",
+    title: "4-Day Zanzibar Beach Getaway",
+    route: "Stone Town • Spice Farms • Jozani • Zanzibar Coast",
+    duration: "4 Days",
+    location: "Zanzibar, Tanzania",
+    description:
+      "Discover Zanzibar beyond its beaches, combining historic Stone Town, aromatic spice farms, Jozani Forest, Swahili culture, tropical beaches, and a spectacular sunset dhow cruise.",
+    keywords: [
+      "zanzibar",
+      "zanzibar beach",
+      "stone town",
+      "spice farms",
+      "jozani forest",
+      "dhow cruise",
+      "tanzania beach holiday",
+      "island escape",
+      "4 day zanzibar",
+    ],
+    href: "/zanzibar#zanzibar-4-day",
+  },
+
+  // =========================================================
+  // 11 — 7-DAY LEMOSHO ROUTE
+  // =========================================================
+  {
+    id: "lemosho-7-day",
+    title: "7-Day Kilimanjaro Adventure via Lemosho Route",
+    route: "Lemosho Route",
+    duration: "7 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    description:
+      "Embark on an extraordinary journey to the summit of Africa's tallest mountain through the spectacular Lemosho Route, crossing rainforest, moorland, the Shira Plateau, alpine desert, and the summit zone.",
+    keywords: [
+      "lemosho",
+      "lemosho route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "uhuru peak",
+      "5,895m",
+      "shira plateau",
+      "barranco wall",
+      "mountain trekking",
+      "7 day",
+    ],
+    href: "/Mountkilimanjaro#lemosho-7-day",
+  },
+
+  // =========================================================
+  // 12 — 7-DAY RONGAI ROUTE
+  // =========================================================
+  {
+    id: "rongai-7-day",
+    title: "7-Day Rongai Route Kilimanjaro Adventure",
+    route: "Rongai Route",
+    duration: "7 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    description:
+      "Embark on a spectacular northern wilderness expedition via the remote Rongai Route, featuring peaceful forests, gradual elevation gain, dramatic alpine landscapes, and magnificent views of Mawenzi Peak.",
+    keywords: [
+      "rongai",
+      "rongai route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "northern trail",
+      "northern wilderness",
+      "uhuru peak",
+      "5,895m",
+      "mawenzi peak",
+      "mountain trekking",
+      "7 day",
+    ],
+    href: "/Mountkilimanjaro#rongai-7-day",
+  },
+
+  // =========================================================
+  // 13 — 6-DAY MARANGU ROUTE
+  // =========================================================
+  {
+    id: "marangu-6-day",
+    title: "6-Day Kilimanjaro Adventure",
+    route: "Marangu Route",
+    duration: "6 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 64 km",
+    description:
+      "Experience the legendary Marangu Route, popularly known as the Coca-Cola Route, featuring comfortable mountain huts, diverse landscapes, and an additional acclimatization day at Horombo Hut.",
+    keywords: [
+      "marangu",
+      "marangu route",
+      "coca cola route",
+      "coca-cola route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "uhuru peak",
+      "5,895m",
+      "horombo",
+      "acclimatization",
+      "6 day",
+    ],
+    href: "/Mountkilimanjaro#marangu-6-day",
+  },
+
+  // =========================================================
+  // 14 — 6-DAY RONGAI ROUTE
+  // =========================================================
+  {
+    id: "rongai-6-day",
+    title: "6-Day Rongai Route Kilimanjaro Adventure",
+    route: "Rongai Route",
+    duration: "6 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 65 km",
+    description:
+      "Experience the quieter northern side of Mount Kilimanjaro via the scenic Rongai Route, trekking through peaceful forests, open moorlands, alpine desert, and dramatic mountain landscapes toward Uhuru Peak.",
+    keywords: [
+      "rongai",
+      "rongai route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "northern trail",
+      "northern kilimanjaro",
+      "mawenzi tarn",
+      "uhuru peak",
+      "5,895m",
+      "65 km",
+      "6 day",
+    ],
+    href: "/Mountkilimanjaro#rongai-6-day",
+  },
+
+  // =========================================================
+  // 15 — 5-DAY MARANGU ROUTE
+  // =========================================================
+  {
+    id: "marangu-5-day",
+    title: "5-Day Kilimanjaro Adventure",
+    route: "Marangu Route",
+    duration: "5 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 64 km",
+    description:
+      "A classic Kilimanjaro climb via the Marangu Route, popularly known as the Coca-Cola Route, featuring mountain huts and diverse landscapes.",
+    keywords: [
+      "marangu",
+      "marangu route",
+      "coca cola route",
+      "coca-cola route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "uhuru peak",
+      "5,895m",
+      "64 km",
+      "5 day",
+    ],
+    href: "/Mountkilimanjaro#marangu-5-day",
+  },
+
+  // =========================================================
+  // 16 — 8-DAY LEMOSHO ROUTE
+  // =========================================================
+  {
+    id: "lemosho-8-day",
+    title: "8-Day Lemosho Route Kilimanjaro Expedition",
+    route: "Lemosho Route",
+    duration: "8 Days",
+    location: "Mount Kilimanjaro, Tanzania",
+    altitude: "5,895m",
+    distance: "Approx. 46 km",
+    description:
+      "Experience one of Mount Kilimanjaro's most spectacular approaches via the scenic Lemosho Route, combining breathtaking landscapes, excellent acclimatization, quieter trails, and diverse ecological zones.",
+    keywords: [
+      "lemosho",
+      "lemosho route",
+      "kilimanjaro",
+      "mount kilimanjaro",
+      "uhuru peak",
+      "5,895m",
+      "shira plateau",
+      "barranco wall",
+      "lava tower",
+      "mweka",
+      "46 km",
+      "8 day",
+    ],
+    href: "/Mountkilimanjaro#lemosho-8-day",
+  },
+
+  {
+  id: "3-day-wildebeestmigration",
+  title: "3-Day Best of Wildebeest Migration Safari",
+  route: "Masai Mara National Reserve",
+  duration: "3 Days / 2 Nights",
+  location: "Masai Mara, Kenya",
+  description:
+    "Experience the spectacular Great Wildebeest Migration in the legendary Masai Mara, with two nights in the reserve, extended game drives, Big Five encounters, dramatic wildlife sightings and authentic Maasai cultural experiences.",
+  keywords: [
+    "wildebeest migration",
+    "great migration",
+    "masai mara",
+    "masai mara safari",
+    "migration safari",
+    "big five",
+    "wildebeest",
+    "zebras",
+    "kenya safari",
+    "3 day safari",
+    "2 nights",
+  ],
+  href: "/maasaimara#3-day-wildebeestmigration",
+},  
+];
+
+
 
 const heroSlides = [
   {
@@ -45,6 +907,7 @@ const heroSlides = [
     description:
       "From endless savannahs to spectacular landscapes, experience East Africa through a journey created especially for you.",
   },
+  
 ];
 
 /* ============================================================
@@ -53,31 +916,54 @@ const heroSlides = [
 
 const safariPackages = [
   {
-    image: amboseli,
     title: "Amboseli Safari",
+    location: "Amboseli National Park",
     days: "3 Days",
-    location: "Kenya",
+    tag: "Luxury Safari",
+    image: amboseli,
+    href: "/amboseli",
     description:
-      "Wildlife, open plains and spectacular views of Mount Kilimanjaro.",
-    tag: "Iconic",
+      "Experience the magnificent landscapes of Amboseli with spectacular views of Mount Kilimanjaro and unforgettable wildlife encounters.",
   },
   {
-    image: Wilderbeast,
-    title: "Maasai Mara Adventure",
+    title: "Maasai Mara Safari",
+    location: "Maasai Mara National Reserve",
     days: "4 Days",
-    location: "Kenya",
+    tag: "Wildlife Safari",
+    image: mara1,
+    href: "/maasai-mara",
     description:
-      "Discover Kenya's legendary reserve and experience unforgettable wildlife encounters.",
-    tag: "Wildlife",
+      "Discover the legendary Maasai Mara, home to incredible wildlife, dramatic landscapes and the spectacular Great Wildebeest Migration.",
   },
   {
-    image: serengeti,
     title: "Serengeti Safari",
+    location: "Serengeti National Park",
     days: "5 Days",
-    location: "Tanzania",
+    tag: "Tanzania Safari",
+    image: serengeti,
+    href: "/serengeti",
     description:
-      "Explore the legendary Serengeti and experience Africa at its wildest.",
-    tag: "Classic",
+      "Explore the endless plains of the Serengeti and experience some of Africa's most remarkable wildlife and predator encounters.",
+  },
+  {
+    title: "Diani Beach Escape",
+    location: "Diani Beach",
+    days: "4 Days",
+    tag: "Beach Holiday",
+    image: diani1,
+    href: "/diani",
+    description:
+      "Relax along the beautiful Kenyan coast with white sandy beaches, turquoise waters and the perfect tropical escape.",
+  },
+  {
+    title: "Mount Kilimanjaro",
+    location: "Mount Kilimanjaro",
+    days: "7 Days",
+    tag: "Mountain Adventure",
+    image: kili1,
+    href: "/mount-kilimanjaro",
+    description:
+      "Take on Africa's highest mountain and experience an unforgettable adventure through spectacular alpine landscapes.",
   },
 ];
 
@@ -336,7 +1222,7 @@ function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+const [itinerarySearch, setItinerarySearch] = useState("");
   const hero = heroSlides[heroIndex];
  // const testimonial = testimonials[testimonialIndex];
 
@@ -421,27 +1307,6 @@ function Home() {
 
             {/* BUTTONS */}
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-
-              <Link
-                to="/safaris"
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#dba33a] px-7 py-3.5 text-sm font-bold text-[#092a18] shadow-2xl transition duration-300 hover:-translate-y-1 hover:bg-[#e9b84f]"
-              >
-                Explore Safaris
-
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#092a18]"
-              >
-                Plan My Journey
-              </Link>
-
-            </div>
 
             {/* TRUST */}
 
@@ -503,41 +1368,152 @@ function Home() {
 
       </section>
 
+{/* ======================================================
+    ITINERARY SEARCH
+====================================================== */}
+
+{/* ======================================================
+    ITINERARY SEARCH
+====================================================== */}
+
+{/*
+
+<section className="relative z-30 -mt-10 px-5 sm:px-8 lg:px-12">
+
+  <div className="mx-auto max-w-5xl">
+
+    <div className="rounded-3xl border border-white/20 bg-white p-4 shadow-2xl sm:p-6">
+
+      <div className="mb-4 text-center">
+
+        <SectionLabel>
+          Find Your Journey
+        </SectionLabel>
+
+        <h2 className="mt-2 text-2xl font-serif font-bold text-[#0b4224] sm:text-3xl">
+          Search Our Itineraries
+        </h2>
+
+      </div>
+
+      <div className="relative">
+
+        <input
+          type="text"
+          value={itinerarySearch}
+          onChange={(e) => setItinerarySearch(e.target.value)}
+          placeholder="Search Kilimanjaro, Lemosho, Zanzibar, Diani..."
+          className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 pr-14 text-sm text-gray-800 outline-none transition focus:border-[#dba33a] focus:bg-white focus:ring-2 focus:ring-[#dba33a]/20"
+        />
+
+        <span className="absolute right-5 top-1/2 -translate-y-1/2 text-xl text-[#0b4224]">
+          🔍
+        </span>
+
+      </div>
+
+      
+
+      {itinerarySearch.trim() && (
+
+        <div className="mt-4 space-y-2">
+
+          {itineraries
+            .filter((item) => {
+
+              const query = itinerarySearch.toLowerCase().trim();
+
+              return (
+                item.title.toLowerCase().includes(query) ||
+                item.route.toLowerCase().includes(query) ||
+                item.duration.toLowerCase().includes(query) ||
+                item.location.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query) ||
+                item.keywords.some((keyword) =>
+                  keyword.toLowerCase().includes(query)
+                )
+              );
+
+            })
+            .map((item) => (
+
+              <Link
+                key={item.id}
+                to={item.href}
+                className="group flex flex-col gap-2 rounded-2xl border border-gray-100 bg-gray-50 p-4 transition hover:-translate-y-0.5 hover:border-[#dba33a]/40 hover:bg-[#fffaf0] sm:flex-row sm:items-center sm:justify-between"
+              >
+
+                <div>
+
+                  <h3 className="font-bold text-[#0b4224] transition group-hover:text-[#a87516]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-1 text-xs text-gray-500">
+                    {item.route} • {item.duration} • {item.location}
+                  </p>
+
+                </div>
+
+                <span className="text-sm font-bold text-[#dba33a]">
+                  View Itinerary →
+                </span>
+
+              </Link>
+
+            ))}
+
+          {itineraries.filter((item) => {
+
+            const query = itinerarySearch.toLowerCase().trim();
+
+            return (
+              item.title.toLowerCase().includes(query) ||
+              item.route.toLowerCase().includes(query) ||
+              item.duration.toLowerCase().includes(query) ||
+              item.location.toLowerCase().includes(query) ||
+              item.description.toLowerCase().includes(query) ||
+              item.keywords.some((keyword) =>
+                keyword.toLowerCase().includes(query)
+              )
+            );
+
+          }).length === 0 && (
+
+            <div className="rounded-2xl bg-gray-50 p-5 text-center">
+
+              <p className="text-sm text-gray-500">
+                No itineraries found for{" "}
+                <span className="font-semibold text-[#0b4224]">
+                  "{itinerarySearch}"
+                </span>
+              </p>
+
+              <p className="mt-1 text-xs text-gray-400">
+                Try searching for Kilimanjaro, Lemosho, Marangu, Zanzibar,
+                Diani or Watamu.
+              </p>
+
+            </div>
+
+          )}
+
+        </div>
+
+      )}
+
+    </div>
+
+  </div>
+
+</section>
+ 
+*/}
       {/* ======================================================
           STATS
       ====================================================== */}
 
-      <section className="relative z-20 bg-[#082d19] shadow-2xl">
-
-        <div className="mx-auto grid max-w-7xl grid-cols-2 lg:grid-cols-4">
-
-          <QuickStat
-            icon="✦"
-            number="Safari"
-            label="Experiences"
-          />
-
-          <QuickStat
-            icon="◎"
-            number="Kenya"
-            label="Local Expertise"
-          />
-
-          <QuickStat
-            icon="◆"
-            number="Tailor-Made"
-            label="Journeys"
-          />
-
-          <QuickStat
-            icon="↗"
-            number="24/7"
-            label="Travel Support"
-          />
-
-        </div>
-
-      </section>
+      
 
       {/* ======================================================
           INTRODUCTION
@@ -648,107 +1624,555 @@ function Home() {
 
       </section>
 
+
+
+      {/* ============================================================
+    POPULAR ITINERARIES — PREMIUM ANIMATED SHOWCASE
+============================================================ */}
+<section
+  id="popular-itineraries"
+  className="relative overflow-hidden bg-[#f7faf7] py-20 sm:py-24 lg:py-28"
+>
+  {/* ============================================================
+      AMBIENT BACKGROUND
+  ============================================================ */}
+  <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-[#0b4224]/10 blur-3xl animate-pulse" />
+    <div className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-[#dba33a]/10 blur-3xl animate-pulse" />
+
+    <div className="absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#dba33a]/30 to-transparent" />
+  </div>
+
+  <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    {/* ============================================================
+        HEADER
+    ============================================================ */}
+    <div className="mx-auto max-w-3xl text-center">
+
+      <div className="inline-flex items-center gap-3 rounded-full border border-[#dba33a]/30 bg-white px-4 py-2 shadow-sm">
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dba33a] opacity-60" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#dba33a]" />
+        </span>
+
+        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#8a641c]">
+          Explore Africa
+        </span>
+      </div>
+
+      <h2 className="mt-6 text-4xl font-black tracking-tight text-[#092d1a] sm:text-5xl lg:text-6xl">
+        Journeys Worth
+        <span className="block text-[#dba33a]">
+          Remembering
+        </span>
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
+        Explore our handpicked safari and holiday itineraries across Kenya
+        and Tanzania, created for unforgettable experiences.
+      </p>
+
+      {/* DECORATIVE LINE */}
+      <div className="mx-auto mt-7 flex items-center justify-center gap-3">
+        <span className="h-px w-12 bg-[#dba33a]/40" />
+        <span className="h-1.5 w-1.5 rotate-45 bg-[#dba33a]" />
+        <span className="h-px w-12 bg-[#dba33a]/40" />
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        ITINERARY GRID
+    ============================================================ */}
+    <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+
+      {/* ============================================================
+          1. MASAI MARA — FEATURED
+      ============================================================ */}
+      <Link
+        to="/maasaimaraitineraries#masaimaraitineraries"
+        className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#092d1a]/10"
+      >
+        <div className="relative h-[390px] overflow-hidden">
+
+          <img
+            src={serengeti}
+            alt="Maasai Mara safari"
+            className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
+          />
+
+          {/* DARK GRADIENT */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04150c] via-[#092d1a]/30 to-transparent" />
+
+          {/* HOVER LIGHT */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#dba33a]/0 via-white/0 to-white/20 opacity-0 transition duration-700 group-hover:opacity-100" />
+
+          {/* LOCATION */}
+          <div className="absolute left-5 top-5">
+            <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              Kenya
+            </span>
+          </div>
+
+          {/* NUMBER */}
+          <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-xs font-bold text-white backdrop-blur-md">
+            01
+          </div>
+
+          {/* CONTENT */}
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+              Wildlife Safari
+            </span>
+
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Maasai Mara
+            </h3>
+
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
+              Big Five encounters, endless savannahs and the legendary
+              Great Wildebeest Migration.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
+              <span>
+                Explore itineraries
+              </span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dba33a] text-[#092d1a] transition duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </Link>
+
+
+      {/* ============================================================
+          2. AMBOSELI
+      ============================================================ */}
+      <Link
+        to="/amboseliitineraries#amboseliitineraries"
+        className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
+      >
+        <div className="relative h-[390px] overflow-hidden">
+
+          <img
+            src={serengeti3}
+            alt="Amboseli elephants"
+            className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04150c] via-[#092d1a]/30 to-transparent" />
+
+          <div className="absolute left-5 top-5">
+            <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              Kenya
+            </span>
+          </div>
+
+          <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-xs font-bold text-white backdrop-blur-md">
+            02
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+              Elephant Country
+            </span>
+
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Amboseli
+            </h3>
+
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
+              Iconic elephants, open plains and spectacular views of
+              Mount Kilimanjaro.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
+              <span>Explore itineraries</span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dba33a] text-[#092d1a] transition duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </Link>
+
+
+      {/* ============================================================
+          3. SERENGETI
+      ============================================================ */}
+      <Link
+        to="/serengetiitineraries#serengetiitineraries"
+        className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
+      >
+        <div className="relative h-[390px] overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=1400&q=85"
+            alt="Serengeti safari"
+            className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04150c] via-[#092d1a]/30 to-transparent" />
+
+          <div className="absolute left-5 top-5">
+            <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              Tanzania
+            </span>
+          </div>
+
+          <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-xs font-bold text-white backdrop-blur-md">
+            03
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+              Great Migration
+            </span>
+
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Serengeti
+            </h3>
+
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
+              Endless plains, extraordinary predators and one of the
+              world's greatest wildlife spectacles.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
+              <span>Explore itineraries</span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dba33a] text-[#092d1a] transition duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </Link>
+
+
+      {/* ============================================================
+          4. SAMBURU
+      ============================================================ */}
+      <Link
+        to="/samburuitineraries#samburuitineraries"
+        className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
+      >
+        <div className="relative h-[390px] overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1400&q=85"
+            alt="Samburu safari"
+            className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04150c] via-[#092d1a]/30 to-transparent" />
+
+          <div className="absolute left-5 top-5">
+            <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              Kenya
+            </span>
+          </div>
+
+          <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-xs font-bold text-white backdrop-blur-md">
+            04
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+              Northern Kenya
+            </span>
+
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Samburu
+            </h3>
+
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
+              Rugged landscapes, unique wildlife and the famous
+              Samburu Special Five.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
+              <span>Explore itineraries</span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dba33a] text-[#092d1a] transition duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </Link>
+
+
+      {/* ============================================================
+          5. KILIMANJARO
+      ============================================================ */}
+      <Link
+        to="/mountkilimanjaroitineraries#kilimanjaroitineraries"
+        className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
+      >
+        <div className="relative h-[390px] overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?auto=format&fit=crop&w=1400&q=85"
+            alt="Mount Kilimanjaro"
+            className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04150c] via-[#092d1a]/30 to-transparent" />
+
+          <div className="absolute left-5 top-5">
+            <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              Tanzania
+            </span>
+          </div>
+
+          <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-xs font-bold text-white backdrop-blur-md">
+            05
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+              Mountain Adventure
+            </span>
+
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Mount Kilimanjaro
+            </h3>
+
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
+              Trek Africa's highest mountain through breathtaking
+              landscapes and unforgettable routes.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
+              <span>Explore itineraries</span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dba33a] text-[#092d1a] transition duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </Link>
+
+
+      {/* ============================================================
+          6. DIANI
+      ============================================================ */}
+      <Link
+        to="/dianiitineraries#dianiitineraries"
+        className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
+      >
+        <div className="relative h-[390px] overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1400&q=85"
+            alt="Diani Beach Kenya"
+            className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04150c] via-[#092d1a]/20 to-transparent" />
+
+          <div className="absolute left-5 top-5">
+            <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              Kenya Coast
+            </span>
+          </div>
+
+          <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/20 text-xs font-bold text-white backdrop-blur-md">
+            06
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+              Beach Escape
+            </span>
+
+            <h3 className="mt-2 text-3xl font-black text-white">
+              Diani Beach
+            </h3>
+
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
+              White sands, turquoise waters and unforgettable experiences
+              along Kenya's Indian Ocean coast.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
+              <span>Explore itineraries</span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dba33a] text-[#092d1a] transition duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </Link>
+
+    </div>
+
+
+    {/* ============================================================
+        BOTTOM LINK
+    ============================================================ */}
+    
+
+  </div>
+</section>
+
       {/* ======================================================
           FEATURED SAFARIS
       ====================================================== */}
+{/* ============================================================
+    FEATURED SAFARIS
+============================================================ */}
+<section className="bg-[#f7f5ee] py-24 lg:py-32">
 
-      <section className="bg-[#f7f5ee] py-24 lg:py-32">
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+    {/* SECTION HEADER */}
+    <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
 
-          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+      <SectionIntro
+        label="Featured Safaris"
+        title="Journeys Into The Wild"
+        text="Carefully designed safari experiences created around wildlife, discovery and unforgettable moments."
+      />
 
-            <SectionIntro
-              label="Featured Safaris"
-              title="Journeys Into The Wild"
-              text="Carefully designed safari experiences created around wildlife, discovery and unforgettable moments."
+      <Link
+        to="/safaris"
+        className="hidden items-center gap-2 font-bold text-[#0b4224] lg:inline-flex"
+      >
+        View All Safaris
+
+        <span className="text-[#dba33a]">
+          →
+        </span>
+      </Link>
+
+    </div>
+
+
+    {/* SAFARI CARDS */}
+    <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
+      {safariPackages.map((safari, index) => (
+
+        <div
+          key={index}
+          onMouseEnter={() => setActiveSafari(index)}
+          className={`group overflow-hidden rounded-[1.7rem] bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
+            activeSafari === index ? "-translate-y-1" : ""
+          }`}
+        >
+
+          {/* IMAGE */}
+          <div className="relative h-80 overflow-hidden">
+
+            <img
+              src={safari.image}
+              alt={safari.title}
+              className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
             />
 
-            <Link
-              to="/safaris"
-              className="hidden items-center gap-2 font-bold text-[#0b4224] lg:inline-flex"
-            >
-              View All Safaris
+            {/* IMAGE OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
 
-              <span className="text-[#dba33a]">
+
+            {/* DAYS */}
+            <div className="absolute left-4 top-4 rounded-full bg-[#dba33a] px-4 py-2 text-xs font-bold text-[#092a18]">
+              {safari.days}
+            </div>
+
+
+            {/* TAG */}
+            <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+              {safari.tag}
+            </div>
+
+
+            {/* TITLE */}
+            <div className="absolute bottom-6 left-6 right-6">
+
+              <p className="text-xs font-bold uppercase tracking-[2px] text-[#dba33a]">
+                {safari.location}
+              </p>
+
+              <h3 className="mt-2 font-serif text-2xl font-bold text-white sm:text-3xl">
+                {safari.title}
+              </h3>
+
+            </div>
+
+          </div>
+
+
+          {/* CARD CONTENT */}
+          <div className="p-6">
+
+            <p className="text-sm leading-7 text-gray-600">
+              {safari.description}
+            </p>
+
+
+            {/* CORRECT DESTINATION LINK */}
+            <Link
+              to={safari.href}
+              className="group/link mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b4224]"
+            >
+              Explore Safari
+
+              <span className="text-[#dba33a] transition-transform group-hover/link:translate-x-1">
                 →
               </span>
             </Link>
 
           </div>
 
-          <div className="mt-14 grid gap-7 md:grid-cols-3">
-
-            {safariPackages.map((safari, index) => (
-
-              <div
-                key={index}
-                onMouseEnter={() => setActiveSafari(index)}
-                className={`group overflow-hidden rounded-[1.7rem] bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
-                  activeSafari === index ? "-translate-y-1" : ""
-                }`}
-              >
-
-                <div className="relative h-80 overflow-hidden">
-
-                  <img
-                    src={safari.image}
-                    alt={safari.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
-
-                  <div className="absolute left-4 top-4 rounded-full bg-[#dba33a] px-4 py-2 text-xs font-bold text-[#092a18]">
-                    {safari.days}
-                  </div>
-
-                  <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
-                    {safari.tag}
-                  </div>
-
-                  <div className="absolute bottom-6 left-6 right-6">
-
-                    <p className="text-xs font-bold uppercase tracking-[2px] text-[#dba33a]">
-                      {safari.location}
-                    </p>
-
-                    <h3 className="mt-2 text-2xl font-serif font-bold text-white sm:text-3xl">
-                      {safari.title}
-                    </h3>
-
-                  </div>
-
-                </div>
-
-                <div className="p-6">
-
-                  <p className="text-sm leading-7 text-gray-600">
-                    {safari.description}
-                  </p>
-
-                  <Link
-                    to="/amboseli"
-                    className="group/link mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0b4224]"
-                  >
-                    Explore Safari
-
-                    <span className="text-[#dba33a] transition-transform group-hover/link:translate-x-1">
-                      →
-                    </span>
-                  </Link>
-
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
         </div>
 
-      </section>
+      ))}
+
+    </div>
+
+
+    {/* MOBILE VIEW ALL */}
+    <div className="mt-10 flex justify-center lg:hidden">
+
+      <Link
+        to="/safaris"
+        className="inline-flex items-center gap-2 rounded-full border border-[#0b4224]/20 px-6 py-3 text-sm font-bold text-[#0b4224] transition hover:bg-[#0b4224] hover:text-white"
+      >
+        View All Safaris
+
+        <span className="text-[#dba33a]">
+          →
+        </span>
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ======================================================
           DESTINATIONS
@@ -1523,9 +2947,7 @@ function Home() {
                   Safaris
                 </FooterLink>
 
-                <FooterLink to="/destinations">
-                  Destinations
-                </FooterLink>
+                
 
                 <FooterLink to="/activities">
                   Activities
@@ -1649,7 +3071,7 @@ function Home() {
 
                   </div>
 
-                  {/* WHATSAPP */}
+                  
 
                   
 

@@ -19,7 +19,7 @@ import bird2 from "../assets/bird2.jpg";
 
 import photography1 from "../assets/photography1.jpg";
 import photography2 from "../assets/photography2.jpg";
-
+//import nakuruImage from "../assets/nakuru.jpg";
 import diani1 from "../assets/diani1.jpg";
 import diani2 from "../assets/diani2.jpg";
 
@@ -347,6 +347,8 @@ function Safaris() {
         </div>
 
       </section>
+
+
 
 
 
@@ -875,14 +877,7 @@ function Safaris() {
               </Link>
 
 
-              <a
-                href="https://wa.me/+254708164662"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-[#0b4224]/20 px-8 py-4 font-bold text-[#0b4224] transition-all hover:bg-[#0b4224] hover:text-white"
-              >
-                WhatsApp Us
-              </a>
+              
 
             </div>
 
@@ -1152,12 +1147,7 @@ function Safaris() {
                     Safaris
                   </Link>
 
-                  <Link
-                    to="/destinations"
-                    className="block text-sm text-white/55 transition-colors hover:text-[#F39A08]"
-                  >
-                    Destinations
-                  </Link>
+                  
 
                   <Link
                     to="/activities"

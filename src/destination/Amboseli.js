@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import amboseli from "../assets/amboseli.jpg";
 import image17 from "../assets/image17.jpg";
 import image19 from "../assets/image19.jpg";
+//mport image20 from "../assets/image20.jpg";
+//import image21 from "../assets/image21.jpg";
 
 function Amboseli() {
   const images = [amboseli, image17, image19];
@@ -624,14 +626,7 @@ function Amboseli() {
               Plan Your Safari
             </Link>
 
-            <a
-              href="https://wa.me/+254708164662"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
-            >
-              WhatsApp Us
-            </a>
+            
 
           </div>
 
@@ -796,12 +791,7 @@ function Amboseli() {
               Safaris
             </Link>
 
-            <Link
-              to="/destinations"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Destinations
-            </Link>
+            
 
             <Link
               to="/activities"

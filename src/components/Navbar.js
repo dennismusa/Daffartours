@@ -8,8 +8,13 @@ import safarilinklogo from "../assets/safarilinklogo.png";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [destOpen, setDestOpen] = useState(false);
+  const [safariOpen, setSafariOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [progress, setProgress] = useState(0);
+
+  /* ============================================================
+     DESTINATIONS
+  ============================================================ */
 
   const destinations = [
     ["Maasai Mara", "/maasaimara"],
@@ -22,8 +27,26 @@ function Navbar() {
     ["Zanzibar", "/zanzibar"],
     ["Mount Kenya", "/mountkenya"],
     ["Mount Kilimanjaro", "/mountkilimanjaro"],
-    
   ];
+
+  /* ============================================================
+     SAFARI ITINERARIES
+  ============================================================ */
+
+  const safariItineraries = [
+    ["Maasai Mara Itineraries", "/maasaimaraitineraries"],
+    ["Serengeti Itineraries", "/serengetiitineraries"],
+    ["Amboseli Itineraries", "/amboseliitineraries"],
+    ["Mountkilimanjaro Itineraries", "/mountkilimanjaroitineraries"],
+    ["Diani Itineraries", "/dianiitineraries"],
+    ["Samburu Itineraries", "/samburuitineraries"],
+    ["seychelles Itineraries", "/sychellesitineraries"],
+    ["ndutu calving Itineraries", "/ndutucalvingitineraries"],
+  ];
+
+  /* ============================================================
+     SCROLL EFFECT
+  ============================================================ */
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +67,10 @@ function Navbar() {
     };
   }, []);
 
-  // Prevent background page from scrolling when mobile menu is open
+  /* ============================================================
+     PREVENT BACKGROUND SCROLL ON MOBILE
+  ============================================================ */
+
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -57,9 +83,14 @@ function Navbar() {
     };
   }, [menuOpen]);
 
+  /* ============================================================
+     CLOSE MOBILE MENU
+  ============================================================ */
+
   const closeMobile = () => {
     setMenuOpen(false);
     setDestOpen(false);
+    setSafariOpen(false);
   };
 
   return (
@@ -67,6 +98,7 @@ function Navbar() {
       {/* =====================================================
           SCROLL PROGRESS
       ====================================================== */}
+
       <div className="fixed top-0 left-0 w-full h-[3px] z-[999]">
         <div
           className="h-full bg-[#F39A08] transition-all duration-200"
@@ -77,6 +109,7 @@ function Navbar() {
       {/* =====================================================
           NAVBAR
       ====================================================== */}
+
       <nav
         className={`
           fixed top-0 left-0 w-full z-[100]
@@ -101,10 +134,10 @@ function Navbar() {
               justify-between
             "
           >
-
             {/* =================================================
                 LOGO
             ================================================== */}
+
             <Link
               to="/"
               onClick={closeMobile}
@@ -173,6 +206,7 @@ function Navbar() {
             {/* =================================================
                 DESKTOP NAVIGATION
             ================================================== */}
+
             <div
               className="
                 hidden
@@ -182,19 +216,72 @@ function Navbar() {
                 xl:gap-2
               "
             >
+              {/* HOME */}
+
               <Link to="/" className="navBtn">
                 Home
               </Link>
+
+              {/* ABOUT */}
 
               <Link to="/about" className="navBtn">
                 About Us
               </Link>
 
-              <Link to="/safaris" className="navBtn">
-                Safaris
-              </Link>
+              {/* =================================================
+                  SAFARIS DROPDOWN
+              ================================================== */}
 
-              {/* DESTINATIONS */}
+              <div
+                className="relative"
+                onMouseEnter={() => setSafariOpen(true)}
+                onMouseLeave={() => setSafariOpen(false)}
+              >
+                <button className="navBtn flex items-center gap-1">
+                  Safaris
+
+                  <span
+                    className={`
+                      text-[#F39A08]
+                      transition-transform
+                      duration-300
+                      ${safariOpen ? "rotate-180" : ""}
+                    `}
+                  >
+                    ▾
+                  </span>
+                </button>
+
+                {safariOpen && (
+                  <div className="dropMenu left-0 w-72">
+                    <div className="titleDrop">
+                      Safari Itineraries
+                    </div>
+
+                    <div>
+                      {safariItineraries.map(([name, path]) => (
+                        <Link
+                          key={path}
+                          to={path}
+                          className="dropItem"
+                          onClick={() => setSafariOpen(false)}
+                        >
+                          <span className="text-[#F39A08] mr-2">
+                            •
+                          </span>
+
+                          {name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* =================================================
+                  DESTINATIONS DROPDOWN
+              ================================================== */}
+
               <div
                 className="relative"
                 onMouseEnter={() => setDestOpen(true)}
@@ -241,27 +328,40 @@ function Navbar() {
                 )}
               </div>
 
+              {/* ACTIVITIES */}
+
               <Link to="/activities" className="navBtn">
                 Activities
               </Link>
+
+              {/* COMMUNITY */}
 
               <Link to="/communitywork" className="navBtn">
                 Community
               </Link>
 
+              {/* FAQS */}
+
               <Link to="/faqs" className="navBtn">
                 FAQs
               </Link>
+
+              {/* BLOG */}
 
               <Link to="/tourafricablog" className="navBtn">
                 Blog
               </Link>
 
+              {/* CONTACT */}
+
               <Link to="/contact" className="navBtn">
                 Contact
               </Link>
 
-              {/* DESKTOP CTA */}
+              {/* =================================================
+                  DESKTOP CTA
+              ================================================== */}
+
               <a
                 href="https://wa.me/+254708164662"
                 target="_blank"
@@ -295,6 +395,7 @@ function Navbar() {
             {/* =================================================
                 TABLET / MOBILE CONTROLS
             ================================================== */}
+
             <div
               className="
                 flex
@@ -305,6 +406,7 @@ function Navbar() {
               "
             >
               {/* BOOK BUTTON */}
+
               <a
                 href="https://wa.me/+254708164662"
                 target="_blank"
@@ -329,6 +431,7 @@ function Navbar() {
               </a>
 
               {/* MENU BUTTON */}
+
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}
@@ -363,6 +466,7 @@ function Navbar() {
       {/* =====================================================
           MOBILE OVERLAY
       ====================================================== */}
+
       <div
         onClick={closeMobile}
         className={`
@@ -385,6 +489,7 @@ function Navbar() {
       {/* =====================================================
           MOBILE DRAWER
       ====================================================== */}
+
       <aside
         className={`
           fixed
@@ -408,7 +513,10 @@ function Navbar() {
           }
         `}
       >
-        {/* MOBILE HEADER */}
+        {/* =================================================
+            MOBILE HEADER
+        ================================================== */}
+
         <div
           className="
             h-[76px]
@@ -490,7 +598,10 @@ function Navbar() {
           </button>
         </div>
 
-        {/* MOBILE SCROLLABLE CONTENT */}
+        {/* =================================================
+            MOBILE SCROLLABLE CONTENT
+        ================================================== */}
+
         <div
           className="
             h-[calc(100dvh-76px)]
@@ -505,7 +616,10 @@ function Navbar() {
         >
           <div className="space-y-2">
 
-            {/* HOME */}
+            {/* =================================================
+                HOME
+            ================================================== */}
+
             <Link
               to="/"
               onClick={closeMobile}
@@ -515,7 +629,10 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* ABOUT */}
+            {/* =================================================
+                ABOUT
+            ================================================== */}
+
             <Link
               to="/about"
               onClick={closeMobile}
@@ -525,17 +642,93 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* SAFARIS */}
-            <Link
-              to="/safaris"
-              onClick={closeMobile}
-              className="mobileMenuBtn"
+            {/* =================================================
+                SAFARIS DROPDOWN
+            ================================================== */}
+
+            <button
+              type="button"
+              onClick={() => setSafariOpen(!safariOpen)}
+              className="
+                mobileMenuBtn
+                w-full
+                justify-between
+              "
+              aria-expanded={safariOpen}
             >
               <span>Safaris</span>
-              <span className="mobileArrow">→</span>
-            </Link>
 
-            {/* DESTINATIONS */}
+              <span
+                className={`
+                  text-[#F39A08]
+                  text-xl
+                  transition-transform
+                  duration-300
+                  ${safariOpen ? "rotate-180" : ""}
+                `}
+              >
+                ⌄
+              </span>
+            </button>
+
+            {/* SAFARI ITINERARIES */}
+
+            <div
+              className={`
+                overflow-hidden
+                transition-all
+                duration-300
+                ${
+                  safariOpen
+                    ? "max-h-[400px] opacity-100 mt-2"
+                    : "max-h-0 opacity-0"
+                }
+              `}
+            >
+              <div
+                className="
+                  bg-[#08391D]
+                  p-2
+                  rounded-2xl
+                  border
+                  border-white/5
+                  space-y-1
+                "
+              >
+                {safariItineraries.map(([name, path]) => (
+                  <Link
+                    key={path}
+                    to={path}
+                    onClick={closeMobile}
+                    className="
+                      flex
+                      items-center
+                      gap-3
+                      py-3
+                      px-3
+                      sm:px-4
+                      rounded-xl
+                      text-gray-200
+                      text-sm
+                      hover:bg-white/10
+                      hover:text-[#F39A08]
+                      transition
+                    "
+                  >
+                    <span className="text-[#F39A08]">
+                      •
+                    </span>
+
+                    <span>{name}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* =================================================
+                DESTINATIONS DROPDOWN
+            ================================================== */}
+
             <button
               type="button"
               onClick={() => setDestOpen(!destOpen)}
@@ -562,6 +755,7 @@ function Navbar() {
             </button>
 
             {/* DESTINATION LIST */}
+
             <div
               className={`
                 overflow-hidden
@@ -614,7 +808,10 @@ function Navbar() {
               </div>
             </div>
 
-            {/* ACTIVITIES */}
+            {/* =================================================
+                ACTIVITIES
+            ================================================== */}
+
             <Link
               to="/activities"
               onClick={closeMobile}
@@ -624,7 +821,10 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* COMMUNITY */}
+            {/* =================================================
+                COMMUNITY
+            ================================================== */}
+
             <Link
               to="/communitywork"
               onClick={closeMobile}
@@ -634,7 +834,10 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* FAQS */}
+            {/* =================================================
+                FAQS
+            ================================================== */}
+
             <Link
               to="/faqs"
               onClick={closeMobile}
@@ -644,7 +847,10 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* BLOG */}
+            {/* =================================================
+                BLOG
+            ================================================== */}
+
             <Link
               to="/tourafricablog"
               onClick={closeMobile}
@@ -654,17 +860,16 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* GALLERY */}
-            <Link
-              to="/gallery"
-              onClick={closeMobile}
-              className="mobileMenuBtn"
-            >
-              <span>Gallery</span>
-              <span className="mobileArrow">→</span>
-            </Link>
+            {/* =================================================
+                GALLERY
+            ================================================== */}
 
-            {/* CONTACT */}
+            
+
+            {/* =================================================
+                CONTACT
+            ================================================== */}
+
             <Link
               to="/contact"
               onClick={closeMobile}
@@ -674,7 +879,10 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* MOBILE CTA */}
+            {/* =================================================
+                MOBILE CTA
+            ================================================== */}
+
             <a
               href="https://wa.me/+254708164662"
               target="_blank"
@@ -700,7 +908,10 @@ function Navbar() {
               Plan Your Safari
             </a>
 
-            {/* SMALL BRAND MESSAGE */}
+            {/* =================================================
+                SMALL BRAND MESSAGE
+            ================================================== */}
+
             <p
               className="
                 text-center
@@ -718,6 +929,7 @@ function Navbar() {
       {/* =====================================================
           STYLES
       ====================================================== */}
+
       <style>{`
         .navBtn {
           position: relative;
@@ -842,6 +1054,7 @@ function Navbar() {
         }
 
         /* Mobile scrollbar */
+
         aside ::-webkit-scrollbar {
           width: 4px;
         }

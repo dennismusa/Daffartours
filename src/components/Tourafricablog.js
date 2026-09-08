@@ -533,9 +533,7 @@ function Blogs() {
                     Safaris
                   </Link>
 
-                  <Link to="/destinations" className="block text-sm text-white/55 transition hover:text-[#F39A08]">
-                    Destinations
-                  </Link>
+                  
 
                   <Link to="/activities" className="block text-sm text-white/55 transition hover:text-[#F39A08]">
                     Activities
@@ -668,15 +666,7 @@ function Blogs() {
                   </div>
 
 
-                  <a
-                    href="https://wa.me/+254708164662"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#F39A08] px-5 py-3 text-sm font-bold text-[#082D19] transition hover:-translate-y-1 hover:bg-white"
-                  >
-                    WhatsApp Us
-                    <span>→</span>
-                  </a>
+                  
 
                 </div>
 
