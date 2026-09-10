@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -13,10 +14,10 @@ import honeymoon2 from "../assets/honeymoon2.jpg";
 
 import wilderbeast1 from "../assets/wilderbeast1.jpg";
 import wilderbeast2 from "../assets/wilderbeast2.jpg";
-
+import climbingkili from "../assets/climbingkili.jpg";
 import bird1 from "../assets/bird1.jpg";
 import bird2 from "../assets/bird2.jpg";
-
+import zanzibar4 from "../assets/zanzibar4.jpg";
 import photography1 from "../assets/photography1.jpg";
 import photography2 from "../assets/photography2.jpg";
 //import nakuruImage from "../assets/nakuru.jpg";
@@ -356,236 +357,1464 @@ function Safaris() {
           INTRODUCTION
       ====================================================== */}
 
-      <section className="py-16 sm:py-20 lg:py-24">
+{/* ============================================================
+    SAFARIS PAGE
+    Daffar Tours & Travel
+============================================================ */}
 
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+<section className="relative overflow-hidden bg-[#F8F6F1]">
 
-          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+  {/* ============================================================
+      PAGE INTRO
+  ============================================================ */}
+  <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-24 sm:px-8 lg:px-12 lg:pb-24 lg:pt-32">
 
-            {/* TEXT */}
-            <div>
+    <div className="grid items-end gap-10 lg:grid-cols-[0.8fr_1.2fr]">
 
-              <SectionLabel>
-                Our Safari Experiences
-              </SectionLabel>
+      <div>
+        <span className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+          <span className="h-px w-10 bg-[#B87916]" />
+          Our Safaris
+        </span>
 
+        <h1 className="font-serif text-5xl leading-[0.95] text-[#082D19] sm:text-6xl lg:text-7xl">
+          Journeys
+          <span className="block italic text-[#B87916]">
+            Beyond Ordinary.
+          </span>
+        </h1>
+      </div>
 
-              <h2 className="mt-4 font-serif text-3xl font-bold leading-tight text-[#0b4224] sm:text-4xl lg:text-5xl">
+      <div className="max-w-2xl lg:pb-2">
+        <p className="text-lg leading-8 text-gray-600 sm:text-xl">
+          From tailor-made adventures and romantic escapes to extraordinary
+          wildlife encounters, mountain expeditions and Indian Ocean retreats,
+          every Daffar journey is designed around the way you want to experience
+          Africa.
+        </p>
+      </div>
 
-                One Africa.
-
-                <span className="block text-[#F5A623]">
-                  Endless Ways To Explore It.
-                </span>
-
-              </h2>
-
-
-              <p className="mt-6 leading-8 text-gray-600">
-                At Daffar Tours & Travel, we believe that a safari should
-                reflect the traveller, not simply follow a standard itinerary.
-              </p>
-
-
-              <p className="mt-4 leading-8 text-gray-600">
-                From private tailor-made adventures and romantic honeymoon
-                escapes to wildlife migrations, birding, photography, beach
-                holidays and mountain trekking, we create journeys that allow
-                you to experience Africa your way.
-              </p>
+    </div>
+  </div>
 
 
-              <Link
-                to="/contact"
-                className="mt-7 inline-flex items-center gap-2 font-bold text-[#0b4224] transition hover:text-[#F5A623]"
+  {/* ============================================================
+      01 — TAILOR-MADE SAFARIS
+  ============================================================ */}
+  <section
+    id="tailor-made-safaris"
+    className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+
+        {/* IMAGE */}
+        <div className="group relative">
+          <div className="absolute -left-5 -top-5 hidden h-32 w-32 rounded-full border border-[#B87916]/20 lg:block" />
+
+          <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
+            <img
+              src={tailormade1}
+              alt="Tailor-made safari in Africa"                   
+              className="h-[440px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[560px]"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#082D19]/70 via-transparent to-transparent" />
+
+            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8">
+              <div className="rounded-2xl border border-white/20 bg-black/20 p-5 backdrop-blur-md">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+                  Your Journey
+                </p>
+                <p className="mt-1 font-serif text-2xl text-white">
+                  Crafted around you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CONTENT */}
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+            01 — Tailor-Made
+          </span>
+
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl">
+            Crafted Just
+            <span className="block italic text-[#B87916]">
+              for You
+            </span>
+          </h2>
+
+          <p className="mt-7 text-lg leading-8 text-gray-600">
+            At Daffar Tours and Travel, we believe your safari should reflect
+            you; your interests, pace, and vision of the perfect African journey.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            Our Tailor-Made Safaris are designed to bring that vision to life,
+            whether it is a romantic escape, a family adventure, a luxury
+            retreat, or a specialist trip for photography or birdwatching.
+            Working closely with our experienced safari planners, you create an
+            itinerary that is as unique as your dreams.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            We handpick destinations, lodges, and experiences that match your
+            style — from private game drives and cultural encounters to sunrise
+            balloon rides over the Maasai Mara or sundowner cocktails in the bush.
+          </p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {[
+              "Private game drives",
+              "Handpicked lodges",
+              "Flexible itineraries",
+              "Local hidden gems",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 rounded-xl bg-[#F8F6F1] px-4 py-3"
               >
-                Start Planning Your Journey
-                <span>→</span>
-              </Link>
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#082D19] text-sm text-[#F5A623]">
+                  ✓
+                </span>
+                <span className="text-sm font-medium text-[#082D19]">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
 
+          <p className="mt-8 border-l-2 border-[#F5A623] pl-5 font-serif text-xl italic leading-8 text-[#082D19]">
+            The freedom is yours. Explore the wild at your own pace and shape
+            each day around what excites you most.
+          </p>
+
+          <p className="mt-6 leading-8 text-gray-600">
+            With Daffar Tours and Travel, every Tailor-Made Safari is more than
+            a trip; it is a deeply personal experience, crafted with care and
+            delivered with genuine East African warmth.
+          </p>
+
+          
+        </div>
+
+
+
+      </div>
+
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/maasaimara#5-day-maasaimaranakuru"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
+
+
+  {/* ============================================================
+      02 — HONEYMOON SAFARIS
+  ============================================================ */}
+  <section
+    id="honeymoon-safaris"
+    className="relative overflow-hidden bg-[#082D19] py-20 sm:py-24 lg:py-32"
+  >
+    <div className="absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#F5A623]/10 blur-3xl" />
+
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+
+        {/* CONTENT */}
+        <div className="order-2 lg:order-1">
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#F5A623]">
+            02 — Honeymoon Safaris
+          </span>
+
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-white sm:text-5xl">
+            A Love Story
+            <span className="block italic text-[#F5A623]">
+              in the Wild
+            </span>
+          </h2>
+
+          <p className="mt-7 text-lg leading-8 text-white/75">
+            Honeymoon Adventures Just for You.
+          </p>
+
+          <p className="mt-5 leading-8 text-white/65">
+            At Daffar Tours and Travel, we understand that the perfect honeymoon
+            looks different for every couple. Some dream of quiet moments under
+            starlit skies, while others long to celebrate love in grand,
+            unforgettable style.
+          </p>
+
+          <p className="mt-5 leading-8 text-white/65">
+            Every journey begins with a conversation and is designed around your
+            interests, budget, and vision. Imagine sharing sunset views across
+            the savannah, toasting your love during a private bush dinner, or
+            waking up to birdsong in a luxury tented camp.
+          </p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {[
+              "Private game drives",
+              "Bush dinners",
+              "Luxury tented camps",
+              "Zanzibar extensions",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm"
+              >
+                <p className="text-sm font-medium text-white">
+                  <span className="mr-2 text-[#F5A623]">✦</span>
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 font-serif text-xl italic leading-8 text-white/90">
+            Your honeymoon should be the first chapter in your shared adventure.
+          </p>
+
+          
+        </div>
+
+        {/* IMAGE */}
+        <div className="group relative order-1 lg:order-2">
+          <div className="overflow-hidden rounded-[2.5rem]">
+            <img
+              src={honeymoon1}
+              alt="Romantic honeymoon safari in Africa"
+              className="h-[440px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[570px]"
+            />
+          </div>
+
+          <div className="absolute -bottom-6 -left-5 rounded-2xl border border-white/10 bg-[#0D4825]/95 p-5 shadow-xl backdrop-blur-md sm:left-6">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#F5A623]">
+              Together
+            </p>
+            <p className="mt-1 font-serif text-xl text-white">
+              Love. Adventure. Africa.
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/dianiitineraries#dianiitineraries"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
+
+
+  {/* ============================================================
+      03 — WILDEBEEST SAFARIS
+  ============================================================ */}
+  <section
+    id="wildebeest-safaris"
+    className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="mb-14 max-w-3xl lg:mb-20">
+        <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+          03 — Wildebeest Safaris
+        </span>
+
+        <h2 className="mt-5 font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+          Beyond the River Crossings:
+          <span className="block italic text-[#B87916]">
+            The Migration Experience
+          </span>
+        </h2>
+      </div>
+
+      <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+
+        <div className="group relative overflow-hidden rounded-[2.5rem]">
+          <img
+            src={wilderbeast1}
+            alt="Wildebeest migration in East Africa"
+            className="h-[500px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[650px]"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-8 left-8 right-8">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+              Serengeti → Mara
+            </p>
+            <p className="mt-2 max-w-xl font-serif text-3xl leading-tight text-white sm:text-4xl">
+              Follow one of Earth's greatest natural spectacles.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center">
+
+          <p className="text-lg leading-8 text-gray-600">
+            Step into the untamed rhythms of East Africa with Daffar Tours and
+            Travel on our Wildebeest Migration Safari, an extraordinary journey
+            following one of the planet’s most powerful natural spectacles.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            Imagine standing among endless herds as millions of wildebeest,
+            zebras, and gazelles sweep across the vast Serengeti, brave the
+            crocodile-filled Mara River, and spill into the golden grasslands of
+            the Maasai Mara.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            From the calving grounds of Ndutu, where thousands of newborns take
+            their first steps, to dramatic river crossings, each stage brings
+            raw, breathtaking drama.
+          </p>
+
+          <div className="my-8 h-px bg-[#082D19]/10" />
+
+          <div className="space-y-4">
+            {[
+              ["01", "Ndutu Calving Grounds", "Witness the beginning of life."],
+              ["02", "Serengeti Plains", "Follow the herds across endless grasslands."],
+              ["03", "Mara River", "Experience the drama of the crossings."],
+              ["04", "Maasai Mara", "Discover the herds in Kenya."],
+            ].map(([number, title, text]) => (
+              <div key={number} className="flex gap-4">
+                <span className="font-serif text-sm text-[#B87916]">
+                  {number}
+                </span>
+                <div>
+                  <h3 className="font-semibold text-[#082D19]">{title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-500">
+                    {text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 font-serif text-xl italic leading-8 text-[#082D19]">
+            Join us, and watch the greatest story of survival and instinct
+            unfold before your eyes.
+          </p>
+
+        </div>
+      </div>
+
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/maasaimaraitineraries#masaimaraitineraries"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
+
+
+  {/* ============================================================
+      04 — BIRDING SAFARIS
+  ============================================================ */}
+  <section
+    id="birding-safaris"
+    className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+            04 — Birding Safaris
+          </span>
+
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl">
+            A World of
+            <span className="block italic text-[#B87916]">
+              Wings & Wonder
+            </span>
+          </h2>
+
+          <p className="mt-7 text-lg leading-8 text-gray-600">
+            Step into a world where every sunrise brings fresh colors,
+            unfamiliar calls, and the quiet thrill of discovery.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            Our Birding Safaris are crafted for everyone who feels the excitement
+            of seeing rare feathers in flight. Whether you are a dedicated
+            birder, wildlife photographer, researcher, or simply a traveler who
+            loves nature, each journey promises something special.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            Explore misty montane forests, open savannahs, peaceful wetlands and
+            habitats alive with flamingos, kingfishers, raptors and hidden
+            waders. Rather than chasing lists, these safaris invite you to slow
+            your pace and become part of the landscape.
+          </p>
+
+          <div className="mt-8 rounded-3xl bg-[#F8F6F1] p-6">
+            <p className="font-serif text-xl italic leading-8 text-[#082D19]">
+              “Every wingbeat carries a story waiting to be discovered.”
+            </p>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="grid gap-5 sm:grid-cols-2">
+
+            <div className="overflow-hidden rounded-[2rem] sm:mt-12">
+              <img
+                src={bird1}
+                alt="Birding safari in Africa"
+                className="h-[360px] w-full object-cover transition duration-700 hover:scale-105"
+              />
             </div>
 
-
-            {/* STATS */}
-            <div className="grid grid-cols-2 gap-4">
-
-              <Stat
-                number="01"
-                title="Wildlife"
-                text="Experience Africa's iconic wildlife."
+            <div className="overflow-hidden rounded-[2rem]">
+              <img
+                src={bird2}
+                alt="African birds"
+                className="h-[360px] w-full object-cover transition duration-700 hover:scale-105"
               />
+            </div>
 
-              <Stat
-                number="02"
-                title="Adventure"
-                text="Explore beyond the ordinary."
-              />
+          </div>
 
-              <Stat
-                number="03"
-                title="Culture"
-                text="Connect with local communities."
-              />
+          <div className="mt-5 rounded-[2rem] bg-[#082D19] p-7 text-white">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+              Discover
+            </p>
+            <p className="mt-3 font-serif text-2xl">
+              Forests · Wetlands · Savannah · Endemics
+            </p>
+          </div>
+        </div>
 
-              <Stat
-                number="04"
-                title="Relaxation"
-                text="Finish your journey by the coast."
-              />
+      </div>
 
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/lakenakuru#lakenakuru"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
+
+
+  {/* ============================================================
+      05 — PHOTOGRAPHY SAFARIS
+  ============================================================ */}
+```jsx
+{/* ============================================================
+    05 — PHOTOGRAPHY SAFARIS
+============================================================ */}
+<section
+  id="photography-safaris"
+  className="relative overflow-hidden bg-[#07140C] py-20 sm:py-24 lg:py-32"
+>
+  {/* SUBTLE BACKGROUND IMAGE */}
+  <div className="absolute inset-0">
+    <img
+      src={photography1}
+      alt=""
+      className="h-full w-full object-cover opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#07140C] via-[#07140C]/95 to-[#07140C]/75" />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#07140C] via-transparent to-[#07140C]/40" />
+  </div>
+
+  {/* DECORATIVE GLOW */}
+  <div className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-[#F5A623]/10 blur-[140px]" />
+
+  <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+    {/* ============================================================
+        INTRO
+    ============================================================ */}
+    <div className="grid items-end gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+
+      <div>
+        <div className="mb-5 flex items-center gap-3">
+          <span className="h-px w-10 bg-[#F5A623]" />
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#F5A623]">
+            05 — Photography Safaris
+          </span>
+        </div>
+
+        <h2 className="font-serif text-4xl leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+          See Africa
+          <span className="block italic text-[#F5A623]">
+            Through Your Lens
+          </span>
+        </h2>
+      </div>
+
+      <div className="lg:pb-2">
+        <p className="max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
+          At Daffar Tours and Travel, we design Photography Safaris for
+          travelers who see the world in light and shadow, shape and texture.
+          These journeys are more than game drives; they are an invitation to
+          capture the spirit of Africa.
+        </p>
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        FEATURED IMAGE + CONTENT
+    ============================================================ */}
+    <div className="mt-14 grid gap-6 lg:mt-20 lg:grid-cols-[1.15fr_0.85fr]">
+
+      {/* LARGE IMAGE */}
+      <div className="group relative overflow-hidden rounded-[2.5rem]">
+        <img
+          src={photography1}
+          alt="African wildlife photography safari"
+          className="h-[440px] w-full object-cover transition duration-1000 group-hover:scale-105 sm:h-[580px]"
+        />
+
+        {/* IMAGE OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+        {/* IMAGE CAPTION */}
+        <div className="absolute bottom-7 left-7 right-7 sm:bottom-9 sm:left-9 sm:right-9">
+
+          <div className="flex items-end justify-between gap-6">
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+                The Art of the Wild
+              </p>
+
+              <p className="mt-2 max-w-lg font-serif text-2xl leading-tight text-white sm:text-3xl">
+                Every moment becomes a story worth remembering.
+              </p>
+            </div>
+
+            <div className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md sm:flex">
+              <span className="text-xl text-white">↗</span>
             </div>
 
           </div>
 
         </div>
+      </div>
 
-      </section>
+
+      {/* RIGHT CONTENT */}
+      <div className="flex flex-col rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-7 backdrop-blur-sm sm:p-9">
+
+        <p className="text-sm leading-7 text-white/60">
+          Led by guides with an eye for composition and a deep love for the
+          wild, you will explore iconic reserves and hidden gems known for
+          dramatic scenery and thriving wildlife.
+        </p>
+
+        <p className="mt-5 text-sm leading-7 text-white/60">
+          Each day is timed to match nature’s perfect light, with early morning
+          outings and golden-hour evenings when animals are most active and the
+          savannah glows with warm colour.
+        </p>
+
+
+        {/* FEATURES */}
+        <div className="mt-8 space-y-3">
+
+          {[
+            {
+              number: "01",
+              title: "Golden Light",
+              text: "Early mornings and magical evenings.",
+            },
+            {
+              number: "02",
+              title: "Wildlife Moments",
+              text: "Patient encounters with Africa's iconic species.",
+            },
+            {
+              number: "03",
+              title: "Expert Guidance",
+              text: "Guides who understand the art of photography.",
+            },
+            {
+              number: "04",
+              title: "Time & Flexibility",
+              text: "Stay longer when the perfect moment arrives.",
+            },
+          ].map((item) => (
+            <div
+              key={item.number}
+              className="group flex gap-4 rounded-2xl border border-white/5 bg-black/10 p-4 transition duration-300 hover:border-[#F5A623]/30 hover:bg-white/[0.06]"
+            >
+              <span className="pt-1 font-serif text-xs text-[#F5A623]">
+                {item.number}
+              </span>
+
+              <div>
+                <h3 className="font-serif text-lg text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-1 text-xs leading-5 text-white/45">
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+
+        {/* CLOSING QUOTE */}
+        <div className="mt-auto pt-9">
+
+          <div className="h-px w-full bg-white/10" />
+
+          <p className="mt-7 font-serif text-xl italic leading-8 text-white/90 sm:text-2xl">
+            “Let every frame hold a piece of Africa’s soul.”
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        BOTTOM STRIP
+    ============================================================ */}
+    <div className="mt-6 grid gap-3 sm:grid-cols-3">
+
+      {[
+        "Wildlife Portraits",
+        "African Landscapes",
+        "Golden Hour Experiences",
+      ].map((item) => (
+        <div
+          key={item}
+          className="rounded-2xl border border-white/10 bg-white/[0.035] px-5 py-4 text-center transition hover:border-[#F5A623]/30"
+        >
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
+            {item}
+          </span>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+  {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/sychellesitineraries#sychellesitineraries"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+</section>
+
+
+
+
+  {/* ============================================================
+      06 — MOUNTAIN TREKKING
+  ============================================================ */}
+  <section
+    id="mountain-trekking"
+    className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+
+        <div className="relative">
+          <div className="overflow-hidden rounded-[2.5rem] shadow-2xl">
+            <img
+              src={climbingkili}
+              alt="Mountain trekking in Africa"
+              className="h-[470px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[620px]"
+            />
+          </div>
+
+          <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3 sm:bottom-8 sm:left-8 sm:right-8">
+            <div className="rounded-2xl border border-white/20 bg-black/30 p-4 backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#F5A623]">
+                Kilimanjaro
+              </p>
+              <p className="mt-1 font-serif text-2xl text-white">
+                5,895m
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/20 bg-black/30 p-4 backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#F5A623]">
+                Mt. Kenya
+              </p>
+              <p className="mt-1 font-serif text-2xl text-white">
+                5,199m
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+            06 — Mountain Trekking
+          </span>
+
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl">
+            Walk Among
+            <span className="block italic text-[#B87916]">
+              Giants
+            </span>
+          </h2>
+
+          <p className="mt-7 text-lg leading-8 text-gray-600">
+            At Daffar Tours and Travel, we invite you to discover Africa’s
+            legendary summits through journeys that blend adventure, beauty,
+            and a sense of true achievement.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            Climbing Mt. Kilimanjaro, the continent’s highest peak rising to
+            5,895 metres, is more than a trek. It is a walk through changing
+            worlds — from lush rainforests alive with birdsong, through
+            moorlands brushed by mist, to stark alpine deserts.
+          </p>
+
+          <div className="mt-8 space-y-4">
+
+            {[
+              ["Kilimanjaro", "Machame · Lemosho · Rongai · Marangu"],
+              ["Mt. Kenya", "Sirimon · Chogoria · Naro Moru"],
+            ].map(([mountain, routes]) => (
+              <div
+                key={mountain}
+                className="rounded-2xl border border-[#082D19]/10 bg-white p-5"
+              >
+                <h3 className="font-serif text-xl text-[#082D19]">
+                  {mountain}
+                </h3>
+                <p className="mt-2 text-sm text-gray-500">
+                  {routes}
+                </p>
+              </div>
+            ))}
+
+          </div>
+
+          <p className="mt-7 leading-8 text-gray-600">
+            Both treks promise far more than physical challenge. They are
+            journeys into breathtaking landscapes where every sunrise feels
+            earned and every horizon opens to new wonder.
+          </p>
+
+          <p className="mt-7 font-serif text-xl italic text-[#082D19]">
+            Walk with Daffar and discover the spirit of Africa’s mountains.
+          </p>
+
+        </div>
+
+      </div>
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/mountkilimanjaroitineraries#mountkilimanjaroitineraries"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
+
+
+  {/* ============================================================
+      07 — BEACH HOLIDAYS
+  ============================================================ */}
+  <section
+    id="beach-holidays"
+    className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="mb-14 text-center lg:mb-20">
+        <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+          07 — Beach Holidays
+        </span>
+
+        <h2 className="mx-auto mt-5 max-w-4xl font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+          Coastal Escapes:
+          <span className="block italic text-[#B87916]">
+            East Africa by the Ocean
+          </span>
+        </h2>
+
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+          Trade the rustle of the savannah for the soft hush of waves along
+          Africa’s idyllic coastline.
+        </p>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-3">
+
+        {/* DIANI */}
+        <div className="group relative overflow-hidden rounded-[2.5rem]">
+          <img
+            src={diani1}
+            alt="Diani Beach Kenya"
+            className="h-[520px] w-full object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-7 left-7 right-7">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+              Kenya
+            </span>
+
+            <h3 className="mt-2 font-serif text-3xl text-white">
+              Diani Beach
+            </h3>
+
+            <p className="mt-3 text-sm leading-6 text-white/70">
+              White sands, turquoise waters, coral reefs and laid-back coastal
+              living.
+            </p>
+          </div>
+        </div>
+
+        {/* LAMU */}
+        <div className="group relative overflow-hidden rounded-[2.5rem]">
+          <img
+            src={diani2}
+            alt="Lamu Kenya"
+            className="h-[520px] w-full object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-7 left-7 right-7">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+              Kenya
+            </span>
+
+            <h3 className="mt-2 font-serif text-3xl text-white">
+              Lamu
+            </h3>
+
+            <p className="mt-3 text-sm leading-6 text-white/70">
+              Swahili heritage, wooden dhows, winding streets and timeless
+              island charm.
+            </p>
+          </div>
+        </div>
+
+        {/* ZANZIBAR */}
+        <div className="group relative overflow-hidden rounded-[2.5rem]">
+          <img
+            src={zanzibar4}
+            alt="Zanzibar beach"
+            className="h-[520px] w-full object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-7 left-7 right-7">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+              Tanzania
+            </span>
+
+            <h3 className="mt-2 font-serif text-3xl text-white">
+              Zanzibar
+            </h3>
+
+            <p className="mt-3 text-sm leading-6 text-white/70">
+              Spice-scented air, Stone Town, sunset dhow cruises and vibrant
+              marine life.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      {/* BEACH DESCRIPTION */}
+      <div className="mx-auto mt-14 max-w-4xl text-center">
+
+        <p className="leading-8 text-gray-600">
+          Whether you choose Kenya’s quiet coastal gems or Zanzibar’s vibrant
+          mix of history and sea, your days flow at your own pace. Relax beside
+          crystal-clear waters, embark on a sunset dhow cruise, or dive among
+          vivid coral gardens alive with tropical fish.
+        </p>
+
+        <p className="mt-5 leading-8 text-gray-600">
+          From peaceful mornings on sunlit sands to evenings lit by lanterns
+          and ocean breezes, every moment is designed for rest, discovery, and
+          gentle adventure.
+        </p>
+
+        <p className="mt-8 font-serif text-2xl italic text-[#082D19]">
+          Every wave invites you to simply breathe and be.
+        </p>
+
+      </div>
+
+
+{/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+
+  {/* START PLANNING */}
+  <a
+    href="/contact"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
+  >
+    {/* Gold hover sweep */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative">
+      Start Planning
+    </span>
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 10h11M11 5l5 5-5 5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  </a>
+
+
+  {/* VIEW ITINERARY */}
+  <a
+    href="/dianiitineraries#dianiitineraries"
+    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
+  >
+    {/* Subtle gold background animation */}
+    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
+
+    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
+      <svg
+        viewBox="0 0 20 20"
+        fill="none"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 3.5v13M3.5 10h13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+      </svg>
+    </span>
+
+    <span className="relative">
+      View Itinerary
+    </span>
+
+    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
+      →
+    </span>
+  </a>
+
+</div>
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
+
+
+  {/* ============================================================
+      FINAL CTA
+  ============================================================ */}
+  <section className="relative overflow-hidden bg-[#082D19] py-20 sm:py-24 lg:py-28">
+
+    <div className="absolute -left-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#F5A623]/10 blur-3xl" />
+    <div className="absolute -bottom-40 -right-40 h-[450px] w-[450px] rounded-full bg-white/5 blur-3xl" />
+
+    <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8">
+
+      <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#F5A623]">
+        Your Africa Awaits
+      </span>
+
+      <h2 className="mt-5 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+        Where Will You
+        <span className="block italic text-[#F5A623]">
+          Go Further?
+        </span>
+      </h2>
+
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/65">
+        Tell us what you dream of experiencing, and let our team turn your
+        ideas into an unforgettable African journey.
+      </p>
+
+      
+
+    </div>
+  </section>
+
+</section>
+
+
 
 
 
       {/* =====================================================
           SAFARI TYPES
       ====================================================== */}
-
-      <section className="bg-[#F7F5EE] py-16 sm:py-20 lg:py-28">
-
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-
-
-          {/* HEADER */}
-          <div className="max-w-3xl">
-
-            <SectionLabel>
-              Our Safari Experiences
-            </SectionLabel>
-
-
-            <h2 className="mt-4 font-serif text-3xl font-bold text-[#0b4224] sm:text-4xl lg:text-5xl">
-
-              Choose Your
-
-              <span className="block text-[#F5A623]">
-                Perfect Safari.
-              </span>
-
-            </h2>
-
-
-            <p className="mt-5 leading-8 text-gray-600">
-              Choose from our signature safari experiences or speak with our
-              team to combine several experiences into one unforgettable
-              African journey.
-            </p>
-
-          </div>
-
-
-          {/* CARDS */}
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-
-            {/* =================================================
-                01 — TAILOR MADE
-            ================================================== */}
-
-            <SafariCard
-              image={tailormade1}
-              image2={tailormade2}
-              number="01"
-              title="Tailor-Made Safaris"
-              text="A personalized journey designed around your interests, destinations, dates, preferred pace and budget."
-              tag="Personalized"
-            />
-
-
-            {/* =================================================
-                02 — HONEYMOON
-            ================================================== */}
-
-            <SafariCard
-              image={honeymoon1}
-              image2={honeymoon2}
-              number="02"
-              title="Honeymoon Safaris"
-              text="Romantic African escapes combining incredible wildlife, beautiful accommodation and unforgettable moments together."
-              tag="Romantic"
-            />
-
-
-            {/* =================================================
-                03 — WILDEBEEST
-            ================================================== */}
-
-            <SafariCard
-              image={wilderbeast1}
-              image2={wilderbeast2}
-              number="03"
-              title="Wildebeest Safaris"
-              text="Follow one of nature's greatest spectacles as millions of wildebeest and other animals move across the Mara and Serengeti ecosystem."
-              tag="Migration"
-            />
-
-
-            {/* =================================================
-                04 — BIRDING
-            ================================================== */}
-
-            <SafariCard
-              image={bird1}
-              image2={bird2}
-              number="04"
-              title="Birding Safaris"
-              text="Explore East Africa's diverse habitats and discover remarkable birdlife with carefully planned birding experiences."
-              tag="Birding"
-            />
-
-
-            {/* =================================================
-                05 — PHOTOGRAPHY
-            ================================================== */}
-
-            <SafariCard
-              image={photography1}
-              image2={photography2}
-              number="05"
-              title="Photography Safaris"
-              text="Enjoy dedicated time and exceptional opportunities to capture wildlife, landscapes and authentic African moments."
-              tag="Photography"
-            />
-
-
-            {/* =================================================
-                06 — BEACH
-            ================================================== */}
-
-            <SafariCard
-              image={diani1}
-              image2={diani2}
-              number="06"
-              title="Beach Holidays"
-              text="Combine your safari with the tropical beaches of East Africa for the perfect balance of adventure and relaxation."
-              tag="Beach Escape"
-            />
-
-
-            {/* =================================================
-                07 — MOUNTAIN
-            ================================================== */}
-
-            <SafariCard
-              image={kili1}
-              image2={kili2}
-              number="07"
-              title="Mountain Trekking"
-              text="Experience spectacular mountain landscapes through memorable trekking adventures across East Africa."
-              tag="Adventure"
-            />
-
-          </div>
-
-        </div>
-
-      </section>
 
 
 
@@ -1273,10 +2502,10 @@ function Safaris() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 transition-colors hover:text-[#F39A08]"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -1298,10 +2527,10 @@ function Safaris() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 transition-colors hover:text-[#F39A08]"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>
@@ -1311,7 +2540,7 @@ function Safaris() {
 
                   {/* WHATSAPP */}
                   <a
-                    href="https://wa.me/+254708164662"
+                    href="https://wa.me/+254708711459"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-[#F39A08] px-5 py-3 text-sm font-bold text-[#082D19] transition-all hover:-translate-y-1 hover:bg-white"

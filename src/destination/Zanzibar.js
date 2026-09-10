@@ -226,115 +226,151 @@ function Zanzibar() {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
+```jsx
+{/* ============================================================
+    ZANZIBAR ISLAND
+============================================================ */}
+<section className="bg-white py-16 sm:py-20 lg:py-28">
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* IMAGE */}
+      <div className="relative group">
 
-            {/* IMAGE */}
+        <div className="absolute -left-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
 
-            <div className="relative group">
+        <img
+          src={zanzibar2}
+          alt="Zanzibar Island"
+          className="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[480px]"
+        />
 
-              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
+        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl backdrop-blur-md">
 
-              <img
-                src={zanzibar2}
-                alt="Zanzibar island experience"
-                className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Zanzibar
+          </p>
 
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
+          <p className="mt-1 text-xs text-white/70">
+            The Spice Island of Tanzania
+          </p>
 
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Zanzibar
-                </p>
+        </div>
 
-                <p className="text-white/70 text-xs mt-1">
-                  The Spice Island of Tanzania
-                </p>
-
-              </div>
-
-            </div>
+      </div>
 
 
-            {/* CONTENT */}
+      {/* CONTENT */}
+      <div>
 
-            <div>
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          About The Destination
+        </span>
 
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About The Destination
-              </span>
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
 
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
+          Zanzibar Island
 
-                Where The Ocean
+          <span className="block text-[#F39A08]">
+            A Timeless Indian Ocean Escape
+          </span>
 
-                <span className="block text-[#F39A08]">
-                  Meets Island Culture
-                </span>
+        </h2>
 
-              </h2>
+        <div className="mt-7 space-y-5 text-gray-600">
 
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                Although Zanzibar is best known for its dreamy beaches, the
-                island’s interior highlands reveal a serene, verdant landscape
-                that tells a different story. Gently rolling hills, coconut
-                plantations, spice farms, and traditional villages form the
-                lush backdrop of central and western Unguja — the island’s
-                agricultural core.
-              </p>
+          <p className="leading-relaxed">
+            Nestled off Tanzania’s coast, Zanzibar Island, affectionately
+            called the “Spice Island,” entices travelers with its powder-soft
+            beaches, clear aquamarine waters, and rich cultural tapestry shaped
+            by centuries of trade. A favorite among honeymooners, families,
+            and explorers alike, Zanzibar blends tropical beauty with living
+            history. At the heart of the island lies Stone Town, a UNESCO World
+            Heritage treasure. Its maze of narrow alleyways reveals grand
+            Omani-era doorways, vibrant bazaars brimming with local crafts,
+            and a captivating mix of Swahili, Arab, and European architecture.
+          </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                Thanks to its fertile volcanic soil, the region thrives with
-                cloves, cinnamon, vanilla, and tropical fruits. Travelers can
-                discover this quieter side of Zanzibar by visiting working
-                farms, walking shaded forest trails, and engaging with local
-                communities.
-              </p>
+          <p className="leading-relaxed">
+            Visitors can stroll through bustling spice markets, uncover the
+            island’s poignant past at the former Slave Market, or savor the
+            aroma of cloves, nutmeg, and cinnamon on a guided spice plantation
+            tour.
+          </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                It’s an experience rich in natural beauty and Swahili cultural
-                roots, offering a tranquil contrast to the island’s bustling
-                coastline.
-              </p>
+          <p className="leading-relaxed">
+            Beyond its cultural allure, Zanzibar is a playground for sunseekers
+            and adventurers. Iconic beaches like Nungwi, Kendwa, and Paje invite
+            travelers to unwind under swaying palms or dive into warm,
+            reef-protected waters alive with colorful fish and corals.
+            Thrill-seekers can enjoy kite surfing, snorkeling, or dolphin-spotting
+            excursions, while traditional dhow cruises at sunset paint
+            unforgettable scenes against the horizon.
+          </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+          <p className="leading-relaxed">
+            Luxurious beachfront resorts and charming boutique hotels promise
+            warm island hospitality, blending relaxation with world-class
+            amenities. And as the sun dips into the Indian Ocean, Zanzibar’s
+            beachside restaurants and bars come alive, offering fresh seafood,
+            tropical cocktails, and Swahili-inspired cuisine.
+          </p>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+          <p className="leading-relaxed">
+            From historical intrigue and spice-scented adventures to
+            crystal-clear waters and barefoot luxury, Zanzibar Island is more
+            than a destination, it’s a journey that touches the senses and the
+            soul. Discover your perfect island escape in Zanzibar today!
+          </p>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Beaches
-                  </p>
+        </div>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    White sands & turquoise waters
-                  </p>
 
-                </div>
+        {/* HIGHLIGHTS */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Culture
-                  </p>
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Beaches
+            </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Rich island heritage
-                  </p>
+            <p className="mt-1 text-sm text-gray-500">
+              Nungwi, Kendwa & Paje
+            </p>
 
-                </div>
+          </div>
 
-              </div>
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-            </div>
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Culture
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Stone Town & Spice Island heritage
+            </p>
 
           </div>
 
         </div>
-      </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{/* ============================================================
+    MT. KENYA
+============================================================ */}
+
+
 
 
       {/* =====================================================
@@ -1376,7 +1412,7 @@ function Zanzibar() {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
@@ -1682,10 +1718,10 @@ function Zanzibar() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -1708,10 +1744,10 @@ function Zanzibar() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

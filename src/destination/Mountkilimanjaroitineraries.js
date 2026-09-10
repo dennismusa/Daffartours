@@ -570,6 +570,169 @@ export default function SafariItineraries() {
 </section>
 
 
+
+{/* ============================================================
+    MOUNT KILIMANJARO — DESTINATION
+============================================================ */}
+
+<section className="bg-white py-16 sm:py-20 lg:py-28">
+
+  <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
+
+      <div className="relative group">
+
+        {/* Decorative Shape */}
+        <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
+
+        <img
+          src={kili4}
+          alt="Mount Kilimanjaro trekking experience"
+          className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
+        />
+
+        {/* Image Badge */}
+        <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
+
+          <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
+            Mount Kilimanjaro
+          </p>
+
+          <p className="text-white/70 text-xs mt-1">
+            The Roof of Africa
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
+
+      <div>
+
+        {/* Eyebrow */}
+        <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
+          About The Destination
+        </span>
+
+        {/* Heading */}
+        <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
+
+          Mount Kilimanjaro
+
+          <span className="block text-[#F39A08]">
+            The Roof of Africa
+          </span>
+
+        </h2>
+
+
+        {/* Main Content */}
+
+        <p className="mt-6 text-gray-600 leading-relaxed">
+          Towering at 5,895 meters, Mount Kilimanjaro rises majestically
+          from Tanzania’s savannah, its snow-capped peak a breathtaking
+          sight against equatorial skies. Often described as “the Roof of
+          Africa,” this dormant volcano draws adventurers and nature lovers
+          from around the world to experience its beauty, challenge, and
+          ever-changing landscapes.
+        </p>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          The journey up Kilimanjaro is as rewarding as the summit itself.
+          Climbers pass through a remarkable series of ecological zones:
+          lush rainforest alive with colobus monkeys and exotic birds;
+          heather-covered moorlands draped in mist; high alpine deserts
+          with surreal lava formations; and, finally, the icy glaciers
+          crowning Uhuru Peak.
+        </p>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Each zone reveals unique plant and animal life, offering
+          photographers and wildlife enthusiasts unexpected moments to
+          capture Africa’s hidden mountain wonders.
+        </p>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Beyond the physical climb, Kilimanjaro is an immersion into
+          cultural heritage and natural history. Local Chagga guides share
+          stories passed down through generations, adding a human warmth
+          to the adventure.
+        </p>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Watching the sunrise from the crater rim, with the plains
+          stretching endlessly below, is a memory that stays with trekkers
+          long after they’ve returned home.
+        </p>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Although large wildlife is rarely seen near the summit, the lower
+          forests can surprise hikers with sightings of bushbuck, duikers,
+          blue monkeys, and countless bird species.
+        </p>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          The mountain is not only a climb but a moving encounter with East
+          Africa’s wild heart. Whether drawn by the allure of standing atop
+          Africa’s highest point or the beauty of its slopes, Kilimanjaro
+          promises an unforgettable experience, a blend of nature, culture,
+          and personal triumph.
+        </p>
+
+
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
+
+        <div className="grid sm:grid-cols-2 gap-4 mt-8">
+
+          {/* Highlight 1 */}
+          <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
+            <p className="text-[#F39A08] text-2xl font-serif font-bold">
+              5,895 m
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Africa’s highest mountain
+            </p>
+
+          </div>
+
+
+          {/* Highlight 2 */}
+          <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
+            <p className="text-[#F39A08] text-2xl font-serif font-bold">
+              Uhuru Peak
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Summit of Mount Kilimanjaro
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+
 <section id="lemosho-7-day" className="relative overflow-hidden bg-[#F7F4EA] py-20 sm:py-24 lg:py-32">
 
   {/* =====================================================
@@ -12215,10 +12378,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -12241,10 +12404,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

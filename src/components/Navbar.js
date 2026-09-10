@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
+
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -37,11 +37,14 @@ function Navbar() {
     ["Maasai Mara Itineraries", "/maasaimaraitineraries"],
     ["Serengeti Itineraries", "/serengetiitineraries"],
     ["Amboseli Itineraries", "/amboseliitineraries"],
-    ["Mountkilimanjaro Itineraries", "/mountkilimanjaroitineraries"],
+    [
+      "Mount Kilimanjaro Itineraries",
+      "/mountkilimanjaroitineraries",
+    ],
     ["Diani Itineraries", "/dianiitineraries"],
     ["Samburu Itineraries", "/samburuitineraries"],
-    ["seychelles Itineraries", "/sychellesitineraries"],
-    ["ndutu calving Itineraries", "/ndutucalvingitineraries"],
+    ["Seychelles Itineraries", "/sychellesitineraries"],
+    ["Ndutu Calving Itineraries", "/ndutucalvingitineraries"],
   ];
 
   /* ============================================================
@@ -61,6 +64,8 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -93,13 +98,25 @@ function Navbar() {
     setSafariOpen(false);
   };
 
+  /* ============================================================
+     CLOSE DROPDOWNS
+  ============================================================ */
+
+  const closeSafari = () => {
+    setSafariOpen(false);
+  };
+
+  const closeDestinations = () => {
+    setDestOpen(false);
+  };
+
   return (
     <>
       {/* =====================================================
           SCROLL PROGRESS
       ====================================================== */}
 
-      <div className="fixed top-0 left-0 w-full h-[3px] z-[999]">
+      <div className="fixed top-0 left-0 w-full h-[3px] z-[999] pointer-events-none">
         <div
           className="h-full bg-[#F39A08] transition-all duration-200"
           style={{ width: `${progress}%` }}
@@ -112,10 +129,16 @@ function Navbar() {
 
       <nav
         className={`
-          fixed top-0 left-0 w-full z-[100]
-          border-b border-white/10
+          fixed
+          top-0
+          left-0
+          w-full
+          z-[100]
+          border-b
+          border-white/10
           backdrop-blur-xl
-          transition-all duration-500
+          transition-all
+          duration-500
           ${
             scrolled
               ? "bg-[#0D4825]/98 py-1 shadow-xl"
@@ -124,6 +147,7 @@ function Navbar() {
         `}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
+
           <div
             className="
               min-h-[72px]
@@ -134,6 +158,7 @@ function Navbar() {
               justify-between
             "
           >
+
             {/* =================================================
                 LOGO
             ================================================== */}
@@ -149,6 +174,7 @@ function Navbar() {
                 min-w-0
               "
             >
+
               <img
                 src={safarilinklogo}
                 className="
@@ -172,6 +198,7 @@ function Navbar() {
               />
 
               <div className="hidden xs:block sm:block min-w-0">
+
                 <h2
                   className="
                     text-white
@@ -200,8 +227,11 @@ function Navbar() {
                 >
                   Tours & Travel
                 </p>
+
               </div>
+
             </Link>
+
 
             {/* =================================================
                 DESKTOP NAVIGATION
@@ -216,20 +246,30 @@ function Navbar() {
                 xl:gap-2
               "
             >
+
               {/* HOME */}
 
-              <Link to="/" className="navBtn">
+              <Link
+                to="/"
+                className="navBtn"
+              >
                 Home
               </Link>
 
+
               {/* ABOUT */}
 
-              <Link to="/about" className="navBtn">
+              <Link
+                to="/about"
+                className="navBtn"
+              >
                 About Us
               </Link>
 
+
               {/* =================================================
-                  SAFARIS DROPDOWN
+                  SAFARIS
+                  MAIN PAGE + DROPDOWN
               ================================================== */}
 
               <div
@@ -237,46 +277,130 @@ function Navbar() {
                 onMouseEnter={() => setSafariOpen(true)}
                 onMouseLeave={() => setSafariOpen(false)}
               >
-                <button className="navBtn flex items-center gap-1">
-                  Safaris
 
-                  <span
-                    className={`
-                      text-[#F39A08]
-                      transition-transform
-                      duration-300
-                      ${safariOpen ? "rotate-180" : ""}
-                    `}
+                <div className="flex items-center">
+
+                  {/* MAIN SAFARIS PAGE */}
+
+                  <Link
+                    to="/safaris"
+                    className="navBtn"
+                    onClick={closeSafari}
                   >
-                    ▾
-                  </span>
-                </button>
+                    Safaris
+                  </Link>
+
+
+                  {/* DROPDOWN ARROW */}
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setSafariOpen((prev) => !prev)
+                    }
+                    className="
+                      navBtn
+                      !px-2
+                      flex
+                      items-center
+                      justify-center
+                    "
+                    aria-label="Open Safari itineraries"
+                    aria-expanded={safariOpen}
+                  >
+
+                    <span
+                      className={`
+                        text-[#F39A08]
+                        text-sm
+                        transition-transform
+                        duration-300
+                        ${
+                          safariOpen
+                            ? "rotate-180"
+                            : ""
+                        }
+                      `}
+                    >
+                      ▾
+                    </span>
+
+                  </button>
+
+                </div>
+
+
+                {/* =================================================
+                    SAFARI DROPDOWN
+                ================================================== */}
 
                 {safariOpen && (
-                  <div className="dropMenu left-0 w-72">
+
+                  <div className="dropMenu left-0 w-80">
+
+                    {/* TITLE */}
+
                     <div className="titleDrop">
                       Safari Itineraries
                     </div>
 
-                    <div>
-                      {safariItineraries.map(([name, path]) => (
-                        <Link
-                          key={path}
-                          to={path}
-                          className="dropItem"
-                          onClick={() => setSafariOpen(false)}
-                        >
-                          <span className="text-[#F39A08] mr-2">
-                            •
-                          </span>
 
-                          {name}
-                        </Link>
-                      ))}
+                    {/* MAIN SAFARIS PAGE */}
+
+                    <Link
+                      to="/safaris"
+                      className="
+                        dropItem
+                        font-semibold
+                        border-b
+                        border-white/10
+                        mb-1
+                      "
+                      onClick={closeSafari}
+                    >
+
+                      <span className="text-[#F39A08] mr-2">
+                        →
+                      </span>
+
+                      All Safaris
+
+                    </Link>
+
+
+                    {/* ITINERARIES */}
+
+                    <div>
+
+                      {safariItineraries.map(
+                        ([name, path]) => (
+
+                          <Link
+                            key={path}
+                            to={path}
+                            className="dropItem"
+                            onClick={closeSafari}
+                          >
+
+                            <span className="text-[#F39A08] mr-2">
+                              •
+                            </span>
+
+                            {name}
+
+                          </Link>
+
+                        )
+                      )}
+
                     </div>
+
                   </div>
+
                 )}
+
               </div>
+
 
               {/* =================================================
                   DESTINATIONS DROPDOWN
@@ -287,83 +411,160 @@ function Navbar() {
                 onMouseEnter={() => setDestOpen(true)}
                 onMouseLeave={() => setDestOpen(false)}
               >
-                <button className="navBtn flex items-center gap-1">
-                  Destinations
 
-                  <span
-                    className={`
-                      text-[#F39A08]
-                      transition-transform
-                      duration-300
-                      ${destOpen ? "rotate-180" : ""}
-                    `}
+                <div className="flex items-center">
+
+                  {/* DESTINATIONS MAIN PAGE */}
+
+                  <Link
+                    to="/"
+                    className="navBtn"
+                    onClick={closeDestinations}
                   >
-                    ▾
-                  </span>
-                </button>
+                    Destinations
+                  </Link>
+
+
+                  {/* DESTINATION ARROW */}
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setDestOpen((prev) => !prev)
+                    }
+                    className="
+                      navBtn
+                      !px-2
+                      flex
+                      items-center
+                      justify-center
+                    "
+                    aria-label="Open destinations menu"
+                    aria-expanded={destOpen}
+                  >
+
+                    <span
+                      className={`
+                        text-[#F39A08]
+                        text-sm
+                        transition-transform
+                        duration-300
+                        ${
+                          destOpen
+                            ? "rotate-180"
+                            : ""
+                        }
+                      `}
+                    >
+                      ▾
+                    </span>
+
+                  </button>
+
+                </div>
+
+
+                {/* =================================================
+                    DESTINATIONS DROPDOWN
+                ================================================== */}
 
                 {destOpen && (
-                  <div className="dropMenu left-0 w-64">
+
+                  <div className="dropMenu left-0 w-72">
+
                     <div className="titleDrop">
                       Explore Destinations
                     </div>
 
-                    <div className="max-h-[70vh] overflow-y-auto">
-                      {destinations.map(([name, path]) => (
-                        <Link
-                          key={path}
-                          to={path}
-                          className="dropItem"
-                          onClick={() => setDestOpen(false)}
-                        >
-                          <span className="text-[#F39A08] mr-2">
-                            •
-                          </span>
 
-                          {name}
-                        </Link>
-                      ))}
+                    <div className="max-h-[70vh] overflow-y-auto">
+
+                      {destinations.map(
+                        ([name, path]) => (
+
+                          <Link
+                            key={path}
+                            to={path}
+                            className="dropItem"
+                            onClick={closeDestinations}
+                          >
+
+                            <span className="text-[#F39A08] mr-2">
+                              •
+                            </span>
+
+                            {name}
+
+                          </Link>
+
+                        )
+                      )}
+
                     </div>
+
                   </div>
+
                 )}
+
               </div>
+
 
               {/* ACTIVITIES */}
 
-              <Link to="/activities" className="navBtn">
+              <Link
+                to="/activities"
+                className="navBtn"
+              >
                 Activities
               </Link>
 
+
               {/* COMMUNITY */}
 
-              <Link to="/communitywork" className="navBtn">
+              <Link
+                to="/communitywork"
+                className="navBtn"
+              >
                 Community
               </Link>
 
+
               {/* FAQS */}
 
-              <Link to="/faqs" className="navBtn">
+              <Link
+                to="/faqs"
+                className="navBtn"
+              >
                 FAQs
               </Link>
 
+
               {/* BLOG */}
 
-              <Link to="/tourafricablog" className="navBtn">
+              <Link
+                to="/tourafricablog"
+                className="navBtn"
+              >
                 Blog
               </Link>
 
+
               {/* CONTACT */}
 
-              <Link to="/contact" className="navBtn">
+              <Link
+                to="/contact"
+                className="navBtn"
+              >
                 Contact
               </Link>
+
 
               {/* =================================================
                   DESKTOP CTA
               ================================================== */}
 
               <a
-                href="https://wa.me/+254708164662"
+                href="https://wa.me/+254708711459"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -390,7 +591,9 @@ function Navbar() {
               >
                 Plan Your Safari
               </a>
+
             </div>
+
 
             {/* =================================================
                 TABLET / MOBILE CONTROLS
@@ -405,10 +608,11 @@ function Navbar() {
                 sm:gap-3
               "
             >
+
               {/* BOOK BUTTON */}
 
               <a
-                href="https://wa.me/+254708164662"
+                href="https://wa.me/+254708711459"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -429,6 +633,7 @@ function Navbar() {
               >
                 Book Now
               </a>
+
 
               {/* MENU BUTTON */}
 
@@ -458,10 +663,15 @@ function Navbar() {
                   ☰
                 </span>
               </button>
+
             </div>
+
           </div>
+
         </div>
+
       </nav>
+
 
       {/* =====================================================
           MOBILE OVERLAY
@@ -485,6 +695,7 @@ function Navbar() {
           }
         `}
       />
+
 
       {/* =====================================================
           MOBILE DRAWER
@@ -513,6 +724,7 @@ function Navbar() {
           }
         `}
       >
+
         {/* =================================================
             MOBILE HEADER
         ================================================== */}
@@ -531,11 +743,18 @@ function Navbar() {
             bg-[#08391D]
           "
         >
+
           <Link
             to="/"
             onClick={closeMobile}
-            className="flex items-center gap-3 min-w-0"
+            className="
+              flex
+              items-center
+              gap-3
+              min-w-0
+            "
           >
+
             <img
               src={safarilinklogo}
               className="
@@ -554,6 +773,7 @@ function Navbar() {
             />
 
             <div className="min-w-0">
+
               <h2 className="text-white font-bold tracking-wide">
                 DAFFAR
               </h2>
@@ -570,8 +790,13 @@ function Navbar() {
               >
                 Tours & Travel
               </p>
+
             </div>
+
           </Link>
+
+
+          {/* CLOSE */}
 
           <button
             type="button"
@@ -596,7 +821,9 @@ function Navbar() {
           >
             ✕
           </button>
+
         </div>
+
 
         {/* =================================================
             MOBILE SCROLLABLE CONTENT
@@ -614,7 +841,9 @@ function Navbar() {
             pb-8
           "
         >
+
           <div className="space-y-2">
+
 
             {/* =================================================
                 HOME
@@ -629,6 +858,7 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
+
             {/* =================================================
                 ABOUT
             ================================================== */}
@@ -642,13 +872,30 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
+
             {/* =================================================
-                SAFARIS DROPDOWN
+                SAFARIS MAIN PAGE
+            ================================================== */}
+
+            <Link
+              to="/safaris"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Safaris</span>
+              <span className="mobileArrow">→</span>
+            </Link>
+
+
+            {/* =================================================
+                SAFARI ITINERARIES TOGGLE
             ================================================== */}
 
             <button
               type="button"
-              onClick={() => setSafariOpen(!safariOpen)}
+              onClick={() =>
+                setSafariOpen((prev) => !prev)
+              }
               className="
                 mobileMenuBtn
                 w-full
@@ -656,7 +903,10 @@ function Navbar() {
               "
               aria-expanded={safariOpen}
             >
-              <span>Safaris</span>
+
+              <span>
+                Safari Itineraries
+              </span>
 
               <span
                 className={`
@@ -664,14 +914,22 @@ function Navbar() {
                   text-xl
                   transition-transform
                   duration-300
-                  ${safariOpen ? "rotate-180" : ""}
+                  ${
+                    safariOpen
+                      ? "rotate-180"
+                      : ""
+                  }
                 `}
               >
                 ⌄
               </span>
+
             </button>
 
-            {/* SAFARI ITINERARIES */}
+
+            {/* =================================================
+                SAFARI ITINERARY LIST
+            ================================================== */}
 
             <div
               className={`
@@ -680,11 +938,12 @@ function Navbar() {
                 duration-300
                 ${
                   safariOpen
-                    ? "max-h-[400px] opacity-100 mt-2"
+                    ? "max-h-[650px] opacity-100 mt-2"
                     : "max-h-0 opacity-0"
                 }
               `}
             >
+
               <div
                 className="
                   bg-[#08391D]
@@ -695,43 +954,106 @@ function Navbar() {
                   space-y-1
                 "
               >
-                {safariItineraries.map(([name, path]) => (
-                  <Link
-                    key={path}
-                    to={path}
-                    onClick={closeMobile}
-                    className="
-                      flex
-                      items-center
-                      gap-3
-                      py-3
-                      px-3
-                      sm:px-4
-                      rounded-xl
-                      text-gray-200
-                      text-sm
-                      hover:bg-white/10
-                      hover:text-[#F39A08]
-                      transition
-                    "
-                  >
-                    <span className="text-[#F39A08]">
-                      •
-                    </span>
 
-                    <span>{name}</span>
-                  </Link>
-                ))}
+                {/* ALL SAFARIS */}
+
+                <Link
+                  to="/safaris"
+                  onClick={closeMobile}
+                  className="
+                    flex
+                    items-center
+                    gap-3
+                    py-3
+                    px-3
+                    sm:px-4
+                    rounded-xl
+                    text-white
+                    text-sm
+                    font-semibold
+                    hover:bg-white/10
+                    hover:text-[#F39A08]
+                    transition
+                  "
+                >
+
+                  <span className="text-[#F39A08]">
+                    →
+                  </span>
+
+                  <span>
+                    All Safaris
+                  </span>
+
+                </Link>
+
+
+                {/* ITINERARIES */}
+
+                {safariItineraries.map(
+                  ([name, path]) => (
+
+                    <Link
+                      key={path}
+                      to={path}
+                      onClick={closeMobile}
+                      className="
+                        flex
+                        items-center
+                        gap-3
+                        py-3
+                        px-3
+                        sm:px-4
+                        rounded-xl
+                        text-gray-200
+                        text-sm
+                        hover:bg-white/10
+                        hover:text-[#F39A08]
+                        transition
+                      "
+                    >
+
+                      <span className="text-[#F39A08]">
+                        •
+                      </span>
+
+                      <span>
+                        {name}
+                      </span>
+
+                    </Link>
+
+                  )
+                )}
+
               </div>
+
             </div>
 
+
             {/* =================================================
-                DESTINATIONS DROPDOWN
+                DESTINATIONS MAIN PAGE
+            ================================================== */}
+
+            <Link
+              to="/destinations"
+              onClick={closeMobile}
+              className="mobileMenuBtn"
+            >
+              <span>Destinations</span>
+              <span className="mobileArrow">→</span>
+            </Link>
+
+
+            {/* =================================================
+                DESTINATIONS TOGGLE
             ================================================== */}
 
             <button
               type="button"
-              onClick={() => setDestOpen(!destOpen)}
+              onClick={() =>
+                setDestOpen((prev) => !prev)
+              }
               className="
                 mobileMenuBtn
                 w-full
@@ -739,7 +1061,10 @@ function Navbar() {
               "
               aria-expanded={destOpen}
             >
-              <span>Destinations</span>
+
+              <span>
+                Explore Destinations
+              </span>
 
               <span
                 className={`
@@ -747,14 +1072,22 @@ function Navbar() {
                   text-xl
                   transition-transform
                   duration-300
-                  ${destOpen ? "rotate-180" : ""}
+                  ${
+                    destOpen
+                      ? "rotate-180"
+                      : ""
+                  }
                 `}
               >
                 ⌄
               </span>
+
             </button>
 
-            {/* DESTINATION LIST */}
+
+            {/* =================================================
+                DESTINATION LIST
+            ================================================== */}
 
             <div
               className={`
@@ -763,11 +1096,12 @@ function Navbar() {
                 duration-300
                 ${
                   destOpen
-                    ? "max-h-[700px] opacity-100 mt-2"
+                    ? "max-h-[750px] opacity-100 mt-2"
                     : "max-h-0 opacity-0"
                 }
               `}
             >
+
               <div
                 className="
                   bg-[#08391D]
@@ -778,35 +1112,47 @@ function Navbar() {
                   space-y-1
                 "
               >
-                {destinations.map(([name, path]) => (
-                  <Link
-                    key={path}
-                    to={path}
-                    onClick={closeMobile}
-                    className="
-                      flex
-                      items-center
-                      gap-3
-                      py-3
-                      px-3
-                      sm:px-4
-                      rounded-xl
-                      text-gray-200
-                      text-sm
-                      hover:bg-white/10
-                      hover:text-[#F39A08]
-                      transition
-                    "
-                  >
-                    <span className="text-[#F39A08]">
-                      •
-                    </span>
 
-                    <span>{name}</span>
-                  </Link>
-                ))}
+                {destinations.map(
+                  ([name, path]) => (
+
+                    <Link
+                      key={path}
+                      to={path}
+                      onClick={closeMobile}
+                      className="
+                        flex
+                        items-center
+                        gap-3
+                        py-3
+                        px-3
+                        sm:px-4
+                        rounded-xl
+                        text-gray-200
+                        text-sm
+                        hover:bg-white/10
+                        hover:text-[#F39A08]
+                        transition
+                      "
+                    >
+
+                      <span className="text-[#F39A08]">
+                        •
+                      </span>
+
+                      <span>
+                        {name}
+                      </span>
+
+                    </Link>
+
+                  )
+                )}
+
               </div>
+
             </div>
+
 
             {/* =================================================
                 ACTIVITIES
@@ -821,6 +1167,7 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
+
             {/* =================================================
                 COMMUNITY
             ================================================== */}
@@ -833,6 +1180,7 @@ function Navbar() {
               <span>Community Work</span>
               <span className="mobileArrow">→</span>
             </Link>
+
 
             {/* =================================================
                 FAQS
@@ -847,6 +1195,7 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
+
             {/* =================================================
                 BLOG
             ================================================== */}
@@ -860,11 +1209,6 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
-            {/* =================================================
-                GALLERY
-            ================================================== */}
-
-            
 
             {/* =================================================
                 CONTACT
@@ -879,12 +1223,13 @@ function Navbar() {
               <span className="mobileArrow">→</span>
             </Link>
 
+
             {/* =================================================
                 MOBILE CTA
             ================================================== */}
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -908,8 +1253,9 @@ function Navbar() {
               Plan Your Safari
             </a>
 
+
             {/* =================================================
-                SMALL BRAND MESSAGE
+                BRAND MESSAGE
             ================================================== */}
 
             <p
@@ -922,15 +1268,24 @@ function Navbar() {
             >
               Go further with Daffar.
             </p>
+
           </div>
+
         </div>
+
       </aside>
+
 
       {/* =====================================================
           STYLES
       ====================================================== */}
 
       <style>{`
+
+        /* =====================================================
+           DESKTOP NAV BUTTON
+        ====================================================== */
+
         .navBtn {
           position: relative;
           color: white;
@@ -942,12 +1297,16 @@ function Navbar() {
           white-space: nowrap;
         }
 
+
         @media (min-width: 1280px) {
+
           .navBtn {
             padding: 10px 12px;
             font-size: 14px;
           }
+
         }
+
 
         .navBtn::after {
           content: "";
@@ -962,14 +1321,21 @@ function Navbar() {
           transition: transform 0.3s ease;
         }
 
+
         .navBtn:hover {
           color: #F39A08;
           background: rgba(255,255,255,0.06);
         }
 
+
         .navBtn:hover::after {
           transform: scaleX(1);
         }
+
+
+        /* =====================================================
+           DROPDOWN
+        ====================================================== */
 
         .dropMenu {
           position: absolute;
@@ -983,6 +1349,7 @@ function Navbar() {
           animation: dropdown 0.2s ease-out;
         }
 
+
         .titleDrop {
           padding: 12px 14px;
           color: #F39A08;
@@ -994,6 +1361,7 @@ function Navbar() {
           margin-bottom: 4px;
         }
 
+
         .dropItem {
           display: block;
           padding: 11px 14px;
@@ -1003,11 +1371,17 @@ function Navbar() {
           transition: all 0.2s ease;
         }
 
+
         .dropItem:hover {
           background: rgba(243,154,8,0.12);
           color: #F39A08;
           padding-left: 18px;
         }
+
+
+        /* =====================================================
+           MOBILE MENU BUTTON
+        ====================================================== */
 
         .mobileMenuBtn {
           display: flex;
@@ -1024,6 +1398,7 @@ function Navbar() {
           transition: all 0.25s ease;
         }
 
+
         .mobileMenuBtn:hover,
         .mobileMenuBtn:active {
           background: rgba(243,154,8,0.12);
@@ -1031,17 +1406,25 @@ function Navbar() {
           color: #F39A08;
         }
 
+
         .mobileArrow {
           color: #F39A08;
           font-size: 16px;
           transition: transform 0.2s ease;
         }
 
+
         .mobileMenuBtn:hover .mobileArrow {
           transform: translateX(3px);
         }
 
+
+        /* =====================================================
+           DROPDOWN ANIMATION
+        ====================================================== */
+
         @keyframes dropdown {
+
           from {
             opacity: 0;
             transform: translateY(-8px);
@@ -1051,25 +1434,34 @@ function Navbar() {
             opacity: 1;
             transform: translateY(0);
           }
+
         }
 
-        /* Mobile scrollbar */
+
+        /* =====================================================
+           MOBILE SCROLLBAR
+        ====================================================== */
 
         aside ::-webkit-scrollbar {
           width: 4px;
         }
 
+
         aside ::-webkit-scrollbar-track {
           background: transparent;
         }
+
 
         aside ::-webkit-scrollbar-thumb {
           background: rgba(243,154,8,0.35);
           border-radius: 10px;
         }
+
       `}</style>
+
     </>
   );
 }
 
 export default Navbar;
+

@@ -575,7 +575,147 @@ export default function SafariItineraries() {
 
 
 
+{/* ============================================================
+    DIANI BEACH
+============================================================ */}
+<section className="bg-white py-16 sm:py-20 lg:py-28">
 
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
+      <div className="relative group">
+
+        <div className="absolute -left-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
+
+        <img
+          src={diani2}
+          alt="Diani Beach"
+          className="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[480px]"
+        />
+
+        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl backdrop-blur-md">
+
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Diani Beach
+          </p>
+
+          <p className="mt-1 text-xs text-white/70">
+            Kenya’s coastal paradise
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
+      <div>
+
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          About The Destination
+        </span>
+
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
+
+          Diani Beach
+
+          <span className="block text-[#F39A08]">
+            Kenya’s Coastal Paradise
+          </span>
+
+        </h2>
+
+        <div className="mt-7 space-y-5 text-gray-600">
+
+          <p className="leading-relaxed">
+            Stretching along Kenya’s enchanting south coast, Diani Beach is a
+            breathtaking blend of natural beauty and laid-back luxury. Famous
+            for its powdery white sands that stretch over 17 kilometers and
+            warm, crystal-clear waters of the Indian Ocean, Diani has earned
+            its place among Africa’s top beach destinations, ideal for both
+            relaxation and adventure. Towering palm trees sway gently above
+            boutique hotels and beach resorts that line the coast, offering
+            everything from intimate hideaways to vibrant beachfront lounges.
+            The calm, shallow waters create perfect conditions for swimming,
+            snorkeling, and stand-up paddleboarding, while the coral reefs just
+            offshore teem with colorful marine life, captivating divers and
+            snorkelers alike.
+          </p>
+
+          <p className="leading-relaxed">
+            For thrill-seekers, Diani is a haven for kite surfing thanks to
+            steady coastal winds, while deep-sea fishing excursions and dhow
+            sailing trips invite guests to discover the ocean beyond. Nature
+            lovers can explore nearby Shimba Hills National Reserve, where
+            coastal rainforest meets rolling savannah, or take guided walks
+            through sacred Kaya forests steeped in Swahili history and local
+            legend.
+          </p>
+
+          <p className="leading-relaxed">
+            Diani’s appeal extends beyond the shore. Its coastal culture,
+            infused with Swahili charm, offers vibrant craft markets, fresh
+            seafood dining, and lively beach bars where the evenings come alive
+            with music and dancing. Whether you’re strolling barefoot along
+            sunlit sands at dawn, enjoying a sunset dhow cruise, or unwinding
+            under a palm thatched canopy, Diani promises moments of pure
+            escape.
+          </p>
+
+          <p className="leading-relaxed">
+            With its blend of adventure, serenity, and coastal charm, Diani
+            Beach is more than just a destination, it’s a timeless invitation
+            to slow down, explore, and savor the magic of Kenya’s Indian
+            Ocean coastline.
+          </p>
+
+        </div>
+
+
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
+
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Beaches
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Powder-soft sands & turquoise waters
+            </p>
+
+          </div>
+
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Adventure
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Kite surfing, diving & dhow sailing
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 {/* =====================================================
     4-DAY DIANI BEACH HOLIDAY — PREMIUM ITINERARY
@@ -3652,10 +3792,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -3678,10 +3818,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

@@ -1365,10 +1365,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -1391,10 +1391,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

@@ -2441,7 +2441,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-white/30 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-md transition hover:bg-white hover:text-[#07351d]"
@@ -3036,10 +3036,10 @@ const [itinerarySearch, setItinerarySearch] = useState("");
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 transition hover:text-[#F39A08]"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -3061,10 +3061,10 @@ const [itinerarySearch, setItinerarySearch] = useState("");
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 transition hover:text-[#F39A08]"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

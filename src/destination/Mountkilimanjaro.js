@@ -129,106 +129,169 @@ function MountKilimanjaro() {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
+```jsx
+{/* ============================================================
+    MOUNT KILIMANJARO — DESTINATION
+============================================================ */}
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
+<section className="bg-white py-16 sm:py-20 lg:py-28">
 
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+  <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            {/* IMAGE */}
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
 
-            <div className="relative group">
+      <div className="relative group">
 
-              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
+        {/* Decorative Shape */}
+        <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
 
-              <img
-                src={kili2}
-                alt="Mount Kilimanjaro trekking experience"
-                className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+        <img
+          src={kili4}
+          alt="Mount Kilimanjaro trekking experience"
+          className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
+        />
 
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
+        {/* Image Badge */}
+        <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
 
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Mount Kilimanjaro
-                </p>
+          <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
+            Mount Kilimanjaro
+          </p>
 
-                <p className="text-white/70 text-xs mt-1">
-                  Africa's legendary mountain
-                </p>
+          <p className="text-white/70 text-xs mt-1">
+            The Roof of Africa
+          </p>
 
-              </div>
+        </div>
 
-            </div>
+      </div>
 
 
-            {/* CONTENT */}
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
 
-            <div>
+      <div>
 
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About The Destination
-              </span>
+        {/* Eyebrow */}
+        <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
+          About The Destination
+        </span>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
+        {/* Heading */}
+        <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
 
-                Where Adventure
+          Mount Kilimanjaro
 
-                <span className="block text-[#F39A08]">
-                  Meets The Sky
-                </span>
+          <span className="block text-[#F39A08]">
+            The Roof of Africa
+          </span>
 
-              </h2>
+        </h2>
 
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                Mount Kilimanjaro is one of Africa's most recognizable
-                landmarks and a dream destination for adventurers from
-                around the world. Its dramatic summit rises above the
-                surrounding landscapes of Tanzania.
-              </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                A Kilimanjaro trek takes you through remarkable changes
-                in scenery and climate, creating an extraordinary journey
-                from the lower slopes to the summit.
-              </p>
+        {/* Main Content */}
 
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+        <p className="mt-6 text-gray-600 leading-relaxed">
+          Towering at 5,895 meters, Mount Kilimanjaro rises majestically
+          from Tanzania’s savannah, its snow-capped peak a breathtaking
+          sight against equatorial skies. Often described as “the Roof of
+          Africa,” this dormant volcano draws adventurers and nature lovers
+          from around the world to experience its beauty, challenge, and
+          ever-changing landscapes.
+        </p>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          The journey up Kilimanjaro is as rewarding as the summit itself.
+          Climbers pass through a remarkable series of ecological zones:
+          lush rainforest alive with colobus monkeys and exotic birds;
+          heather-covered moorlands draped in mist; high alpine deserts
+          with surreal lava formations; and, finally, the icy glaciers
+          crowning Uhuru Peak.
+        </p>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Adventure
-                  </p>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Each zone reveals unique plant and animal life, offering
+          photographers and wildlife enthusiasts unexpected moments to
+          capture Africa’s hidden mountain wonders.
+        </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Unforgettable mountain trekking
-                  </p>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Beyond the physical climb, Kilimanjaro is an immersion into
+          cultural heritage and natural history. Local Chagga guides share
+          stories passed down through generations, adding a human warmth
+          to the adventure.
+        </p>
 
-                </div>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Watching the sunrise from the crater rim, with the plains
+          stretching endlessly below, is a memory that stays with trekkers
+          long after they’ve returned home.
+        </p>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Although large wildlife is rarely seen near the summit, the lower
+          forests can surprise hikers with sightings of bushbuck, duikers,
+          blue monkeys, and countless bird species.
+        </p>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Nature
-                  </p>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          The mountain is not only a climb but a moving encounter with East
+          Africa’s wild heart. Whether drawn by the allure of standing atop
+          Africa’s highest point or the beauty of its slopes, Kilimanjaro
+          promises an unforgettable experience, a blend of nature, culture,
+          and personal triumph.
+        </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Extraordinary alpine landscapes
-                  </p>
 
-                </div>
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
 
-              </div>
+        <div className="grid sm:grid-cols-2 gap-4 mt-8">
 
-            </div>
+          {/* Highlight 1 */}
+          <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
+            <p className="text-[#F39A08] text-2xl font-serif font-bold">
+              5,895 m
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Africa’s highest mountain
+            </p>
+
+          </div>
+
+
+          {/* Highlight 2 */}
+          <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
+            <p className="text-[#F39A08] text-2xl font-serif font-bold">
+              Uhuru Peak
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Summit of Mount Kilimanjaro
+            </p>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+
 ```jsx
 {/* =====================================================
     7-DAY KILIMANJARO ADVENTURE VIA LEMOSHO ROUTE
@@ -9225,7 +9288,7 @@ function MountKilimanjaro() {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
@@ -9512,10 +9575,10 @@ function MountKilimanjaro() {
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -9537,10 +9600,10 @@ function MountKilimanjaro() {
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>

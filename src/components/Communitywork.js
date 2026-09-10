@@ -604,6 +604,462 @@ function Communitywork() {
 </section>
 
 
+```jsx
+{/* ============================================================
+    COMMUNITY WORK
+============================================================ */}
+
+<section
+  id="community-work"
+  className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-32"
+>
+
+  {/* ============================================================
+      BACKGROUND DECORATION
+  ============================================================ */}
+
+  <div className="pointer-events-none absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-[#F39A08]/10 blur-[120px]" />
+
+  <div className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#0D4825]/5 blur-[130px]" />
+
+
+  <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+
+    {/* ============================================================
+        SECTION INTRO
+    ============================================================ */}
+
+    <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
+
+      <span className="inline-flex items-center gap-2 rounded-full border border-[#F39A08]/30 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#0D4825] shadow-sm">
+        <span className="h-2 w-2 rounded-full bg-[#F39A08]" />
+        Community Work
+      </span>
+
+      <h2 className="mt-5 text-4xl font-serif font-bold leading-tight text-[#0D4825] sm:text-5xl lg:text-6xl">
+        Travel With
+        <span className="block text-[#F39A08]">
+          Purpose
+        </span>
+      </h2>
+
+      <p className="mt-6 text-base leading-8 text-gray-600 sm:text-lg">
+        Our journeys are designed to create meaningful connections between
+        travelers and the communities that make East Africa so special.
+      </p>
+
+    </div>
+
+
+    {/* ============================================================
+        WOMEN'S EMPOWERMENT
+    ============================================================ */}
+
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+
+      {/* IMAGE */}
+
+      <div className="relative group">
+
+        {/* Decorative Gold Shape */}
+
+        <div className="absolute -left-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
+
+        <div className="absolute -bottom-5 -right-5 h-28 w-28 rounded-full border border-[#F39A08]/20" />
+
+        <div className="relative overflow-hidden rounded-[2rem] shadow-2xl">
+
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5670bd4a1115e008c1cfa5b8/1519430779205-WNHJ8AZM160O8M0M52RO/Inchurra_AmboseliWomen-0059.jpg"
+            alt="Maasai women creating traditional beadwork in Amboseli"
+            className="
+              h-[400px]
+              w-full
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-[1.04]
+              sm:h-[500px]
+              lg:h-[580px]
+            "
+          />
+
+          {/* Image Overlay */}
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#061B10]/75 via-transparent to-transparent" />
+
+          {/* Image Badge */}
+
+          <div className="absolute bottom-5 left-5 right-5 sm:left-7 sm:right-auto">
+
+            <div className="rounded-2xl border border-white/10 bg-[#0D4825]/90 px-5 py-4 shadow-xl backdrop-blur-md">
+
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F39A08]">
+                Women & Culture
+              </p>
+
+              <p className="mt-1 text-sm text-white/80">
+                Supporting local artisans
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* CONTENT */}
+
+      <div>
+
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          Empowering Women Through Craft
+        </span>
+
+        <h3 className="mt-3 text-3xl font-serif font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
+          Empowering Women
+          <span className="block text-[#F39A08]">
+            Through Craft
+          </span>
+        </h3>
+
+
+        <p className="mt-6 leading-8 text-gray-600">
+          At the heart of our commitment to meaningful travel is a women’s
+          empowerment initiative that uplifts local artisans specializing in
+          traditional beadwork, basketry, and other handmade crafts. We go
+          beyond simply showcasing their work, we invest in skill development
+          workshops, business training, and mentorship programs to help these
+          women refine their craft and strengthen their entrepreneurial skills.
+        </p>
+
+
+        <p className="mt-5 leading-8 text-gray-600">
+          By connecting them directly with conscious travelers who appreciate
+          authentic, handmade souvenirs, we open up fair and sustainable
+          markets for their creations. This not only helps preserve Kenya’s
+          vibrant cultural heritage but also transforms lives, as each purchase
+          directly supports women in building brighter futures for themselves
+          and their families.
+        </p>
+
+
+        <p className="mt-5 leading-8 text-gray-600">
+          Through this project, travelers gain a deeper connection to the
+          communities they visit, discovering the powerful stories woven into
+          every bead and stitch. It’s an opportunity to take home something
+          truly meaningful, knowing it carries the spirit, tradition, and
+          resilience of the incredible women artisans who made it.
+        </p>
+
+
+        {/* HIGHLIGHTS */}
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Craft
+            </p>
+
+            <p className="mt-1 text-sm leading-6 text-gray-500">
+              Traditional handmade skills
+            </p>
+
+          </div>
+
+
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Skills
+            </p>
+
+            <p className="mt-1 text-sm leading-6 text-gray-500">
+              Training and mentorship
+            </p>
+
+          </div>
+
+
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Markets
+            </p>
+
+            <p className="mt-1 text-sm leading-6 text-gray-500">
+              Fair opportunities for artisans
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        DIVIDER
+    ============================================================ */}
+
+    <div className="my-20 flex items-center gap-5 lg:my-28">
+
+      <div className="h-px flex-1 bg-[#0D4825]/10" />
+
+      <div className="h-2 w-2 rounded-full bg-[#F39A08]" />
+
+      <div className="h-px flex-1 bg-[#0D4825]/10" />
+
+    </div>
+
+
+    {/* ============================================================
+        SUPPORTING SCHOOLGIRLS
+    ============================================================ */}
+
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+
+      {/* CONTENT */}
+
+      <div className="lg:order-1">
+
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          Pads & Shoes Initiative
+        </span>
+
+        <h3 className="mt-3 text-3xl font-serif font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
+
+          Supporting
+          <span className="block text-[#F39A08]">
+            Schoolgirls
+          </span>
+
+        </h3>
+
+
+        <p className="mt-6 leading-8 text-gray-600">
+          Alongside our flagship women’s empowerment project, we run a
+          heartfelt program dedicated to helping schoolgirls stay in school
+          and thrive. By providing essential sanitary pads and durable,
+          comfortable school shoes, we help remove everyday barriers that
+          often force young girls to miss classes or drop out altogether.
+        </p>
+
+
+        <p className="mt-5 leading-8 text-gray-600">
+          This small but powerful act ensures girls can walk to school safely
+          and attend confidently during their monthly cycles, giving them the
+          dignity, security, and equal opportunity, every child deserves.
+        </p>
+
+
+        <p className="mt-5 leading-8 text-gray-600">
+          Beyond donations, we also partner with local educators and community
+          leaders to raise awareness and promote long-term change around girls’
+          education and health.
+        </p>
+
+
+        <p className="mt-5 leading-8 text-gray-600">
+          Through both initiatives, your journey becomes more than just a
+          holiday: it becomes a chance to empower women, uplift future
+          generations, and preserve living cultural heritage. It’s about
+          travelling with purpose and connecting deeply with the people whose
+          stories and resilience enrich your experience.
+        </p>
+
+
+        {/* IMPACT CARDS */}
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+
+          <div className="rounded-2xl bg-[#0D4825] p-6 shadow-xl">
+
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#F39A08]/15">
+
+              <span className="text-lg text-[#F39A08]">
+                ♡
+              </span>
+
+            </div>
+
+            <h4 className="font-serif text-xl font-bold text-white">
+              Dignity
+            </h4>
+
+            <p className="mt-2 text-sm leading-6 text-white/60">
+              Helping girls attend school with confidence and security.
+            </p>
+
+          </div>
+
+
+          <div className="rounded-2xl bg-white p-6 shadow-lg border border-[#0D4825]/5">
+
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#F39A08]/10">
+
+              <span className="text-lg text-[#F39A08]">
+                ✦
+              </span>
+
+            </div>
+
+            <h4 className="font-serif text-xl font-bold text-[#0D4825]">
+              Opportunity
+            </h4>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Supporting girls to remain in school and build brighter futures.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* IMAGE */}
+
+      <div className="relative group lg:order-2">
+
+        {/* Decorative Shape */}
+
+        <div className="absolute -right-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
+
+        <div className="absolute -bottom-5 -left-5 h-28 w-28 rounded-full border border-[#0D4825]/10" />
+
+
+        <div className="relative overflow-hidden rounded-[2rem] shadow-2xl">
+
+          <img
+            src="https://www.globalgiving.org/pfil/59423/ph_59423_231436.jpg"
+            alt="Kenyan schoolgirls receiving new school shoes"
+            className="
+              h-[400px]
+              w-full
+              object-cover
+              transition-transform
+              duration-700
+              group-hover:scale-[1.04]
+              sm:h-[500px]
+              lg:h-[580px]
+            "
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#061B10]/75 via-transparent to-transparent" />
+
+
+          {/* Image Badge */}
+
+          <div className="absolute bottom-5 left-5 right-5 sm:left-auto sm:right-7">
+
+            <div className="rounded-2xl border border-white/10 bg-[#0D4825]/90 px-5 py-4 shadow-xl backdrop-blur-md">
+
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F39A08]">
+                Girls' Education
+              </p>
+
+              <p className="mt-1 text-sm text-white/80">
+                Pads, shoes & opportunity
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        FINAL MESSAGE
+    ============================================================ */}
+
+    <div className="mt-20 lg:mt-28">
+
+      <div className="relative overflow-hidden rounded-[2rem] bg-[#0D4825] px-7 py-12 text-center shadow-2xl sm:px-12 lg:px-20 lg:py-16">
+
+        {/* Background Glow */}
+
+        <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#F39A08]/15 blur-[80px]" />
+
+        <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-white/5 blur-[90px]" />
+
+
+        <div className="relative mx-auto max-w-4xl">
+
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F39A08]">
+            Travel With Purpose
+          </span>
+
+          <h3 className="mt-4 text-3xl font-serif font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Your Journey Can
+            <span className="block text-[#F39A08]">
+              Make A Difference
+            </span>
+          </h3>
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
+            Every journey has the power to create a positive connection.
+            Through responsible tourism, your experience can support local
+            livelihoods, strengthen communities, preserve culture, and help
+            create opportunities for future generations.
+          </p>
+
+
+          <Link
+            to="/contact"
+            className="
+              mt-8
+              inline-flex
+              items-center
+              justify-center
+              rounded-full
+              bg-[#F39A08]
+              px-7
+              py-3.5
+              text-sm
+              font-bold
+              text-[#0D4825]
+              shadow-lg
+              shadow-black/20
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:bg-[#ffad20]
+              hover:shadow-xl
+            "
+          >
+            Travel With Us
+            <span className="ml-2">
+              →
+            </span>
+          </Link>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
 
       {/* =====================================================
           INTRODUCTION
@@ -1794,7 +2250,7 @@ function Communitywork() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="
                           mt-1
                           block
@@ -1804,7 +2260,7 @@ function Communitywork() {
                           hover:text-[#F39A08]
                         "
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
                     </div>
                   </div>
@@ -1845,7 +2301,7 @@ function Communitywork() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="
                           mt-1
                           block
@@ -1855,7 +2311,7 @@ function Communitywork() {
                           hover:text-[#F39A08]
                         "
                       >
-                        +254708164662
+                        +254708711459
                       </a>
                     </div>
                   </div>

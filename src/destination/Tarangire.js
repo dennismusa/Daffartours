@@ -107,105 +107,153 @@ function Tarangire() {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
+```jsx
+{/* ============================================================
+    TARANGIRE NATIONAL PARK
+============================================================ */}
+<section className="bg-white py-16 sm:py-20 lg:py-28">
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
+      <div className="relative group">
 
-            {/* IMAGE */}
+        <div className="absolute -left-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
 
-            <div className="relative group">
+        <img
+          src={tarangire3}
+          alt="Tarangire National Park"
+          className="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[480px]"
+        />
 
-              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
+        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl backdrop-blur-md">
 
-              <img
-                src={tarangire2}
-                alt="Wildlife experience in Tarangire"
-                className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Tarangire
+          </p>
 
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
+          <p className="mt-1 text-xs text-white/70">
+            Tanzania's elephant country
+          </p>
 
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Tarangire
-                </p>
+        </div>
 
-                <p className="text-white/70 text-xs mt-1">
-                  Tanzania's elephant country
-                </p>
-
-              </div>
-
-            </div>
+      </div>
 
 
-            {/* CONTENT */}
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
+      <div>
 
-            <div>
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          About The Destination
+        </span>
 
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About The Destination
-              </span>
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
 
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
+          Tarangire National Park
 
-                Where Wildlife
+          <span className="block text-[#F39A08]">
+            Where Wildlife Meets The Baobabs
+          </span>
 
-                <span className="block text-[#F39A08]">
-                  Meets The Baobabs
-                </span>
+        </h2>
 
-              </h2>
+        <div className="mt-7 space-y-5 text-gray-600">
 
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                Tarangire National Park is one of Tanzania's most rewarding
-                safari destinations, known for its dramatic landscapes,
-                ancient baobab trees and large concentrations of wildlife.
-              </p>
+          <p className="leading-relaxed">
+            Nestled in northern Tanzania, Tarangire National Park is an
+            often-overlooked treasure that captivates visitors with its raw,
+            untamed beauty. Renowned for its majestic baobab trees that dot
+            the savannah and its massive elephant herds, Tarangire offers an
+            authentic safari experience away from larger crowds. The park
+            covers approximately 2,850 km² (1,100 mi²), creating a haven where
+            wildlife roams freely across varied habitats, from river valleys
+            to open plains and dense woodlands.
+          </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                The park provides a remarkable safari setting where elephants,
-                predators and plains wildlife move through a beautiful
-                landscape shaped by seasonal rivers and woodland.
-              </p>
+          <p className="leading-relaxed">
+            One of Tarangire’s defining features is the seasonal Tarangire
+            River, which becomes a lifeline during the dry season (June to
+            October). As water sources elsewhere vanish, large numbers of
+            elephants, buffalo, wildebeest, zebras, and gazelles gather along
+            the riverbanks, creating breathtaking wildlife spectacles. This
+            concentration of animals also attracts predators, and visitors
+            often witness lions resting under acacia trees or leopards draped
+            across sturdy branches.
+          </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+          <p className="leading-relaxed">
+            Beyond the famous elephants and classic safari animals, Tarangire
+            is a paradise for bird enthusiasts, boasting over 550 recorded
+            bird species, from colorful lilac-breasted rollers to large kori
+            bustards striding through the grasslands. The park is also home to
+            rare antelope species like fringe-eared oryx and gerenuk, adding a
+            special touch to each game drive.
+          </p>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+          <p className="leading-relaxed">
+            The landscapes themselves are as unforgettable as the wildlife,
+            with ancient baobabs towering over the plains and golden light
+            casting dramatic shadows at sunrise and sunset. Less crowded than
+            nearby Serengeti or Ngorongoro, Tarangire offers an intimate safari
+            atmosphere perfect for photographers and nature lovers alike.
+          </p>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Elephants
-                  </p>
+          <p className="leading-relaxed">
+            Whether exploring its sunbaked riverbeds, spotting elephants
+            dwarfed by colossal baobabs, or marveling at a kaleidoscope of
+            birds, Tarangire National Park delivers an authentic and
+            enchanting Tanzanian safari adventure.
+          </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Famous elephant herds
-                  </p>
+        </div>
 
-                </div>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Baobabs
-                  </p>
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Iconic African landscapes
-                  </p>
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Elephants
+            </p>
 
-                </div>
+            <p className="mt-1 text-sm text-gray-500">
+              Massive herds gather during the dry season
+            </p>
 
-              </div>
+          </div>
 
-            </div>
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Baobabs
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Ancient trees across the sweeping savannah
+            </p>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
 
 
       {/* =====================================================
@@ -829,7 +877,7 @@ function Tarangire() {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
@@ -1116,10 +1164,10 @@ function Tarangire() {
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -1141,10 +1189,10 @@ function Tarangire() {
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>

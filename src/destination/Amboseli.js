@@ -153,97 +153,149 @@ function Amboseli() {
       {/* =====================================================
           INTRODUCTION
       ===================================================== */}
+```jsx
+{/* ============================================================
+    AMBOSELI NATIONAL PARK
+============================================================ */}
+<section className="bg-white py-16 sm:py-20 lg:py-28">
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
+      <div className="relative group">
 
-            <div className="relative group">
+        <img
+          src={image17}
+          alt="Amboseli National Park"
+          className="h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[500px]"
+        />
 
-              <img
-                src={image17}
-                alt="Amboseli wildlife"
-                className="w-full h-[380px] sm:h-[500px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl">
 
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 text-white px-6 py-4 rounded-2xl shadow-xl">
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Amboseli
+          </p>
 
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Amboseli
-                </p>
+          <p className="mt-1 text-xs text-white/70">
+            Land of giants and mountain views
+          </p>
 
-                <p className="text-white/70 text-xs mt-1">
-                  Land of giants and mountain views
-                </p>
+        </div>
 
-              </div>
-
-            </div>
+      </div>
 
 
-            <div>
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
+      <div>
 
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About Amboseli
-              </span>
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          About Amboseli
+        </span>
 
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
-                Where Elephants
-                <span className="block text-[#F39A08]">
-                  Roam Beneath Kilimanjaro
-                </span>
-              </h2>
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
 
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                Amboseli National Park is one of Kenya's most iconic
-                safari destinations. The park is known for its impressive
-                elephant populations, wide-open landscapes and spectacular
-                views of Mount Kilimanjaro.
-              </p>
+          Amboseli National Park
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                From early morning game drives to cultural encounters
-                and unforgettable sunsets, Amboseli offers an exceptional
-                combination of wildlife, nature and authentic experiences.
-              </p>
+          <span className="block text-[#F39A08]">
+            Beneath Kilimanjaro
+          </span>
 
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+        </h2>
 
-                <div className="p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5">
+        <div className="mt-7 space-y-5 text-gray-600">
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Wildlife
-                  </p>
+          <p className="leading-relaxed">
+            Nestled in the shadow of Africa’s highest peak, Mt. Kilimanjaro,
+            Amboseli National Park is a captivating safari destination
+            celebrated for its vast elephant herds and awe-inspiring scenery.
+            Its sweeping plains, dotted with acacia trees and seasonal swamps,
+            make it an ideal habitat for diverse wildlife, including buffaloes,
+            wildebeests, zebras, and gazelles. Lions and cheetahs are often
+            spotted roaming the open grasslands, adding thrilling moments to
+            every game drive.
+          </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Exceptional elephant encounters
-                  </p>
+          <p className="leading-relaxed">
+            Elephants, famous for their impressive tusks, steal the spotlight
+            here. Watching them amble across the dusty plains or wade into
+            marshes is an unforgettable sight. The park’s wetlands also attract
+            abundant birdlife, including flamingos and a variety of waterbirds,
+            making it a paradise for birdwatchers. Though black rhinos have
+            disappeared and leopards are rarely seen, Amboseli’s wildlife
+            viewing remains exceptional.
+          </p>
 
-                </div>
+          <p className="leading-relaxed">
+            Sunrise and sunset are especially magical when clouds part to
+            reveal Kilimanjaro’s snow-capped peak, creating a perfect backdrop
+            for photography. Visitors can climb Observation Hill for panoramic
+            views or take to the skies in a hot-air balloon for a unique
+            perspective at dawn.
+          </p>
 
-                <div className="p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5">
+          <p className="leading-relaxed">
+            While the park’s dry months (June to October, plus January and
+            February) offer the best game viewing, its beauty and wildlife can
+            be enjoyed all year. The climate is generally warm and dry, though
+            April and May bring heavier rains that can affect road conditions.
+          </p>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Kilimanjaro
-                  </p>
+          <p className="leading-relaxed">
+            Beyond wildlife, Amboseli enchants with its landscapes: open
+            savannahs, pockets of woodland, and lush swamps shimmering under
+            Kilimanjaro’s gaze. This blend of scenery, wildlife, and iconic
+            views ensures Amboseli National Park remains one of Kenya’s most
+            memorable and rewarding safari destinations.
+          </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Iconic mountain scenery
-                  </p>
+        </div>
 
-                </div>
 
-              </div>
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
 
-            </div>
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Wildlife
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Vast elephant herds & diverse wildlife
+            </p>
+
+          </div>
+
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Kilimanjaro
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Iconic mountain views & photography
+            </p>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
 
 
       {/* =====================================================
@@ -913,10 +965,10 @@ function Amboseli() {
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -938,10 +990,10 @@ function Amboseli() {
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>
@@ -951,7 +1003,7 @@ function Amboseli() {
 
             {/* WHATSAPP */}
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#F39A08] px-5 py-3 text-sm font-bold text-[#082D19] transition-all hover:-translate-y-1 hover:bg-white"

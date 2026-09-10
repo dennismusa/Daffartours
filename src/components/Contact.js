@@ -42,7 +42,7 @@ Message:
 ${formData.message}
     `.trim();
 
-    const whatsappUrl = `https://wa.me/+254708164662?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/+254708711459?text=${encodeURIComponent(
       whatsappMessage
     )}`;
 
@@ -175,10 +175,10 @@ ${formData.message}
               </p>
 
               <a
-                href="tel:+254708164662"
+                href="tel:+254708711459"
                 className="inline-block mt-4 text-[#0D4825] font-bold hover:text-[#F39A08] transition-colors"
               >
-                +254708164662
+                +254708711459
               </a>
 
             </div>
@@ -201,7 +201,7 @@ ${formData.message}
               </p>
 
               <a
-                href="https://wa.me/+254708164662"
+                href="https://wa.me/+254708711459"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 text-[#0D4825] font-bold hover:text-[#F39A08] transition-colors"
@@ -364,7 +364,7 @@ ${formData.message}
                 </p>
 
                 <a
-                  href="https://wa.me/+254708164662"
+                  href="https://wa.me/+254708711459"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex mt-5 bg-[#F39A08] hover:bg-[#ffad20] text-[#0D4825] px-6 py-3 rounded-full font-bold transition-all duration-300"
@@ -462,7 +462,7 @@ ${formData.message}
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+254708164662"
+                      placeholder="+254708711459"
                       className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#FAFAF7] focus:outline-none focus:ring-2 focus:ring-[#F39A08]/40 focus:border-[#F39A08] transition-all"
                     />
 
@@ -719,10 +719,10 @@ ${formData.message}
                     </h3>
 
                     <a
-                      href="tel:+254708164662"
+                      href="tel:+254708711459"
                       className="mt-1 block text-gray-500 text-sm hover:text-[#F39A08]"
                     >
-                      +254708164662
+                      +254708711459
                     </a>
 
                   </div>
@@ -924,7 +924,7 @@ ${formData.message}
           <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#F39A08] hover:bg-[#ffad20] text-[#0D4825] px-8 py-4 rounded-full font-bold shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -1218,10 +1218,10 @@ ${formData.message}
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -1243,10 +1243,10 @@ ${formData.message}
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>

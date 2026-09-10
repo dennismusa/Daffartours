@@ -130,106 +130,101 @@ useEffect(() => {
           INTRODUCTION
       ====================================================== */}
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
+{/* ============================================================
+    MASAI MARA NATIONAL RESERVE
+============================================================ */}
 
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+{/* ============================================================
+    MASAI MARA NATIONAL RESERVE
+============================================================ */}
+<section
+  id="masai-mara-national-reserve"
+  className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-28"
+>
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    {/* SECTION HEADER */}
+    <div className="mb-14 max-w-3xl">
+      <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#dba33a]">
+        Masai Mara
+      </p>
 
-            {/* IMAGE */}
+      <h2 className="text-3xl font-black leading-tight tracking-tight text-[#092d1a] sm:text-4xl lg:text-5xl">
+        Masai Mara National Reserve
+      </h2>
+    </div>
 
-            <div className="relative group">
+    {/* MAIN EDITORIAL LAYOUT */}
+    <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
 
-              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
+      {/* IMAGE SIDE */}
+      <div className="relative">
+        <div className="relative overflow-hidden rounded-[2.5rem]">
+          <img
+            src={mara2}
+            alt="Masai Mara National Reserve"
+            className="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
+          />
 
-              <img
-                src={mara2}
-                alt="Wildlife experience in Maasai Mara"
-                className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+          {/* IMAGE OVERLAY */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#061b10]/80 via-transparent to-transparent" />
 
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
-
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Maasai Mara
-                </p>
-
-                <p className="text-white/70 text-xs mt-1">
-                  Kenya's legendary safari destination
-                </p>
-
-              </div>
-
-            </div>
-
-
-            {/* CONTENT */}
-
-            <div>
-
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About The Destination
-              </span>
-
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
-
-                Where Africa's
-
-                <span className="block text-[#F39A08]">
-                  Wild Heart Lives
-                </span>
-
-              </h2>
-
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                The Maasai Mara is one of Kenya's most celebrated
-                safari destinations. Its open grasslands, rolling
-                landscapes and abundant wildlife make it an exceptional
-                place to experience Africa.
+          {/* IMAGE LABEL */}
+          <div className="absolute bottom-6 left-6 right-6">
+            <div className="rounded-2xl border border-white/20 bg-black/25 p-5 backdrop-blur-md">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+                The Mara
               </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                From spectacular predator sightings to breathtaking
-                landscapes and authentic cultural encounters, every
-                journey through the Mara can create memories that
-                last a lifetime.
+              <p className="mt-2 text-lg font-semibold leading-7 text-white">
+                One of Africa’s most legendary wildlife destinations
               </p>
-
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
-
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Wildlife
-                  </p>
-
-                  <p className="mt-1 text-sm text-gray-500">
-                    Exceptional wildlife viewing
-                  </p>
-
-                </div>
-
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Culture
-                  </p>
-
-                  <p className="mt-1 text-sm text-gray-500">
-                    Authentic Maasai experiences
-                  </p>
-
-                </div>
-
-              </div>
-
             </div>
-
           </div>
-
         </div>
+      </div>
 
-      </section>
+      {/* CONTENT SIDE */}
+      <div className="space-y-7">
+
+        <p className="text-base leading-8 text-gray-700 sm:text-lg">
+          The Masai Mara National Reserve remains one of Africa’s most legendary
+          wildlife destinations, captivating travelers from around the world with
+          its dramatic landscapes and extraordinary biodiversity. Rolling
+          grasslands stretch to the horizon, dotted with flat-topped acacia trees
+          that provide shade to resting lions and grazing herds alike. Thanks to
+          its rich grazing grounds and dependable seasonal rains, the Mara
+          supports a remarkable concentration of herbivores, which in turn
+          attracts some of Africa’s most iconic predators.
+        </p>
+
+        <p className="text-base leading-8 text-gray-700 sm:text-lg">
+          One of the reserve’s most unforgettable highlights is the Great
+          Migration, often described as nature’s grandest spectacle. Each year,
+          over a million wildebeest, along with countless zebras and gazelles,
+          make their perilous journey across the plains and rivers in search of
+          fresh grazing. Watching thousands of animals surge across
+          crocodile-filled waters or thunder across sunlit grasslands is a sight
+          that leaves even seasoned travelers awestruck.
+        </p>
+
+        <p className="text-base leading-8 text-gray-700 sm:text-lg">
+          Beyond the migration, the Masai Mara offers outstanding wildlife
+          viewing throughout the year. It’s one of the best places in Africa to
+          see the “Big Cats,” with frequent sightings of lions lounging in the
+          shade, leopards draped elegantly over tree branches, and cheetahs
+          scanning the horizon for prey. Visitors may also encounter elephants,
+          buffaloes, giraffes, and an array of colorful birdlife that add to the
+          region’s charm. A visit to the Masai Mara is more than just a safari;
+          it’s an immersion into an ancient ecosystem where life unfolds daily
+          in raw, breathtaking beauty. For anyone seeking an authentic African
+          adventure, few places rival the magic and drama of the Mara.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -5439,7 +5434,7 @@ useEffect(() => {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
@@ -5732,10 +5727,10 @@ useEffect(() => {
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -5757,10 +5752,10 @@ useEffect(() => {
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>
@@ -5770,7 +5765,7 @@ useEffect(() => {
 
             {/* WHATSAPP */}
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#F39A08] px-5 py-3 text-sm font-bold text-[#082D19] transition-all hover:-translate-y-1 hover:bg-white"

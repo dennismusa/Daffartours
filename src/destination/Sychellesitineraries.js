@@ -1269,7 +1269,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#082d19]"
@@ -1574,10 +1574,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -1600,10 +1600,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

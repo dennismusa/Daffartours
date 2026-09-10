@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import image17 from "../assets/image17.jpg";
+import cruiser1 from "../assets/cruiser1.jpg";
 import cruiser2 from "../assets/cruiser2.jpg";
 import image16 from "../assets/image16.jpg";
 import kenya from "../assets/kenya.jpg";
@@ -216,191 +217,670 @@ const About = () => {
       {/* ============================================================
           OUR STORY
       ============================================================ */}
-      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
-        <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-[#F5A623]/5 blur-3xl" />
+     ```jsx
+{/* ============================================================
+    OUR STORY
+============================================================ */}
+<section
+  className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32"
+>
+  {/* Background Decoration */}
+  <div className="pointer-events-none absolute -right-40 top-10 h-[500px] w-[500px] rounded-full bg-[#F5A623]/[0.06] blur-[120px]" />
+  <div className="pointer-events-none absolute -left-40 bottom-0 h-[450px] w-[450px] rounded-full bg-[#082D19]/[0.04] blur-[120px]" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20 lg:px-10">
+  <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
-          {/* IMAGE */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl">
-              <img
-                src={image17}
-                alt="Daffar Tours team"
-                className="h-[420px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[520px]"
-              />
-            </div>
+    {/* ============================================================
+        TOP INTRO
+    ============================================================ */}
+    <div className="grid items-end gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
 
-            <div className="absolute -bottom-7 -right-4 rounded-[1.5rem] bg-[#0b4224] px-7 py-6 text-white shadow-2xl sm:-right-7">
-              <span className="block font-serif text-4xl text-[#F5A623]">
-                Africa
-              </span>
-              <span className="mt-1 block text-xs uppercase tracking-[2px] text-white/70">
-                Our home. Your adventure.
-              </span>
-            </div>
-          </div>
+      <div>
+        <SectionLabel>Our Story</SectionLabel>
 
-          {/* CONTENT */}
-          <div>
-            <SectionLabel>Our Story</SectionLabel>
+        <h2 className="mt-5 max-w-2xl font-serif text-4xl font-medium leading-[1.08] tracking-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+          Go Further.
+          <span className="block text-[#F5A623]">
+            Feel More. Discover Africa.
+          </span>
+        </h2>
+      </div>
 
-            <h2 className="mt-5 font-serif text-4xl font-medium leading-tight text-[#082D19] sm:text-5xl">
-              Creating Meaningful
-              <span className="block text-[#F5A623]">
-                African Experiences.
-              </span>
-            </h2>
+      <div className="max-w-xl lg:ml-auto">
+        <p className="text-lg leading-8 text-gray-600">
+          There are places you visit. And then there are places that become
+          part of you. For us, Africa is the second kind.
+        </p>
+      </div>
 
-            <p className="mt-7 text-base leading-8 text-gray-600">
-              At Daffar Tours & Travel, we believe travel should be more
-              than simply moving from one destination to another.
+    </div>
+
+
+    {/* ============================================================
+        MAIN STORY
+    ============================================================ */}
+    <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-20">
+
+      {/* ============================================================
+          IMAGE
+      ============================================================ */}
+      <div className="relative lg:sticky lg:top-28">
+
+        <div className="relative overflow-hidden rounded-[2rem] shadow-2xl">
+          <img
+            src={image17}
+            alt="Daffar Tours and Travel team"
+            className="h-[440px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[560px]"
+          />
+
+          {/* Image overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#082D19]/70 via-transparent to-transparent" />
+
+          {/* Image caption */}
+          <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
+
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5A623]">
+              Daffar Tours & Travel
             </p>
 
-            <p className="mt-5 text-base leading-8 text-gray-600">
-              A safari is about the first sight of wildlife across the
-              savannah, the sound of nature in the distance, the people
-              you meet and the stories you carry home.
+            <p className="mt-2 max-w-sm font-serif text-2xl leading-tight text-white sm:text-3xl">
+              Africa is not just where we work.
+              <span className="block text-white/70">
+                It is home.
+              </span>
             </p>
 
-            <p className="mt-5 text-base leading-8 text-gray-600">
-              Our goal is to help travellers discover Kenya and East Africa
-              through carefully planned journeys that combine adventure,
-              comfort, culture and authentic experiences.
-            </p>
-
-            <div className="mt-10 grid gap-7 sm:grid-cols-2">
-              <StoryPoint
-                number="01"
-                title="Authentic Journeys"
-                text="Experiences designed around the destination and what makes it special."
-              />
-
-              <StoryPoint
-                number="02"
-                title="Personal Service"
-                text="Travel planning built around your interests, expectations and needs."
-              />
-
-              <StoryPoint
-                number="03"
-                title="Local Experience"
-                text="Knowledge of the places we call home and the stories behind them."
-              />
-
-              <StoryPoint
-                number="04"
-                title="Responsible Travel"
-                text="Supporting people, communities, wildlife and the places we explore."
-              />
-            </div>
           </div>
         </div>
-      </section>
 
+
+        {/* Floating Badge */}
+        <div className="absolute -bottom-6 right-5 rounded-2xl bg-[#082D19] px-6 py-5 text-white shadow-2xl sm:-right-6">
+
+          <span className="block font-serif text-3xl text-[#F5A623]">
+            Go Further
+          </span>
+
+          <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.2em] text-white/60">
+            Into the heart of Africa
+          </span>
+
+        </div>
+
+      </div>
+
+
+      {/* ============================================================
+          STORY CONTENT
+      ============================================================ */}
+      <div className="pt-2 lg:pt-5">
+
+        <div className="space-y-6 text-base leading-8 text-gray-600">
+
+          <p>
+            At Daffar Tours and Travel, we believe an African safari should
+            never feel like simply ticking destinations off a bucket list.
+            It should be the kind of journey you remember years later.
+          </p>
+
+          <p>
+            The golden light of an African sunrise. The sound of elephants
+            moving through the bush. A lion appearing silently across the
+            savannah. A Maasai story shared around a fire. Or the breathtaking
+            moment you realise you are witnessing something truly wild.
+          </p>
+
+          {/* Highlight Quote */}
+          <div className="my-8 border-l-2 border-[#F5A623] pl-6">
+            <p className="font-serif text-2xl leading-relaxed text-[#082D19] sm:text-3xl">
+              “Go Further. Further into the wild. Further into discovery.
+              Further into the heart of Africa.”
+            </p>
+          </div>
+
+          <p>
+            This is why we created Daffar — to help you go beyond the ordinary
+            and into the Africa you have always dreamed of experiencing.
+          </p>
+
+          <p>
+            We know that planning a safari from thousands of miles away can
+            feel overwhelming. Which park should you visit? Where should you
+            stay? How many nights are enough? When is the best time to travel?
+            What route makes the most sense?
+          </p>
+
+          <p>
+            These are the details we love getting right. With our deep local
+            expertise, professional guides, custom 4x4 safari vehicles, and
+            reliable operational network, we take care of the details that
+            matter, so you can simply look forward to your adventure.
+          </p>
+
+        </div>
+
+
+        {/* ============================================================
+            WOMEN-OWNED FEATURE
+        ============================================================ */}
+        <div className="mt-9 rounded-3xl border border-[#082D19]/10 bg-[#F8F6F1] p-6 sm:p-7">
+
+          <div className="flex gap-5">
+
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#082D19] text-sm font-semibold text-[#F5A623]">
+              ✦
+            </div>
+
+            <div>
+              <h3 className="font-serif text-xl text-[#082D19]">
+                Proudly Women-Owned
+              </h3>
+
+              <p className="mt-2 text-sm leading-7 text-gray-600">
+                Women make up a large percentage of our team. We are passionate
+                about creating opportunities for women to lead, grow, and build
+                meaningful careers in African tourism. Their dedication,
+                warmth, and attention to detail are part of what makes the
+                Daffar experience special.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* ============================================================
+            CLOSING
+        ============================================================ */}
+        <p className="mt-8 text-base leading-8 text-gray-600">
+          Whether it is your first safari, a honeymoon, a family adventure,
+          or a lifelong dream finally coming true, we design every journey
+          with care, honesty, and genuine passion.
+        </p>
+
+        <p className="mt-5 font-serif text-xl leading-8 text-[#082D19]">
+          Because we don't just want you to see Africa. We want you to go
+          further, feel more, and return home with a story that stays with
+          you forever.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        OUR VALUES
+    ============================================================ */}
+    <div className="mt-20 border-t border-[#082D19]/10 pt-10 lg:mt-24">
+
+      <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5A623]">
+            What We Believe
+          </p>
+
+          <h3 className="mt-2 font-serif text-3xl text-[#082D19] sm:text-4xl">
+            The Daffar Difference
+          </h3>
+        </div>
+
+        <p className="max-w-md text-sm leading-6 text-gray-500 sm:text-right">
+          Every journey is guided by the principles that shape how we
+          experience and share Africa.
+        </p>
+
+      </div>
+
+
+      {/* Values */}
+      <div className="grid divide-y divide-[#082D19]/10 border-y border-[#082D19]/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+
+        {/* 01 */}
+        <div className="group py-7 sm:px-7 lg:first:pl-0 lg:last:pr-0">
+          <span className="font-serif text-2xl text-[#F5A623]">
+            01
+          </span>
+
+          <h4 className="mt-4 text-base font-semibold text-[#082D19]">
+            Go Further
+          </h4>
+
+          <p className="mt-2 text-sm leading-6 text-gray-500">
+            Going beyond ordinary tourism to discover meaningful African
+            experiences.
+          </p>
+        </div>
+
+
+        {/* 02 */}
+        <div className="group py-7 sm:px-7 lg:first:pl-7 lg:last:pr-0">
+          <span className="font-serif text-2xl text-[#F5A623]">
+            02
+          </span>
+
+          <h4 className="mt-4 text-base font-semibold text-[#082D19]">
+            Local Expertise
+          </h4>
+
+          <p className="mt-2 text-sm leading-6 text-gray-500">
+            Deep knowledge of the destinations, wildlife, cultures and
+            communities we call home.
+          </p>
+        </div>
+
+
+        {/* 03 */}
+        <div className="group py-7 sm:px-7 lg:first:pl-7 lg:last:pr-0">
+          <span className="font-serif text-2xl text-[#F5A623]">
+            03
+          </span>
+
+          <h4 className="mt-4 text-base font-semibold text-[#082D19]">
+            Women-Owned
+          </h4>
+
+          <p className="mt-2 text-sm leading-6 text-gray-500">
+            Creating opportunities for women to lead, grow and thrive in
+            African tourism.
+          </p>
+        </div>
+
+
+        {/* 04 */}
+        <div className="group py-7 sm:px-7 lg:first:pl-7 lg:last:pr-0">
+          <span className="font-serif text-2xl text-[#F5A623]">
+            04
+          </span>
+
+          <h4 className="mt-4 text-base font-semibold text-[#082D19]">
+            Travel With Purpose
+          </h4>
+
+          <p className="mt-2 text-sm leading-6 text-gray-500">
+            Thoughtful journeys created with care, honesty and genuine
+            passion.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+{/* ============================================================
+    OUR EXPERTISE
+============================================================ */}
+<section
+  id="our-expertise"
+  className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-32"
+>
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+    {/* SECTION INTRO */}
+    <div className="grid items-end gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+
+      <div>
+        <SectionLabel>Our Expertise</SectionLabel>
+
+        <h2 className="mt-5 max-w-xl font-serif text-4xl font-medium leading-[1.08] tracking-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+          Rooted in East Africa.
+          <span className="block text-[#F5A623]">
+            Experienced beyond.
+          </span>
+        </h2>
+      </div>
+
+      <p className="max-w-2xl text-base leading-8 text-gray-600 lg:text-lg">
+        With offices in Nairobi, Kenya, and Arusha, Tanzania, Daffar Tours
+        and Travel is proudly rooted in East Africa. We create and operate
+        unforgettable safari experiences across Kenya, Tanzania, Uganda, and
+        Rwanda, combining local knowledge, thoughtful planning, and
+        professional service.
+      </p>
+
+    </div>
+
+
+    {/* ============================================================
+        IMAGE + INTRODUCTION
+    ============================================================ */}
+    <div className="mt-16 grid overflow-hidden rounded-[2rem] bg-[#082D19] lg:grid-cols-[1.15fr_0.85fr]">
+
+      {/* IMAGE */}
+      <div className="relative min-h-[420px] overflow-hidden lg:min-h-[620px]">
+
+        <img
+          src={cruiser2}
+          alt="Safari vehicle overlooking the African wilderness"
+          className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
+        />
+
+        {/* Image overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#082D19]/80 via-transparent to-transparent" />
+
+        {/* Image Caption */}
+        <div className="absolute bottom-7 left-7 right-7 sm:left-10 sm:right-10">
+          <div className="max-w-md">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5A623]">
+              East Africa
+            </p>
+
+            <p className="mt-2 font-serif text-2xl leading-tight text-white sm:text-3xl">
+              Where local knowledge becomes unforgettable journeys.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      {/* CONTENT */}
+      <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-14">
+
+        <p className="text-base leading-8 text-white/75">
+          We understand that planning a safari from thousands of miles away
+          is a big decision. You want people who know the destinations,
+          understand what makes a safari special, and can be trusted to take
+          care of the details.
+        </p>
+
+        <p className="mt-6 text-base leading-8 text-white/75">
+          We offer tailor-made safaris ranging from
+          <span className="font-semibold text-white">
+            {" "}budget and mid-range to luxury and luxury-plus,
+          </span>{" "}
+          allowing you to choose an experience that suits your budget while
+          ensuring we deliver on every service we promise.
+        </p>
+
+        <div className="mt-9 h-px bg-white/10" />
+
+        {/* Safari styles */}
+        <div className="mt-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F5A623]">
+            Safari Styles
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            {[
+              "Budget",
+              "Mid-Range",
+              "Luxury",
+              "Luxury Plus",
+            ].map((style) => (
+              <span
+                key={style}
+                className="rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm text-white/80"
+              >
+                {style}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    {/* ============================================================
+        EXPERTISE DETAILS
+    ============================================================ */}
+    <div className="mt-16 grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+
+      {/* LEFT */}
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F5A623]">
+          Knowledge that matters
+        </p>
+
+        <h3 className="mt-4 max-w-md font-serif text-3xl leading-tight text-[#082D19] sm:text-4xl">
+          More than planning a safari.
+          <span className="block text-gray-400">
+            We know how to bring it to life.
+          </span>
+        </h3>
+      </div>
+
+
+      {/* RIGHT */}
+      <div className="space-y-6 text-base leading-8 text-gray-600">
+
+        <p>
+          Our experienced travel professionals and safari guides bring
+          extensive knowledge of East Africa's wildlife, landscapes,
+          cultures, and communities.
+        </p>
+
+        <p>
+          Fluent in English and Swahili, with some also speaking German,
+          Spanish, French, and Italian, our guides combine expert knowledge
+          with warm hospitality and excellent communication, bringing the
+          stories and wonders of East Africa to life.
+        </p>
+
+        <p>
+          We carefully select camps, lodges, hotels, and safari experiences
+          based on each client's itinerary, preferences, and budget. Whether
+          you prefer a comfortable budget stay, a well-appointed mid-range
+          lodge, or an exceptional luxury property, we tailor each journey
+          to suit you.
+        </p>
+
+        <p>
+          From your first enquiry to your return home, our team remains
+          attentive to the details that matter, providing dependable support
+          and peace of mind throughout your journey.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        DESTINATION STRIP
+    ============================================================ */}
+    <div className="mt-16 border-y border-[#082D19]/10 py-8">
+
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">
+          Our East African Reach
+        </p>
+
+        <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-[#082D19]">
+          <span>Kenya</span>
+          <span>Tanzania</span>
+          <span>Uganda</span>
+          <span>Rwanda</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+{/* ============================================================
+    OUR SAFARI VEHICLES
+============================================================ */}
+<section
+  id="our-safari-vehicles"
+  className="relative overflow-hidden bg-[#082D19] py-20 text-white sm:py-24 lg:py-32"
+>
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+    {/* HEADER */}
+    <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+
+      <div>
+        <SectionLabel>Our Safari Vehicles</SectionLabel>
+
+        <h2 className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+          Built for the wild.
+          <span className="block text-[#F5A623]">
+            Designed around you.
+          </span>
+        </h2>
+      </div>
+
+      <p className="max-w-xl text-base leading-8 text-white/65 lg:text-lg">
+        Our 2018–2024 Toyota Land Cruiser 4x4 safari vehicles are specially
+        adapted for comfort, safety, photography, and East Africa's diverse
+        terrain.
+      </p>
+
+    </div>
+
+
+    {/* ============================================================
+        MAIN VEHICLE SHOWCASE
+    ============================================================ */}
+    <div className="relative mt-16">
+
+      {/* IMAGE */}
+      <div className="relative h-[430px] overflow-hidden rounded-[2rem] sm:h-[520px] lg:h-[650px]">
+
+        <img
+          src={cruiser1}
+          alt="Daffar safari Land Cruiser in the African wilderness"
+          className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+        {/* Image text */}
+        <div className="absolute bottom-8 left-7 right-7 sm:bottom-10 sm:left-10 sm:right-10">
+
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5A623]">
+            Your view of Africa
+          </p>
+
+          <h3 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+            Every seat is a front-row seat to the wild.
+          </h3>
+
+        </div>
+      </div>
+
+
+      {/* ============================================================
+          FLOATING FEATURE PANEL
+      ============================================================ */}
+      <div className="relative mx-5 -mt-10 rounded-3xl border border-white/10 bg-[#0D4825] p-7 shadow-2xl sm:mx-8 sm:p-9 lg:absolute lg:bottom-8 lg:right-8 lg:mt-0 lg:w-[440px]">
+
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F5A623]">
+          Vehicle Features
+        </p>
+
+        <div className="mt-6 divide-y divide-white/10">
+
+          <div className="flex gap-5 py-5 first:pt-0">
+            <span className="font-serif text-2xl text-[#F5A623]">
+              01
+            </span>
+
+            <div>
+              <h4 className="font-semibold text-white">
+                Pop-Up Roof
+              </h4>
+
+              <p className="mt-1 text-sm leading-6 text-white/55">
+                Panoramic wildlife viewing and unobstructed photography.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-5 py-5">
+            <span className="font-serif text-2xl text-[#F5A623]">
+              02
+            </span>
+
+            <div>
+              <h4 className="font-semibold text-white">
+                Six Guest Capacity
+              </h4>
+
+              <p className="mt-1 text-sm leading-6 text-white/55">
+                Spacious seating with a window seat for everyone.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-5 py-5">
+            <span className="font-serif text-2xl text-[#F5A623]">
+              03
+            </span>
+
+            <div>
+              <h4 className="font-semibold text-white">
+                Onboard Charging
+              </h4>
+
+              <p className="mt-1 text-sm leading-6 text-white/55">
+                Charging ports with UK-style sockets for your devices.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-5 pt-5">
+            <span className="font-serif text-2xl text-[#F5A623]">
+              04
+            </span>
+
+            <div>
+              <h4 className="font-semibold text-white">
+                Maintained & Supported
+              </h4>
+
+              <p className="mt-1 text-sm leading-6 text-white/55">
+                Rigorously maintained vehicles with backup support for
+                additional peace of mind.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    {/* ============================================================
+        VEHICLE FOOTER
+    ============================================================ */}
+    <div className="mt-16 grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-[1fr_auto] lg:items-end">
+
+      <p className="max-w-4xl text-lg leading-8 text-white/65 sm:text-xl">
+        From the savannahs of Kenya and Tanzania to the remarkable landscapes
+        of Uganda and Rwanda, our expertise is knowing how to turn your
+        African dream into a journey that feels personal, seamless, and
+        unforgettable.
+      </p>
+
+      <div className="font-serif text-2xl text-[#F5A623]">
+        Go Further with Daffar.
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* ============================================================
           MISSION & VISION
       ============================================================ */}
-      <section className="relative overflow-hidden bg-[#082D19] py-20 sm:py-24 lg:py-28">
-
-        <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#F5A623]/10 blur-3xl" />
-        <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-3xl" />
-
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
-          <div className="mx-auto max-w-3xl text-center">
-            <SectionLabel dark>Our Purpose</SectionLabel>
-
-            <h2 className="mt-5 font-serif text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">
-              Driven By Purpose.
-              <span className="block text-[#F5A623]">
-                Inspired By Africa.
-              </span>
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/60">
-              Everything we do is guided by a simple belief: travel has
-              the power to create unforgettable memories, meaningful
-              connections and a deeper appreciation for Africa.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-6 lg:grid-cols-2">
-
-            {/* MISSION */}
-            <div className="group relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl transition duration-500 hover:bg-white/[0.07] sm:p-10">
-
-              <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-[#F5A623]/10 blur-3xl" />
-
-              <div className="relative">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-[3px] text-[#F5A623]">
-                    01 — Mission
-                  </span>
-
-                  <span className="font-serif text-6xl text-white/5">
-                    M
-                  </span>
-                </div>
-
-                <h3 className="mt-10 font-serif text-4xl text-white">
-                  Creating Journeys
-                  <span className="block text-[#F5A623]">
-                    Worth Remembering.
-                  </span>
-                </h3>
-
-                <p className="mt-6 text-base leading-8 text-white/60">
-                  Our mission is to create exceptional African travel
-                  experiences through thoughtful planning, personal service,
-                  local knowledge and genuine hospitality. We aim to make
-                  every journey comfortable, inspiring and deeply connected
-                  to the destination.
-                </p>
-
-                <div className="mt-8 h-px w-16 bg-[#F5A623]" />
-              </div>
-            </div>
-
-            {/* VISION */}
-            <div className="group relative overflow-hidden rounded-[2.25rem] bg-[#F7F5EE] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 sm:p-10">
-
-              <div className="absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-[#F5A623]/10 blur-3xl" />
-
-              <div className="relative">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-[3px] text-[#F5A623]">
-                    02 — Vision
-                  </span>
-
-                  <span className="font-serif text-6xl text-[#0b4224]/5">
-                    V
-                  </span>
-                </div>
-
-                <h3 className="mt-10 font-serif text-4xl text-[#082D19]">
-                  Inspiring The World
-                  <span className="block text-[#F5A623]">
-                    To Discover Africa.
-                  </span>
-                </h3>
-
-                <p className="mt-6 text-base leading-8 text-gray-600">
-                  Our vision is to become a trusted gateway to East Africa,
-                  known for authentic experiences, thoughtful hospitality
-                  and responsible tourism that benefits travellers,
-                  communities and the natural world.
-                </p>
-
-                <div className="mt-8 h-px w-16 bg-[#F5A623]" />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
+      
 
       {/* ============================================================
           WHY CHOOSE DAFFAR
@@ -869,7 +1349,7 @@ const About = () => {
               </Link>
 
               <a
-                href="https://wa.me/254708164662"
+                href="https://wa.me/254708711459"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-bold text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#082D19]"
@@ -1124,10 +1604,10 @@ const About = () => {
                   </span>
 
                   <a
-                    href="mailto:info@daffartours.com"
+                    href="mailto: info@daffar.co.ke"
                     className="mt-1 block text-white/60 transition hover:text-[#F5A623]"
                   >
-                    info@daffartours.com
+                     info@daffar.co.ke
                   </a>
                 </div>
 
@@ -1137,10 +1617,10 @@ const About = () => {
                   </span>
 
                   <a
-                    href="tel:+254708164662"
+                    href="tel:+254708711459"
                     className="mt-1 block text-white/60 transition hover:text-[#F5A623]"
                   >
-                    +254 708 164 662
+                    +254708711459
                   </a>
                 </div>
 

@@ -1,1346 +1,1092 @@
+/* eslint-disable no-unused-vars */
+
+
 import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
+import {  ArrowRight,  Bird,  Camera,  Compass,  Fish,  Footprints,  Mountain,  Users,  Waves,  Wind,} from "lucide-react";
 
 import kenya from "../assets/kenya.jpg";
+import gorilla from "../assets/gorilla.jpg";
+import tanzania1 from "../assets/tanzania1.jpg";
+import samburu from "../assets/samburu.jpg";
+import maasai from "../assets/maasai.jpg";
+import nakuru from "../assets/nakuru.jpg";
+import ngorongoro2 from "../assets/ngorongoro2.jpg";
+import mara3 from "../assets/mara3.jpg";
 import bird1 from "../assets/bird1.jpg";
 import diani1 from "../assets/diani1.jpg";
 import culture1 from "../assets/culture1.jpg";
 import amboseli from "../assets/amboseli.jpg";
 import serengeti from "../assets/serengeti.jpg";
-//import nakuru from "../assets/nakuru.jpg";
 import Wilderbeast from "../assets/Wilderbeast.jpg";
 import climbingkenya from "../assets/climbingkenya.jpg";
 import climbinglongonot from "../assets/climbinglongonot.jpg";
 import climbingkili from "../assets/climbingkili.jpg";
 import meru from "../assets/meru.jpg";
-//import west from "../assets/west.jpg";
-//import image17 from "../assets/image17.jpg";
 
-/* ============================================================
-   REUSABLE COMPONENTS
-============================================================ */
+const WHATSAPP_LINK = "https://wa.me/254708711459";
 
-function ActivityCard({ activity, index }) {
-  return (
-    <article
-      className="
-        group
-        bg-white
-        rounded-[1.7rem]
-        overflow-hidden
-        border
-        border-gray-100
-        shadow-sm
-        hover:shadow-2xl
-        hover:-translate-y-2
-        transition-all
-        duration-500
-      "
-      style={{
-        animationDelay: `${index * 80}ms`,
-      }}
+const SectionLabel = ({ children, light = false }) => (
+  <div className="mb-5 flex items-center gap-3">
+    <span className="h-px w-10 bg-[#F5A623]" />
+    <span
+      className={`text-xs font-bold uppercase tracking-[0.28em] ${
+        light ? "text-[#F5A623]" : "text-[#F5A623]"
+      }`}
     >
-      <div className="relative h-[250px] overflow-hidden">
-        <img
-          src={activity.image}
-          alt={activity.title}
-          className="
-            w-full
-            h-full
-            object-cover
-            group-hover:scale-110
-            transition-transform
-            duration-1000
-          "
-        />
+      {children}
+    </span>
+  </div>
+);
 
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-t
-            from-black/75
-            via-black/10
-            to-transparent
-          "
-        />
-
-        <div className="absolute top-5 left-5">
-          <span
-            className="
-              px-3
-              py-1.5
-              rounded-full
-              bg-white/15
-              backdrop-blur-md
-              border
-              border-white/20
-              text-white
-              text-[10px]
-              uppercase
-              tracking-wider
-              font-bold
-            "
-          >
-            {activity.category}
-          </span>
-        </div>
-
-        <div
-          className="
-            absolute
-            bottom-5
-            left-5
-            right-5
-            flex
-            items-end
-            justify-between
-          "
-        >
-          <div>
-            <div className="text-2xl mb-1">
-              {activity.icon}
-            </div>
-
-            <h3
-              className="
-                text-xl
-                font-serif
-                font-bold
-                text-white
-              "
-            >
-              {activity.title}
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      <div className="p-6">
-        <p className="text-sm text-gray-600 leading-7">
-          {activity.description}
-        </p>
-
-        <div
-          className="
-            mt-5
-            pt-4
-            border-t
-            border-gray-100
-            flex
-            items-center
-            justify-between
-          "
-        >
-          <div>
-            <span
-              className="
-                block
-                text-[10px]
-                uppercase
-                tracking-wider
-                text-gray-400
-                font-bold
-              "
-            >
-              Duration
-            </span>
-
-            <span
-              className="
-                text-sm
-                font-bold
-                text-[#0b4224]
-              "
-            >
-              {activity.duration}
-            </span>
-          </div>
-
-          <Link
-            to="/contact"
-            className="
-              w-10
-              h-10
-              rounded-full
-              bg-[#F7F5EE]
-              text-[#0b4224]
-              flex
-              items-center
-              justify-center
-              font-bold
-              group-hover:bg-[#0b4224]
-              group-hover:text-white
-              transition
-            "
-            aria-label={`Enquire about ${activity.title}`}
-          >
-            →
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
-}
-
-
-/* ============================================================
-   PROCESS CARD
-============================================================ */
-
-function ProcessCard({
+const EditorialSection = ({
   number,
+  label,
   title,
-  text,
-}) {
+  image,
+  imageAlt,
+  children,
+  reverse = false,
+  dark = false,
+}) => {
   return (
-    <div
-      className="
-        p-7
-        rounded-3xl
-        bg-white/5
-        border
-        border-white/10
-        hover:bg-white/10
-        hover:-translate-y-2
-        transition-all
-        duration-500
-      "
+    <section
+      className={`relative overflow-hidden py-20 sm:py-24 lg:py-32 ${
+        dark ? "bg-[#082D19] text-white" : "bg-[#F8F6F1] text-gray-800"
+      }`}
     >
       <div
-        className="
-          w-12
-          h-12
-          rounded-full
-          bg-[#F5A623]
-          text-[#07351d]
-          flex
-          items-center
-          justify-center
-          font-black
-        "
+        className={`mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20 ${
+          reverse ? "lg:[&>div:first-child]:order-2" : ""
+        }`}
       >
-        {number}
-      </div>
-
-      <h3
-        className="
-          mt-6
-          text-lg
-          font-bold
-          text-white
-        "
-      >
-        {title}
-      </h3>
-
-      <p
-        className="
-          mt-3
-          text-sm
-          text-white/50
-          leading-7
-        "
-      >
-        {text}
-      </p>
-    </div>
-  );
-}
-
-
-/* ============================================================
-   ACTIVITIES PAGE
-============================================================ */
-
-function Activities() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  /* ==========================================================
-     HERO IMAGES
-  ========================================================== */
-
-  const heroImages = [
-    kenya,
-    amboseli,
-    Wilderbeast,
-    climbingkili,
-  ];
-
-
-  /* ==========================================================
-     CATEGORIES
-  ========================================================== */
-
-  const categories = [
-    "All",
-    "Wildlife",
-    "Adventure",
-    "Culture",
-    "Nature",
-    "Beach",
-    "Photography",
-  ];
-
-
-  /* ==========================================================
-     ACTIVITIES DATA
-  ========================================================== */
-
-  const activities = [
-    {
-      title: "Game Drives",
-      category: "Wildlife",
-      image: amboseli,
-      description:
-        "Explore Kenya's incredible wildlife areas in search of elephants, lions, cheetahs, giraffes, buffalo and other iconic African wildlife.",
-      duration: "Half Day – Full Day",
-      icon: "🦁",
-    },
-
-    {
-      title: "Great Migration Viewing",
-      category: "Wildlife",
-      image: Wilderbeast,
-      description:
-        "Witness the dramatic movement of wildebeest and zebras across the Mara and Serengeti ecosystem.",
-      duration: "Seasonal Experience",
-      icon: "🐃",
-    },
-
-    {
-      title: "Bird Watching",
-      category: "Nature",
-      image: bird1,
-      description:
-        "Discover spectacular birdlife across Kenya's lakes, forests, grasslands and protected areas.",
-      duration: "Flexible",
-      icon: "🦅",
-    },
-
-    {
-      title: "Mountain Trekking",
-      category: "Adventure",
-      image: climbingkenya,
-      description:
-        "Experience unforgettable mountain landscapes and challenging trails across East Africa.",
-      duration: "1 – 7+ Days",
-      icon: "🥾",
-    },
-
-    {
-      title: "Mount Kilimanjaro Climbing",
-      category: "Adventure",
-      image: climbingkili,
-      description:
-        "Take on Africa's highest mountain with carefully planned routes, experienced guides and support.",
-      duration: "5 – 9 Days",
-      icon: "🏔️",
-    },
-
-    {
-      title: "Mount Longonot Hiking",
-      category: "Adventure",
-      image: climbinglongonot,
-      description:
-        "Enjoy an exhilarating hike through the dramatic volcanic landscape of Mount Longonot.",
-      duration: "Full Day",
-      icon: "⛰️",
-    },
-
-    {
-      title: "Cultural Experiences",
-      category: "Culture",
-      image: culture1,
-      description:
-        "Meet local communities and discover traditions, stories, food and ways of life that make East Africa unique.",
-      duration: "Flexible",
-      icon: "🤝",
-    },
-
-    {
-      title: "Safari Photography",
-      category: "Photography",
-      image: serengeti,
-      description:
-        "Spend time in extraordinary wildlife landscapes while creating memorable photographs of Africa.",
-      duration: "Flexible",
-      icon: "📷",
-    },
-
-    {
-      title: "Nature Walks",
-      category: "Nature",
-      image: meru,
-      description:
-        "Slow down and experience Africa on foot through guided nature walks and scenic landscapes.",
-      duration: "1 – 4 Hours",
-      icon: "🌿",
-    },
-
-    {
-      title: "Beach Escapes",
-      category: "Beach",
-      image: diani1,
-      description:
-        "Combine your safari with relaxing coastal experiences along Kenya and Tanzania's beautiful beaches.",
-      duration: "2 – 7+ Days",
-      icon: "🌊",
-    },
-  ];
-
-
-  /* ==========================================================
-     HERO SLIDER
-  ========================================================== */
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveSlide(
-        (prev) => (prev + 1) % heroImages.length
-      );
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [heroImages.length]);
-
-
-  /* ==========================================================
-     FILTER ACTIVITIES
-  ========================================================== */
-
-  const filteredActivities =
-    activeCategory === "All"
-      ? activities
-      : activities.filter(
-          (activity) =>
-            activity.category === activeCategory
-        );
-
-
-  return (
-    <div className="bg-white text-gray-800 overflow-hidden">
-
-
-      {/* =====================================================
-          HERO
-      ====================================================== */}
-
-      <section
-        className="
-          relative
-          h-[48vh]
-          min-h-[400px]
-          max-h-[560px]
-          overflow-hidden
-        "
-      >
-
-        {heroImages.map((image, index) => (
+        {/* IMAGE */}
+        <div className="relative">
           <div
-            key={index}
-            className={`
-              absolute
-              inset-0
-              transition-all
-              duration-[1800ms]
-              ${
-                activeSlide === index
-                  ? "opacity-100 scale-100"
-                  : "opacity-0 scale-105"
-              }
-            `}
+            className={`absolute -top-10 ${
+              reverse ? "-right-8" : "-left-8"
+            } z-0 font-serif text-[7rem] font-bold leading-none text-[#F5A623]/10`}
           >
+            {number}
+          </div>
+
+          <div className="relative z-10 overflow-hidden rounded-[2.5rem] shadow-2xl">
             <img
               src={image}
-              alt="Daffar Tours and Travel activity"
-              className="
-                w-full
-                h-full
-                object-cover
-              "
+              alt={imageAlt}
+              className="h-[380px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[500px]"
             />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
-        ))}
+        </div>
 
+        {/* CONTENT */}
+        <div>
+          <SectionLabel light={dark}>{label}</SectionLabel>
 
-        <div className="absolute inset-0 bg-black/50" />
+          <h2
+            className={`font-serif text-4xl font-semibold leading-[1.1] sm:text-5xl ${
+              dark ? "text-white" : "text-[#082D19]"
+            }`}
+          >
+            {title}
+          </h2>
 
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-r
-            from-[#062d1a]/95
-            via-[#062d1a]/60
-            to-transparent
-          "
-        />
+          <div
+            className={`mt-8 space-y-6 text-[16px] leading-8 ${
+              dark ? "text-white/75" : "text-gray-600"
+            }`}
+          >
+            {children}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-        <div
-          className="
-            absolute
-            inset-x-0
-            bottom-0
-            h-36
-            bg-gradient-to-t
-            from-black/70
-            to-transparent
-          "
-        />
+const DestinationCard = ({ image, title, children }) => (
+  <article className="group relative overflow-hidden rounded-[2rem] bg-[#082D19]">
+    <div className="relative h-[390px] overflow-hidden">
+      <img
+        src={image}
+        alt={title}
+        className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+      />
 
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-        {/* HERO CONTENT */}
+      <div className="absolute bottom-0 left-0 right-0 p-7">
+        <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19]">
+          <Bird size={19} />
+        </div>
 
-        <div
-          className="
-            relative
-            z-10
-            h-full
-            max-w-7xl
-            mx-auto
-            px-5
-            sm:px-8
-            lg:px-12
-            flex
-            items-center
-          "
-        >
+        <h3 className="font-serif text-2xl font-semibold text-white">
+          {title}
+        </h3>
 
-          <div className="max-w-3xl text-white">
+        <p className="mt-3 text-sm leading-6 text-white/75">{children}</p>
+      </div>
+    </div>
+  </article>
+);
 
-            <div
-              className="
-                inline-flex
-                items-center
-                gap-3
-                px-4
-                py-2
-                rounded-full
-                bg-white/10
-                backdrop-blur-xl
-                border
-                border-white/20
-              "
-            >
+export default function Activities() {
+  return (
+    <main className="overflow-hidden">
 
-              <span
-                className="
-                  w-2
-                  h-2
-                  rounded-full
-                  bg-[#F5A623]
-                  animate-pulse
-                "
-              />
+      {/* ============================================================
+          PAGE INTRODUCTION
+      ============================================================ */}
+      <section className="relative overflow-hidden bg-[#082D19]">
+        <div className="absolute inset-0">
+          <img
+            src={bird1}
+            alt="Bird watching in East Africa"
+            className="h-full w-full object-cover opacity-45"
+          />
 
-              <span
-                className="
-                  text-[10px]
-                  sm:text-xs
-                  uppercase
-                  tracking-[3px]
-                  font-bold
-                  text-white/80
-                "
-              >
-                Daffar Tours & Travel
-              </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#082D19] via-[#082D19]/90 to-[#082D19]/40" />
 
-            </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#082D19] via-transparent to-transparent" />
+        </div>
 
+        <div className="relative mx-auto flex min-h-[650px] max-w-7xl items-end px-5 pb-20 pt-36 sm:px-8 lg:min-h-[720px] lg:pb-28">
+          <div className="max-w-5xl">
+            <SectionLabel light>
+              Activities & Experiences
+            </SectionLabel>
 
-            <h1
-              className="
-                mt-5
-                text-4xl
-                sm:text-5xl
-                lg:text-6xl
-                font-serif
-                font-bold
-                leading-tight
-              "
-            >
-              Experiences Beyond
+            <h1 className="font-serif text-5xl font-semibold leading-[1.02] text-white sm:text-6xl lg:text-8xl">
+              Discover East Africa
               <span className="block text-[#F5A623]">
-                The Safari.
+                Beyond the Ordinary
               </span>
             </h1>
 
-
-            <p
-              className="
-                mt-5
-                max-w-2xl
-                text-sm
-                sm:text-base
-                text-white/75
-                leading-7
-              "
-            >
-              Discover the many ways to experience Africa —
-              from thrilling wildlife encounters and mountain
-              adventures to cultural experiences, photography
-              and relaxing beach escapes.
+            <p className="mt-8 max-w-4xl text-base leading-8 text-white/80 sm:text-lg">
+              Kenya and Tanzania aren’t just celebrated for their iconic
+              wildlife and landscapes, they’re also home to over 1,000
+              spectacular bird species, making them a true paradise for bird
+              lovers. Daffar Tours and Travel offers tailored bird-watching
+              safaris across East Africa’s finest national parks and reserves,
+              giving you a chance to explore the rich avian life this region
+              boasts.
             </p>
-
-
-            <div
-              className="
-                mt-7
-                flex
-                flex-col
-                sm:flex-row
-                gap-3
-              "
-            >
-
-              <Link
-                to="/contact"
-                className="
-                  inline-flex
-                  justify-center
-                  items-center
-                  px-7
-                  py-3.5
-                  rounded-full
-                  bg-[#F5A623]
-                  text-[#07351d]
-                  font-bold
-                  shadow-xl
-                  hover:-translate-y-1
-                  transition
-                "
-              >
-                Plan An Experience →
-              </Link>
-
-
-              <Link
-                to="/safaris"
-                className="
-                  inline-flex
-                  justify-center
-                  items-center
-                  px-7
-                  py-3.5
-                  rounded-full
-                  bg-white/10
-                  backdrop-blur-md
-                  border
-                  border-white/20
-                  text-white
-                  font-bold
-                  hover:bg-white
-                  hover:text-[#07351d]
-                  transition
-                "
-              >
-                Explore Safaris
-              </Link>
-
-            </div>
-
           </div>
-
         </div>
-
-
-        {/* SLIDER INDICATORS */}
-
-        <div
-          className="
-            absolute
-            bottom-7
-            right-6
-            sm:right-10
-            z-20
-            flex
-            gap-2
-          "
-        >
-
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveSlide(index)}
-              aria-label={`Show slide ${index + 1}`}
-              className={`
-                h-1.5
-                rounded-full
-                transition-all
-                duration-500
-                ${
-                  activeSlide === index
-                    ? "w-10 bg-[#F5A623]"
-                    : "w-2 bg-white/50"
-                }
-              `}
-            />
-          ))}
-
-        </div>
-
       </section>
 
 
-      {/* =====================================================
-          INTRODUCTION
-      ====================================================== */}
+      {/* ============================================================
+          WHY EAST AFRICA IS PERFECT FOR BIRDERS
+      ============================================================ */}
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32">
+        <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#F5A623]/10 blur-[140px]" />
 
-      <section className="py-20 lg:py-28">
-
-        <div
-          className="
-            max-w-7xl
-            mx-auto
-            px-5
-            sm:px-8
-            lg:px-12
-          "
-        >
-
-          <div
-            className="
-              grid
-              lg:grid-cols-2
-              gap-14
-              items-center
-            "
-          >
-
-            {/* TEXT */}
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
 
             <div>
+              <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623] shadow-xl">
+                <Bird size={30} />
+              </div>
 
-              <span
-                className="
-                  text-xs
-                  uppercase
-                  tracking-[3px]
-                  font-bold
-                  text-[#F5A623]
-                "
-              >
-                Discover Africa Differently
-              </span>
+              <SectionLabel>
+                Birding Experiences
+              </SectionLabel>
 
-
-              <h2
-                className="
-                  mt-4
-                  text-3xl
-                  sm:text-4xl
-                  lg:text-5xl
-                  font-serif
-                  font-bold
-                  text-[#0b4224]
-                  leading-tight
-                "
-              >
-                More Than A Destination.
+              <h2 className="font-serif text-4xl font-semibold leading-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+                Why East Africa is
                 <span className="block text-[#F5A623]">
-                  It's An Experience.
+                  Perfect for Birders
                 </span>
               </h2>
-
-
-              <p
-                className="
-                  mt-6
-                  text-gray-600
-                  leading-8
-                "
-              >
-                Africa is not experienced from a single viewpoint.
-                It is found in the roar of a lion, the silence of
-                a mountain trail, the rhythm of local communities,
-                the flight of a flamingo and the warm waters of the
-                Indian Ocean.
-              </p>
-
-
-              <p
-                className="
-                  mt-4
-                  text-gray-600
-                  leading-8
-                "
-              >
-                At Daffar Tours & Travel, we help you combine these
-                experiences into meaningful journeys that suit your
-                interests, time and travel style.
-              </p>
-
             </div>
 
+            <div>
+              <p className="text-lg leading-9 text-gray-600">
+                From lush forests and expansive wetlands to sweeping savannahs
+                and scenic coastal areas, the diversity of habitats attracts
+                both resident and migratory species. Whether you’re an
+                experienced birder or new to the hobby, Kenya and Tanzania
+                offer year-round opportunities to spot colorful and rare birds.
+              </p>
 
-            {/* IMAGE GRID */}
-
-            <div className="grid grid-cols-2 gap-4">
-
-              <div className="space-y-4">
-
-                <img
-                  src={amboseli}
-                  alt="Wildlife safari"
-                  className="
-                    w-full
-                    h-64
-                    object-cover
-                    rounded-[2rem]
-                    hover:scale-[1.03]
-                    transition
-                    duration-700
-                  "
-                />
-
-
-                <div
-                  className="
-                    rounded-[2rem]
-                    bg-[#0b4224]
-                    p-7
-                    text-white
-                  "
-                >
-
-                  <div
-                    className="
-                      text-4xl
-                      font-serif
-                      font-bold
-                      text-[#F5A623]
-                    "
-                  >
-                    01
-                  </div>
-
-                  <h3 className="mt-3 font-bold">
-                    Wildlife
+              <div className="mt-9 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-3xl bg-[#F8F6F1] p-6">
+                  <Bird className="text-[#F5A623]" size={24} />
+                  <h3 className="mt-4 font-serif text-xl font-semibold text-[#082D19]">
+                    Resident Species
                   </h3>
-
-                  <p className="mt-2 text-sm text-white/60 leading-6">
-                    Get closer to the wild.
-                  </p>
-
                 </div>
 
-              </div>
-
-
-              <div className="space-y-4 pt-10">
-
-                <div
-                  className="
-                    rounded-[2rem]
-                    bg-[#F7F5EE]
-                    p-7
-                  "
-                >
-
-                  <div
-                    className="
-                      text-4xl
-                      font-serif
-                      font-bold
-                      text-[#0b4224]
-                    "
-                  >
-                    02
-                  </div>
-
-                  <h3 className="mt-3 font-bold text-[#0b4224]">
-                    Adventure
+                <div className="rounded-3xl bg-[#F8F6F1] p-6">
+                  <Bird className="text-[#F5A623]" size={24} />
+                  <h3 className="mt-4 font-serif text-xl font-semibold text-[#082D19]">
+                    Migratory Species
                   </h3>
-
-                  <p className="mt-2 text-sm text-gray-500 leading-6">
-                    Push beyond the ordinary.
-                  </p>
-
                 </div>
 
+                <div className="rounded-3xl bg-[#F8F6F1] p-6">
+                  <Bird className="text-[#F5A623]" size={24} />
+                  <h3 className="mt-4 font-serif text-xl font-semibold text-[#082D19]">
+                    Diverse Habitats
+                  </h3>
+                </div>
+              </div>
+            </div>
 
-                <img
-                  src={climbingkili}
-                  alt="Mountain adventure"
-                  className="
-                    w-full
-                    h-64
-                    object-cover
-                    rounded-[2rem]
-                    hover:scale-[1.03]
-                    transition
-                    duration-700
-                  "
-                />
+          </div>
+        </div>
+      </section>
 
+
+      {/* ============================================================
+          TOP BIRDING DESTINATIONS
+      ============================================================ */}
+      <section className="bg-[#F8F6F1] py-20 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+
+          <div className="mb-14 max-w-3xl">
+            <SectionLabel>
+              Birding Destinations
+            </SectionLabel>
+
+            <h2 className="font-serif text-4xl font-semibold text-[#082D19] sm:text-5xl lg:text-6xl">
+              Top Birding Destinations
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+            <DestinationCard
+              image={nakuru}
+              title="Lake Nakuru National Park"
+            >
+              Famed for thousands of flamingos and species like the African
+              Fish Eagle.
+            </DestinationCard>
+
+            <DestinationCard
+              image={Wilderbeast}
+              title="Masai Mara National Reserve"
+            >
+              Spot Lilac-breasted Rollers and powerful Bateleur Eagles.
+            </DestinationCard>
+
+            <DestinationCard
+              image={serengeti}
+              title="Serengeti National Park"
+            >
+              Home to Grey Crowned Cranes and Martial Eagles.
+            </DestinationCard>
+
+            <DestinationCard
+              image={ngorongoro2}
+              title="Ngorongoro Conservation Area"
+            >
+              Discover unique birds like the Rufous-tailed Weaver.
+            </DestinationCard>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* ============================================================
+          WHY CHOOSE DAFFAR
+      ============================================================ */}
+      <section className="bg-white py-20 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+
+          <div className="mx-auto max-w-3xl text-center">
+            <SectionLabel>
+              Why Travel With Us
+            </SectionLabel>
+
+            <h2 className="font-serif text-4xl font-semibold text-[#082D19] sm:text-5xl">
+              Why Choose Daffar Tours and Travel
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+
+            <div className="rounded-[2rem] bg-[#F8F6F1] p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623]">
+                <Users size={25} />
               </div>
 
+              <h3 className="mt-7 font-serif text-2xl font-semibold text-[#082D19]">
+                Expert Guides
+              </h3>
+
+              <p className="mt-4 leading-7 text-gray-600">
+                Passionate professionals ready to help you identify and
+                photograph countless species.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-[#F8F6F1] p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623]">
+                <Compass size={25} />
+              </div>
+
+              <h3 className="mt-7 font-serif text-2xl font-semibold text-[#082D19]">
+                Customized Itineraries
+              </h3>
+
+              <p className="mt-4 leading-7 text-gray-600">
+                Focus on your favorite species or combine birding with classic
+                safaris.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-[#F8F6F1] p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623]">
+                <Camera size={25} />
+              </div>
+
+              <h3 className="mt-7 font-serif text-2xl font-semibold text-[#082D19]">
+                Diverse Locations
+              </h3>
+
+              <p className="mt-4 leading-7 text-gray-600">
+                Access to prime birding spots in both Kenya and Tanzania.
+              </p>
             </div>
 
           </div>
 
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          ACTIVITIES
-      ====================================================== */}
-
-      <section className="py-20 lg:py-28 bg-[#F7F5EE]">
-
-        <div
-          className="
-            max-w-7xl
-            mx-auto
-            px-5
-            sm:px-8
-            lg:px-12
-          "
-        >
-
-          <div className="max-w-3xl">
-
-            <span
-              className="
-                text-xs
-                uppercase
-                tracking-[3px]
-                font-bold
-                text-[#F5A623]
-              "
-            >
-              Explore Activities
-            </span>
-
-
-            <h2
-              className="
-                mt-4
-                text-3xl
-                sm:text-4xl
-                lg:text-5xl
-                font-serif
-                font-bold
-                text-[#0b4224]
-              "
-            >
-              Find Your
-              <span className="text-[#F5A623]">
-                {" "}Perfect Experience.
-              </span>
-            </h2>
-
-
-            <p className="mt-5 text-gray-600 leading-7">
-              Choose an activity or combine several experiences
-              to create a journey that is uniquely yours.
+          <div className="mx-auto mt-14 max-w-4xl text-center">
+            <p className="text-lg leading-9 text-gray-600">
+              With Daffar Tours and Travel, every bird-watching safari becomes
+              a journey into East Africa’s vibrant birdlife. Capture
+              breathtaking moments, learn from knowledgeable guides, and
+              immerse yourself in nature’s beauty.
             </p>
-
-          </div>
-
-
-          {/* FILTERS */}
-
-          <div
-            className="
-              mt-10
-              flex
-              gap-2
-              overflow-x-auto
-              pb-3
-              scrollbar-hide
-            "
-          >
-
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`
-                  flex-shrink-0
-                  px-5
-                  py-2.5
-                  rounded-full
-                  text-sm
-                  font-bold
-                  transition-all
-                  ${
-                    activeCategory === category
-                      ? "bg-[#0b4224] text-white shadow-lg"
-                      : "bg-white text-gray-600 border border-gray-200 hover:border-[#0b4224] hover:text-[#0b4224]"
-                  }
-                `}
-              >
-                {category}
-              </button>
-            ))}
-
-          </div>
-
-
-          {/* ACTIVITY GRID */}
-
-          <div
-            className="
-              grid
-              sm:grid-cols-2
-              lg:grid-cols-3
-              gap-6
-              mt-8
-            "
-          >
-
-            {filteredActivities.map((activity, index) => (
-              <ActivityCard
-                key={activity.title}
-                activity={activity}
-                index={index}
-              />
-            ))}
-
           </div>
 
         </div>
-
       </section>
 
 
-      {/* =====================================================
-          CUSTOM EXPERIENCES
-      ====================================================== */}
+      {/* ============================================================
+          BIRDING CTA
+      ============================================================ */}
+      <section className="bg-[#082D19] py-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-7 px-5 text-center sm:px-8 lg:flex-row lg:text-left">
 
-      <section className="py-20 lg:py-28">
-
-        <div
-          className="
-            max-w-7xl
-            mx-auto
-            px-5
-            sm:px-8
-            lg:px-12
-          "
-        >
-
-          <div
-            className="
-              relative
-              overflow-hidden
-              rounded-[2rem]
-              min-h-[430px]
-            "
-          >
-
-            <img
-              src={serengeti}
-              alt="African safari experience"
-              className="
-                absolute
-                inset-0
-                w-full
-                h-full
-                object-cover
-              "
-            />
-
-            <div className="absolute inset-0 bg-black/60" />
-
-            <div
-              className="
-                absolute
-                inset-0
-                bg-gradient-to-r
-                from-[#062d1a]/90
-                via-black/50
-                to-transparent
-              "
-            />
-
-
-            <div
-              className="
-                relative
-                z-10
-                min-h-[430px]
-                flex
-                items-center
-                px-7
-                sm:px-12
-                lg:px-16
-              "
-            >
-
-              <div className="max-w-2xl text-white">
-
-                <span
-                  className="
-                    text-xs
-                    uppercase
-                    tracking-[3px]
-                    font-bold
-                    text-[#F5A623]
-                  "
-                >
-                  Your Journey, Your Way
-                </span>
-
-
-                <h2
-                  className="
-                    mt-4
-                    text-3xl
-                    sm:text-4xl
-                    lg:text-5xl
-                    font-serif
-                    font-bold
-                  "
-                >
-                  Can't Find Exactly
-                  <span className="text-[#F5A623]">
-                    {" "}What You're Looking For?
-                  </span>
-                </h2>
-
-
-                <p
-                  className="
-                    mt-5
-                    text-white/70
-                    leading-8
-                  "
-                >
-                  Activities can be combined and adapted to create
-                  a private journey around your interests. Tell us
-                  what you want to experience and we will help build
-                  the right itinerary.
-                </p>
-
-
-                <Link
-                  to="/contact"
-                  className="
-                    inline-flex
-                    mt-7
-                    px-7
-                    py-3.5
-                    rounded-full
-                    bg-[#F5A623]
-                    text-[#07351d]
-                    font-bold
-                    hover:-translate-y-1
-                    transition
-                  "
-                >
-                  Create My Experience →
-                </Link>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          PLANNING PROCESS
-      ====================================================== */}
-
-      <section className="py-20 lg:py-28 bg-[#082d19]">
-
-        <div
-          className="
-            max-w-7xl
-            mx-auto
-            px-5
-            sm:px-8
-            lg:px-12
-          "
-        >
-
-          <div className="text-center max-w-3xl mx-auto">
-
-            <span
-              className="
-                text-xs
-                uppercase
-                tracking-[3px]
-                font-bold
-                text-[#F5A623]
-              "
-            >
-              Simple Planning
-            </span>
-
-
-            <h2
-              className="
-                mt-4
-                text-3xl
-                sm:text-4xl
-                lg:text-5xl
-                font-serif
-                font-bold
-                text-white
-              "
-            >
-              Your Experience
-              <span className="text-[#F5A623]">
-                {" "}Starts Here.
-              </span>
-            </h2>
-
-          </div>
-
-
-          <div
-            className="
-              grid
-              md:grid-cols-3
-              gap-6
-              mt-14
-            "
-          >
-
-            <ProcessCard
-              number="01"
-              title="Choose Your Activities"
-              text="Tell us which experiences interest you and what you would like to discover."
-            />
-
-            <ProcessCard
-              number="02"
-              title="Build Your Journey"
-              text="We combine your preferred activities with destinations and accommodation."
-            />
-
-            <ProcessCard
-              number="03"
-              title="Enjoy Africa"
-              text="Travel with confidence knowing your experience has been carefully planned."
-            />
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          FINAL CTA
-      ====================================================== */}
-
-      <section
-        className="
-          px-5
-          sm:px-8
-          lg:px-12
-          py-20
-          lg:py-28
-        "
-      >
-
-        <div className="max-w-7xl mx-auto text-center">
-
-          <span
-            className="
-              text-xs
-              uppercase
-              tracking-[3px]
-              font-bold
-              text-[#F5A623]
-            "
-          >
-            Start Exploring
-          </span>
-
-
-          <h2
-            className="
-              mt-4
-              text-3xl
-              sm:text-4xl
-              lg:text-5xl
-              font-serif
-              font-bold
-              text-[#0b4224]
-            "
-          >
-            What Will Your
-            <span className="text-[#F5A623]">
-              {" "}African Story
-            </span>
-            Be?
+          <h2 className="max-w-3xl font-serif text-3xl font-semibold text-white sm:text-4xl">
+            Book your birding adventure today and experience the magic of East
+            Africa from a new perspective!
           </h2>
 
-
-          <p
-            className="
-              mt-5
-              max-w-2xl
-              mx-auto
-              text-gray-600
-              leading-7
-            "
+          <Link
+            to="/contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#F5A623] px-8 py-4 font-bold text-[#082D19] transition hover:-translate-y-1 hover:bg-[#ffb83e]"
           >
-            Tell us what you want to experience and let Daffar
-            Tours & Travel create a journey around you.
+            Book Your Adventure
+            <ArrowRight size={18} />
+          </Link>
+
+        </div>
+      </section>
+
+
+      {/* ============================================================
+          CULTURAL TRIPS
+      ============================================================ */}
+      <section className="bg-[#F8F6F1] py-20 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+
+          <div className="mb-14 max-w-4xl">
+            <SectionLabel>
+              Cultural Experiences
+            </SectionLabel>
+
+            <h2 className="font-serif text-4xl font-semibold leading-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+              Cultural Trips
+            </h2>
+
+            <p className="mt-5 font-serif text-2xl leading-relaxed text-[#F5A623] sm:text-3xl">
+              Discover East Africa’s Living Cultures: Beyond Wildlife and
+              Landscapes!
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-3">
+
+            {/* Samburu */}
+            <article className="overflow-hidden rounded-[2.5rem] bg-white shadow-sm">
+              <div className="h-[300px] overflow-hidden">
+                <img
+                  src={samburu}
+                  alt="Samburu cultural experience"
+                  className="h-full w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
+
+              <div className="p-8">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623]">
+                  <Users size={22} />
+                </div>
+
+                <h3 className="font-serif text-2xl font-semibold text-[#082D19]">
+                  Samburu Villages
+                </h3>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  Step into the heart of Samburu culture, where resilience and
+                  tradition come alive in Kenya’s remote north. Visits to
+                  Samburu manyattas reveal daily life shaped by semi-nomadic
+                  herding, intricate beadwork, and age-old ceremonies. Guests
+                  learn how each color, dance, and adornment tells a story
+                  passed through generations. It’s more than a tour, it’s a
+                  chance to connect with a proud community that thrives in
+                  harmony with its arid landscape.
+                </p>
+              </div>
+            </article>
+
+
+            {/* Maasai */}
+            <article className="overflow-hidden rounded-[2.5rem] bg-white shadow-sm">
+              <div className="h-[300px] overflow-hidden">
+                <img
+                  src={maasai}
+                  alt="Maasai cultural experience"
+                  className="h-full w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
+
+              <div className="p-8">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623]">
+                  <Users size={22} />
+                </div>
+
+                <h3 className="font-serif text-2xl font-semibold text-[#082D19]">
+                  Maasai Villages in Kenya and Tanzania
+                </h3>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  Experience Maasai life set against the sweeping plains of
+                  Kenya’s Masai Mara or Tanzania’s Serengeti and Ngorongoro.
+                  Here, cattle remain central to culture and identity. Visitors
+                  are welcomed warmly into traditional mud-walled homes, watch
+                  rhythmic dances and hear songs celebrating life’s milestones.
+                  Learn the meaning behind vivid shukas, handcrafted beadwork,
+                  and warrior traditions. Across borders, the Maasai’s
+                  dedication to preserving heritage and storytelling offers an
+                  authentic glimpse into a world both timeless and vibrant.
+                </p>
+              </div>
+            </article>
+
+
+            {/* Tanzania */}
+            <article className="overflow-hidden rounded-[2.5rem] bg-white shadow-sm">
+              <div className="h-[300px] overflow-hidden">
+                <img
+                  src={tanzania1}
+                  alt="Tanzanian village cultural experience"
+                  className="h-full w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
+
+              <div className="p-8">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#082D19] text-[#F5A623]">
+                  <Users size={22} />
+                </div>
+
+                <h3 className="font-serif text-2xl font-semibold text-[#082D19]">
+                  Tanzanian Villages
+                </h3>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  In northern Tanzania, cultural visits deepen the journey.
+                  Walk with the Hadzabe, among the last hunter-gatherers, whose
+                  knowledge of tracking, foraging, and ancient survival skills
+                  remains unchanged. Nearby, the Datoga blacksmiths showcase
+                  ancestral metalwork techniques, crafting tools and jewelry by
+                  hand while sharing stories of their pastoral roots. At Daffar
+                  Tours and Travel, cultural visits are designed as respectful
+                  exchanges rather than staged shows. These encounters invite
+                  travelers to listen, learn, and discover living traditions
+                  that add depth and humanity to every safari, turning an
+                  African journey into a richer, shared story.
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* ============================================================
+          NGORONGORO CRATER
+      ============================================================ */}
+      <EditorialSection
+        number="03"
+        label="Tanzania • Wildlife"
+        title="Experience the Magic of Descending into Ngorongoro Crater"
+        image={ngorongoro2}
+        imageAlt="Ngorongoro crater safari experience"
+        reverse
+        dark
+      >
+        <p>
+          Picture the moment your safari vehicle begins its descent into the
+          world’s largest intact volcanic caldera, revealing an ancient
+          landscape unlike anywhere else on earth. At nearly 2,000 feet deep
+          and spanning over 260 square kilometers, the Ngorongoro Crater is a
+          living Eden where Africa’s densest concentration of wildlife roams
+          freely against a dramatic backdrop of steep, forested walls.
+        </p>
+
+        <p>
+          As you wind down the misty slopes at sunrise, the view opens into a
+          hidden world: shimmering soda lakes dotted with flamingos, open
+          plains where lions lounge under acacia trees, and swamps that attract
+          elephants and hippos. The crater is also one of the few places in
+          East Africa where you may encounter the elusive black rhino grazing
+          peacefully in the morning light.
+        </p>
+
+        <p>
+          At Daffar Tours and Travel, we believe descending into Ngorongoro is
+          more than a safari stop; it’s an unforgettable moment where nature
+          feels close enough to touch. Experience the thrill of tracking
+          wildlife across this rich ecosystem, listen to the chorus of birds
+          echoing off crater walls, and feel the quiet magic of being
+          surrounded by one of Africa’s greatest natural wonders.
+        </p>
+
+        <p className="font-semibold text-white">
+          Let us guide you into the heart of this breathtaking caldera, where
+          every view tells a story and every turn invites awe!
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          GUIDED GAME DRIVES
+      ============================================================ */}
+      <EditorialSection
+        number="04"
+        label="Nature • Exploration"
+        title="Guided Game Drives"
+        image={amboseli}
+        imageAlt="Safari experience in East Africa"
+      >
+        <h3 className="font-serif text-3xl font-semibold text-[#082D19]">
+          Step into the Wild: Guided Nature Walks Across East Africa
+        </h3>
+
+        <p>
+          Step beyond the safari vehicle and feel Africa come alive under your
+          feet with Daffar Tours and Travel guided nature walks. Led by expert
+          naturalists and local guides, these walks invite you to slow down and
+          see the wild from an entirely new perspective, close enough to hear
+          the rustle of hidden creatures, trace animal tracks in the dust, and
+          breathe in the earthy scent of acacia and wild sage.
+        </p>
+
+        <p>
+          Venture into landscapes where every step reveals something
+          extraordinary: ancient baobabs towering against the sky, colorful
+          butterflies dancing through sunlit clearings, and secret watering
+          holes where zebra and antelope pause to drink. Listen as your guide
+          unravels the bush’s quiet language, from medicinal plants used by
+          local communities to the subtle signs of nearby elephants.
+        </p>
+
+        <p>
+          Whether you’re exploring the grassy plains of the Masai Mara, the
+          forested slopes near Mt. Kenya, or the volcanic ridges bordering
+          Ngorongoro, our guided walks are crafted to bring you closer to
+          Africa’s raw, untamed beauty. Along the way, discover hidden worlds
+          often missed on traditional game drives, from tiny insects with
+          dazzling colors to birds whose calls fill the morning air.
+        </p>
+
+        <p>
+          More than a walk, it’s a journey of connection: to nature, to local
+          cultures whose lives are intertwined with the land, and to your own
+          sense of wonder. Feel the rhythm of the wild, embrace the unexpected,
+          and take home stories few travelers ever experience.
+        </p>
+
+        <p className="font-semibold text-[#082D19]">
+          Explore East Africa on foot with Daffar Tours and Travel, where every
+          path leads to discovery.
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          GUIDED NATURE WALKS
+      ============================================================ */}
+      <EditorialSection
+        number="05"
+        label="On Foot • Nature"
+        title="Guided Nature Walks"
+        image={meru}
+        imageAlt="Guided nature walks in East Africa"
+        reverse
+        dark
+      >
+        <p>
+          Guided Nature Walks with Daffar Tours and Travel offer more than just
+          a walk, they invite you into the quiet heartbeat of East Africa’s
+          wilderness. Led by our knowledgeable local guides, these immersive
+          walks take you beyond the usual game drive, letting you explore
+          hidden trails, ancient woodlands, and open savannahs alive with life.
+          Discover medicinal plants whispered about in local folklore, spot
+          colorful birds flitting through the canopy, and follow the fresh
+          tracks of zebra, antelope, or even elephants that passed by at dawn.
+        </p>
+
+        <p>
+          Every step reveals a new story: the delicate architecture of a
+          weaverbird’s nest, the scent of wild herbs warming under the sun, and
+          the ripple of grass as small creatures dart away unseen. Along the
+          way, your guide will share fascinating insights into the region’s
+          flora, fauna, and the delicate balance that sustains these
+          ecosystems.
+        </p>
+
+        <p>
+          With Daffar Tours and Travel, guided nature walks aren’t just about
+          seeing, they’re about feeling connected: to the land, its wildlife,
+          and the rich cultural heritage woven through every landscape. Slow
+          down, breathe in the fresh morning air, and rediscover the wonder of
+          the wild, step by step.
+        </p>
+
+        <p className="font-semibold text-white">
+          Let Daffar Tours and Travel take you off the beaten path, where every
+          walk becomes a journey of discovery and every moment brings East
+          Africa’s hidden magic to life.
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          HIKING AND NATURE WALKS
+      ============================================================ */}
+      <EditorialSection
+        number="06"
+        label="Adventure • Hiking"
+        title="Hiking and Nature Walks"
+        image={climbinglongonot}
+        imageAlt="Hiking and nature walks in Kenya"
+      >
+        <p>
+          With Daffar Tours and Travel, every trail becomes a journey into East
+          Africa’s hidden wonders. Imagine walking beneath ancient forest
+          canopies, climbing volcanic ridges for sunrise views, or wandering
+          through savannah paths where wildlife roams free. Our carefully
+          crafted hikes and nature walks immerse you in landscapes that change
+          with every step. In Kenya, explore the mist-shrouded Aberdares, famous
+          for secret waterfalls like Karuru Falls and dense forests alive with
+          colorful birds and gentle giants like elephants and buffalo. Feel the
+          thrill of adventure at Hell’s Gate National Park, where narrow
+          gorges, towering cliffs, and bubbling geothermal springs create a
+          backdrop unlike anywhere else. For panoramic views, the breezy ridges
+          of Ngong Hills reveal endless horizons stretching over the Great Rift
+          Valley.
+        </p>
+
+        <p>
+          Further south, Tanzania’s crown jewel, Mount Kilimanjaro, invites
+          hikers to trek through rainforest, alpine moorland, and finally to icy
+          peaks. Beyond Kilimanjaro, hidden gems like Mount Meru and the
+          Usambara Mountains promise equally stunning trails wrapped in rich
+          biodiversity. Uganda tempts explorers to wander ancient jungle paths
+          in Bwindi, where every rustling leaf could mean a glimpse of unique
+          wildlife. And Rwanda’s iconic Volcanoes National Park offers hikes up
+          dramatic volcanic cones, where lush slopes overlook valleys draped in
+          morning mist.
+        </p>
+
+        <p>
+          At Daffar Tours and Travel, we believe every walk should awaken
+          wonder; whether it’s a short, family-friendly trail or a challenging
+          ascent. Step off the road, slow your pace, and let Africa’s raw
+          landscapes, wildlife, and living history unfold around you.
+        </p>
+
+        <p className="font-semibold text-[#082D19]">
+          Journey with us, and let each trail reveal the soul of East Africa!
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          BABOON CLIFF
+      ============================================================ */}
+      <EditorialSection
+        number="07"
+        label="Lake Nakuru • Hiking"
+        title="Hiking at Baboon Cliff"
+        image={gorilla}
+        imageAlt="Baboon Cliff hiking experience"
+        reverse
+        dark
+      >
+        <p>
+          Hiking to Baboon Cliff with Daffar Tours and Travel invites you to
+          discover one of Lake Nakuru National Park’s most captivating
+          viewpoints. This guided walk gently leads you up rocky trails
+          surrounded by acacia trees and sweeping savannah, where every step
+          reveals something new, from playful baboons and grazing antelope to
+          colorful birdlife resting along the way. At the summit, you’re
+          rewarded with a breathtaking panorama of the shimmering lake below,
+          famous for its flamingo-dotted shoreline and the endless tapestry of
+          woodlands stretching to the horizon.
+        </p>
+
+        <p>
+          More than just a climb, this experience lets you slow down and truly
+          connect with nature: pause to listen to the calls of African fish
+          eagles echoing across the water, breathe in the fresh highland air,
+          and capture stunning photographs from a vantage point few travelers
+          ever see this intimately.
+        </p>
+
+        <p>
+          Ideal for nature lovers and photographers alike, hiking Baboon Cliff
+          blends gentle adventure with unforgettable scenery, making it a
+          perfect addition to any Lake Nakuru safari. With Daffar Tours and
+          Travel, you’re not just hiking; you’re stepping into a living
+          landscape where every view tells a story and every moment feels wild
+          and alive.
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          HOT AIR BALLOON SAFARIS
+          EXACT CONTENT SUPPLIED
+      ============================================================ */}
+      <EditorialSection
+        number="08"
+        label="Hot Air Balloon Safaris"
+        title="Hot Air Balloon Safaris"
+        image={mara3}
+        imageAlt="Hot air balloon safari"
+      >
+        <p>
+          This guided walk gently leads you up rocky trails surrounded by
+          acacia trees and sweeping savannah, where every step reveals
+          something new, from playful baboons and grazing antelope to colorful
+          birdlife resting along the way. At the summit, you’re rewarded with a
+          breathtaking panorama of the shimmering lake below, famous for its
+          flamingo-dotted shoreline and the endless tapestry of woodlands
+          stretching to the horizon.
+        </p>
+
+        <p>
+          More than just a climb, this experience lets you slow down and truly
+          connect with nature: pause to listen to the calls of African fish
+          eagles echoing across the water, breathe in the fresh highland air,
+          and capture stunning photographs from a vantage point few travelers
+          ever see this intimately.
+        </p>
+
+        <p>
+          Ideal for nature lovers and photographers alike, hiking Baboon Cliff
+          blends gentle adventure with unforgettable scenery, making it a
+          perfect addition to any Lake Nakuru safari. With Daffar Tours and
+          Travel, you’re not just hiking; you’re stepping into a living
+          landscape where every view tells a story and every moment feels wild
+          and alive.
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          MOUNTAIN CLIMBING
+      ============================================================ */}
+      <section className="relative overflow-hidden bg-[#082D19] py-20 text-white sm:py-24 lg:py-32">
+
+        <div className="pointer-events-none absolute -right-40 top-0 h-[600px] w-[600px] rounded-full bg-[#F5A623]/10 blur-[150px]" />
+
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+          <div className="max-w-5xl">
+            <SectionLabel light>
+              Mountain Adventures
+            </SectionLabel>
+
+            <h2 className="font-serif text-4xl font-semibold sm:text-5xl lg:text-6xl">
+              Mountain Climbing
+            </h2>
+
+            <p className="mt-8 text-lg leading-9 text-white/75">
+              East Africa calls out to adventurers with its legendary peaks,
+              each offering breathtaking scenery, rich biodiversity, and moments
+              of triumph you’ll remember for a lifetime. At Daffar Tours and
+              Travel, we craft mountain climbing experiences in Kenya, Tanzania,
+              and Uganda that go beyond the summit to immerse you in the soul of
+              Africa’s mountains. In Kenya, Mount Kenya rises to 5,199 meters,
+              captivating climbers with its rugged ridges, hidden glaciers, and
+              distinct peaks: Batian, Nelion, and the more accessible Point
+              Lenana. Ascend through misty bamboo forests and alpine meadows
+              alive with unique flora and birdlife, and stand above the clouds
+              with panoramic views of the plains below. Popular routes like
+              Sirimon and Chogoria combine adventure with stunning landscapes.
+            </p>
+          </div>
+
+
+          {/* MOUNT KENYA */}
+          <div className="mt-16 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+
+            <div className="overflow-hidden rounded-[2.5rem]">
+              <img
+                src={climbingkenya}
+                alt="Mount Kenya climbing"
+                className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
+
+            <div>
+              <div className="mb-5 flex items-center gap-3 text-[#F5A623]">
+                <Mountain size={25} />
+                <span className="text-sm font-bold uppercase tracking-[0.25em]">
+                  Kenya
+                </span>
+              </div>
+
+              <h3 className="font-serif text-4xl font-semibold">
+                Mount Kenya
+              </h3>
+
+              <p className="mt-6 text-base leading-8 text-white/70">
+                In Kenya, Mount Kenya rises to 5,199 meters, captivating
+                climbers with its rugged ridges, hidden glaciers, and distinct
+                peaks: Batian, Nelion, and the more accessible Point Lenana.
+                Ascend through misty bamboo forests and alpine meadows alive
+                with unique flora and birdlife, and stand above the clouds with
+                panoramic views of the plains below. Popular routes like Sirimon
+                and Chogoria combine adventure with stunning landscapes.
+              </p>
+            </div>
+
+          </div>
+
+
+          {/* KILIMANJARO */}
+          <div className="mt-20 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+
+            <div className="overflow-hidden rounded-[2.5rem] lg:order-2">
+              <img
+                src={climbingkili}
+                alt="Mount Kilimanjaro climbing"
+                className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
+
+            <div className="lg:order-1">
+              <div className="mb-5 flex items-center gap-3 text-[#F5A623]">
+                <Mountain size={25} />
+                <span className="text-sm font-bold uppercase tracking-[0.25em]">
+                  Tanzania
+                </span>
+              </div>
+
+              <h3 className="font-serif text-4xl font-semibold">
+                Mount Kilimanjaro
+              </h3>
+
+              <p className="mt-6 text-base leading-8 text-white/70">
+                Tanzania’s Mount Kilimanjaro, Africa’s highest peak at 5,895
+                meters, offers a bucket-list climb through ever-changing
+                ecological zones — from tropical rainforests and giant heather
+                moorlands to snow-capped summit glaciers. Whether you choose
+                the scenic Machame Route or the gentler Marangu Route, every
+                step brings new vistas and the unforgettable moment of sunrise
+                at Uhuru Peak.
+              </p>
+            </div>
+
+          </div>
+
+
+          {/* RWENZORI & ELGON */}
+          <div className="mt-20 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+
+            <div className="overflow-hidden rounded-[2.5rem]">
+              <img
+                src={meru}
+                alt="East African mountain adventure"
+                className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
+
+            <div>
+              <div className="mb-5 flex items-center gap-3 text-[#F5A623]">
+                <Mountain size={25} />
+                <span className="text-sm font-bold uppercase tracking-[0.25em]">
+                  Uganda
+                </span>
+              </div>
+
+              <h3 className="font-serif text-4xl font-semibold">
+                Rwenzori Mountains & Mount Elgon
+              </h3>
+
+              <p className="mt-6 text-base leading-8 text-white/70">
+                In Uganda, the wild and lesser-known Rwenzori Mountains await.
+                Nicknamed the “Mountains of the Moon,” these mist-shrouded
+                peaks feature dramatic glaciers, rare giant lobelias, and
+                otherworldly landscapes. For a gentler adventure, Mount Elgon
+                rewards climbers with ancient calderas, waterfalls, and lush
+                forest trails teeming with wildlife. At Daffar Tours and Travel,
+                we believe climbing is more than reaching a summit; it’s about
+                the journey, the landscapes you cross, and the memories you
+                create. Embark on your next great adventure with us.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ============================================================
+          WALKING SAFARIS
+      ============================================================ */}
+      <EditorialSection
+        number="10"
+        label="Walking Safaris"
+        title="Walking Safaris"
+        image={climbingkenya}
+        imageAlt="Walking safari in East Africa"
+      >
+        <p>
+          Step off the beaten track and discover Africa on foot with Daffar
+          Tours and Travel. Our walking safaris invite you to slow down, tune
+          in, and feel the pulse of the wilderness around you, guided by
+          skilled trackers and passionate naturalists who know every trail,
+          scent, and hidden path. Imagine tracing animal footprints across open
+          plains, pausing to watch elephants grazing silently ahead, or
+          catching the flicker of a kudu disappearing into the brush. Feel the
+          sun on your shoulders, listen to birdsong overhead, and breathe in
+          the earthy scent of the savannah as every sense awakens.
+        </p>
+
+        <p>
+          Unlike a game drive, walking safaris bring you eye-to-eye with
+          Africa’s smaller wonders too including colorful insects, medicinal
+          plants, and animal tracks that tell the untold stories of the wild.
+          Whether you’re crossing golden grasslands, winding through acacia
+          woodlands, or strolling along seasonal riverbeds, each step deepens
+          your connection to nature.
+        </p>
+
+        <p>
+          At Daffar Tours and Travel, we craft these journeys to balance safety,
+          learning, and excitement, turning a simple walk into an unforgettable
+          exploration of East Africa’s raw beauty. Discover Africa’s soul, one
+          step at a time.
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          WATER SPORTS AND FISHING
+          EXACT CONTENT SUPPLIED
+      ============================================================ */}
+      <EditorialSection
+        number="11"
+        label="Water Sports & Fishing"
+        title="Water Sports and Fishing"
+        image={diani1}
+        imageAlt="Water sports and fishing in East Africa"
+        reverse
+        dark
+      >
+        <p>
+          Step beyond the safari vehicle and explore East Africa’s untamed
+          beauty on foot with Daffar Tours and Travel. Our walking safaris
+          promise an intimate journey into the heart of nature, guided by
+          seasoned trackers who know every whisper of the wind and rustle of
+          the grass. Feel the thrill of tracing animal tracks across open
+          plains, wander through ancient woodlands alive with birdsong, and
+          pause by hidden watering holes where wildlife comes to drink.
+        </p>
+
+        <p>
+          Unlike a traditional game drive, these treks offer a closer
+          connection to Africa’s small wonders: colorful butterflies, medicinal
+          plants, and fresh animal tracks that tell stories of the night before.
+          Whether you’re strolling along sunlit savannahs or exploring rugged
+          riverbanks, each walk is tailored to awaken your senses and deepen
+          your appreciation of the wild.
+        </p>
+
+        <p>
+          Your guide’s knowledge transforms every step into discovery, sharing
+          insights about local flora, animal behavior, and the delicate balance
+          that sustains these ecosystems. Ideal for travelers seeking more than
+          just sightseeing, our walking safaris blend adventure, learning, and
+          peaceful reflection, capturing the true spirit of East Africa, one
+          unforgettable step at a time. Discover nature up close, and let the
+          wilderness tell its story through your footsteps.
+        </p>
+      </EditorialSection>
+
+
+      {/* ============================================================
+          FINAL CTA
+      ============================================================ */}
+      <section className="relative overflow-hidden bg-[#F5A623] py-20 sm:py-24 lg:py-28">
+
+        <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-white/20 blur-3xl" />
+
+        <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[#082D19]/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
+
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#082D19] text-[#F5A623]">
+            <Footprints size={27} />
+          </div>
+
+          <h2 className="mt-7 font-serif text-4xl font-semibold leading-tight text-[#082D19] sm:text-5xl lg:text-6xl">
+            Explore East Africa
+            <span className="block">
+              Your Way.
+            </span>
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#082D19]/70">
+            From birding and cultural encounters to mountain adventures,
+            walking safaris and unforgettable experiences across East Africa,
+            Daffar Tours and Travel is ready to create your journey.
           </p>
 
-
-          <div
-            className="
-              mt-8
-              flex
-              flex-col
-              sm:flex-row
-              justify-center
-              gap-3
-            "
-          >
+          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
 
             <Link
               to="/contact"
-              className="
-                px-8
-                py-4
-                rounded-full
-                bg-[#0b4224]
-                text-white
-                font-bold
-                shadow-xl
-                hover:-translate-y-1
-                transition
-              "
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#082D19] px-8 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-[#0d4226]"
             >
-              Plan My Experience →
+              Plan Your Journey
+              <ArrowRight size={18} />
             </Link>
 
-
             <a
-              href="https://wa.me/+254708164662"
+              href={WHATSAPP_LINK}
               target="_blank"
-              rel="noopener noreferrer"
-              className="
-                px-8
-                py-4
-                rounded-full
-                border
-                border-[#0b4224]/20
-                text-[#0b4224]
-                font-bold
-                hover:bg-[#0b4224]
-                hover:text-white
-                transition
-              "
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#082D19]/20 px-8 py-4 font-bold text-[#082D19] transition hover:bg-white/30"
             >
               WhatsApp Us
             </a>
@@ -1348,393 +1094,318 @@ function Activities() {
           </div>
 
         </div>
-
       </section>
 
+      {/* ============================================================
+          FOOTER
+      ============================================================ */}
+      <footer className="relative overflow-hidden bg-[#082D19] text-white">
 
-      {/* =====================================================
-          ACCESSIBLE REDUCED MOTION
-      ====================================================== */}
+        <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#F5A623]/5 blur-3xl" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
 
-      <style>
-        {`
-          @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-              animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important;
-              scroll-behavior: auto !important;
-            }
-          }
-        `}
-      </style>
-<footer className="overflow-hidden bg-[#082D19] text-white">
+        <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
 
-  <div className="relative mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-14 lg:px-12">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
-    {/* Decorative background */}
-    <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#F39A08]/10 blur-3xl" />
+            {/* BRAND */}
+            <div>
+              <Link to="/" className="inline-block">
+                <div className="font-serif text-3xl font-semibold">
+                  Daffar
+                </div>
 
-    <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-emerald-400/5 blur-3xl" />
+                <div className="text-xs font-bold uppercase tracking-[3px] text-[#F5A623]">
+                  Tours & Travel
+                </div>
+              </Link>
 
-    <div className="relative z-10">
+              <p className="mt-6 max-w-sm text-sm leading-7 text-white/50">
+                Creating meaningful African journeys through authentic
+                experiences, thoughtful planning and exceptional service.
+              </p>
 
-      {/* FOOTER CONTENT */}
-      <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-10 sm:grid-cols-2 lg:grid-cols-4">
-
-        {/* BRAND */}
-        <div className="lg:col-span-1">
-
-          <Link to="/" className="inline-block group">
-
-            <h2 className="font-serif text-3xl font-bold text-white transition-colors group-hover:text-[#F39A08]">
-              Daffar
-            </h2>
-
-            <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.35em] text-[#F39A08]">
-              Tours & Travel
-            </p>
-
-          </Link>
-
-          <p className="mt-5 max-w-sm text-sm leading-6 text-white/55">
-            Discover Africa through unforgettable safari adventures,
-            authentic cultural experiences and breathtaking landscapes.
-          </p>
-
-          {/* SOCIAL */}
-<div className="mt-6 flex items-center gap-2.5">
-
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/dafartoursandtravel"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
-  >
-    <svg
-      viewBox="0 0 24 24"
-      className="h-4 w-4 fill-current"
-      aria-hidden="true"
-    >
-      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
-    </svg>
-  </a>
-
-
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/dafartoursandtravel"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#833AB4] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#E1306C]/30"
-  >
-    <svg
-      viewBox="0 0 24 24"
-      className="h-[18px] w-[18px] fill-none stroke-current"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle
-        cx="17.5"
-        cy="6.5"
-        r="1"
-        className="fill-current stroke-none"
-      />
-    </svg>
-  </a>
-
-
-  {/* TikTok */}
-  <a
-    href="https://www.tiktok.com/@dafartoursandtravel"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="TikTok"
-    className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-black/30"
-  >
-    <svg
-      viewBox="0 0 24 24"
-      className="h-[17px] w-[17px] fill-current"
-      aria-hidden="true"
-    >
-      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
-    </svg>
-  </a>
-
-
-  {/* YouTube */}
-  <a
-    href="https://www.youtube.com/@dafartoursandtravel"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="YouTube"
-    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FF0000] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#FF0000]/30"
-  >
-    <svg
-      viewBox="0 0 24 24"
-      className="h-4 w-4 fill-current"
-      aria-hidden="true"
-    >
-      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.9V8.1l6.5 3.9-6.5 3.9z" />
-    </svg>
-  </a>
-
-</div>
-
-        </div>
-
-
-        {/* EXPLORE */}
-        <div>
-
-          <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-[#F39A08]">
-            Explore
-          </h3>
-
-          <div className="mt-5 space-y-3">
-
-            <Link
-              to="/"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Home
-            </Link>
-
-            <Link
-              to="/about"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              About Us
-            </Link>
-
-            <Link
-              to="/safaris"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Safaris
-            </Link>
-
-           
-
-            <Link
-              to="/activities"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Activities
-            </Link>
-
-            <Link
-              to="/contact"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Contact
-            </Link>
-
-          </div>
-
-        </div>
-
-
-        {/* DISCOVER */}
-        <div>
-
-          <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-[#F39A08]">
-            Discover
-          </h3>
-
-          <div className="mt-5 space-y-3">
-
-            <Link
-              to="/communitywork"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Community Work
-            </Link>
-
-            <Link
-              to="/tourafricablog"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Tour Africa Blog
-            </Link>
-
-            <Link
-              to="/faqs"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              FAQs
-            </Link>
-
-            <Link
-              to="/safaris"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Tailor-Made Safaris
-            </Link>
-
-            <Link
-              to="/safaris"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Honeymoon Safaris
-            </Link>
-
-            <Link
-              to="/contact"
-              className="block text-sm text-white/55 hover:text-[#F39A08] transition-colors"
-            >
-              Plan Your Trip
-            </Link>
-
-          </div>
-
-        </div>
-
-
-        {/* CONTACT */}
-        <div>
-
-          <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-[#F39A08]">
-            Contact Us
-          </h3>
-
-          <div className="mt-5 space-y-5">
-
-            {/* LOCATION */}
-            <div className="flex items-start gap-3">
-
-              <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#F39A08]">
-                📍
-              </div>
-
-              <div>
-
-                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
-                  Location
-                </p>
-
-                <p className="mt-1 text-sm text-white/60">
-                  Kenya • East Africa
-                </p>
-
-              </div>
-
-            </div>
-
-
-            {/* EMAIL */}
-            <div className="flex items-start gap-3">
-
-              <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#F39A08]">
-                ✉
-              </div>
-
-              <div>
-
-                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
-                  Email
-                </p>
+              {/* SOCIALS */}
+              <div className="mt-7 flex gap-3">
 
                 <a
-                  href="mailto:info@daffartours.com"
-                  className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
+                  href="https://www.facebook.com/dafartoursandtravel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
                 >
-                  info@daffartours.com
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1V10H8v3h2.4v8h3.1Z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/dafartoursandtravel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <rect
+                      x="3"
+                      y="3"
+                      width="18"
+                      height="18"
+                      rx="5"
+                    />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle
+                      cx="17.5"
+                      cy="6.5"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.tiktok.com/@dafartoursandtravel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M14.8 3h3c.2 1.5 1 2.6 2.2 3.4v2.8c-1.2-.1-2.3-.5-3.2-1.1v6.7c0 3.7-2.4 6.2-6 6.2-3.1 0-5.3-2.2-5.3-5.1 0-3.2 2.6-5.4 5.8-5.4.4 0 .8 0 1.2.1v3c-.3-.1-.7-.2-1.1-.2-1.5 0-2.7 1-2.7 2.4 0 1.3 1 2.3 2.3 2.3 1.6 0 2.8-1 2.8-3.2V3Z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@dafartoursandtravel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C2 9 2 12 2 12s0 3 .4 4.8a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z" />
+                  </svg>
                 </a>
 
               </div>
-
             </div>
 
 
-            {/* PHONE */}
-            <div className="flex items-start gap-3">
+            {/* EXPLORE */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-[3px] text-[#F5A623]">
+                Explore
+              </h3>
 
-              <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#F39A08]">
-                ☎
-              </div>
-
-              <div>
-
-                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
-                  Phone
-                </p>
-
-                <a
-                  href="tel:+254708164662"
-                  className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
+              <div className="mt-6 space-y-3 text-sm text-white/60">
+                <Link
+                  to="/"
+                  className="block transition hover:text-white"
                 >
-                  +254708164662
-                </a>
+                  Home
+                </Link>
 
+                <Link
+                  to="/about"
+                  className="block transition hover:text-white"
+                >
+                  About Us
+                </Link>
+
+                <Link
+                  to="/safaris"
+                  className="block transition hover:text-white"
+                >
+                  Safaris
+                </Link>
+
+                
+
+                <Link
+                  to="/activities"
+                  className="block transition hover:text-white"
+                >
+                  Activities
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="block transition hover:text-white"
+                >
+                  Contact
+                </Link>
               </div>
-
             </div>
 
 
-            {/* WHATSAPP */}
-            
+            {/* DISCOVER */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-[3px] text-[#F5A623]">
+                Discover
+              </h3>
+
+              <div className="mt-6 space-y-3 text-sm text-white/60">
+
+                <Link
+                  to="/community-work"
+                  className="block transition hover:text-white"
+                >
+                  Community Work
+                </Link>
+
+                <Link
+                  to="/tour-africa-blog"
+                  className="block transition hover:text-white"
+                >
+                  Tour Africa Blog
+                </Link>
+
+                <Link
+                  to="/faqs"
+                  className="block transition hover:text-white"
+                >
+                  FAQs
+                </Link>
+
+                <Link
+                  to="/safaris"
+                  className="block transition hover:text-white"
+                >
+                  Tailor-Made Safaris
+                </Link>
+
+                <Link
+                  to="/safaris"
+                  className="block transition hover:text-white"
+                >
+                  Honeymoon Safaris
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="block transition hover:text-white"
+                >
+                  Plan Your Trip
+                </Link>
+
+              </div>
+            </div>
+
+
+            {/* CONTACT */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-[3px] text-[#F5A623]">
+                Contact
+              </h3>
+
+              <div className="mt-6 space-y-5 text-sm">
+
+                <div>
+                  <span className="block text-xs uppercase tracking-[1.5px] text-white/30">
+                    Location
+                  </span>
+
+                  <span className="mt-1 block text-white/60">
+                    Kenya • East Africa
+                  </span>
+                </div>
+
+                <div>
+                  <span className="block text-xs uppercase tracking-[1.5px] text-white/30">
+                    Email
+                  </span>
+
+                  <a
+                    href="mailto: info@daffar.co.ke"
+                    className="mt-1 block text-white/60 transition hover:text-[#F5A623]"
+                  >
+                     info@daffar.co.ke
+                  </a>
+                </div>
+
+                <div>
+                  <span className="block text-xs uppercase tracking-[1.5px] text-white/30">
+                    Phone
+                  </span>
+
+                  <a
+                    href="tel:+254708711459"
+                    className="mt-1 block text-white/60 transition hover:text-[#F5A623]"
+                  >
+                    +254708711459
+                  </a>
+                </div>
+
+                
+
+              </div>
+            </div>
 
           </div>
 
+
+          {/* BOTTOM */}
+          <div className="mt-14 border-t border-white/10 pt-7">
+
+            <div className="flex flex-col gap-5 text-xs text-white/30 md:flex-row md:items-center md:justify-between">
+
+              <p>
+                © {new Date().getFullYear()} Daffar Tours & Travel.
+                All rights reserved.
+              </p>
+
+              <div className="flex flex-wrap gap-5">
+                <Link
+                  to="/terms"
+                  className="transition hover:text-white"
+                >
+                  Terms & Conditions
+                </Link>
+
+                <Link
+                  to="/privacy"
+                  className="transition hover:text-white"
+                >
+                  Privacy Policy
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="transition hover:text-white"
+                >
+                  Contact
+                </Link>
+
+                <span>Kenya • Africa</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
-
-      </div>
-
-
-      {/* BOTTOM BAR */}
-      <div className="flex flex-col gap-3 pt-6 md:flex-row md:items-center md:justify-between">
-
-        <p className="text-xs text-white/35">
-          © {new Date().getFullYear()} Daffar Tours & Travel. All rights reserved.
-        </p>
-
-        <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/35">
-
-          <Link
-            to="/terms"
-            className="transition hover:text-[#F39A08]"
-          >
-            Terms & Conditions
-          </Link>
-
-          <Link
-            to="/privacy"
-            className="transition hover:text-[#F39A08]"
-          >
-            Privacy Policy
-          </Link>
-
-          <Link
-            to="/contact"
-            className="transition hover:text-[#F39A08]"
-          >
-            Contact
-          </Link>
-
-        </div>
-
-        <p className="text-xs text-white/25">
-          Kenya • Africa
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
-    </div>
+      </footer>
+    </main>
   );
 }
 
-
-export default Activities;

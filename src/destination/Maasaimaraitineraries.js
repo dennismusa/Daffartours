@@ -539,6 +539,10 @@ export default function SafariItineraries() {
 {/* ============================================================
     PAGE HERO — MAASAI MARA ITINERARIES
 ============================================================ */}
+
+{/* ============================================================
+    MASAI MARA ITINERARIES — HERO
+============================================================ */}
 <section
   id="masai-mara-itineraries-hero"
   className="relative overflow-hidden bg-[#092d1a]"
@@ -549,17 +553,23 @@ export default function SafariItineraries() {
     className="absolute inset-0 h-full w-full object-cover"
   />
 
+  {/* DARK OVERLAY */}
   <div className="absolute inset-0 bg-gradient-to-r from-[#061b10]/90 via-[#092d1a]/60 to-[#092d1a]/20" />
 
+  {/* HERO CONTENT */}
   <div className="relative mx-auto flex min-h-[480px] max-w-7xl items-center px-5 py-24 sm:px-8 lg:min-h-[540px] lg:px-12">
     <div className="max-w-3xl">
+
+      {/* LABEL */}
       <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/20 px-4 py-2 backdrop-blur-md">
         <span className="h-2 w-2 rounded-full bg-[#dba33a]" />
+
         <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
           Safari Itineraries
         </span>
       </div>
 
+      {/* TITLE */}
       <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
         Maasai Mara
         <span className="block text-[#f5c45d]">
@@ -567,13 +577,115 @@ export default function SafariItineraries() {
         </span>
       </h1>
 
+      {/* HERO DESCRIPTION */}
       <p className="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
         Experience Kenya's iconic safari destination, renowned for the Big
         Five, dramatic landscapes and the spectacular Great Wildebeest Migration.
       </p>
+
     </div>
   </div>
 </section>
+
+
+{/* ============================================================
+    MASAI MARA NATIONAL RESERVE
+============================================================ */}
+
+{/* ============================================================
+    MASAI MARA NATIONAL RESERVE
+============================================================ */}
+<section
+  id="masai-mara-national-reserve"
+  className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-28"
+>
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    {/* SECTION HEADER */}
+    <div className="mb-14 max-w-3xl">
+      <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#dba33a]">
+        Masai Mara
+      </p>
+
+      <h2 className="text-3xl font-black leading-tight tracking-tight text-[#092d1a] sm:text-4xl lg:text-5xl">
+        Masai Mara National Reserve
+      </h2>
+    </div>
+
+    {/* MAIN EDITORIAL LAYOUT */}
+    <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+
+      {/* IMAGE SIDE */}
+      <div className="relative">
+        <div className="relative overflow-hidden rounded-[2.5rem]">
+          <img
+            src={mara2}
+            alt="Masai Mara National Reserve"
+            className="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
+          />
+
+          {/* IMAGE OVERLAY */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#061b10]/80 via-transparent to-transparent" />
+
+          {/* IMAGE LABEL */}
+          <div className="absolute bottom-6 left-6 right-6">
+            <div className="rounded-2xl border border-white/20 bg-black/25 p-5 backdrop-blur-md">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
+                The Mara
+              </p>
+
+              <p className="mt-2 text-lg font-semibold leading-7 text-white">
+                One of Africa’s most legendary wildlife destinations
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT SIDE */}
+      <div className="space-y-7">
+
+        <p className="text-base leading-8 text-gray-700 sm:text-lg">
+          The Masai Mara National Reserve remains one of Africa’s most legendary
+          wildlife destinations, captivating travelers from around the world with
+          its dramatic landscapes and extraordinary biodiversity. Rolling
+          grasslands stretch to the horizon, dotted with flat-topped acacia trees
+          that provide shade to resting lions and grazing herds alike. Thanks to
+          its rich grazing grounds and dependable seasonal rains, the Mara
+          supports a remarkable concentration of herbivores, which in turn
+          attracts some of Africa’s most iconic predators.
+        </p>
+
+        <p className="text-base leading-8 text-gray-700 sm:text-lg">
+          One of the reserve’s most unforgettable highlights is the Great
+          Migration, often described as nature’s grandest spectacle. Each year,
+          over a million wildebeest, along with countless zebras and gazelles,
+          make their perilous journey across the plains and rivers in search of
+          fresh grazing. Watching thousands of animals surge across
+          crocodile-filled waters or thunder across sunlit grasslands is a sight
+          that leaves even seasoned travelers awestruck.
+        </p>
+
+        <p className="text-base leading-8 text-gray-700 sm:text-lg">
+          Beyond the migration, the Masai Mara offers outstanding wildlife
+          viewing throughout the year. It’s one of the best places in Africa to
+          see the “Big Cats,” with frequent sightings of lions lounging in the
+          shade, leopards draped elegantly over tree branches, and cheetahs
+          scanning the horizon for prey. Visitors may also encounter elephants,
+          buffaloes, giraffes, and an array of colorful birdlife that add to the
+          region’s charm. A visit to the Masai Mara is more than just a safari;
+          it’s an immersion into an ancient ecosystem where life unfolds daily
+          in raw, breathtaking beauty. For anyone seeking an authentic African
+          adventure, few places rival the magic and drama of the Mara.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 {/* ============================================================
     8-DAY NDUTU CALVING SEASON SAFARI
@@ -2989,7 +3101,7 @@ export default function SafariItineraries() {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/20"
@@ -5793,7 +5905,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#092d1a]"
@@ -6682,7 +6794,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#092d1a]"
@@ -7426,7 +7538,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#092d1a]"
@@ -8613,7 +8725,7 @@ export default function SafariItineraries() {
         </Link>
 
         <a
-          href="https://wa.me/+254708164662"
+          href="https://wa.me/+254708711459"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -9701,7 +9813,7 @@ export default function SafariItineraries() {
         </Link>
 
         <a
-          href="https://wa.me/+254708164662"
+          href="https://wa.me/+254708711459"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -10436,7 +10548,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-7 py-4 text-sm font-bold text-white transition hover:bg-white/10"
@@ -11085,7 +11197,7 @@ export default function SafariItineraries() {
         </Link>
 
         <a
-          href="https://wa.me/+254708164662"
+          href="https://wa.me/+254708711459"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -11407,7 +11519,7 @@ export default function SafariItineraries() {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
@@ -11711,10 +11823,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -11737,10 +11849,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

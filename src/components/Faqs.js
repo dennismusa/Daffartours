@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
  * FAQs Page
  *
  * Premium / Professional Design
- * - Simple Nairobi hero background
- * - No category navigation
- * - No "Find an answer" statistics
- * - No hero buttons
- * - Search integrated into hero
- * - Animated FAQ accordion
+ * - Nairobi hero background
+ * - Searchable FAQ accordion
+ * - Safari-specific questions and answers
  * - Responsive design
  * - Accessible interactions
+ * - Premium African travel styling
  */
 
 function FAQs() {
@@ -22,106 +20,73 @@ function FAQs() {
 
   const faqs = [
     {
-      category: "General",
-      question: "What does Daffar Tours & Travel offer?",
+      category: "Safari Experience",
+      question: "What’s Included in Your Safari Experience?",
       answer:
-        "Daffar Tours & Travel helps travelers discover Africa through wildlife safaris, beach holidays, mountain adventures, cultural experiences, family journeys, and customized travel itineraries.",
+        "Your tour covers comfortable game-drive vehicles, including Land Cruisers with pop-up roofs, unlimited mileage, park entry fees, camping charges where applicable, daily bottled water, and full-board accommodation as arranged.",
     },
+
     {
-      category: "General",
-      question: "Can you customize my safari?",
+      category: "Safari Experience",
+      question: "What’s Not Part of the Package?",
       answer:
-        "Yes. We can create a journey around your preferred destinations, activities, travel dates, accommodation style, and budget. Simply share your travel ideas with our team and we will help shape them into a personalized itinerary.",
+        "You’ll need to budget separately for visas, personal items such as souvenirs, extra excursions that were not agreed in advance, and tips. Around $10 USD per guest per day is the standard tipping guideline. Please note that if park authorities increase fees after you book, these adjustments may reflect in your final balance.",
     },
+
     {
-      category: "Booking",
-      question: "How do I book a safari?",
+      category: "Travel Information",
+      question: "Which Airport Should I Fly Into?",
       answer:
-        "You can start by contacting us through the website, email, phone, or WhatsApp. Share your preferred destination, travel dates, number of travelers, and the type of experience you are looking for. Our team will then assist you with planning your journey.",
+        "We recommend arriving at Jomo Kenyatta International Airport in Nairobi (NBO). From Nairobi, we can help arrange the appropriate transfers and transportation for your safari or other African travel experience.",
     },
+
     {
-      category: "Booking",
-      question: "How far in advance should I book?",
+      category: "Health & Safety",
+      question: "What Health Precautions Should I Take?",
       answer:
-        "We recommend booking as early as possible, particularly for peak travel seasons and popular destinations. Early planning provides greater flexibility when choosing accommodation, activities, transportation, and travel dates.",
+        "Please visit a travel health clinic before your trip. You may be advised to get vaccinated for yellow fever and to take malaria prophylaxis. If you’re visiting Zanzibar or transiting through a yellow fever zone, proof of vaccination might be needed. We recommend consulting a qualified travel-health professional for advice based on your personal travel plans.",
     },
+
     {
-      category: "Booking",
-      question: "Can I make changes to my itinerary?",
+      category: "Packing",
+      question: "What Should I Bring With Me?",
       answer:
-        "In many cases, itinerary changes can be accommodated depending on availability and the timing of the request. If your plans change, contact us as soon as possible so we can explore the available options.",
+        "Bring your passport, vaccination proof, personal medication, including basics such as painkillers, sunscreen, sunglasses, a hat, moisturizer, insect repellent, and comfortable clothes in neutral shades. Include warm layers for chilly mornings, swimwear if your lodge has a pool, and good walking shoes. A camera with wide and telephoto lenses, plus binoculars, will enhance your safari experience. We provide one pair of binoculars per vehicle, but you are welcome to bring your own.",
     },
+
     {
-      category: "Safari",
-      question: "What is the best time to go on safari?",
+      category: "Safari Planning",
+      question: "Can I Customize My Safari?",
       answer:
-        "The best time depends on your destination and the type of experience you want. Different seasons offer different wildlife viewing opportunities, weather conditions, landscapes, and travel experiences. We can recommend the most suitable period based on your plans.",
+        "Absolutely. We design itineraries around your interests, travel dates, and budget. Whether you are looking for a wildlife safari, honeymoon, family holiday, beach escape, cultural experience, photography journey, or a combination of destinations, we can tailor your itinerary to suit your travel plans.",
     },
+
     {
-      category: "Safari",
-      question: "Which destinations do you cover?",
+      category: "Safari Vehicles",
+      question: "Can I Charge My Phone or Camera in the Safari Vehicle?",
       answer:
-        "Our journeys can include destinations across East Africa and other parts of Africa depending on your itinerary. Popular destinations include Maasai Mara, Amboseli, Serengeti, Ngorongoro, Diani, Zanzibar, and many other remarkable destinations.",
+        "Yes. Our safari vehicles have charging points so you can keep your camera, phone, and other devices powered while you’re on the go. We recommend bringing your own charging cables and any adapters required for your devices.",
     },
+
     {
-      category: "Safari",
-      question: "Are safaris suitable for families with children?",
+      category: "Food & Accommodation",
+      question: "Do You Cater for Special Diets?",
       answer:
-        "Yes. Family safaris can be designed around the ages and interests of your children. We can recommend suitable accommodation, activities, transportation, and a comfortable travel pace for your family.",
+        "Absolutely. When you book, we’ll ask you to fill out a form listing any dietary restrictions, allergies, or preferences. We share this information with all lodges and camps to ensure your meals are safe and satisfying throughout your journey.",
     },
-    {
-      category: "Safari",
-      question: "What should I bring on safari?",
-      answer:
-        "Comfortable clothing, walking shoes, sun protection, a hat, sunglasses, personal toiletries, a camera, and any required personal items are useful. We can provide additional recommendations depending on your destination, season, and itinerary.",
-    },
-    {
-      category: "Accommodation",
-      question: "What type of accommodation is available?",
-      answer:
-        "Depending on your itinerary and preferences, accommodation can include safari lodges, tented camps, hotels, beach resorts, boutique properties, and other suitable options. We help select accommodation based on comfort, location, experience, and budget.",
-    },
-    {
-      category: "Transport",
-      question: "What type of safari vehicles are available?",
-      answer:
-        "Safari transportation depends on the destination and itinerary. We can recommend suitable safari vehicles and transportation arrangements based on the number of travelers, destination, activities, and overall journey.",
-    },
-    {
-      category: "Transport",
-      question: "Can you arrange airport transfers?",
-      answer:
-        "Yes. Airport transfers can be included as part of your travel arrangement depending on your itinerary. Share your arrival and departure details with us and we can help organize the necessary transportation.",
-    },
+
     {
       category: "Payments",
-      question: "How do I pay for my trip?",
+      question: "What Payment Methods Do You Accept?",
       answer:
-        "Payment arrangements depend on the trip and services selected. Our team will provide the applicable payment information, booking requirements, and payment schedule before your journey is confirmed.",
+        "We accept payments via wire transfer, Wise, and credit card. Credit card payments are securely processed through Pesapal. Please note that a small service fee applies to credit card payments.",
     },
+
     {
-      category: "Payments",
-      question: "Is a deposit required to confirm a booking?",
+      category: "Safari Vehicles",
+      question: "What If the Vehicle Breaks Down?",
       answer:
-        "A deposit may be required depending on the itinerary, accommodation, and services involved. The exact deposit amount and payment schedule will be communicated before your booking is confirmed.",
-    },
-    {
-      category: "Payments",
-      question: "What is your cancellation policy?",
-      answer:
-        "Cancellation terms vary depending on the itinerary, accommodation providers, transportation arrangements, and other services booked. Please contact us for the specific cancellation conditions applicable to your trip.",
-    },
-    {
-      category: "Beach Holidays",
-      question: "Can I combine a safari with a beach holiday?",
-      answer:
-        "Absolutely. A safari and beach combination is a wonderful way to experience different sides of East Africa. Your itinerary can combine wildlife destinations with coastal destinations such as Diani, Mombasa, Watamu, Malindi, or Zanzibar.",
-    },
-    {
-      category: "Community",
-      question: "Can I include a cultural or community experience?",
-      answer:
-        "Yes. Cultural and community experiences can be included where appropriate. These experiences provide opportunities to learn about local traditions, communities, lifestyles, heritage, and the people who make each destination unique.",
+        "All our vehicles are well-maintained, but in the rare case of a breakdown, your driver-guide is trained to handle basic repairs. If needed, we’ll send backup assistance promptly to make sure your safari continues smoothly.",
     },
   ];
 
@@ -145,86 +110,80 @@ function FAQs() {
     <main className="overflow-hidden bg-[#F7F4EA] text-[#183020]">
 
       {/* =====================================================
-          SIMPLE HERO
+          HERO
       ====================================================== */}
-      {/* =====================================================
-    SIMPLE FAQ HERO
-====================================================== */}
-<section className="relative min-h-[55vh] overflow-hidden">
+      <section className="relative min-h-[55vh] overflow-hidden">
 
-  {/* Nairobi Background */}
-  <img
-    src="/images/nairobi.jpg"
-    alt="Nairobi, Kenya"
-    className="absolute inset-0 h-full w-full object-cover"
-  />
+        {/* Nairobi Background */}
+        <img
+          src="/images/nairobi.jpg"
+          alt="Nairobi, Kenya"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-  {/* Elegant dark overlay */}
-  <div className="absolute inset-0 bg-[#071F13]/65" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-[#071F13]/65" />
 
-  {/* Subtle center gradient */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#071F13]/50 via-[#071F13]/65 to-[#071F13]/80" />
+        {/* Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#071F13]/45 via-[#071F13]/65 to-[#071F13]/90" />
 
-  {/* Hero Content */}
-  <div className="relative z-10 flex min-h-[55vh] items-center justify-center">
+        {/* Hero Content */}
+        <div className="relative z-10 flex min-h-[55vh] items-center justify-center">
 
-    <div className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8">
+          <div className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8">
 
-      {/* Small Label */}
-      <p
-        className="
-          mb-5
-          text-xs
-          font-bold
-          uppercase
-          tracking-[0.3em]
-          text-[#F39A08]
-        "
-      >
-        Daffar Tours & Travel
-      </p>
+            <p
+              className="
+                mb-5
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.3em]
+                text-[#F39A08]
+              "
+            >
+              Daffar Tours & Travel
+            </p>
 
-      {/* Heading */}
-      <h1
-        className="
-          font-serif
-          text-4xl
-          font-bold
-          leading-tight
-          text-white
-          sm:text-5xl
-          md:text-6xl
-          lg:text-7xl
-        "
-      >
-        Frequently Asked
-        <span className="block text-[#F39A08]">
-          Questions
-        </span>
-      </h1>
+            <h1
+              className="
+                font-serif
+                text-4xl
+                font-bold
+                leading-tight
+                text-white
+                sm:text-5xl
+                md:text-6xl
+                lg:text-7xl
+              "
+            >
+              Frequently Asked
+              <span className="block text-[#F39A08]">
+                Questions
+              </span>
+            </h1>
 
-      {/* Description */}
-      <p
-        className="
-          mx-auto
-          mt-6
-          max-w-2xl
-          text-base
-          leading-relaxed
-          text-white/80
-          sm:text-lg
-        "
-      >
-        Find helpful answers about our safaris, travel
-        experiences, bookings, accommodation, transportation,
-        and planning your journey across Africa.
-      </p>
+            <p
+              className="
+                mx-auto
+                mt-6
+                max-w-2xl
+                text-base
+                leading-relaxed
+                text-white/80
+                sm:text-lg
+              "
+            >
+              Everything you need to know about your safari,
+              from what’s included and what to pack to health,
+              payments, vehicles, meals, and planning your journey
+              across Africa.
+            </p>
 
-    </div>
+          </div>
 
-  </div>
-
-</section>
+        </div>
+      </section>
 
 
       {/* =====================================================
@@ -258,9 +217,9 @@ function FAQs() {
               lg:text-5xl
             "
           >
-            Plan Your Journey
+            Travel With
             <span className="text-[#F39A08]">
-              {" "}With Confidence
+              {" "}Confidence
             </span>
           </h2>
 
@@ -275,11 +234,10 @@ function FAQs() {
               sm:text-lg
             "
           >
-            Planning a trip to Africa can come with plenty of
-            questions. We have gathered some of the most common
-            questions travelers ask to help you understand what
-            to expect and make informed decisions about your
-            journey.
+            Planning an African safari comes with important
+            questions. We’ve answered some of the most common
+            things our travelers want to know before setting
+            out on their adventure.
           </p>
 
         </div>
@@ -288,13 +246,92 @@ function FAQs() {
 
 
       {/* =====================================================
-          FAQ SECTION
+          SEARCH
       ====================================================== */}
-      <section className="bg-[#F7F4EA] py-16 sm:py-20 lg:py-24">
+      <section className="bg-[#F7F4EA] pt-16 sm:pt-20">
 
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
 
-          {/* Search result message */}
+          <div
+            className="
+              relative
+              mx-auto
+              max-w-3xl
+            "
+          >
+
+            {/* Search Icon */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                left-5
+                top-1/2
+                -translate-y-1/2
+                text-[#0D4825]/45
+              "
+            >
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"
+                />
+              </svg>
+            </div>
+
+            <input
+              type="search"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setOpenIndex(null);
+              }}
+              placeholder="Search your question..."
+              aria-label="Search frequently asked questions"
+              className="
+                w-full
+                rounded-2xl
+                border
+                border-[#0D4825]/10
+                bg-white
+                py-4
+                pl-14
+                pr-5
+                text-sm
+                text-[#183020]
+                shadow-sm
+                outline-none
+                transition-all
+                placeholder:text-gray-400
+                focus:border-[#F39A08]/60
+                focus:ring-4
+                focus:ring-[#F39A08]/10
+                sm:py-5
+                sm:text-base
+              "
+            />
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          FAQ SECTION
+      ====================================================== */}
+      <section className="bg-[#F7F4EA] py-10 sm:py-14 lg:py-20">
+
+        <div className="mx-auto max-w-5xl px-5 sm:px-8">
+
+          {/* Search Result Message */}
           {search && (
             <div className="mb-8 flex items-center justify-between gap-4">
 
@@ -344,7 +381,7 @@ function FAQs() {
                   `}
                 >
 
-                  {/* Question */}
+                  {/* QUESTION */}
                   <button
                     type="button"
                     onClick={() => toggleFAQ(index)}
@@ -392,12 +429,12 @@ function FAQs() {
                     </span>
 
 
-                    {/* Question Text */}
+                    {/* Question */}
                     <div className="min-w-0 flex-1">
 
                       <p
                         className="
-                          mb-1
+                          mb-1.5
                           text-[10px]
                           font-bold
                           uppercase
@@ -490,7 +527,7 @@ function FAQs() {
                   </button>
 
 
-                  {/* Answer */}
+                  {/* ANSWER */}
                   <div
                     className={`
                       grid
@@ -666,7 +703,7 @@ function FAQs() {
             "
           >
 
-            {/* Decorative elements */}
+            {/* Decorative Elements */}
             <div
               className="
                 pointer-events-none
@@ -705,7 +742,7 @@ function FAQs() {
                   text-[#F39A08]
                 "
               >
-                Need More Information?
+                Still Have Questions?
               </p>
 
               <h2
@@ -736,9 +773,10 @@ function FAQs() {
                   sm:text-base
                 "
               >
-                Still have questions about your safari, holiday,
-                accommodation, or itinerary? Our team is ready to
-                help you create a journey that fits your plans.
+                Have a question that isn't covered here?
+                Our team is ready to help you plan your safari,
+                beach holiday, honeymoon, cultural experience,
+                or tailor-made African adventure.
               </p>
 
               <div
@@ -752,6 +790,7 @@ function FAQs() {
                 "
               >
 
+                {/* Contact */}
                 <Link
                   to="/contact"
                   className="
@@ -772,13 +811,16 @@ function FAQs() {
                   "
                 >
                   Contact Us
+
                   <span className="ml-2">
                     →
                   </span>
                 </Link>
 
+
+                {/* WhatsApp */}
                 <a
-                  href="https://wa.me/+254708164662"
+                  href="https://wa.me/254708711459"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
@@ -831,7 +873,7 @@ function FAQs() {
           "
         >
 
-          {/* Decorative background */}
+          {/* Decorative Background */}
           <div
             className="
               pointer-events-none
@@ -862,7 +904,9 @@ function FAQs() {
 
           <div className="relative z-10">
 
-            {/* FOOTER CONTENT */}
+            {/* =================================================
+                FOOTER CONTENT
+            ================================================== */}
             <div
               className="
                 grid
@@ -926,7 +970,8 @@ function FAQs() {
                   breathtaking landscapes.
                 </p>
 
-                {/* SOCIAL */}
+
+                {/* SOCIAL MEDIA */}
                 <div className="mt-6 flex items-center gap-2.5">
 
                   {/* Facebook */}
@@ -957,6 +1002,7 @@ function FAQs() {
                       <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
                     </svg>
                   </a>
+
 
                   {/* Instagram */}
                   <a
@@ -994,11 +1040,13 @@ function FAQs() {
                         height="18"
                         rx="5"
                       />
+
                       <circle
                         cx="12"
                         cy="12"
                         r="4"
                       />
+
                       <circle
                         cx="17.5"
                         cy="6.5"
@@ -1007,6 +1055,7 @@ function FAQs() {
                       />
                     </svg>
                   </a>
+
 
                   {/* TikTok */}
                   <a
@@ -1036,6 +1085,7 @@ function FAQs() {
                       <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
                     </svg>
                   </a>
+
 
                   {/* YouTube */}
                   <a
@@ -1108,8 +1158,6 @@ function FAQs() {
                   >
                     Safaris
                   </Link>
-
-                  
 
                   <Link
                     to="/activities"
@@ -1275,7 +1323,7 @@ function FAQs() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="
                           mt-1
                           block
@@ -1285,7 +1333,7 @@ function FAQs() {
                           hover:text-[#F39A08]
                         "
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -1321,7 +1369,7 @@ function FAQs() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="
                           mt-1
                           block
@@ -1331,7 +1379,7 @@ function FAQs() {
                           hover:text-[#F39A08]
                         "
                       >
-                        +254708164662
+                        +254 708 711 459
                       </a>
 
                     </div>
@@ -1340,7 +1388,52 @@ function FAQs() {
 
 
                   {/* WhatsApp */}
-                  
+                  <div className="flex items-start gap-3">
+
+                    <div
+                      className="
+                        flex
+                        h-9
+                        w-9
+                        flex-shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/5
+                        text-[#F39A08]
+                      "
+                    >
+                      💬
+                    </div>
+
+                    <div>
+
+                      <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/30">
+                        WhatsApp
+                      </p>
+
+                      <a
+                        href="https://wa.me/254708711459"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                          mt-1
+                          block
+                          text-sm
+                          text-white/60
+                          transition-colors
+                          hover:text-[#F39A08]
+                        "
+                      >
+                        +254 708 711 459
+                      </a>
+
+                    </div>
+
+                  </div>
+
                 </div>
 
               </div>
@@ -1348,7 +1441,9 @@ function FAQs() {
             </div>
 
 
-            {/* BOTTOM BAR */}
+            {/* =================================================
+                BOTTOM BAR
+            ================================================== */}
             <div
               className="
                 flex
@@ -1366,7 +1461,16 @@ function FAQs() {
                 All rights reserved.
               </p>
 
-              <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/35">
+              <div
+                className="
+                  flex
+                  flex-wrap
+                  gap-x-5
+                  gap-y-2
+                  text-xs
+                  text-white/35
+                "
+              >
 
                 <Link
                   to="/terms"

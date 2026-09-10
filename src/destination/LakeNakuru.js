@@ -110,105 +110,154 @@ function LakeNakuru() {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
+```jsx
+{/* ============================================================
+    LAKE NAKURU NATIONAL PARK
+============================================================ */}
+<section className="bg-white py-16 sm:py-20 lg:py-28">
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
+      <div className="relative group">
 
-            {/* IMAGE */}
+        <div className="absolute -left-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
 
-            <div className="relative group">
+        <img
+          src={nakuru2}
+          alt="Lake Nakuru National Park"
+          className="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[480px]"
+        />
 
-              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
+        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl backdrop-blur-md">
 
-              <img
-                src={nakuru2}
-                alt="Wildlife experience at Lake Nakuru"
-                className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Lake Nakuru
+          </p>
 
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
+          <p className="mt-1 text-xs text-white/70">
+            National Park
+          </p>
 
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Lake Nakuru
-                </p>
+        </div>
 
-                <p className="text-white/70 text-xs mt-1">
-                  Kenya's scenic Rift Valley safari destination
-                </p>
-
-              </div>
-
-            </div>
+      </div>
 
 
-            {/* CONTENT */}
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
+      <div>
 
-            <div>
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          Lake Nakuru National Park
+        </span>
 
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About The Destination
-              </span>
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
 
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
+          Lake Nakuru
 
-                Where Wildlife
+          <span className="block text-[#F39A08]">
+            National Park
+          </span>
 
-                <span className="block text-[#F39A08]">
-                  Meets The Rift Valley
-                </span>
+        </h2>
 
-              </h2>
+        <div className="mt-7 space-y-5 text-gray-600">
 
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                Lake Nakuru is one of Kenya's most rewarding safari
-                destinations, combining beautiful landscapes with
-                remarkable wildlife and birdlife.
-              </p>
+          <p className="leading-relaxed">
+            Set against the backdrop of Kenya’s Great Rift Valley, Lake Nakuru
+            National Park remains a favorite for travelers seeking diverse
+            wildlife and striking landscapes. Just a short drive from Nakuru
+            town, its convenient location makes it an attractive destination
+            for day trips and longer safaris alike.
+          </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                From rhino sightings and big cats to colorful birdlife
-                and dramatic viewpoints, a journey through Lake Nakuru
-                offers an unforgettable taste of Kenya's wilderness.
-              </p>
+          <p className="leading-relaxed">
+            The park’s centerpiece, the alkaline Lake Nakuru, is famed for
+            attracting large flocks of birds. Though recent shifts in water
+            levels have reduced flamingo numbers at times, birdwatchers can
+            still spot impressive gatherings of pelicans, cormorants, and
+            other species. Beyond birdlife, the park is a sanctuary for both
+            black and white rhinos, offering some of Kenya’s most reliable
+            rhino sightings. Visitors often see these majestic animals grazing
+            near the lake’s shores.
+          </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+          <p className="leading-relaxed">
+            Among the park’s highlights are the rare Rothschild’s giraffes
+            introduced decades ago, which now thrive in the surrounding acacia
+            woodlands. Spotting tree-climbing lions lounging on branches or
+            leopards stealthily moving through the forest adds to the
+            excitement. Other commonly seen wildlife includes buffaloes,
+            zebras, waterbucks, hippos, and playful troops of vervet monkeys
+            and olive baboons.
+          </p>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+          <p className="leading-relaxed">
+            While Lake Nakuru’s small size means some game-drive routes can
+            become crowded, its varied habitats, from woodlands to grasslands
+            and rocky escarpments, ensure rich sightings within a compact
+            area. Visitors enjoy spectacular views over the lake and valley,
+            especially from vantage points like Baboon Cliff.
+          </p>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Wildlife
-                  </p>
+          <p className="leading-relaxed">
+            For the best wildlife experience, visit between June and February
+            when conditions are drier, and animals are easier to spot in
+            shorter grasses. Despite occasional rain making tracks muddy in
+            April and May, Lake Nakuru National Park remains an unforgettable
+            destination year-round, combining natural beauty, birdlife, and
+            big game in a uniquely accessible setting.
+          </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Rhinos, lions & more
-                  </p>
+        </div>
 
-                </div>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Birdlife
-                  </p>
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    A paradise for birdwatchers
-                  </p>
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Wildlife
+            </p>
 
-                </div>
+            <p className="mt-1 text-sm leading-6 text-gray-500">
+              Rhinos, giraffes, lions, leopards & more
+            </p>
 
-              </div>
+          </div>
 
-            </div>
+          <div className="rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Birdlife
+            </p>
+
+            <p className="mt-1 text-sm leading-6 text-gray-500">
+              Pelicans, cormorants, flamingos & more
+            </p>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+
 
 
       {/* =====================================================
@@ -1111,10 +1160,10 @@ function LakeNakuru() {
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -1136,10 +1185,10 @@ function LakeNakuru() {
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>
@@ -1149,7 +1198,7 @@ function LakeNakuru() {
 
             {/* WHATSAPP */}
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#F39A08] px-5 py-3 text-sm font-bold text-[#082D19] transition-all hover:-translate-y-1 hover:bg-white"

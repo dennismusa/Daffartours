@@ -581,6 +581,152 @@ export default function SafariItineraries() {
 </section>
 
 {/* ============================================================
+    SERENGETI NATIONAL PARK
+============================================================ */}
+<section className="bg-white py-16 sm:py-20 lg:py-28">
+
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+      {/* ======================================================
+          IMAGE
+      ====================================================== */}
+      <div className="relative group">
+
+        <div className="absolute -left-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
+
+        <img
+          src={serengeti2}
+          alt="Serengeti National Park"
+          className="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[480px]"
+        />
+
+        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl backdrop-blur-md">
+
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Serengeti
+          </p>
+
+          <p className="mt-1 text-xs text-white/70">
+            Tanzania's legendary safari destination
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* ======================================================
+          CONTENT
+      ====================================================== */}
+      <div>
+
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          About The Destination
+        </span>
+
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
+
+          Serengeti National Park
+
+          <span className="block text-[#F39A08]">
+            The Heart of Africa
+          </span>
+
+        </h2>
+
+        <div className="mt-7 space-y-5 text-gray-600">
+
+          <p className="leading-relaxed">
+            Situated in northern Tanzania, Serengeti National Park stands as a
+            crown jewel of African safaris, renowned for its sweeping savannahs
+            and the world-famous great migration. Each year, over two million
+            wildebeest, zebras, and gazelles embark on a remarkable journey
+            across these plains, creating one of nature’s most breathtaking
+            spectacles. Even outside migration months, the Serengeti offers
+            consistently superb wildlife encounters thanks to its high density
+            of predators and herbivores.
+          </p>
+
+          <p className="leading-relaxed">
+            While the open grasslands near Seronera are the most frequented,
+            visitors can also discover the striking Western Corridor and the
+            Mara River region—famous for dramatic river crossings where
+            crocodiles await migrating herds. Hot-air balloon rides provide an
+            extraordinary perspective over these endless plains, especially at
+            sunrise.
+          </p>
+
+          <p className="leading-relaxed">
+            The Serengeti is particularly celebrated for its predator
+            sightings. Lions are commonly observed lounging or stalking prey,
+            while cheetahs race across the plains in pursuit of gazelles.
+            Leopards, though more elusive, can occasionally be spotted draped
+            over acacia branches near rivers.
+          </p>
+
+          <p className="leading-relaxed">
+            The wildebeest migration’s timing can vary, but generally, the
+            Grumeti River crossings occur in June and July, and the Mara River
+            crossings unfold around August and September. For those eager to
+            witness calving season, January and February bring the plains to
+            life with newborn wildebeest and intense predator action.
+          </p>
+
+          <p className="leading-relaxed">
+            Beyond the migration, the park’s year-round appeal lies in its vast,
+            untamed beauty and exceptional biodiversity. With sweeping
+            landscapes, abundant wildlife, and unforgettable safari moments,
+            Serengeti National Park promises an authentic and timeless
+            adventure at the heart of Africa’s wilderness.
+          </p>
+
+        </div>
+
+
+        {/* ======================================================
+            HIGHLIGHTS
+        ====================================================== */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
+
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Wildlife
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Lions, cheetahs, leopards & more
+            </p>
+
+          </div>
+
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Great Migration
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Over two million migrating animals
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+
+
+{/* ============================================================
     6-DAY MASAI MARA, SERENGETI & NGORONGORO LUXURY SAFARI
 ============================================================ */}
 <section
@@ -1652,7 +1798,7 @@ export default function SafariItineraries() {
         </Link>
 
         <a
-          href="https://wa.me/+254708164662"
+          href="https://wa.me/+254708711459"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -2687,7 +2833,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-black text-white backdrop-blur-sm transition hover:bg-white/15"
@@ -6843,7 +6989,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -8069,7 +8215,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -9057,7 +9203,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -9972,7 +10118,7 @@ export default function SafariItineraries() {
           </Link>
 
           <a
-            href="https://wa.me/+254708164662"
+            href="https://wa.me/+254708711459"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 font-bold text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -11391,10 +11537,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="mailto:info@daffartours.com"
+                        href="mailto: info@daffar.co.ke"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        info@daffartours.com
+                         info@daffar.co.ke
                       </a>
 
                     </div>
@@ -11417,10 +11563,10 @@ export default function SafariItineraries() {
                       </p>
 
                       <a
-                        href="tel:+254708164662"
+                        href="tel:+254708711459"
                         className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                       >
-                        +254708164662
+                        +254708711459
                       </a>
 
                     </div>

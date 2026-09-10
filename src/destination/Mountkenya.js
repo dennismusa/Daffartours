@@ -110,105 +110,138 @@ function MountKenya() {
           INTRODUCTION
       ====================================================== */}
 
-      <section className="bg-white py-16 sm:py-20 lg:py-28">
-
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-            {/* IMAGE */}
-
-            <div className="relative group">
-
-              <div className="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-[#F39A08]/15" />
-
-              <img
-                src={kenya2}
-                alt="Mount Kenya landscape"
-                className="relative w-full h-[380px] sm:h-[480px] object-cover rounded-[2rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-
-              <div className="absolute bottom-5 left-5 bg-[#0D4825]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-xl">
-
-                <p className="text-[#F39A08] text-sm font-bold uppercase tracking-wider">
-                  Mount Kenya
-                </p>
-
-                <p className="text-white/70 text-xs mt-1">
-                  Africa's second-highest mountain
-                </p>
-
-              </div>
-
-            </div>
 
 
-            {/* CONTENT */}
+{/* ============================================================
+    MT. KENYA
+============================================================ */}
+<section className="bg-[#F8F6F1] py-16 sm:py-20 lg:py-28">
 
-            <div>
+  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
 
-              <span className="text-[#F39A08] text-sm font-bold uppercase tracking-[0.2em]">
-                About The Destination
-              </span>
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D4825] leading-tight">
+      {/* IMAGE */}
+      <div className="relative group lg:order-2">
 
-                Where The Mountain
+        <div className="absolute -right-5 -top-5 h-24 w-24 rounded-3xl bg-[#F39A08]/15" />
 
-                <span className="block text-[#F39A08]">
-                  Meets The Wilderness
-                </span>
+        <img
+          src={kenya4}
+          alt="Mount Kenya landscape and wildlife"
+          className="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[480px]"
+        />
 
-              </h2>
+        <div className="absolute bottom-5 right-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl backdrop-blur-md">
 
-              <p className="mt-6 text-gray-600 leading-relaxed">
-                Mount Kenya is one of Africa's most remarkable natural
-                landmarks. Its dramatic peaks, forested slopes and unique
-                high-altitude landscapes create an unforgettable destination
-                for adventure and nature lovers.
-              </p>
+          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
+            Mt. Kenya
+          </p>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                From scenic walks through mountain forests to challenging
-                trekking routes and wildlife experiences, Mount Kenya offers
-                an incredible combination of adventure, nature and discovery.
-              </p>
+          <p className="mt-1 text-xs text-white/70">
+            Mountain, forests & wildlife
+          </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+        </div>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+      </div>
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Adventure
-                  </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Hiking & mountain experiences
-                  </p>
+      {/* CONTENT */}
+      <div className="lg:order-1">
 
-                </div>
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
+          About The Destination
+        </span>
 
-                <div className="group p-5 rounded-2xl bg-[#F7F4EA] border border-[#0D4825]/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
 
-                  <p className="text-[#F39A08] text-2xl font-serif font-bold">
-                    Nature
-                  </p>
+          Mt. Kenya
 
-                  <p className="mt-1 text-sm text-gray-500">
-                    Forests & unique landscapes
-                  </p>
+          <span className="block text-[#F39A08]">
+            A Journey Through Rich Ecosystems
+          </span>
 
-                </div>
+        </h2>
 
-              </div>
+        <div className="mt-7 space-y-5 text-gray-600">
 
-            </div>
+          <p className="leading-relaxed">
+            While Mount Kenya is famous for its breathtaking peaks and alpine
+            scenery, the journey there doubles as a unique wildlife experience.
+            The lower slopes and forests around the mountain are home to a
+            surprising range of animals, giving visitors the feel of a safari
+            woven into their trek. As you hike through the lush montane and
+            bamboo forests, you might spot elephants quietly foraging,
+            bushbucks leaping through the undergrowth, or playful troops of
+            black-and-white colobus and Sykes monkeys swinging in the canopy.
+            Waterbucks, giant forest hogs, and even the elusive bongo, a rare
+            forest antelope, also call this area home. Bird enthusiasts will be
+            delighted too, as over 130 species have been recorded, from bright
+            turacos and sunbirds to majestic eagles circling high above the
+            valleys.
+          </p>
+
+          <p className="leading-relaxed">
+            Further up, where the forest thins into heather and moorland, the
+            landscape transforms dramatically, and while larger mammals become
+            scarce, you may see rock hyraxes sunning on the rocks or tracks of
+            leopards and buffalo that sometimes roam these higher areas.
+          </p>
+
+          <p className="leading-relaxed">
+            This combination of stunning alpine beauty and unexpected wildlife
+            makes a Mount Kenya adventure truly special. It’s not just a climb,
+            it’s an immersive journey through rich ecosystems, where every turn
+            in the trail can bring a surprise sighting and deepen your
+            connection to the mountain’s natural wonder.
+          </p>
+
+          <p className="leading-relaxed">
+            For travelers seeking both scenic trekking and wildlife moments,
+            Mount Kenya offers an experience that blends both seamlessly.
+          </p>
+
+        </div>
+
+
+        {/* HIGHLIGHTS */}
+        <div className="mt-9 grid gap-4 sm:grid-cols-2">
+
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Wildlife
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Elephants, monkeys, bongo & more
+            </p>
+
+          </div>
+
+          <div className="group rounded-2xl border border-[#0D4825]/5 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+            <p className="font-serif text-2xl font-bold text-[#F39A08]">
+              Trekking
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Alpine scenery & diverse ecosystems
+            </p>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
 
 
       {/* =====================================================
@@ -832,7 +865,7 @@ function MountKenya() {
             </Link>
 
             <a
-              href="https://wa.me/+254708164662"
+              href="https://wa.me/+254708711459"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white/30 hover:border-[#F39A08] text-white hover:text-[#F39A08] px-8 py-4 rounded-full font-bold transition-all duration-300"
@@ -1118,10 +1151,10 @@ function MountKenya() {
                 </p>
 
                 <a
-                  href="mailto:info@daffartours.com"
+                  href="mailto: info@daffar.co.ke"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  info@daffartours.com
+                   info@daffar.co.ke
                 </a>
 
               </div>
@@ -1143,10 +1176,10 @@ function MountKenya() {
                 </p>
 
                 <a
-                  href="tel:+254708164662"
+                  href="tel:+254708711459"
                   className="mt-1 block text-sm text-white/60 hover:text-[#F39A08] transition-colors"
                 >
-                  +254708164662
+                  +254708711459
                 </a>
 
               </div>
