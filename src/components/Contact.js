@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import contact1 from "../assets/contact1.jpg";
+//import contact1 from "../assets/contact1.jpg";
+import kenya1 from "../assets/kenya1.jpg";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -59,7 +60,7 @@ ${formData.message}
       <section className="relative min-h-[560px] md:min-h-[650px] flex items-center overflow-hidden">
 
         <img
-          src={contact1}
+          src={kenya1}
           alt="Contact Daffar Tours and Travel"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -225,11 +226,11 @@ ${formData.message}
               </h3>
 
               <p className="mt-1 text-gray-500 text-sm">
-                Find Daffar Tours & Travel in Nairobi.
+                Find Daffar Tours & Travel in Nairobi and Arusha TZ.
               </p>
 
               <p className="mt-4 text-[#0D4825] font-bold">
-                Muindi Mbingu St, Nairobi
+                Muindi Mbingu St, Nairobi and Arusha TZ
               </p>
 
             </div>
@@ -671,7 +672,7 @@ ${formData.message}
                 Visit Our
 
                 <span className="block text-[#F39A08]">
-                  Nairobi Office
+                  Nairobi Office and Arusha TZ
                 </span>
 
               </h2>
@@ -698,7 +699,7 @@ ${formData.message}
                     </h3>
 
                     <p className="mt-1 text-gray-500 text-sm">
-                      Muindi Mbingu St, Nairobi, Kenya
+                      Muindi Mbingu St, Nairobi, Kenya and Arusha TZ
                     </p>
 
                   </div>
@@ -980,11 +981,14 @@ ${formData.message}
           </p>
 
           {/* SOCIAL */}
-     <div className="mt-6 flex items-center gap-2.5">
+   
+  {/* SOCIAL */}
+
+  <div className="mt-6 flex items-center gap-2.5">
 
   {/* Facebook */}
   <a
-    href="https://www.facebook.com/dafartoursandtravel"
+    href="https://www.facebook.com/share/19QDDWcvTd/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Facebook"
@@ -1002,7 +1006,7 @@ ${formData.message}
 
   {/* Instagram */}
   <a
-    href="https://www.instagram.com/dafartoursandtravel"
+    href="https://www.instagram.com/daffartoursandtravel?stkn=MXZjd2k5Nm05dXk4dQ"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -1028,7 +1032,7 @@ ${formData.message}
 
   {/* TikTok */}
   <a
-    href="https://www.tiktok.com/@dafartoursandtravel"
+    href="https://www.tiktok.com/@daffartoursandtravel?_r=1&_t=ZS-99cSHcpfpn0"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="TikTok"
@@ -1196,7 +1200,7 @@ ${formData.message}
                 </p>
 
                 <p className="mt-1 text-sm text-white/60">
-                  Kenya • East Africa
+                  Kenya and TZ • East Africa
                 </p>
 
               </div>

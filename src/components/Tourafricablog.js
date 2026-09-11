@@ -610,7 +610,7 @@ function Blogs() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Kenya and TZ • East Africa
                       </p>
 
                     </div>

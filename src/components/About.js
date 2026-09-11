@@ -246,12 +246,7 @@ const About = () => {
         </h2>
       </div>
 
-      <div className="max-w-xl lg:ml-auto">
-        <p className="text-lg leading-8 text-gray-600">
-          There are places you visit. And then there are places that become
-          part of you. For us, Africa is the second kind.
-        </p>
-      </div>
+      
 
     </div>
 
@@ -318,6 +313,8 @@ const About = () => {
         <div className="space-y-6 text-base leading-8 text-gray-600">
 
           <p>
+            There are places you visit. And then there are places that become
+          part of you. For us, Africa is the second kind.
             At Daffar Tours and Travel, we believe an African safari should
             never feel like simply ticking destinations off a bucket list.
             It should be the kind of journey you remember years later.
@@ -1239,78 +1236,7 @@ const About = () => {
       {/* ============================================================
           TERMS & CONDITIONS
       ============================================================ */}
-      <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
-
-        <div className="mx-auto max-w-5xl px-5 sm:px-8">
-
-          <div className="mx-auto max-w-3xl text-center">
-            <SectionLabel>Terms & Conditions</SectionLabel>
-
-            <h2 className="mt-5 font-serif text-4xl font-medium text-[#082D19] sm:text-5xl">
-              Important Travel
-              <span className="block text-[#F5A623]">
-                Information
-              </span>
-            </h2>
-
-            <p className="mt-6 text-base leading-8 text-gray-600">
-              We want every journey to be clear and comfortable from the
-              beginning. Our travel terms help ensure that expectations
-              are understood before your adventure begins.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-5 sm:grid-cols-2">
-
-            <TermsCard
-              number="01"
-              title="Bookings & Payments"
-              text="Booking requirements, deposits and payment arrangements will be confirmed during your reservation process."
-            />
-
-            <TermsCard
-              number="02"
-              title="Cancellation"
-              text="Cancellation conditions may vary depending on the safari, accommodation and third-party suppliers involved."
-            />
-
-            <TermsCard
-              number="03"
-              title="Travel Documents"
-              text="Travellers are responsible for ensuring they have valid passports, visas and other required travel documents."
-            />
-
-            <TermsCard
-              number="04"
-              title="Travel Changes"
-              text="Weather, road conditions, park regulations and other circumstances may occasionally require adjustments to an itinerary."
-            />
-
-          </div>
-
-          <div className="mt-8 rounded-[1.75rem] border border-[#F5A623]/20 bg-[#F7F5EE] p-7 sm:p-8">
-            <div className="flex gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0b4224] text-[#F5A623]">
-                !
-              </div>
-
-              <div>
-                <h3 className="font-serif text-2xl font-semibold text-[#082D19]">
-                  Please Note
-                </h3>
-
-                <p className="mt-2 text-sm leading-7 text-gray-600">
-                  Final booking terms and conditions will be communicated
-                  clearly during the reservation process and may vary
-                  depending on the selected itinerary and suppliers.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
+      
 
       {/* ============================================================
           FINAL CTA
@@ -1393,72 +1319,71 @@ const About = () => {
               </p>
 
               {/* SOCIALS */}
-              <div className="mt-7 flex gap-3">
+              
+  {/* SOCIAL */}
 
-                <a
-                  href="https://www.facebook.com/dafartoursandtravel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
-                >
-                  <svg
-                    className="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1V10H8v3h2.4v8h3.1Z" />
-                  </svg>
-                </a>
+  <div className="mt-6 flex items-center gap-2.5">
 
-                <a
-                  href="https://www.instagram.com/dafartoursandtravel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
-                >
-                  <svg
-                    className="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                  >
-                    <rect
-                      x="3"
-                      y="3"
-                      width="18"
-                      height="18"
-                      rx="5"
-                    />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle
-                      cx="17.5"
-                      cy="6.5"
-                      r="1"
-                      fill="currentColor"
-                      stroke="none"
-                    />
-                  </svg>
-                </a>
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/share/19QDDWcvTd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
+    >
+      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
+    </svg>
+  </a>
 
-                <a
-                  href="https://www.tiktok.com/@dafartoursandtravel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="TikTok"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-[#F5A623] hover:text-[#082D19]"
-                >
-                  <svg
-                    className="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M14.8 3h3c.2 1.5 1 2.6 2.2 3.4v2.8c-1.2-.1-2.3-.5-3.2-1.1v6.7c0 3.7-2.4 6.2-6 6.2-3.1 0-5.3-2.2-5.3-5.1 0-3.2 2.6-5.4 5.8-5.4.4 0 .8 0 1.2.1v3c-.3-.1-.7-.2-1.1-.2-1.5 0-2.7 1-2.7 2.4 0 1.3 1 2.3 2.3 2.3 1.6 0 2.8-1 2.8-3.2V3Z" />
-                  </svg>
-                </a>
 
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/daffartoursandtravel?stkn=MXZjd2k5Nm05dXk4dQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#833AB4] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#E1306C]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[18px] w-[18px] fill-none stroke-current"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        className="fill-current stroke-none"
+      />
+    </svg>
+  </a>
+
+
+  {/* TikTok */}
+  <a
+    href="https://www.tiktok.com/@daffartoursandtravel?_r=1&_t=ZS-99cSHcpfpn0"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-black/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[17px] w-[17px] fill-current"
+      aria-hidden="true"
+    >
+      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
+    </svg>
+  </a>
                 <a
                   href="https://www.youtube.com/@dafartoursandtravel"
                   target="_blank"
@@ -1594,7 +1519,7 @@ const About = () => {
                   </span>
 
                   <span className="mt-1 block text-white/60">
-                    Kenya • East Africa
+                    Kenya and TZ • East Africa
                   </span>
                 </div>
 

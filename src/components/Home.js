@@ -2844,13 +2844,13 @@ const [itinerarySearch, setItinerarySearch] = useState("");
                   and carefully crafted journeys.
                 </p>
 
-                {/* SOCIAL */}
+  {/* SOCIAL */}
 
-             <div className="mt-6 flex items-center gap-2.5">
+  <div className="mt-6 flex items-center gap-2.5">
 
   {/* Facebook */}
   <a
-    href="https://www.facebook.com/dafartoursandtravel"
+    href="https://www.facebook.com/share/19QDDWcvTd/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Facebook"
@@ -2868,7 +2868,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
 
   {/* Instagram */}
   <a
-    href="https://www.instagram.com/dafartoursandtravel"
+    href="https://www.instagram.com/daffartoursandtravel?stkn=MXZjd2k5Nm05dXk4dQ"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -2894,7 +2894,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
 
   {/* TikTok */}
   <a
-    href="https://www.tiktok.com/@dafartoursandtravel"
+    href="https://www.tiktok.com/@daffartoursandtravel?_r=1&_t=ZS-99cSHcpfpn0"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="TikTok"
@@ -3014,7 +3014,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Kenya and TZ • East Africa
                       </p>
 
                     </div>

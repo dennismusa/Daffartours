@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -989,72 +990,7 @@ function Communitywork() {
         FINAL MESSAGE
     ============================================================ */}
 
-    <div className="mt-20 lg:mt-28">
-
-      <div className="relative overflow-hidden rounded-[2rem] bg-[#0D4825] px-7 py-12 text-center shadow-2xl sm:px-12 lg:px-20 lg:py-16">
-
-        {/* Background Glow */}
-
-        <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#F39A08]/15 blur-[80px]" />
-
-        <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-white/5 blur-[90px]" />
-
-
-        <div className="relative mx-auto max-w-4xl">
-
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F39A08]">
-            Travel With Purpose
-          </span>
-
-          <h3 className="mt-4 text-3xl font-serif font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Your Journey Can
-            <span className="block text-[#F39A08]">
-              Make A Difference
-            </span>
-          </h3>
-
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
-            Every journey has the power to create a positive connection.
-            Through responsible tourism, your experience can support local
-            livelihoods, strengthen communities, preserve culture, and help
-            create opportunities for future generations.
-          </p>
-
-
-          <Link
-            to="/contact"
-            className="
-              mt-8
-              inline-flex
-              items-center
-              justify-center
-              rounded-full
-              bg-[#F39A08]
-              px-7
-              py-3.5
-              text-sm
-              font-bold
-              text-[#0D4825]
-              shadow-lg
-              shadow-black/20
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:bg-[#ffad20]
-              hover:shadow-xl
-            "
-          >
-            Travel With Us
-            <span className="ml-2">
-              →
-            </span>
-          </Link>
-
-        </div>
-
-      </div>
-
-    </div>
+    
 
   </div>
 
@@ -1065,46 +1001,7 @@ function Communitywork() {
           INTRODUCTION
       ====================================================== */}
 
-      <section className="bg-white py-20 sm:py-24 lg:py-32">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={fadeUp}
-          className="  mx-auto max-w-5xl px-5  text-center sm:px-8 "  >
-          <span
-            className=" text-xs  font-bold  uppercase tracking-[0.2em]  text-[#F39A08] sm:text-sm  "   >
-            Our Commitment
-          </span>
-
-          <h2
-            className=" mt-4  font-serif  text-3xl font-bold  text-[#0D4825]  sm:text-4xl lg:text-5xl   "   >
-            Tourism That Gives
-            <span className="text-[#F39A08]">
-              {" "}Back.
-            </span>
-          </h2>
-
-          <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-[#F39A08]" />
-
-          <p
-            className="   mx-auto     mt-7    max-w-3xl   text-base  leading-relaxed   text-gray-600 sm:text-lg "  >
-            Africa's natural beauty, wildlife, communities, and
-            cultures are at the heart of every journey we create.
-            We believe responsible tourism should respect these
-            treasures while contributing positively to the people
-            and places that make Africa extraordinary.
-          </p>
-
-          <p
-            className="  mx-auto    mt-5     max-w-3xl   leading-relaxed text-gray-500   "   >
-            As Daffar Tours & Travel grows, we aim to develop
-            meaningful partnerships and initiatives that create
-            lasting value for communities and the environment.
-          </p>
-        </motion.div>
-      </section>
-
+      
       {/* =====================================================
           AREAS OF FOCUS
       ====================================================== */}
@@ -1193,355 +1090,6 @@ function Communitywork() {
       {/* =====================================================
           CONSERVATION
       ====================================================== */}
-
-      <section className="bg-[#0D4825] py-20 sm:py-24 lg:py-32">
-        <div
-          className="
-            mx-auto
-            max-w-7xl
-            px-5
-            sm:px-8
-            lg:px-12
-          "
-        >
-          <div
-            className="
-              grid
-              items-center
-              gap-12
-              lg:grid-cols-2
-              lg:gap-20
-            "
-          >
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeLeft}
-            >
-              <span
-                className="
-                  text-xs
-                  font-bold
-                  uppercase
-                  tracking-[0.2em]
-                  text-[#F39A08]
-                  sm:text-sm
-                "
-              >
-                Protecting What Matters
-              </span>
-
-              <h2
-                className="
-                  mt-4
-                  font-serif
-                  text-3xl
-                  font-bold
-                  leading-tight
-                  text-white
-                  sm:text-4xl
-                  lg:text-5xl
-                "
-              >
-                People.
-                <span className="text-[#F39A08]">
-                  {" "}Wildlife.
-                </span>
-
-                <br />
-
-                Nature.
-              </h2>
-
-              <p
-                className="
-                  mt-6
-                  max-w-xl
-                  leading-relaxed
-                  text-white/70
-                "
-              >
-                Africa's wildlife and natural landscapes are
-                among the world's most valuable treasures.
-                Responsible tourism can help protect them while
-                creating positive opportunities for the communities
-                that live alongside them.
-              </p>
-
-              <div className="mt-9 space-y-6">
-                <ImpactPoint
-                  number="01"
-                  icon={Leaf}
-                  title="Respect Nature"
-                  text="Encouraging responsible travel practices that help protect natural environments."
-                />
-
-                <ImpactPoint
-                  number="02"
-                  icon={Users}
-                  title="Support Communities"
-                  text="Recognizing the important role local communities play in sustainable tourism."
-                />
-
-                <ImpactPoint
-                  number="03"
-                  icon={ShieldCheck}
-                  title="Protect Wildlife"
-                  text="Promoting responsible wildlife experiences and respect for animals in their natural habitats."
-                />
-
-                <ImpactPoint
-                  number="04"
-                  icon={Globe2}
-                  title="Preserve Culture"
-                  text="Encouraging respectful interactions with local cultures, traditions, and heritage."
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeRight}
-              className="relative"
-            >
-              <div className="relative overflow-hidden rounded-[2rem]">
-                <motion.img
-                  src={images.conservation}
-                  alt="Wildlife conservation in Kenya"
-                  loading="lazy"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.7 }}
-                  className="
-                    h-[400px]
-                    w-full
-                    object-cover
-                    sm:h-[500px]
-                    lg:h-[600px]
-                  "
-                />
-
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-[#0D4825]/70
-                    via-transparent
-                    to-transparent
-                  "
-                />
-              </div>
-
-              <div
-                className="
-                  absolute
-                  bottom-5
-                  left-5
-                  rounded-2xl
-                  bg-white
-                  px-5
-                  py-4
-                  shadow-2xl
-                  sm:bottom-7
-                  sm:left-7
-                "
-              >
-                <div className="flex items-center gap-3">
-                  <div
-                    className="
-                      flex
-                      h-10
-                      w-10
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-[#F39A08]/15
-                      text-[#F39A08]
-                    "
-                  >
-                    <Leaf size={18} />
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-bold text-[#0D4825]">
-                      Responsible Travel
-                    </p>
-
-                    <p className="mt-1 text-xs text-gray-500">
-                      Explore with purpose
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================
-          COMMUNITY CONNECTION
-      ====================================================== */}
-
-      <section className="bg-[#F7F4EA] py-20 sm:py-24 lg:py-32">
-        <div
-          className="
-            mx-auto
-            max-w-7xl
-            px-5
-            sm:px-8
-            lg:px-12
-          "
-        >
-          <div
-            className="
-              grid
-              items-center
-              gap-12
-              lg:grid-cols-2
-              lg:gap-20
-            "
-          >
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeLeft}
-              className="relative"
-            >
-              <div className="overflow-hidden rounded-[2rem]">
-                <motion.img
-                  src={images.community}
-                  alt="African community and responsible tourism"
-                  loading="lazy"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.7 }}
-                  className="
-                    h-[380px]
-                    w-full
-                    object-cover
-                    sm:h-[480px]
-                  "
-                />
-              </div>
-
-              <div
-                className="
-                  absolute
-                  -bottom-5
-                  right-4
-                  rounded-2xl
-                  bg-[#F39A08]
-                  px-6
-                  py-5
-                  text-[#0D4825]
-                  shadow-xl
-                  sm:-bottom-6
-                  sm:right-6
-                "
-              >
-                <Users size={24} />
-
-                <p className="mt-2 font-bold">
-                  Community
-                </p>
-
-                <p className="mt-1 text-xs">
-                  People & places
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeRight}
-            >
-              <span
-                className="
-                  text-xs
-                  font-bold
-                  uppercase
-                  tracking-[0.2em]
-                  text-[#F39A08]
-                  sm:text-sm
-                "
-              >
-                Local Connections
-              </span>
-
-              <h2
-                className="
-                  mt-4
-                  font-serif
-                  text-3xl
-                  font-bold
-                  leading-tight
-                  text-[#0D4825]
-                  sm:text-4xl
-                  lg:text-5xl
-                "
-              >
-                Connecting Travelers
-
-                <span className="block text-[#F39A08]">
-                  With Communities.
-                </span>
-              </h2>
-
-              <div className="mt-6 h-1 w-16 rounded-full bg-[#F39A08]" />
-
-              <p className="mt-7 leading-relaxed text-gray-600">
-                Travel becomes more meaningful when visitors
-                have an opportunity to understand the people
-                and communities that call these destinations
-                home.
-              </p>
-
-              <p className="mt-4 leading-relaxed text-gray-600">
-                Through responsible experiences and local
-                partnerships, we aim to create opportunities
-                for travelers to connect with Africa in a
-                respectful and meaningful way.
-              </p>
-
-              <Link
-                to="/contact"
-                className="
-                  group
-                  mt-8
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-[#0D4825]
-                  px-7
-                  py-4
-                  font-bold
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-[#176B35]
-                "
-              >
-                Learn More
-
-                <ArrowRight
-                  size={18}
-                  className="
-                    transition-transform
-                    group-hover:translate-x-1
-                  "
-                />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* =====================================================
           IMPACT / FUTURE PROJECTS
@@ -1642,168 +1190,6 @@ function Communitywork() {
           FINAL CTA
       ====================================================== */}
 
-      <section className="relative overflow-hidden bg-[#0D4825]">
-
-        <div
-          className="
-            absolute
-            -left-32
-            -top-32
-            h-80
-            w-80
-            rounded-full
-            bg-[#F39A08]/10
-            blur-3xl
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -bottom-40
-            -right-40
-            h-96
-            w-96
-            rounded-full
-            bg-[#176B35]
-            opacity-30
-            blur-3xl
-          "
-        />
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-          className="
-            relative
-            z-10
-            mx-auto
-            max-w-5xl
-            px-5
-            py-20
-            text-center
-            sm:px-8
-            sm:py-24
-            lg:py-32
-          "
-        >
-          <span
-            className="
-              text-xs
-              font-bold
-              uppercase
-              tracking-[0.2em]
-              text-[#F39A08]
-              sm:text-sm
-            "
-          >
-            Travel Responsibly
-          </span>
-
-          <h2
-            className="
-              mt-5
-              font-serif
-              text-3xl
-              font-bold
-              leading-tight
-              text-white
-              sm:text-4xl
-              lg:text-6xl
-            "
-          >
-            Explore Africa.
-
-            <span className="block text-[#F39A08]">
-              Leave A Positive Impact.
-            </span>
-          </h2>
-
-          <p
-            className="
-              mx-auto
-              mt-6
-              max-w-2xl
-              text-base
-              leading-relaxed
-              text-white/70
-              sm:text-lg
-            "
-          >
-            Your journey can be more than a holiday. Discover,
-            connect, respect, and contribute while experiencing
-            the extraordinary beauty of Africa.
-          </p>
-
-          <div
-            className="
-              mt-9
-              flex
-              flex-col
-              justify-center
-              gap-3
-              sm:flex-row
-            "
-          >
-            <Link
-              to="/contact"
-              className="
-                group
-                inline-flex
-                items-center
-                justify-center
-                gap-3
-                rounded-full
-                bg-[#F39A08]
-                px-8
-                py-4
-                font-bold
-                text-[#0D4825]
-                shadow-xl
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:bg-[#ffad20]
-              "
-            >
-              Plan Your Journey
-
-              <ArrowRight
-                size={18}
-                className="
-                  transition-transform
-                  group-hover:translate-x-1
-                "
-              />
-            </Link>
-
-            <Link
-              to="/safaris"
-              className="
-                inline-flex
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/30
-                bg-white/5
-                px-8
-                py-4
-                font-bold
-                text-white
-                backdrop-blur-md
-                transition-all
-                hover:border-[#F39A08]
-                hover:text-[#F39A08]
-              "
-            >
-              Explore Safaris
-            </Link>
-          </div>
-        </motion.div>
-      </section>
 
       {/* =====================================================
           FOOTER
@@ -1916,127 +1302,71 @@ function Communitywork() {
 
                 {/* SOCIALS */}
 
-                <div className="mt-6 flex items-center gap-2.5">
+                
+  {/* SOCIAL */}
 
-                  {/* FACEBOOK */}
+  <div className="mt-6 flex items-center gap-2.5">
 
-                  <a
-                    href="https://www.facebook.com/dafartoursandtravel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-[#1877F2]
-                      text-white
-                      transition-all
-                      duration-300
-                      hover:-translate-y-1
-                      hover:scale-110
-                      hover:shadow-lg
-                    "
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-4 w-4 fill-current"
-                    >
-                      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
-                    </svg>
-                  </a>
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/share/19QDDWcvTd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
+    >
+      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
+    </svg>
+  </a>
 
-                  {/* INSTAGRAM */}
 
-                  <a
-                    href="https://www.instagram.com/dafartoursandtravel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-gradient-to-tr
-                      from-[#FFDC80]
-                      via-[#E1306C]
-                      to-[#833AB4]
-                      text-white
-                      transition-all
-                      duration-300
-                      hover:-translate-y-1
-                      hover:scale-110
-                    "
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="
-                        h-[18px]
-                        w-[18px]
-                        fill-none
-                        stroke-current
-                      "
-                      strokeWidth="2"
-                    >
-                      <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                      />
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/daffartoursandtravel?stkn=MXZjd2k5Nm05dXk4dQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#833AB4] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#E1306C]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[18px] w-[18px] fill-none stroke-current"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        className="fill-current stroke-none"
+      />
+    </svg>
+  </a>
 
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                      />
 
-                      <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1"
-                        className="fill-current stroke-none"
-                      />
-                    </svg>
-                  </a>
-
-                  {/* TIKTOK */}
-
-                  <a
-                    href="https://www.tiktok.com/@dafartoursandtravel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="TikTok"
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-black
-                      text-white
-                      transition-all
-                      duration-300
-                      hover:-translate-y-1
-                      hover:scale-110
-                    "
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-[17px] w-[17px] fill-current"
-                    >
-                      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
-                    </svg>
-                  </a>
-
+  {/* TikTok */}
+  <a
+    href="https://www.tiktok.com/@daffartoursandtravel?_r=1&_t=ZS-99cSHcpfpn0"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-black/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[17px] w-[17px] fill-current"
+      aria-hidden="true"
+    >
+      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
+    </svg>
+  </a>
                   {/* YOUTUBE */}
 
                   <a
@@ -2209,7 +1539,7 @@ function Communitywork() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Kenya and TZ • East Africa
                       </p>
                     </div>
                   </div>

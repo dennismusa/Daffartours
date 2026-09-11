@@ -4,6 +4,7 @@ import kili1 from "../assets/kili1.jpg";
 import kili2 from "../assets/kili2.jpg";
 import kili3 from "../assets/kili3.jpg";
 import kili4 from "../assets/kili4.jpg";
+import climbingkili from "../assets/climbingkili.jpg";
 /* ============================================================
    REUSABLE COMPONENTS
 ============================================================ */
@@ -538,7 +539,7 @@ export default function SafariItineraries() {
   className="relative overflow-hidden bg-[#092d1a]"
 >
   <img
-    src={kili1}
+    src={climbingkili}
     alt="Mount Kilimanjaro"
     className="absolute inset-0 h-full w-full object-cover"
   />
@@ -569,6 +570,119 @@ export default function SafariItineraries() {
   </div>
 </section>
 
+
+  {/* ============================================================
+      06 — MOUNTAIN TREKKING
+  ============================================================ */}
+  <section
+    id="mountain-trekking"
+    className="relative overflow-hidden bg-[#F8F6F1] py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+
+        <div className="relative">
+          <div className="overflow-hidden rounded-[2.5rem] shadow-2xl">
+            <img
+              src={climbingkili}
+              alt="Mountain trekking in Africa"
+              className="h-[470px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[620px]"
+            />
+          </div>
+
+          <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3 sm:bottom-8 sm:left-8 sm:right-8">
+            <div className="rounded-2xl border border-white/20 bg-black/30 p-4 backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#F5A623]">
+                Kilimanjaro
+              </p>
+              <p className="mt-1 font-serif text-2xl text-white">
+                5,895m
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/20 bg-black/30 p-4 backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#F5A623]">
+                Mt. Kenya
+              </p>
+              <p className="mt-1 font-serif text-2xl text-white">
+                5,199m
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+            — Mountain Trekking
+          </span>
+
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl">
+            Walk Among
+            <span className="block italic text-[#B87916]">
+              Giants
+            </span>
+          </h2>
+
+          <p className="mt-7 text-lg leading-8 text-gray-600">
+            At Daffar Tours and Travel, we invite you to discover Africa’s
+            legendary summits through journeys that blend adventure, beauty,
+            and a sense of true achievement.
+          </p>
+
+          <p className="mt-5 leading-8 text-gray-600">
+            Climbing Mt. Kilimanjaro, the continent’s highest peak rising to
+            5,895 metres, is more than a trek. It is a walk through changing
+            worlds — from lush rainforests alive with birdsong, through
+            moorlands brushed by mist, to stark alpine deserts.
+          </p>
+
+          <div className="mt-8 space-y-4">
+
+            {[
+              ["Kilimanjaro", "Machame · Lemosho · Rongai · Marangu"],
+              ["Mt. Kenya", "Sirimon · Chogoria · Naro Moru"],
+            ].map(([mountain, routes]) => (
+              <div
+                key={mountain}
+                className="rounded-2xl border border-[#082D19]/10 bg-white p-5"
+              >
+                <h3 className="font-serif text-xl text-[#082D19]">
+                  {mountain}
+                </h3>
+                <p className="mt-2 text-sm text-gray-500">
+                  {routes}
+                </p>
+              </div>
+            ))}
+
+          </div>
+
+          <p className="mt-7 leading-8 text-gray-600">
+            Both treks promise far more than physical challenge. They are
+            journeys into breathtaking landscapes where every sunrise feels
+            earned and every horizon opens to new wonder.
+          </p>
+
+          <p className="mt-7 font-serif text-xl italic text-[#082D19]">
+            Walk with Daffar and discover the spirit of Africa’s mountains.
+          </p>
+
+        </div>
+
+      </div>
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
+    </div>
+  </section>
 
 
 {/* ============================================================
@@ -1737,7 +1851,7 @@ export default function SafariItineraries() {
           <div className="order-1 relative min-h-[380px] overflow-hidden lg:order-2 lg:min-h-[500px]">
 
             <img
-              src={kili2}
+              src={kili4}
               alt="Barafu Camp Kilimanjaro"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
             />
@@ -2045,7 +2159,7 @@ export default function SafariItineraries() {
           <div className="order-1 relative min-h-[380px] overflow-hidden lg:order-2 lg:min-h-[500px]">
 
             <img
-              src={kili3}
+              src={climbingkili}
               alt="Mweka descent Mount Kilimanjaro"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
             />
@@ -2494,7 +2608,7 @@ export default function SafariItineraries() {
   </div>
 
 </section>
-```
+
 
 
 
@@ -2509,7 +2623,7 @@ export default function SafariItineraries() {
           <div className="relative min-h-[560px] overflow-hidden rounded-[2rem]">
 
             <img
-              src={kili1}
+              src={kili4}
               alt="Mount Kilimanjaro rising above Amboseli National Park"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -12355,7 +12469,7 @@ export default function SafariItineraries() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Kenya and TZ • East Africa
                       </p>
 
                     </div>

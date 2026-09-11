@@ -33,18 +33,18 @@ function Navbar() {
   ============================================================ */
 
   const safariItineraries = [
-    ["Maasai Mara Itineraries", "/maasaimaraitineraries"],
-    ["Serengeti Itineraries", "/serengetiitineraries"],
-    ["Amboseli Itineraries", "/amboseliitineraries"],
-    [
-      "Mount Kilimanjaro Itineraries",
-      "/mountkilimanjaroitineraries",
-    ],
-    ["Diani Itineraries", "/dianiitineraries"],
-    ["Samburu Itineraries", "/samburuitineraries"],
-    ["Seychelles Itineraries", "/sychellesitineraries"],
-    ["Ndutu Calving Itineraries", "/ndutucalvingitineraries"],
+    ["wildebeest Migration", "/wildebeestsafaris"],
+    ["Tailor-made safaris ", "/Tailormadesafaris"],
+    ["Birding Safaris", "/Birdingsafaris"],
+    ["Trecking Safaris ","/Treckingsafaris",    ],
+    ["BeachHolidays Safaris", "/Beachholidayssafaris"],
+    ["Photography Safaris", "/Photographysafaris"],
+    ["Honeymoon Safaris", "/Honeymoonsafaris"],
+   
   ];
+
+
+
 
   /* ============================================================
      SCROLL EFFECT
@@ -331,7 +331,7 @@ function Navbar() {
                   <div className="dropMenu left-0 w-80">
 
                     <div className="titleDrop">
-                      Safari Itineraries
+                      Sample Itineraries
                     </div>
 
 
@@ -922,7 +922,7 @@ function Navbar() {
                 >
 
                   <div className="titleDrop">
-                    Safari Itineraries
+                    Sample Itineraries
                   </div>
 
 

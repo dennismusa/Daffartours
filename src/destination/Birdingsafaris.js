@@ -3,7 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import amboseli from "../assets/amboseli.jpg";
 import nakuru3 from "../assets/nakuru3.jpg";
+import meru from "../assets/meru.jpg";
+import mara3 from "../assets/mara3.jpg";
+import mara4 from "../assets/mara4.jpg";
 import nakuru4 from "../assets/nakuru4.jpg";
+import bird1 from "../assets/bird1.jpg";
+import bird2 from "../assets/bird2.jpg";
 /* ============================================================
    REUSABLE COMPONENTS
 ============================================================ */
@@ -555,17 +560,7 @@ export default function SafariItineraries() {
         </span>
       </div>
 
-      <h1 className="text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-        Amboseli
-        <span className="block text-[#f5c45d]">
-          Safari Itineraries
-        </span>
-      </h1>
-
-      <p className="mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
-        Explore the spectacular landscapes of Amboseli, encounter its
-        legendary elephants and enjoy unforgettable views of Mount Kilimanjaro.
-      </p>
+      
     </div>
   </div>
 </section>
@@ -573,148 +568,100 @@ export default function SafariItineraries() {
 
 
 
+  {/* ============================================================
+      04 — BIRDING SAFARIS
+  ============================================================ */}
+  <section
+    id="birding-safaris"
+    className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-32"
+  >
+    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
-{/* ============================================================
-    AMBOSELI NATIONAL PARK
-============================================================ */}
-<section className="bg-white py-16 sm:py-20 lg:py-28">
+      <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
 
-  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-
-    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-
-      {/* ======================================================
-          IMAGE
-      ====================================================== */}
-      <div className="relative group">
-
-        <img
-          src={amboseli}
-          alt="Amboseli National Park"
-          className="h-[380px] w-full rounded-[2rem] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.03] sm:h-[500px]"
-        />
-
-        <div className="absolute bottom-5 left-5 rounded-2xl bg-[#0D4825]/95 px-6 py-4 text-white shadow-xl">
-
-          <p className="text-sm font-bold uppercase tracking-wider text-[#F39A08]">
-            Amboseli
-          </p>
-
-          <p className="mt-1 text-xs text-white/70">
-            Land of giants and mountain views
-          </p>
-
-        </div>
-
-      </div>
-
-
-      {/* ======================================================
-          CONTENT
-      ====================================================== */}
-      <div>
-
-        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F39A08]">
-          About Amboseli
-        </span>
-
-        <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-[#0D4825] sm:text-4xl lg:text-5xl">
-
-          Amboseli National Park
-
-          <span className="block text-[#F39A08]">
-            Beneath Kilimanjaro
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#B87916]">
+            — Birding Safaris
           </span>
 
-        </h2>
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#082D19] sm:text-5xl">
+            A World of
+            <span className="block italic text-[#B87916]">
+              Wings & Wonder
+            </span>
+          </h2>
 
-        <div className="mt-7 space-y-5 text-gray-600">
-
-          <p className="leading-relaxed">
-            Nestled in the shadow of Africa’s highest peak, Mt. Kilimanjaro,
-            Amboseli National Park is a captivating safari destination
-            celebrated for its vast elephant herds and awe-inspiring scenery.
-            Its sweeping plains, dotted with acacia trees and seasonal swamps,
-            make it an ideal habitat for diverse wildlife, including buffaloes,
-            wildebeests, zebras, and gazelles. Lions and cheetahs are often
-            spotted roaming the open grasslands, adding thrilling moments to
-            every game drive.
+          <p className="mt-7 text-lg leading-8 text-gray-600">
+            Step into a world where every sunrise brings fresh colors,
+            unfamiliar calls, and the quiet thrill of discovery.
           </p>
 
-          <p className="leading-relaxed">
-            Elephants, famous for their impressive tusks, steal the spotlight
-            here. Watching them amble across the dusty plains or wade into
-            marshes is an unforgettable sight. The park’s wetlands also attract
-            abundant birdlife, including flamingos and a variety of waterbirds,
-            making it a paradise for birdwatchers. Though black rhinos have
-            disappeared and leopards are rarely seen, Amboseli’s wildlife
-            viewing remains exceptional.
+          <p className="mt-5 leading-8 text-gray-600">
+            Our Birding Safaris are crafted for everyone who feels the excitement
+            of seeing rare feathers in flight. Whether you are a dedicated
+            birder, wildlife photographer, researcher, or simply a traveler who
+            loves nature, each journey promises something special.
           </p>
 
-          <p className="leading-relaxed">
-            Sunrise and sunset are especially magical when clouds part to
-            reveal Kilimanjaro’s snow-capped peak, creating a perfect backdrop
-            for photography. Visitors can climb Observation Hill for panoramic
-            views or take to the skies in a hot-air balloon for a unique
-            perspective at dawn.
+          <p className="mt-5 leading-8 text-gray-600">
+            Explore misty montane forests, open savannahs, peaceful wetlands and
+            habitats alive with flamingos, kingfishers, raptors and hidden
+            waders. Rather than chasing lists, these safaris invite you to slow
+            your pace and become part of the landscape.
           </p>
 
-          <p className="leading-relaxed">
-            While the park’s dry months (June to October, plus January and
-            February) offer the best game viewing, its beauty and wildlife can
-            be enjoyed all year. The climate is generally warm and dry, though
-            April and May bring heavier rains that can affect road conditions.
-          </p>
-
-          <p className="leading-relaxed">
-            Beyond wildlife, Amboseli enchants with its landscapes: open
-            savannahs, pockets of woodland, and lush swamps shimmering under
-            Kilimanjaro’s gaze. This blend of scenery, wildlife, and iconic
-            views ensures Amboseli National Park remains one of Kenya’s most
-            memorable and rewarding safari destinations.
-          </p>
-
+          <div className="mt-8 rounded-3xl bg-[#F8F6F1] p-6">
+            <p className="font-serif text-xl italic leading-8 text-[#082D19]">
+              “Every wingbeat carries a story waiting to be discovered.”
+            </p>
+          </div>
         </div>
 
+        <div className="relative">
+          <div className="grid gap-5 sm:grid-cols-2">
 
-        {/* ======================================================
-            HIGHLIGHTS
-        ====================================================== */}
-        <div className="mt-9 grid gap-4 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-[2rem] sm:mt-12">
+              <img
+                src={bird1}
+                alt="Birding safari in Africa"
+                className="h-[360px] w-full object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
 
-          <div className="rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-
-            <p className="font-serif text-2xl font-bold text-[#F39A08]">
-              Wildlife
-            </p>
-
-            <p className="mt-1 text-sm text-gray-500">
-              Vast elephant herds & diverse wildlife
-            </p>
-
-          </div>
-
-          <div className="rounded-2xl border border-[#0D4825]/5 bg-[#F7F4EA] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-
-            <p className="font-serif text-2xl font-bold text-[#F39A08]">
-              Kilimanjaro
-            </p>
-
-            <p className="mt-1 text-sm text-gray-500">
-              Iconic mountain views & photography
-            </p>
+            <div className="overflow-hidden rounded-[2rem]">
+              <img
+                src={bird2}
+                alt="African birds"
+                className="h-[360px] w-full object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
 
           </div>
 
+          <div className="mt-5 rounded-[2rem] bg-[#082D19] p-7 text-white">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F5A623]">
+              Discover
+            </p>
+            <p className="mt-3 font-serif text-2xl">
+              Forests · Wetlands · Savannah · Endemics
+            </p>
+          </div>
         </div>
 
       </div>
 
+      {/* ============================================================
+    PREMIUM CTA BUTTONS
+============================================================ */}
+
+
+{/* Supporting CTA text */}
+<div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
+  <span className="h-px w-8 bg-[#F5A623]" />
+  <span>Personalized African Journeys</span>
+</div>
     </div>
-
-  </div>
-
-</section>
+  </section>
 {/* ============================================================
     6-DAY AMBOSELI • SERENGETI • NGORONGORO
     LUXURY SAFARI
@@ -1487,6 +1434,2138 @@ export default function SafariItineraries() {
 </section>
 
 
+
+
+{/* ============================================================
+    4-DAY MASAI MARA LUXURY PLUS SAFARI
+============================================================ */}
+<section
+  id="4-day-masai-mara-luxury-plus"
+  className="relative overflow-hidden bg-[#f7faf7] py-20 sm:py-24 lg:py-28"
+>
+  {/* BACKGROUND DECORATION */}
+  <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0b4224]/5 blur-3xl" />
+  <div className="pointer-events-none absolute -right-40 top-[35%] h-[30rem] w-[30rem] rounded-full bg-[#dba33a]/10 blur-3xl" />
+  <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-[#0b4224]/5 blur-3xl" />
+
+  <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    {/* ========================================================
+        HEADER
+    ======================================================== */}
+    <div className="mx-auto max-w-4xl text-center">
+
+      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#dba33a]/30 bg-white px-4 py-2 shadow-sm">
+        <span className="h-2 w-2 rounded-full bg-[#dba33a]" />
+        <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#0b4224]">
+          Luxury Safari • Masai Mara
+        </span>
+      </div>
+
+      <h2 className="text-4xl font-black leading-tight tracking-tight text-[#092d1a] sm:text-5xl lg:text-6xl">
+        4-Day Masai Mara
+        <span className="block text-[#0b4224]">
+          Luxury Plus Safari
+        </span>
+      </h2>
+
+      <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-600 sm:text-lg">
+        Experience four unforgettable days in the legendary Masai Mara
+        National Reserve, enjoying an exclusive luxury safari with extended
+        time to explore the spectacular savannah and encounter some of
+        Africa's most iconic wildlife.
+      </p>
+    </div>
+
+    {/* ========================================================
+        QUICK FACTS
+    ======================================================== */}
+    <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      {[
+        {
+          label: "Duration",
+          value: "4 Days / 3 Nights",
+          icon: "01",
+        },
+        {
+          label: "Destination",
+          value: "Masai Mara",
+          icon: "02",
+        },
+        {
+          label: "Safari Style",
+          value: "Luxury Plus",
+          icon: "03",
+        },
+        {
+          label: "Wildlife",
+          value: "Big Five & More",
+          icon: "04",
+        },
+      ].map((item) => (
+        <div
+          key={item.label}
+          className="rounded-2xl border border-[#0b4224]/10 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#0b4224] text-xs font-bold text-white">
+            {item.icon}
+          </div>
+
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+            {item.label}
+          </p>
+
+          <p className="mt-1 font-bold text-[#092d1a]">
+            {item.value}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    {/* ========================================================
+        SAFARI HIGHLIGHT
+    ======================================================== */}
+    <div className="mx-auto mt-16 max-w-6xl overflow-hidden rounded-[2rem] bg-[#0b4224] shadow-xl">
+      <div className="grid lg:grid-cols-[1fr_1.1fr]">
+
+        <div className="relative min-h-[300px] overflow-hidden">
+          <img
+            src={mara3}
+            alt="Masai Mara wildlife safari"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-[#0b4224]/70" />
+
+          <div className="absolute bottom-6 left-6 right-6">
+            <span className="inline-flex rounded-full bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#0b4224]">
+              Masai Mara National Reserve
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center p-8 text-white sm:p-10 lg:p-12">
+
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+            Safari Highlight
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black sm:text-4xl">
+            Four Days in the Heart of the Mara
+          </h3>
+
+          <p className="mt-5 leading-8 text-white/75">
+            With three nights at &Beyond Bateleur Camp, this journey gives
+            you extended time to explore the Masai Mara. Enjoy morning,
+            afternoon and full-day game drives across the reserve while
+            searching for lions, elephants, leopards, cheetahs, buffaloes,
+            giraffes, zebras and many other species.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-3">
+            {[
+              "Big Five",
+              "Luxury Camp",
+              "Extended Game Drives",
+              "Private Safari Experience",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {/* ========================================================
+        DAY-BY-DAY ITINERARY
+    ======================================================== */}
+    <div className="mx-auto mt-20 max-w-5xl">
+
+      <div className="mb-12 text-center">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#dba33a]">
+          Your Journey
+        </p>
+
+        <h3 className="mt-3 text-3xl font-black text-[#092d1a] sm:text-4xl">
+          Day-by-Day Itinerary
+        </h3>
+
+        <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          Four carefully planned days combining luxury accommodation,
+          extended wildlife viewing and unforgettable Masai Mara experiences.
+        </p>
+      </div>
+
+      <div className="relative">
+
+        {/* TIMELINE LINE */}
+        <div className="absolute bottom-0 left-5 top-0 hidden w-px bg-[#0b4224]/15 sm:left-7 md:block" />
+
+        <div className="space-y-8">
+
+          {/* ==================================================
+              DAY 1
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">01</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 1
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Nairobi – Masai Mara National Reserve
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Your safari begins in Nairobi, where you will be picked up
+                  by a representative from Daffar Tours and Travel and driven
+                  to the Masai Mara National Reserve. Upon arrival, check in
+                  to your camp and enjoy lunch.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  In the afternoon, head out for your first game drive across
+                  the Mara's expansive savannah plains. Look out for lions,
+                  elephants, leopards, cheetahs, buffaloes, giraffes, zebras
+                  and other wildlife as you begin your safari adventure.
+                  Return to your camp in the evening for dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      &Beyond Bateleur Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 2
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">02</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 2
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Full-Day Masai Mara National Reserve
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  After breakfast, spend the day exploring the Masai Mara on
+                  game drives through its diverse landscapes. The reserve
+                  offers excellent opportunities to encounter the Big Five,
+                  including lions, elephants, leopards and buffaloes, as well
+                  as cheetahs, giraffes, zebras, hippos and numerous other
+                  species.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  Enjoy lunch before continuing your exploration in the
+                  afternoon, searching for more wildlife and taking in the
+                  spectacular scenery of the Mara. Return to your camp in the
+                  evening for dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      &Beyond Bateleur Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 3
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">03</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 3
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Full-Day Masai Mara National Reserve
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  After breakfast, embark on another full day of wildlife
+                  exploration in the Masai Mara. Continue your game drives
+                  across the vast grasslands, with opportunities to see lions,
+                  leopards, cheetahs, elephants, buffaloes, giraffes, zebras
+                  and antelopes.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  The extra day allows you more time to explore different
+                  areas of the reserve and enjoy unforgettable wildlife
+                  encounters. Enjoy lunch before continuing with your
+                  afternoon game drive. As the day comes to an end, return to
+                  your camp for dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      &Beyond Bateleur Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 4
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">04</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 4
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Masai Mara – Nairobi
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Begin your final morning with an early game drive in the
+                  Masai Mara, giving you one last opportunity to experience
+                  the reserve's incredible wildlife.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  Return to your camp for breakfast before preparing for
+                  departure. After lunch, begin your journey back to Nairobi,
+                  where you will be dropped off at your hotel, residence or
+                  another agreed location.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      No Accommodation
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast & Lunch
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        SAFARI EXPERIENCE
+    ======================================================== */}
+    <div className="mx-auto mt-20 max-w-6xl">
+
+      <div className="rounded-[2rem] border border-[#dba33a]/20 bg-white p-7 shadow-sm sm:p-10">
+
+        <div className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#dba33a]">
+            What Makes This Safari Special
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black text-[#092d1a]">
+            More Time. More Wildlife. More Mara.
+          </h3>
+        </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          {[
+            {
+              title: "Big Five",
+              text: "Search for lions, elephants, leopards, buffaloes and other iconic wildlife.",
+            },
+            {
+              title: "Extended Drives",
+              text: "Three full days of exploration provide more opportunities for exceptional sightings.",
+            },
+            {
+              title: "Luxury Stay",
+              text: "Enjoy three nights at the exclusive &Beyond Bateleur Camp.",
+            },
+            {
+              title: "Mara Landscapes",
+              text: "Experience breathtaking savannah plains and diverse wildlife habitats.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl bg-[#f7faf7] p-6"
+            >
+              <div className="mb-4 h-10 w-10 rounded-xl bg-[#0b4224] p-2.5">
+                <div className="h-full w-full rounded-md border border-white/40" />
+              </div>
+
+              <h4 className="font-black text-[#092d1a]">
+                {item.title}
+              </h4>
+
+              <p className="mt-2 text-sm leading-7 text-gray-600">
+                {item.text}
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        INCLUDED / EXCLUDED
+    ======================================================== */}
+    <div className="mx-auto mt-20 grid max-w-6xl gap-6 lg:grid-cols-2">
+
+      {/* INCLUDED */}
+      <div className="rounded-[2rem] border border-[#0b4224]/10 bg-white p-7 shadow-sm sm:p-9">
+
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0b4224] text-white">
+            ✓
+          </div>
+
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#dba33a]">
+              Your Safari Includes
+            </p>
+
+            <h3 className="text-2xl font-black text-[#092d1a]">
+              Included
+            </h3>
+          </div>
+        </div>
+
+        <div className="mt-7 space-y-3">
+
+          {[
+            "Park fees for non-residents",
+            "All activities unless labeled as optional",
+            "All accommodation unless listed as an upgrade",
+            "Professional driver/guide",
+            "All transportation",
+            "All Taxes/VAT",
+            "Roundtrip airport transfer",
+            "Meals as specified in the itinerary",
+            "Drinks as specified in the itinerary",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-xl bg-[#f7faf7] px-4 py-3"
+            >
+              <span className="mt-0.5 font-bold text-[#0b4224]">
+                ✓
+              </span>
+
+              <span className="text-sm leading-6 text-gray-600">
+                {item}
+              </span>
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+      {/* EXCLUDED */}
+      <div className="rounded-[2rem] border border-red-100 bg-white p-7 shadow-sm sm:p-9">
+
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-900 text-white">
+            ×
+          </div>
+
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#dba33a]">
+              Please Note
+            </p>
+
+            <h3 className="text-2xl font-black text-[#092d1a]">
+              Excluded
+            </h3>
+          </div>
+        </div>
+
+        <div className="mt-7 space-y-3">
+
+          {[
+            "International flights from/to home",
+            "Additional accommodation before and at the end of the tour",
+            "Tips — recommended US$10–15 per person per day",
+            "Personal items such as souvenirs",
+            "Travel insurance",
+            "Visa fees",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-xl bg-gray-50 px-4 py-3"
+            >
+              <span className="mt-0.5 font-bold text-gray-500">
+                ×
+              </span>
+
+              <span className="text-sm leading-6 text-gray-600">
+                {item}
+              </span>
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+    </div>
+
+    {/* ========================================================
+        OPTIONAL ACTIVITIES
+    ======================================================== */}
+    <div className="mx-auto mt-12 max-w-6xl">
+
+      <div className="rounded-[2rem] bg-[#092d1a] p-7 text-white sm:p-10">
+
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+              Enhance Your Safari
+            </p>
+
+            <h3 className="mt-2 text-3xl font-black">
+              Optional Safari Activities
+            </h3>
+          </div>
+
+          <p className="max-w-md text-sm leading-7 text-white/60">
+            Add an unforgettable experience to your Masai Mara adventure.
+          </p>
+
+        </div>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div className="flex items-center justify-between gap-4">
+              <h4 className="font-bold">
+                Balloon Safari
+              </h4>
+
+              <span className="rounded-full bg-[#f5c45d] px-3 py-1 text-xs font-black text-[#092d1a]">
+                USD 500 / Person
+              </span>
+            </div>
+
+            <p className="mt-2 text-sm leading-6 text-white/60">
+              Experience the Masai Mara from above with an unforgettable
+              sunrise hot-air balloon safari.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div className="flex items-center justify-between gap-4">
+              <h4 className="font-bold">
+                Maasai Village Visit
+              </h4>
+
+              <span className="rounded-full bg-[#f5c45d] px-3 py-1 text-xs font-black text-[#092d1a]">
+                USD 50 / Person
+              </span>
+            </div>
+
+            <p className="mt-2 text-sm leading-6 text-white/60">
+              Meet members of the Maasai community and experience their
+              traditional culture and way of life.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        FINAL CTA
+    ======================================================== */}
+    <div className="mx-auto mt-20 max-w-5xl overflow-hidden rounded-[2rem] bg-[#0b4224] px-7 py-12 text-center shadow-xl sm:px-12 sm:py-14">
+
+      <div className="mx-auto max-w-3xl">
+
+        <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+          Daffar Tours & Travel
+        </span>
+
+        <h3 className="mt-5 text-3xl font-black text-white sm:text-4xl lg:text-5xl">
+          Experience the Masai Mara in Luxury
+        </h3>
+
+        <p className="mx-auto mt-5 max-w-2xl leading-8 text-white/70">
+          Spend four unforgettable days exploring one of Africa's greatest
+          wildlife destinations with exceptional accommodation and extended
+          game-viewing opportunities.
+        </p>
+
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-[#f5c45d] px-7 py-3.5 text-sm font-black text-[#092d1a] transition hover:-translate-y-0.5 hover:bg-white"
+          >
+            Plan This Safari
+            <span className="ml-2">→</span>
+          </Link>
+
+          <a
+            href="https://wa.me/+254708711459"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#092d1a]"
+          >
+            WhatsApp Us
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+{/* ============================================================
+    6-DAY MASAI MARA & LAKE NAKURU LUXURY PLUS
+    + 2-DAY DIANI BEACH EXTENSION
+============================================================ */}
+<section
+  id="4-day-masai-mara-lake-nakuru-2-day-diani"
+  className="relative overflow-hidden bg-[#f7faf7] py-20 sm:py-24 lg:py-28"
+>
+  {/* BACKGROUND DECORATION */}
+  <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0b4224]/5 blur-3xl" />
+  <div className="pointer-events-none absolute -right-40 top-[35%] h-[30rem] w-[30rem] rounded-full bg-[#dba33a]/10 blur-3xl" />
+  <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-[#0b4224]/5 blur-3xl" />
+
+  <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    {/* ========================================================
+        HEADER
+    ======================================================== */}
+    <div className="mx-auto max-w-4xl text-center">
+
+      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#dba33a]/30 bg-white px-4 py-2 shadow-sm">
+        <span className="h-2 w-2 rounded-full bg-[#dba33a]" />
+        <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#0b4224]">
+          Luxury Safari • Beach Extension
+        </span>
+      </div>
+
+      <h2 className="text-4xl font-black leading-tight tracking-tight text-[#092d1a] sm:text-5xl lg:text-6xl">
+        4-Day Masai Mara & Lake Nakuru
+        <span className="block text-[#0b4224]">
+          + 2-Day Diani Beach Extension
+        </span>
+      </h2>
+
+      <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-600 sm:text-lg">
+        Experience an exceptional Kenya journey combining the wildlife-rich
+        Masai Mara and Lake Nakuru with a relaxing extension along the
+        beautiful Diani Beach. Enjoy luxury accommodation, spectacular
+        wildlife encounters and the tropical beauty of Kenya's Indian Ocean
+        coast.
+      </p>
+    </div>
+
+    {/* ========================================================
+        QUICK FACTS
+    ======================================================== */}
+    <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      {[
+        {
+          label: "Duration",
+          value: "6 Days / 5 Nights",
+          icon: "01",
+        },
+        {
+          label: "Safari",
+          value: "Masai Mara & Lake Nakuru",
+          icon: "02",
+        },
+        {
+          label: "Beach Extension",
+          value: "Diani Beach",
+          icon: "03",
+        },
+        {
+          label: "Travel Style",
+          value: "Luxury Plus",
+          icon: "04",
+        },
+      ].map((item) => (
+        <div
+          key={item.label}
+          className="rounded-2xl border border-[#0b4224]/10 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#0b4224] text-xs font-bold text-white">
+            {item.icon}
+          </div>
+
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+            {item.label}
+          </p>
+
+          <p className="mt-1 font-bold text-[#092d1a]">
+            {item.value}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    {/* ========================================================
+        JOURNEY HIGHLIGHT
+    ======================================================== */}
+    <div className="mx-auto mt-16 max-w-6xl overflow-hidden rounded-[2rem] bg-[#0b4224] shadow-xl">
+
+      <div className="grid lg:grid-cols-[1fr_1.1fr]">
+
+        <div className="relative min-h-[320px] overflow-hidden">
+          <img
+            src={mara4}
+            alt="Masai Mara luxury safari"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-[#0b4224]/75" />
+
+          <div className="absolute bottom-6 left-6 right-6">
+            <span className="inline-flex rounded-full bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#0b4224]">
+              Safari → Wildlife → Beach
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center p-8 text-white sm:p-10 lg:p-12">
+
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+            Journey Highlight
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black sm:text-4xl">
+            From the Mara to the Indian Ocean
+          </h3>
+
+          <p className="mt-5 leading-8 text-white/75">
+            Begin with unforgettable wildlife experiences in the Masai Mara,
+            continue to the scenic landscapes and rhino-rich environment of
+            Lake Nakuru, then unwind on the white sandy beaches of Diani.
+            This itinerary combines Kenya's iconic safari destinations with
+            a peaceful tropical escape.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-3">
+            {[
+              "Big Five",
+              "Luxury Camps",
+              "Lake Nakuru",
+              "Diani Beach",
+              "Indian Ocean",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-white/90"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        DAY-BY-DAY ITINERARY
+    ======================================================== */}
+    <div className="mx-auto mt-20 max-w-5xl">
+
+      <div className="mb-12 text-center">
+
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#dba33a]">
+          Your Journey
+        </p>
+
+        <h3 className="mt-3 text-3xl font-black text-[#092d1a] sm:text-4xl">
+          Day-by-Day Itinerary
+        </h3>
+
+        <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          Four days of safari adventure followed by two relaxing days on
+          Kenya's spectacular Indian Ocean coast.
+        </p>
+
+      </div>
+
+      <div className="relative">
+
+        {/* TIMELINE */}
+        <div className="absolute bottom-0 left-5 top-0 hidden w-px bg-[#0b4224]/15 sm:left-7 md:block" />
+
+        <div className="space-y-8">
+
+          {/* ==================================================
+              DAY 1
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">01</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 1
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Nairobi – Masai Mara National Reserve
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Your journey begins in Nairobi, where you will be picked up
+                  by a representative from Daffar Tours and Travel and driven
+                  to the Masai Mara National Reserve.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  Upon arrival, check in to your camp and enjoy lunch before
+                  heading out for your first afternoon game drive. Explore the
+                  spectacular Mara savannah in search of lions, elephants,
+                  leopards, cheetahs, buffaloes, giraffes and zebras, among
+                  other wildlife. Return to your camp in the evening for
+                  dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      &Beyond Kichwa Tembo Tented Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 2
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">02</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 2
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Full-Day Masai Mara National Reserve
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  After breakfast, spend the day exploring the Masai Mara with
+                  game drives across its expansive grasslands. The reserve
+                  offers excellent opportunities to encounter lions, leopards,
+                  cheetahs, elephants, buffaloes, giraffes, zebras and hippos,
+                  together with a variety of other wildlife and bird species.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  Enjoy lunch before continuing your wildlife adventure
+                  through the reserve, taking in the dramatic landscapes and
+                  exceptional game viewing. Return to your camp in the evening
+                  for dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      &Beyond Kichwa Tembo Tented Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 3
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">03</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 3
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Masai Mara – Lake Nakuru National Park
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  After breakfast, depart the Masai Mara and travel towards
+                  Lake Nakuru National Park. Upon arrival, enjoy lunch before
+                  heading out for an afternoon game drive.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  Explore the park's scenic landscapes while searching for
+                  rhinos, lions, leopards, buffaloes, giraffes, zebras and
+                  waterbuck. Return to your accommodation in the evening for
+                  dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      The Cliff
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 4
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">04</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 4
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Lake Nakuru – Diani Beach
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Enjoy breakfast before departing Lake Nakuru for your
+                  journey to Diani Beach, Kenya's spectacular Indian Ocean
+                  paradise.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  Upon arrival, check in to your resort and settle into the
+                  beautiful coastal surroundings. Spend the remainder of the
+                  day relaxing and enjoying the white sandy beaches and warm
+                  tropical atmosphere. Dinner and overnight at your resort.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Diani Sea Resort
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Experience
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Indian Ocean Coast
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 5
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">05</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 5
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Full Day Diani Beach
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Enjoy a relaxing day in Diani Beach. Take time to unwind at
+                  your resort and enjoy the beautiful coastline, white sandy
+                  beaches and turquoise waters of the Indian Ocean.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  This is the perfect opportunity to relax after your safari
+                  adventure while enjoying the peaceful tropical setting.
+                  Spend the evening at your resort before dinner and overnight.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Diani Sea Resort
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Experience
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Beach Relaxation
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ==================================================
+              DAY 6
+          ================================================== */}
+          <article className="relative md:pl-20">
+
+            <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] shadow-lg md:flex">
+              <span className="text-xs font-black text-white">06</span>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 text-white sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+                  Day 6
+                </p>
+
+                <h4 className="mt-1 text-2xl font-black">
+                  Diani Beach – Nairobi
+                </h4>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Enjoy your final morning in Diani with breakfast and time to
+                  relax before departure. After lunch, begin your journey back
+                  to Nairobi.
+                </p>
+
+                <p className="mt-4 leading-8 text-gray-600">
+                  You will be dropped off at your hotel, residence or another
+                  agreed location, marking the end of your safari and Diani
+                  Beach extension with Daffar Tours and Travel.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Accommodation
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      No Accommodation
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Meal Plan
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Breakfast & Lunch
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-4">
+                    <p className="text-xs font-bold uppercase text-gray-400">
+                      Drinking Water
+                    </p>
+                    <p className="mt-1 font-bold text-[#092d1a]">
+                      Provided
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        JOURNEY HIGHLIGHTS
+    ======================================================== */}
+    <div className="mx-auto mt-20 max-w-6xl">
+
+      <div className="rounded-[2rem] border border-[#dba33a]/20 bg-white p-7 shadow-sm sm:p-10">
+
+        <div className="text-center">
+
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#dba33a]">
+            Journey Highlights
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black text-[#092d1a]">
+            Safari Meets the Coast
+          </h3>
+
+        </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          {[
+            {
+              title: "Masai Mara",
+              text: "Explore one of Kenya's most iconic wildlife destinations and search for the Big Five.",
+            },
+            {
+              title: "Lake Nakuru",
+              text: "Discover scenic landscapes and look for rhinos, lions, leopards and other wildlife.",
+            },
+            {
+              title: "Diani Beach",
+              text: "Relax beside white sandy beaches and turquoise Indian Ocean waters.",
+            },
+            {
+              title: "Luxury Stay",
+              text: "Enjoy carefully selected luxury accommodation throughout your journey.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl bg-[#f7faf7] p-6"
+            >
+              <div className="mb-4 h-10 w-10 rounded-xl bg-[#0b4224] p-2.5">
+                <div className="h-full w-full rounded-md border border-white/40" />
+              </div>
+
+              <h4 className="font-black text-[#092d1a]">
+                {item.title}
+              </h4>
+
+              <p className="mt-2 text-sm leading-7 text-gray-600">
+                {item.text}
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        INCLUDED / EXCLUDED
+    ======================================================== */}
+    <div className="mx-auto mt-20 grid max-w-6xl gap-6 lg:grid-cols-2">
+
+      {/* INCLUDED */}
+      <div className="rounded-[2rem] border border-[#0b4224]/10 bg-white p-7 shadow-sm sm:p-9">
+
+        <div className="flex items-center gap-4">
+
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0b4224] text-white">
+            ✓
+          </div>
+
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#dba33a]">
+              Your Journey Includes
+            </p>
+
+            <h3 className="text-2xl font-black text-[#092d1a]">
+              Included
+            </h3>
+          </div>
+
+        </div>
+
+        <div className="mt-7 space-y-3">
+
+          {[
+            "Park fees for non-residents",
+            "All activities unless labeled as optional",
+            "All accommodation unless listed as an upgrade",
+            "Professional driver/guide",
+            "All transportation",
+            "All Taxes/VAT",
+            "Roundtrip airport transfer",
+            "Meals as specified in the itinerary",
+            "Drinks as specified in the itinerary",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-xl bg-[#f7faf7] px-4 py-3"
+            >
+              <span className="mt-0.5 font-bold text-[#0b4224]">
+                ✓
+              </span>
+
+              <span className="text-sm leading-6 text-gray-600">
+                {item}
+              </span>
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+      {/* EXCLUDED */}
+      <div className="rounded-[2rem] border border-red-100 bg-white p-7 shadow-sm sm:p-9">
+
+        <div className="flex items-center gap-4">
+
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-900 text-white">
+            ×
+          </div>
+
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#dba33a]">
+              Please Note
+            </p>
+
+            <h3 className="text-2xl font-black text-[#092d1a]">
+              Excluded
+            </h3>
+          </div>
+
+        </div>
+
+        <div className="mt-7 space-y-3">
+
+          {[
+            "International flights from/to home",
+            "Additional accommodation before and at the end of the tour",
+            "Tips — recommended US$10–15 per person per day",
+            "Personal items such as souvenirs",
+            "Travel insurance",
+            "Visa fees",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-xl bg-gray-50 px-4 py-3"
+            >
+              <span className="mt-0.5 font-bold text-gray-500">
+                ×
+              </span>
+
+              <span className="text-sm leading-6 text-gray-600">
+                {item}
+              </span>
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+    </div>
+
+    {/* ========================================================
+        OPTIONAL ACTIVITIES
+    ======================================================== */}
+    <div className="mx-auto mt-12 max-w-6xl">
+
+      <div className="rounded-[2rem] bg-[#092d1a] p-7 text-white sm:p-10">
+
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+              Enhance Your Adventure
+            </p>
+
+            <h3 className="mt-2 text-3xl font-black">
+              Optional Safari Activities
+            </h3>
+          </div>
+
+          <p className="max-w-md text-sm leading-7 text-white/60">
+            Add extra experiences to make your Kenya adventure even more
+            memorable.
+          </p>
+
+        </div>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+
+            <div className="flex items-center justify-between gap-4">
+              <h4 className="font-bold">
+                Balloon Safari
+              </h4>
+
+              <span className="rounded-full bg-[#f5c45d] px-3 py-1 text-xs font-black text-[#092d1a]">
+                USD 500 / Person
+              </span>
+            </div>
+
+            <p className="mt-2 text-sm leading-6 text-white/60">
+              Take to the skies above the Masai Mara for an unforgettable
+              sunrise balloon experience.
+            </p>
+
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+
+            <div className="flex items-center justify-between gap-4">
+              <h4 className="font-bold">
+                Maasai Village Visit
+              </h4>
+
+              <span className="rounded-full bg-[#f5c45d] px-3 py-1 text-xs font-black text-[#092d1a]">
+                USD 50 / Vehicle
+              </span>
+            </div>
+
+            <p className="mt-2 text-sm leading-6 text-white/60">
+              Visit a Maasai village and experience traditional culture,
+              community life and local traditions.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ========================================================
+        FINAL CTA
+    ======================================================== */}
+    <div className="mx-auto mt-20 max-w-5xl overflow-hidden rounded-[2rem] bg-[#0b4224] px-7 py-12 text-center shadow-xl sm:px-12 sm:py-14">
+
+      <div className="mx-auto max-w-3xl">
+
+        <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f5c45d]">
+          Daffar Tours & Travel
+        </span>
+
+        <h3 className="mt-5 text-3xl font-black text-white sm:text-4xl lg:text-5xl">
+          Safari Today. Beach Tomorrow.
+        </h3>
+
+        <p className="mx-auto mt-5 max-w-2xl leading-8 text-white/70">
+          Combine Kenya's spectacular wildlife with the tropical beauty of
+          Diani Beach in one unforgettable luxury journey.
+        </p>
+
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-[#f5c45d] px-7 py-3.5 text-sm font-black text-[#092d1a] transition hover:-translate-y-0.5 hover:bg-white"
+          >
+            Plan This Journey
+            <span className="ml-2">→</span>
+          </Link>
+
+          <a
+            href="https://wa.me/+254708711459"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#092d1a]"
+          >
+            WhatsApp Us
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{/* ============================================================
+    3-DAY SAMBURU LUXURY PLUS SAFARI
+============================================================ */}
+<section
+  id="3-day-samburu-luxury-plus"
+  className="relative scroll-mt-28 overflow-hidden bg-[#f7faf7] py-20 sm:py-24 lg:py-28"
+>
+  {/* BACKGROUND DECORATION */}
+  <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#0b4224]/5 blur-3xl" />
+  <div className="pointer-events-none absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-[#f5c45d]/10 blur-3xl" />
+
+  <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+    {/* ============================================================
+        HERO / INTRO
+    ============================================================ */}
+    <div className="mx-auto max-w-4xl text-center">
+
+      <span className="inline-flex items-center rounded-full border border-[#0b4224]/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#0b4224] shadow-sm">
+        Luxury Plus Safari
+      </span>
+
+      <h1 className="mt-6 text-4xl font-black tracking-tight text-[#092d1a] sm:text-5xl lg:text-6xl">
+        3-Day Samburu Luxury Plus Safari
+      </h1>
+
+      <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-gray-600 sm:text-lg">
+        Experience the spectacular landscapes and rich wildlife of Samburu
+        National Reserve on this three-day luxury safari. Discover the unique
+        wildlife of northern Kenya, including the famous Samburu Special Five,
+        while enjoying a luxurious stay at Sasaab Camp.
+      </p>
+
+      {/* QUICK FACTS */}
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+
+        <div className="rounded-2xl border border-[#0b4224]/10 bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+            Duration
+          </p>
+          <p className="mt-2 text-sm font-bold text-[#0b4224]">
+            3 Days / 2 Nights
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-[#0b4224]/10 bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+            Destination
+          </p>
+          <p className="mt-2 text-sm font-bold text-[#0b4224]">
+            Samburu
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-[#0b4224]/10 bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+            Experience
+          </p>
+          <p className="mt-2 text-sm font-bold text-[#0b4224]">
+            Wildlife Safari
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-[#0b4224]/10 bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+            Accommodation
+          </p>
+          <p className="mt-2 text-sm font-bold text-[#0b4224]">
+            Sasaab Camp
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    {/* ============================================================
+        SAFARI HIGHLIGHT
+    ============================================================ */}
+    <div className="mt-16 overflow-hidden rounded-[2rem] bg-[#0b4224] shadow-xl">
+
+      <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+
+        <div className="relative min-h-[300px] lg:min-h-[400px]">
+          <img
+            src={meru}
+            alt="Samburu National Reserve"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-[#0b4224]/70" />
+
+          <div className="absolute bottom-7 left-7 right-7">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+              Northern Kenya
+            </p>
+
+            <h2 className="mt-2 text-3xl font-black text-white sm:text-4xl">
+              Samburu National Reserve
+            </h2>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-14">
+
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+            Safari Highlight
+          </p>
+
+          <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
+            Discover the Samburu Special Five
+          </h2>
+
+          <p className="mt-5 leading-8 text-white/75">
+            Samburu is renowned for its distinctive northern wildlife,
+            including the reticulated giraffe, Grevy’s zebra, gerenuk,
+            Beisa oryx and Somali ostrich. The reserve also offers
+            opportunities to encounter elephants, lions, leopards,
+            cheetahs and buffaloes.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2">
+            {[
+              "Reticulated Giraffe",
+              "Grevy's Zebra",
+              "Gerenuk",
+              "Beisa Oryx",
+              "Somali Ostrich",
+            ].map((animal) => (
+              <span
+                key={animal}
+                className="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-medium text-white/90 backdrop-blur-sm"
+              >
+                {animal}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ============================================================
+        ITINERARY
+    ============================================================ */}
+    <div className="mt-20">
+
+      <div className="mb-12 max-w-2xl">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0b4224]">
+          Your Journey
+        </p>
+
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-[#092d1a] sm:text-4xl">
+          Day-by-Day Safari Itinerary
+        </h2>
+
+        <p className="mt-4 leading-7 text-gray-600">
+          Explore the landscapes and wildlife of Samburu through carefully
+          planned game drives and luxurious stays at Sasaab Camp.
+        </p>
+      </div>
+
+      <div className="relative">
+
+        {/* TIMELINE LINE */}
+        <div className="absolute left-[19px] top-5 hidden h-[calc(100%-40px)] w-px bg-[#0b4224]/15 md:block" />
+
+        <div className="space-y-8">
+
+          {/* ============================================================
+              DAY 1
+          ============================================================ */}
+          <article className="relative md:pl-16">
+
+            <div className="absolute left-0 top-7 hidden h-10 w-10 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] text-xs font-black text-white shadow-md md:flex">
+              01
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+                  Day 1
+                </p>
+
+                <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">
+                  Nairobi – Samburu National Reserve
+                </h3>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Your Samburu safari begins in Nairobi, where you will be
+                  picked up by a representative from Daffar Tours and Travel
+                  and driven north towards Samburu National Reserve. Upon
+                  arrival, you will check in to your camp and enjoy lunch.
+                </p>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  In the afternoon, head out for your first game drive across
+                  the reserve. Samburu is renowned for its distinctive
+                  wildlife, including the reticulated giraffe, Grevy’s zebra,
+                  gerenuk, Beisa oryx and Somali ostrich. You may also
+                  encounter elephants, lions, leopards, buffaloes and other
+                  wildlife against the dramatic backdrop of northern Kenya.
+                </p>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  Return to your camp in the evening for dinner and overnight.
+                </p>
+
+                {/* DAY DETAILS */}
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                      Accommodation
+                    </p>
+
+                    <p className="mt-2 font-bold text-[#0b4224]">
+                      Sasaab Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                      Meal Plan
+                    </p>
+
+                    <p className="mt-2 font-bold text-[#0b4224]">
+                      Lunch & Dinner
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ============================================================
+              DAY 2
+          ============================================================ */}
+          <article className="relative md:pl-16">
+
+            <div className="absolute left-0 top-7 hidden h-10 w-10 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] text-xs font-black text-white shadow-md md:flex">
+              02
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+                  Day 2
+                </p>
+
+                <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">
+                  Full-Day Samburu National Reserve
+                </h3>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  After breakfast, spend the day exploring the remarkable
+                  landscapes of Samburu National Reserve with game drives
+                  through its diverse habitats. The reserve offers excellent
+                  opportunities to encounter elephants, lions, leopards,
+                  cheetahs, buffaloes and the unique Samburu Special Five.
+                </p>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  The Ewaso Ng’iro River provides a vital water source for
+                  wildlife and attracts a variety of animals throughout the
+                  day. Enjoy lunch before continuing your wildlife exploration,
+                  followed by an afternoon game drive as you search for more
+                  memorable sightings.
+                </p>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  Return to your camp in the evening for dinner and overnight.
+                </p>
+
+                {/* WILDLIFE HIGHLIGHTS */}
+                <div className="mt-8 rounded-2xl border border-[#f5c45d]/20 bg-[#f5c45d]/5 p-6">
+
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8a6418]">
+                    Wildlife Focus
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {[
+                      "Elephants",
+                      "Lions",
+                      "Leopards",
+                      "Cheetahs",
+                      "Buffaloes",
+                      "Samburu Special Five",
+                    ].map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-[#0b4224] shadow-sm"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                </div>
+
+                {/* DAY DETAILS */}
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                      Accommodation
+                    </p>
+
+                    <p className="mt-2 font-bold text-[#0b4224]">
+                      Sasaab Camp
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                      Meal Plan
+                    </p>
+
+                    <p className="mt-2 font-bold text-[#0b4224]">
+                      Breakfast, Lunch & Dinner
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* ============================================================
+              DAY 3
+          ============================================================ */}
+          <article className="relative md:pl-16">
+
+            <div className="absolute left-0 top-7 hidden h-10 w-10 items-center justify-center rounded-full border-4 border-[#f7faf7] bg-[#0b4224] text-xs font-black text-white shadow-md md:flex">
+              03
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-[#0b4224]/10 bg-white shadow-sm">
+
+              <div className="bg-[#0b4224] px-6 py-5 sm:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+                  Day 3
+                </p>
+
+                <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">
+                  Samburu National Reserve – Nairobi
+                </h3>
+              </div>
+
+              <div className="p-6 sm:p-8">
+
+                <p className="leading-8 text-gray-600">
+                  Begin your final morning with an early game drive in Samburu,
+                  taking advantage of the cooler hours when wildlife is
+                  particularly active. Enjoy your final opportunities to spot
+                  elephants, giraffes, zebras, antelopes and predators before
+                  returning to your camp for breakfast.
+                </p>
+
+                <p className="mt-5 leading-8 text-gray-600">
+                  After breakfast, relax at the camp before enjoying lunch.
+                  Later, depart Samburu and begin your journey back to Nairobi
+                  or your onward destination, marking the end of your safari.
+                </p>
+
+                {/* DAY DETAILS */}
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                      Accommodation
+                    </p>
+
+                    <p className="mt-2 font-bold text-[#0b4224]">
+                      No accommodation
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7faf7] p-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
+                      Meal Plan
+                    </p>
+
+                    <p className="mt-2 font-bold text-[#0b4224]">
+                      Breakfast & Lunch
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    {/* ============================================================
+        SAFARI HIGHLIGHTS
+    ============================================================ */}
+    <div className="mt-20">
+
+      <div className="text-center">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0b4224]">
+          Safari Highlights
+        </p>
+
+        <h2 className="mt-3 text-3xl font-black text-[#092d1a] sm:text-4xl">
+          What Makes Samburu Special
+        </h2>
+      </div>
+
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+        {[
+          {
+            title: "Samburu Special Five",
+            text: "Search for the reticulated giraffe, Grevy’s zebra, gerenuk, Beisa oryx and Somali ostrich.",
+          },
+          {
+            title: "Rich Wildlife",
+            text: "Encounter elephants, lions, leopards, cheetahs, buffaloes, giraffes and zebras.",
+          },
+          {
+            title: "Ewaso Ng’iro River",
+            text: "Explore a wildlife-rich landscape shaped by the vital Ewaso Ng’iro River.",
+          },
+          {
+            title: "Luxury Stay",
+            text: "Enjoy two nights of luxurious accommodation at Sasaab Camp.",
+          },
+        ].map((item) => (
+          <div
+            key={item.title}
+            className="rounded-[1.5rem] border border-[#0b4224]/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0b4224]/10 text-[#0b4224]">
+              ✓
+            </div>
+
+            <h3 className="mt-5 font-bold text-[#092d1a]">
+              {item.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-7 text-gray-600">
+              {item.text}
+            </p>
+          </div>
+        ))}
+
+      </div>
+    </div>
+
+    {/* ============================================================
+        FINAL CTA
+    ============================================================ */}
+    <div className="mt-20 overflow-hidden rounded-[2rem] bg-[#092d1a] px-7 py-12 text-center sm:px-10 lg:px-16">
+
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f5c45d]">
+        Experience Samburu
+      </p>
+
+      <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-black text-white sm:text-4xl">
+        Discover Northern Kenya in Luxury
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/70">
+        Explore Samburu’s spectacular landscapes, encounter its unique
+        wildlife and enjoy an unforgettable luxury safari at Sasaab Camp.
+      </p>
+
+      <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+
+        <Link
+          to="/contact"
+          className="inline-flex items-center justify-center rounded-full bg-[#f5c45d] px-7 py-3.5 text-sm font-bold text-[#092d1a] transition hover:-translate-y-0.5 hover:bg-[#e9b94e]"
+        >
+          Plan This Safari
+        </Link>
+
+        <a
+          href="#itineraries"
+          className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-white/10"
+        >
+          Explore More Itineraries
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
 {/* ============================================================
     6-DAY AMBOSELI • LAKE NAKURU • MASAI MARA — LUXURY SAFARI
@@ -2594,7 +4673,7 @@ export default function SafariItineraries() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Kenya and TZ • East Africa
                       </p>
 
                     </div>

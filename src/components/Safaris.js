@@ -28,6 +28,8 @@ import kili1 from "../assets/kili1.jpg";
 import kili2 from "../assets/kili2.jpg";
 
 
+
+
 /* =========================================================
    SECTION LABEL
 ========================================================= */
@@ -448,12 +450,11 @@ function Safaris() {
             </span>
           </h2>
 
-          <p className="mt-7 text-lg leading-8 text-gray-600">
-            At Daffar Tours and Travel, we believe your safari should reflect
-            you; your interests, pace, and vision of the perfect African journey.
-          </p>
+          
 
           <p className="mt-5 leading-8 text-gray-600">
+            At Daffar Tours and Travel, we believe your safari should reflect
+            you; your interests, pace, and vision of the perfect African journey.
             Our Tailor-Made Safaris are designed to bring that vision to life,
             whether it is a romantic escape, a family adventure, a luxury
             retreat, or a specialist trip for photography or birdwatching.
@@ -2232,91 +2233,71 @@ function Safaris() {
 
 
                 {/* SOCIALS */}
-                <div className="mt-6 flex items-center gap-2.5">
+               
+  {/* SOCIAL */}
+
+  <div className="mt-6 flex items-center gap-2.5">
+
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/share/19QDDWcvTd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
+    >
+      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
+    </svg>
+  </a>
 
 
-                  {/* FACEBOOK */}
-                  <a
-                    href="https://www.facebook.com/dafartoursandtravel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
-                  >
-
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-4 w-4 fill-current"
-                      aria-hidden="true"
-                    >
-                      <path d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
-                    </svg>
-
-                  </a>
-
-
-                  {/* INSTAGRAM */}
-                  <a
-                    href="https://www.instagram.com/dafartoursandtravel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#833AB4] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#E1306C]/30"
-                  >
-
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-[18px] w-[18px] fill-none stroke-current"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-
-                      <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                      />
-
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                      />
-
-                      <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1"
-                        className="fill-current stroke-none"
-                      />
-
-                    </svg>
-
-                  </a>
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/daffartoursandtravel?stkn=MXZjd2k5Nm05dXk4dQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#833AB4] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-[#E1306C]/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[18px] w-[18px] fill-none stroke-current"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        className="fill-current stroke-none"
+      />
+    </svg>
+  </a>
 
 
-                  {/* TIKTOK */}
-                  <a
-                    href="https://www.tiktok.com/@dafartoursandtravel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="TikTok"
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-black/30"
-                  >
-
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-[17px] w-[17px] fill-current"
-                      aria-hidden="true"
-                    >
-
-                      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
-
-                    </svg>
-
-                  </a>
+  {/* TikTok */}
+  <a
+    href="https://www.tiktok.com/@daffartoursandtravel?_r=1&_t=ZS-99cSHcpfpn0"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg hover:shadow-black/30"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className="h-[17px] w-[17px] fill-current"
+      aria-hidden="true"
+    >
+      <path d="M16.6 3c.3 1.7 1.3 3 3 3.4v3.1c-1.4-.1-2.7-.6-3.8-1.4v6.7c0 4.1-2.7 6.2-6 6.2-3 0-5.3-2.1-5.3-5.1 0-3.2 2.5-5.4 5.7-5.4.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.1-.9-.1-1.5 0-2.6.9-2.6 2.2 0 1.2.9 2.1 2.2 2.1 1.5 0 2.7-1 2.7-3.2V3h4z" />
+    </svg>
+  </a>
 
 
                   {/* YOUTUBE */}
@@ -2480,7 +2461,7 @@ function Safaris() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Kenya and TZ • East Africa
                       </p>
 
                     </div>

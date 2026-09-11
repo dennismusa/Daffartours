@@ -26,13 +26,13 @@ import Serengeti from "./destination/Serengeti";
 import Tarangire from "./destination/Tarangire";
 import Zanzibar from "./destination/Zanzibar";
 
-import Amboseliitineraries from "./destination/Amboseliitineraries";
-import Serengetiitineraries from "./destination/Serengetiitineraries";
-import Maasaimaraitineraries from "./destination/Maasaimaraitineraries";
-import Mountkilimanjaroitineraries from "./destination/Mountkilimanjaroitineraries";
-import Sychellesitineraries from "./destination/Sychellesitineraries";
-import Dianiitineraries from "./destination/Dianiitineraries";
-import Samburuitineraries from "./destination/Samburuitineraries";
+import Beachholidayssafaris from "./destination/Beachholidayssafaris";
+import Birdingsafaris from "./destination/Birdingsafaris";
+import Honeymoonsafaris from "./destination/Honeymoonsafaris";
+import Photographysafaris from "./destination/Photographysafaris";
+import Tailormadesafaris from "./destination/Tailormadesafaris";
+import Treckingsafaris from "./destination/Treckingsafaris";
+import Wildebeestsafaris from "./destination/Wildebeestsafaris";
 import Ndutucalvingitineraries from "./destination/Ndutucalvingitineraries";
 
 
@@ -74,13 +74,13 @@ function App() {
             <Route path="/vehicles" element={<Vehicles />} />
             <Route path="/contact" element={<Contact />} />
 
-            <Route  path="/maasaimaraitineraries"  element={<Maasaimaraitineraries />}/>
-          <Route  path="/serengetiitineraries"  element={<Serengetiitineraries />}/>
-           <Route  path="/mountkilimanjaroitineraries"  element={<Mountkilimanjaroitineraries />}/>
-          <Route  path="/amboseliitineraries"  element={<Amboseliitineraries />}/>
-          <Route  path="/sychellesitineraries"  element={<Sychellesitineraries />}/>
-          <Route  path="/dianiitineraries"  element={<Dianiitineraries />}/>
-          <Route  path="/samburuitineraries"  element={<Samburuitineraries />}/>
+            <Route  path="/Beachholidayssafaris"  element={<Beachholidayssafaris />}/>
+          <Route  path="/Birdingsafaris"  element={<Birdingsafaris />}/>
+           <Route  path="/Honeymoonsafaris"  element={<Honeymoonsafaris />}/>
+          <Route  path="/Photographysafaris"  element={<Photographysafaris />}/>
+          <Route  path="/Tailormadesafaris"  element={<Tailormadesafaris />}/>
+          <Route  path="/Treckingsafaris"  element={<Treckingsafaris />}/>
+          <Route  path="/Wildebeestsafaris"  element={<Wildebeestsafaris />}/>
           <Route  path="/ndutucalvingitineraries"  element={<Ndutucalvingitineraries />}/>
 
 
