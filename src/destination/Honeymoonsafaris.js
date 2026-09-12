@@ -5,13 +5,26 @@ import { Link } from "react-router-dom";
 import mara1 from "../assets/mara1.jpg";
 import mara2 from "../assets/mara2.jpg";
 import mara3 from "../assets/mara3.jpg";
+import mara4 from "../assets/mara4.jpg";
 import kili1 from "../assets/kili1.jpg";
 import kili2 from "../assets/kili2.jpg";
 import kili3 from "../assets/kili3.jpg";
 import kili4 from "../assets/kili4.jpg";
+import diani1 from "../assets/diani1.jpg";
+import diani2 from "../assets/diani2.jpg";
+import diani4 from "../assets/diani4.jpg";
+import diani5 from "../assets/diani5.jpg";
+import nakuru from "../assets/nakuru.jpg";
+import watamu1 from "../assets/watamu1.jpg";
+import watamu2 from "../assets/watamu2.jpg";
+//import wilderbeast from "../assets/wildebeast.jpg";
+import wilderbeast1 from "../assets/wilderbeast1.jpg";
+import wilderbeast2 from "../assets/wilderbeast2.jpg";
+import nakuru4 from "../assets/nakuru4.jpg";
+import abadare from "../assets/abadare.jpg";
 import amboseli from "../assets/amboseli.jpg";
 import honeymoon1 from "../assets/honeymoon1.jpg";
-import honeymoon2 from "../assets/honeymoon2.jpg";
+import honeymoon2 from "../assets/honeymoon2.jpg";        
 /* ============================================================
    REUSABLE COMPONENTS
 ============================================================ */
@@ -675,73 +688,7 @@ export default function SafariItineraries() {
       {/* ============================================================
     PREMIUM CTA BUTTONS
 ============================================================ */}
-<div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
 
-  {/* START PLANNING */}
-  <a
-    href="/contact"
-    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#082D19] px-7 py-4 text-sm font-bold tracking-wide text-white shadow-[0_12px_30px_rgba(8,45,25,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0D4825] hover:shadow-[0_18px_40px_rgba(8,45,25,0.25)]"
-  >
-    {/* Gold hover sweep */}
-    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-
-    <span className="relative">
-      Start Planning
-    </span>
-
-    <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#F5A623] text-[#082D19] transition-all duration-500 group-hover:translate-x-1 group-hover:bg-[#F7C45F]">
-      <svg
-        viewBox="0 0 20 20"
-        fill="none"
-        className="h-4 w-4"
-        aria-hidden="true"
-      >
-        <path
-          d="M4 10h11M11 5l5 5-5 5"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </span>
-  </a>
-
-
-  {/* VIEW ITINERARY */}
-  <a
-    href="/dianiitineraries#dianiitineraries"
-    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
-  >
-    {/* Subtle gold background animation */}
-    <span className="absolute inset-0 origin-left scale-x-0 bg-[#F5A623]/10 transition-transform duration-500 group-hover:scale-x-100" />
-
-    <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#B87916]/40 bg-white text-[#B87916] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:border-[#F5A623] group-hover:bg-[#F5A623] group-hover:text-[#082D19]">
-      <svg
-        viewBox="0 0 20 20"
-        fill="none"
-        className="h-4 w-4"
-        aria-hidden="true"
-      >
-        <path
-          d="M10 3.5v13M3.5 10h13"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-        />
-      </svg>
-    </span>
-
-    <span className="relative">
-      View Itinerary
-    </span>
-
-    <span className="relative text-[#B87916] transition-all duration-500 group-hover:translate-x-1 group-hover:text-[#F5A623]">
-      →
-    </span>
-  </a>
-
-</div>
 
 {/* Supporting CTA text */}
 <div className="mt-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
@@ -2279,7 +2226,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[280px] overflow-hidden">
 
                   <img
-                    src="/images/aberdare.jpg"
+                    src={abadare}
                     alt="Aberdare National Park forest"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -2378,7 +2325,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[280px] overflow-hidden">
 
                   <img
-                    src="/images/nakuru.jpg"
+                    src={nakuru}
                     alt="Lake Nakuru National Park"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -2476,7 +2423,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[280px] overflow-hidden">
 
                   <img
-                    src="/images/naivasha.jpg"
+                    src={nakuru4}
                     alt="Lake Naivasha landscape"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -2574,7 +2521,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[280px] overflow-hidden">
 
                   <img
-                    src="/images/mara1.jpg"
+                    src={mara2}
                     alt="Masai Mara National Reserve"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -2674,7 +2621,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[280px] overflow-hidden">
 
                   <img
-                    src="/images/mara1.jpg"
+                    src={mara4}
                     alt="Wildlife in the Masai Mara"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -3243,7 +3190,7 @@ export default function SafariItineraries() {
         <div className="relative min-h-[340px] overflow-hidden lg:min-h-[470px]">
 
           <img
-            src="https://www.voyagekenya.fr/cdn/ke-public/safari_masai_mara.jpg"
+            src={watamu1}
             alt="Masai Mara safari"
             className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
           />
@@ -3344,7 +3291,7 @@ export default function SafariItineraries() {
           <div className="relative h-56 overflow-hidden">
 
             <img
-              src="https://www.voyagekenya.fr/cdn/ke-public/safari_masai_mara.jpg"
+              src={mara2}
               alt="Masai Mara wildlife"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
             />
@@ -3461,7 +3408,7 @@ export default function SafariItineraries() {
           <div className="relative h-56 overflow-hidden">
 
             <img
-              src="https://www.audleytravel.com/-/media/images/home/africa/kenya/places/diani-beach/diani-beach-kenya-hero.jpg"
+              src={diani1}
               alt="Diani Beach Kenya"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
             />
@@ -3546,7 +3493,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[300px] overflow-hidden">
 
                   <img
-                    src="https://www.voyagekenya.fr/cdn/ke-public/safari_masai_mara.jpg"
+                   src={wilderbeast1}
                     alt="Masai Mara safari"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -3675,7 +3622,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[300px] overflow-hidden">
 
                   <img
-                    src="https://www.voyagekenya.fr/cdn/ke-public/safari_masai_mara.jpg"
+                    src={wilderbeast2}
                     alt="Masai Mara wildlife safari"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -4183,7 +4130,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[300px] overflow-hidden">
 
                   <img
-                    src="https://www.audleytravel.com/-/media/images/home/africa/kenya/places/diani-beach/diani-beach-kenya-hero.jpg"
+                    src={diani4}
                     alt="Diani Beach Kenya"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -4305,7 +4252,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[300px] overflow-hidden">
 
                   <img
-                    src="https://www.audleytravel.com/-/media/images/home/africa/kenya/places/diani-beach/diani-beach-kenya-hero.jpg"
+                    src={diani5}
                     alt="Diani Beach coastline"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -4425,7 +4372,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[300px] overflow-hidden">
 
                   <img
-                    src="https://www.audleytravel.com/-/media/images/home/africa/kenya/places/diani-beach/diani-beach-kenya-hero.jpg"
+                   src={diani1}
                     alt="Diani Beach tropical coast"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
@@ -4546,7 +4493,7 @@ export default function SafariItineraries() {
                 <div className="relative min-h-[300px] overflow-hidden">
 
                   <img
-                    src="https://www.audleytravel.com/-/media/images/home/africa/kenya/places/diani-beach/diani-beach-kenya-hero.jpg"
+                    src={diani5}
                     alt="Diani Beach Kenya"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
                   />

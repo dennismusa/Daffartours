@@ -13,7 +13,7 @@ import kili1 from "../assets/kili1.jpg";
 import ngorongori1 from "../assets/ngorongoro1.jpg";
 import mara1 from "../assets/mara1.jpg";
 import diani1 from "../assets/diani1.jpg";
-//import west from "../assets/west.jpg";
+import ngorongoro1 from "../assets/ngorongoro1.jpg";
 //import tanzania from "../assets/tanzania.jpg";
 import image16 from "../assets/image16.jpg";
 import image17 from "../assets/image17.jpg";
@@ -1693,7 +1693,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           1. MASAI MARA — FEATURED
       ============================================================ */}
       <Link
-        to="/maasaimaraitineraries#masaimaraitineraries"
+        to="/maasaimara#masaimara"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#092d1a]/10"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1757,7 +1757,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           2. AMBOSELI
       ============================================================ */}
       <Link
-        to="/amboseliitineraries#amboseliitineraries"
+        to="/amboseli#amboseli"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1812,7 +1812,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           3. SERENGETI
       ============================================================ */}
       <Link
-        to="/serengetiitineraries#serengetiitineraries"
+        to="/serengeti#serengeti"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1867,13 +1867,13 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           4. SAMBURU
       ============================================================ */}
       <Link
-        to="/samburuitineraries#samburuitineraries"
+        to="/ngorongoro#ngorongoro"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
 
           <img
-            src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1400&q=85"
+            src={ngorongoro1}
             alt="Samburu safari"
             className="h-full w-full object-cover transition duration-[1200ms] ease-out group-hover:scale-110"
           />
@@ -1897,12 +1897,11 @@ const [itinerarySearch, setItinerarySearch] = useState("");
             </span>
 
             <h3 className="mt-2 text-3xl font-black text-white">
-              Samburu
+              ngorongoro Crater
             </h3>
 
             <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
-              Rugged landscapes, unique wildlife and the famous
-              Samburu Special Five.
+              Ngorongoro provides exceptional opportunities to see a wide variety of wildlife within a spectacular natural setting.
             </p>
 
             <div className="mt-5 flex items-center gap-3 text-sm font-bold text-white">
@@ -1922,7 +1921,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           5. KILIMANJARO
       ============================================================ */}
       <Link
-        to="/mountkilimanjaroitineraries#kilimanjaroitineraries"
+        to="/mountkilimanjaro#mountkilimanjaro"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1977,7 +1976,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           6. DIANI
       ============================================================ */}
       <Link
-        to="/dianiitineraries#dianiitineraries"
+        to="/diani#diani"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -2975,11 +2974,11 @@ const [itinerarySearch, setItinerarySearch] = useState("");
                   FAQs
                 </FooterLink>
 
-                <FooterLink to="/safaris">
+                <FooterLink to="/Tailormadesafaris">
                   Tailor-Made Safaris
                 </FooterLink>
 
-                <FooterLink to="/safaris">
+                <FooterLink to="/honeymoonsafaris">
                   Honeymoon Safaris
                 </FooterLink>
 
