@@ -1245,182 +1245,228 @@ function Navbar() {
 
       <style>{`
 
-        /* =====================================================
-           DESKTOP NAV BUTTON
-        ====================================================== */
+  /* =====================================================
+     DESKTOP NAV BUTTON
+  ====================================================== */
 
-        .navBtn {
-          position: relative;
-          color: white;
-          padding: 9px 10px;
-          border-radius: 10px;
-          font-size: 13px;
-          font-weight: 500;
-          transition: all 0.3s ease;
-          white-space: nowrap;
-        }
+  .navBtn {
+    position: relative;
+    color: white;
+    padding: 9px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
 
+  @media (min-width: 1280px) {
+    .navBtn {
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+  }
 
-        @media (min-width: 1280px) {
+  .navBtn::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 4px;
+    height: 2px;
+    background: #F39A08;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
 
-          .navBtn {
-            padding: 10px 12px;
-            font-size: 14px;
-          }
+  .navBtn:hover {
+    color: #F39A08;
+    background: rgba(255,255,255,0.06);
+  }
 
-        }
-
-
-        .navBtn::after {
-          content: "";
-          position: absolute;
-          left: 10px;
-          right: 10px;
-          bottom: 4px;
-          height: 2px;
-          background: #F39A08;
-          transform: scaleX(0);
-          transform-origin: center;
-          transition: transform 0.3s ease;
-        }
-
-
-        .navBtn:hover {
-          color: #F39A08;
-          background: rgba(255,255,255,0.06);
-        }
-
-
-        .navBtn:hover::after {
-          transform: scaleX(1);
-        }
+  .navBtn:hover::after {
+    transform: scaleX(1);
+  }
 
 
-        /* =====================================================
-           DROPDOWN
-        ====================================================== */
+  /* =====================================================
+     DROPDOWN
+  ====================================================== */
 
-        .dropMenu {
-          position: absolute;
-          top: calc(100% + 8px);
-          background: #0D4825;
-          border-radius: 16px;
-          overflow: hidden;
-          border: 1px solid rgba(255,255,255,0.1);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.45);
-          padding: 8px;
-          animation: dropdown 0.2s ease-out;
-        }
+  .dropMenu {
+    position: absolute;
 
+    /*
+      IMPORTANT:
+      Keep this very close to the navbar so the mouse
+      doesn't leave the hover area.
+    */
+    top: calc(100% + 2px);
 
-        .titleDrop {
-          padding: 12px 14px;
-          color: #F39A08;
-          font-size: 11px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.15em;
-          border-bottom: 1px solid rgba(255,255,255,0.08);
-          margin-bottom: 4px;
-        }
+    background: #0D4825;
+    border-radius: 16px;
+    overflow: hidden;
 
+    border: 1px solid rgba(255,255,255,0.1);
 
-        .dropItem {
-          display: block;
-          padding: 11px 14px;
-          border-radius: 10px;
-          color: #E5E7EB;
-          font-size: 14px;
-          transition: all 0.2s ease;
-        }
+    box-shadow:
+      0 25px 60px rgba(0,0,0,0.45),
+      0 8px 25px rgba(0,0,0,0.2);
+
+    padding: 8px;
+
+    animation: dropdown 0.22s ease-out;
+
+    /*
+      Makes sure the dropdown stays above other content.
+    */
+    z-index: 300;
+  }
 
 
-        .dropItem:hover {
-          background: rgba(243,154,8,0.12);
-          color: #F39A08;
-          padding-left: 18px;
-        }
+  /*
+    Invisible bridge between the navbar button
+    and the dropdown.
+  */
+  .dropMenu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: transparent;
+  }
 
 
-        /* =====================================================
-           MOBILE MENU BUTTON
-        ====================================================== */
+  .titleDrop {
+    padding: 12px 14px;
 
-        .mobileMenuBtn {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          padding: 15px 16px;
-          border-radius: 15px;
-          background: rgba(255,255,255,0.055);
-          color: white;
-          border: 1px solid rgba(255,255,255,0.07);
-          font-size: 14px;
-          font-weight: 500;
-          transition: all 0.25s ease;
-        }
+    color: #F39A08;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    margin-bottom: 4px;
+  }
 
 
-        .mobileMenuBtn:hover,
-        .mobileMenuBtn:active {
-          background: rgba(243,154,8,0.12);
-          border-color: rgba(243,154,8,0.25);
-          color: #F39A08;
-        }
+  .dropItem {
+    display: block;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    color: #E5E7EB;
+
+    font-size: 14px;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      padding-left 0.2s ease;
+  }
 
 
-        .mobileArrow {
-          color: #F39A08;
-          font-size: 16px;
-          transition: transform 0.2s ease;
-        }
+  .dropItem:hover {
+    background: rgba(243,154,8,0.12);
+    color: #F39A08;
+    padding-left: 18px;
+  }
 
 
-        .mobileMenuBtn:hover .mobileArrow {
-          transform: translateX(3px);
-        }
+  /* =====================================================
+     MOBILE MENU BUTTON
+  ====================================================== */
+
+  .mobileMenuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.055);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+  }
 
 
-        /* =====================================================
-           MOBILE DROPDOWN SCROLLBAR
-        ====================================================== */
-
-        aside ::-webkit-scrollbar {
-          width: 4px;
-        }
-
-
-        aside ::-webkit-scrollbar-track {
-          background: transparent;
-        }
+  .mobileMenuBtn:hover,
+  .mobileMenuBtn:active {
+    background: rgba(243,154,8,0.12);
+    border-color: rgba(243,154,8,0.25);
+    color: #F39A08;
+  }
 
 
-        aside ::-webkit-scrollbar-thumb {
-          background: rgba(243,154,8,0.35);
-          border-radius: 10px;
-        }
+  .mobileArrow {
+    color: #F39A08;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
 
 
-        /* =====================================================
-           DROPDOWN ANIMATION
-        ====================================================== */
+  .mobileMenuBtn:hover .mobileArrow {
+    transform: translateX(3px);
+  }
 
-        @keyframes dropdown {
 
-          from {
-            opacity: 0;
-            transform: translateY(-8px);
-          }
+  /* =====================================================
+     MOBILE DROPDOWN SCROLLBAR
+  ====================================================== */
 
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+  aside ::-webkit-scrollbar {
+    width: 4px;
+  }
 
-        }
+  aside ::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-      `}</style>
+  aside ::-webkit-scrollbar-thumb {
+    background: rgba(243,154,8,0.35);
+    border-radius: 10px;
+  }
+
+
+  /* =====================================================
+     DROPDOWN ANIMATION
+  ====================================================== */
+
+  @keyframes dropdown {
+
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+
+`}</style>
 
     </>
   );

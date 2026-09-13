@@ -2610,6 +2610,157 @@ export default function SafariItineraries() {
 </section>
 
 
+      {/* ======================================================
+          MACHAME ROUTE
+      ====================================================== */}
+
+      <section
+        id="machame-7-day"
+        className="relative overflow-hidden bg-slate-50 py-20 lg:py-28"
+      >
+
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <SectionHeader
+            eyebrow="Kilimanjaro Trekking Adventure"
+            title="7-Day Machame Route"
+            description="Embark on an unforgettable journey to the roof of Africa via the spectacular Machame Route, famously known as the Whiskey Route."
+          />
+
+
+          {/* QUICK FACTS */}
+
+          <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+            {machameFacts.map((item) => (
+              <QuickFact
+                key={item.title}
+                {...item}
+              />
+            ))}
+
+          </div>
+
+
+          {/* INTRODUCTION */}
+
+          <div className="mx-auto mt-16 max-w-5xl rounded-3xl border border-slate-200 bg-white p-7 sm:p-10 lg:p-12">
+
+            <h3 className="text-2xl font-bold text-slate-900">
+              About the Machame Route
+            </h3>
+
+            <p className="mt-4 leading-8 text-slate-600">
+              The Machame Route is one of Mount Kilimanjaro’s most scenic and
+              popular trekking routes. The seven-day itinerary provides a
+              progressive ascent through several distinct ecological zones,
+              beginning in the lush rainforest and continuing through
+              heathland, moorland, alpine desert, and the high-altitude summit
+              zone.
+            </p>
+
+            <p className="mt-4 leading-8 text-slate-600">
+              The additional acclimatization time offered by the seven-day
+              itinerary allows trekkers to approach the mountain at a more
+              measured pace.
+            </p>
+
+          </div>
+
+
+          {/* DAY-BY-DAY */}
+
+          <div className="mt-24">
+
+            <SectionHeader
+              eyebrow="Your Mountain Journey"
+              title="Day-by-Day Itinerary"
+              description="Follow the complete journey from your arrival in Tanzania to the summit of Africa’s highest mountain and your final descent to Moshi."
+            />
+
+            <div className="relative mx-auto mt-14 max-w-5xl">
+
+              {machameDays.map((day) => (
+                <DayCard
+                  key={day.number}
+                  {...day}
+                />
+              ))}
+
+            </div>
+
+          </div>
+
+
+          {/* INCLUDED / NOT INCLUDED */}
+
+          <div className="mt-24 grid gap-8 lg:grid-cols-2">
+
+            <div className="rounded-3xl border border-emerald-200 bg-emerald-50/50 p-7 sm:p-9">
+
+              <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+                Included
+              </p>
+
+              <h3 className="text-2xl font-bold text-slate-900">
+                Your Trek Includes
+              </h3>
+
+              <InfoList items={machameIncluded} />
+
+            </div>
+
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 sm:p-9">
+
+              <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                Not Included
+              </p>
+
+              <h3 className="text-2xl font-bold text-slate-900">
+                Additional Expenses
+              </h3>
+
+              <InfoList
+                items={machameExcluded}
+                included={false}
+              />
+
+            </div>
+
+          </div>
+
+
+          {/* FINAL CTA */}
+
+          <div className="relative mt-20 overflow-hidden rounded-[2rem] bg-slate-950 px-7 py-12 text-center sm:px-12 sm:py-16">
+
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
+              Your Kilimanjaro Adventure
+            </p>
+
+            <h3 className="mt-4 text-3xl font-extrabold text-white sm:text-4xl">
+              Ready to Conquer the Roof of Africa?
+            </h3>
+
+            <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-300">
+              Take on the legendary Machame Route with an experienced mountain
+              crew, carefully planned acclimatization, and professional
+              support from arrival in Tanzania to the summit and back to Moshi.
+            </p>
+
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex rounded-full bg-amber-500 px-8 py-3.5 font-bold text-slate-950 transition hover:bg-amber-400"
+            >
+              Plan Your Climb
+            </Link>
+
+          </div>
+
+        </div>
+      </section>
+
 
 
       <section

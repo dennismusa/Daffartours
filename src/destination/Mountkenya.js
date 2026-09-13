@@ -9,22 +9,22 @@ import kenya4 from "../assets/kenya4.jpg";
 function MountKenya() {
   const highlights = [
     {
-      number: "01",
+      number: "",
       title: "Mountain Landscapes",
       text: "Discover dramatic mountain scenery, alpine valleys, forests and breathtaking views around Mount Kenya.",
     },
     {
-      number: "02",
+      number: "",
       title: "Wildlife",
       text: "Explore the diverse wildlife of Mount Kenya's forests and surrounding areas, including elephants, buffalo and more.",
     },
     {
-      number: "03",
+      number: "",
       title: "Mountain Adventure",
       text: "Experience hiking, trekking and scenic mountain adventures across one of Africa's most spectacular landscapes.",
     },
     {
-      number: "04",
+      number: "",
       title: "Unique Ecosystem",
       text: "Discover an extraordinary ecosystem ranging from lush forests to high-altitude moorlands and rocky peaks.",
     },

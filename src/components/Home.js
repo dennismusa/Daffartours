@@ -13,6 +13,7 @@ import kili1 from "../assets/kili1.jpg";
 import ngorongori1 from "../assets/ngorongoro1.jpg";
 import mara1 from "../assets/mara1.jpg";
 import diani1 from "../assets/diani1.jpg";
+import zanzibar4 from "../assets/zanzibar4.jpg";
 import ngorongoro1 from "../assets/ngorongoro1.jpg";
 //import tanzania from "../assets/tanzania.jpg";
 import image16 from "../assets/image16.jpg";
@@ -921,7 +922,7 @@ const safariPackages = [
     days: "3 Days",
     tag: "Luxury Safari",
     image: amboseli,
-    href: "/amboseli",
+    href: "/Amboseli",
     description:
       "Experience the magnificent landscapes of Amboseli with spectacular views of Mount Kilimanjaro and unforgettable wildlife encounters.",
   },
@@ -931,7 +932,7 @@ const safariPackages = [
     days: "4 Days",
     tag: "Wildlife Safari",
     image: mara1,
-    href: "/maasai-mara",
+    href: "/Maasaimara",
     description:
       "Discover the legendary Maasai Mara, home to incredible wildlife, dramatic landscapes and the spectacular Great Wildebeest Migration.",
   },
@@ -941,7 +942,7 @@ const safariPackages = [
     days: "5 Days",
     tag: "Tanzania Safari",
     image: serengeti,
-    href: "/serengeti",
+    href: "/Serengeti",
     description:
       "Explore the endless plains of the Serengeti and experience some of Africa's most remarkable wildlife and predator encounters.",
   },
@@ -951,7 +952,7 @@ const safariPackages = [
     days: "4 Days",
     tag: "Beach Holiday",
     image: diani1,
-    href: "/diani",
+    href: "/Diani",
     description:
       "Relax along the beautiful Kenyan coast with white sandy beaches, turquoise waters and the perfect tropical escape.",
   },
@@ -961,10 +962,21 @@ const safariPackages = [
     days: "7 Days",
     tag: "Mountain Adventure",
     image: kili1,
-    href: "/mount-kilimanjaro",
+    href: "/Mountkilimanjaro",
     description:
       "Take on Africa's highest mountain and experience an unforgettable adventure through spectacular alpine landscapes.",
   },
+
+  {
+  title: "Zanzibar",
+  location: "Zanzibar, Tanzania",
+  days: "5 Days",
+  tag: "Beach Escape",
+  image: zanzibar4,
+  href: "/Zanzibar",
+  description:
+    "Escape to the tropical paradise of Zanzibar and experience pristine beaches, turquoise waters, rich Swahili culture, and unforgettable island adventures.",
+},
 ];
 
 /* ============================================================
@@ -1693,7 +1705,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           1. MASAI MARA — FEATURED
       ============================================================ */}
       <Link
-        to="/maasaimara#masaimara"
+        to="/wildebeestsafaris#wildebeest-safaris"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#092d1a]/10"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1730,7 +1742,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
             </span>
 
             <h3 className="mt-2 text-3xl font-black text-white">
-              Maasai Mara
+              Wildebeest Migration
             </h3>
 
             <p className="mt-2 max-w-sm text-sm leading-6 text-white/70">
@@ -1757,7 +1769,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           2. AMBOSELI
       ============================================================ */}
       <Link
-        to="/amboseli#amboseli"
+        to="/photographysafaris#3-day-best-of-mount-kilimanjaro"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1812,7 +1824,8 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           3. SERENGETI
       ============================================================ */}
       <Link
-        to="/serengeti#serengeti"
+        to="/wildebeestsafaris#9-day-serengeti-migration"
+        
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1867,7 +1880,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           4. SAMBURU
       ============================================================ */}
       <Link
-        to="/ngorongoro#ngorongoro"
+        to="/tailormadesafaris#6-day-masai-mara-serengeti-ngorongoro-luxury"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1921,7 +1934,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           5. KILIMANJARO
       ============================================================ */}
       <Link
-        to="/mountkilimanjaro#mountkilimanjaro"
+        to="/treckingsafaris#lemosho-7-day"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">
@@ -1976,7 +1989,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           6. DIANI
       ============================================================ */}
       <Link
-        to="/diani#diani"
+        to="/beachholidayssafaris#beach-holidays"
         className="group relative overflow-hidden rounded-[2rem] bg-white shadow-lg shadow-black/5 ring-1 ring-black/5 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl"
       >
         <div className="relative h-[390px] overflow-hidden">

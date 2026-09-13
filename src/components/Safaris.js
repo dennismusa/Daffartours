@@ -545,7 +545,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/maasaimara#5-day-maasaimaranakuru"
+    href="/tailormadesafaris#tailor-made-safaris"
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}
@@ -719,7 +719,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/dianiitineraries#dianiitineraries"
+    href="/honeymoonsafaris# "
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}
@@ -894,7 +894,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/maasaimaraitineraries#masaimaraitineraries"
+    href="/wildebeestsafaris# "
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}
@@ -1056,7 +1056,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/lakenakuru#lakenakuru"
+    href="/birdingsafaris# "
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}
@@ -1341,7 +1341,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/sychellesitineraries#sychellesitineraries"
+    href="/photographysafaris# "
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}
@@ -1522,7 +1522,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/mountkilimanjaroitineraries#mountkilimanjaroitineraries"
+    href="/treckingsafaris# "
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}
@@ -1734,7 +1734,7 @@ function Safaris() {
 
   {/* VIEW ITINERARY */}
   <a
-    href="/dianiitineraries#dianiitineraries"
+    href="/beachholidayssafaris# "
     className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full border border-[#082D19]/20 bg-[#F7F4EA] px-7 py-4 text-sm font-bold tracking-wide text-[#082D19] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B87916] hover:bg-white hover:shadow-[0_14px_35px_rgba(8,45,25,0.12)]"
   >
     {/* Subtle gold background animation */}

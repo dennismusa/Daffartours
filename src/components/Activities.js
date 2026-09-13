@@ -23,6 +23,7 @@ import Wilderbeast from "../assets/Wilderbeast.jpg";
 import climbingkenya from "../assets/climbingkenya.jpg";
 import climbinglongonot from "../assets/climbinglongonot.jpg";
 import climbingkili from "../assets/climbingkili.jpg";
+import kili1 from "../assets/kili1.jpg";
 import meru from "../assets/meru.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/254708711459";
@@ -578,15 +579,15 @@ export default function Activities() {
       {/* ============================================================
           GUIDED NATURE WALKS
       ============================================================ */}
-      <EditorialSection
-        number="05"
-        label="On Foot • Nature"
-        title="Guided Nature Walks"
-        image={meru}
-        imageAlt="Guided nature walks in East Africa"
-        reverse
-        dark
-      >
+      <EditorialSection 
+  number="05" 
+  label="On Foot • Nature" 
+  title="Guided Nature Walks" 
+  image="https://www.asiliaafrica.com/wp-content/smush-webp/2024/04/Asilia-walking-safari-Tanzania-1-800x800.jpg.webp"
+  imageAlt="Guided nature walk through the African wilderness"
+  reverse 
+  dark 
+>
         <p>
           Guided Nature Walks with Daffar Tours and Travel offer more than just
           a walk, they invite you into the quiet heartbeat of East Africa’s
@@ -834,7 +835,7 @@ export default function Activities() {
 
             <div className="overflow-hidden rounded-[2.5rem] lg:order-2">
               <img
-                src={climbingkili}
+                src={kili1}
                 alt="Mount Kilimanjaro climbing"
                 className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
               />
@@ -870,12 +871,12 @@ export default function Activities() {
           <div className="mt-20 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
 
             <div className="overflow-hidden rounded-[2.5rem]">
-              <img
-                src={meru}
-                alt="East African mountain adventure"
-                className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
-              />
-            </div>
+  <img
+    src="https://safaribookingkenya.com/wp-content/uploads/2024/09/mount-elgon.jpg"
+    alt="Mount Elgon, Kenya"
+    className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
+  />
+</div>
 
             <div>
               <div className="mb-5 flex items-center gap-3 text-[#F5A623]">
@@ -915,7 +916,7 @@ export default function Activities() {
         number="10"
         label="Walking Safaris"
         title="Walking Safaris"
-        image={climbingkenya}
+        image={climbingkili}
         imageAlt="Walking safari in East Africa"
       >
         <p>
@@ -953,14 +954,14 @@ export default function Activities() {
           EXACT CONTENT SUPPLIED
       ============================================================ */}
       <EditorialSection
-        number="11"
-        label="Water Sports & Fishing"
-        title="Water Sports and Fishing"
-        image={diani1}
-        imageAlt="Water sports and fishing in East Africa"
-        reverse
-        dark
-      >
+  number="11"
+  label="Water Sports & Fishing"
+  title="Water Sports and Fishing"
+  image="https://www.alfajirivillas.com/app/uploads/2022/01/deep_seafishing02.jpg"
+  imageAlt="Deep sea sport fishing in Diani Beach, Kenya"
+  reverse
+  dark
+>
         <p>
           Step beyond the safari vehicle and explore East Africa’s untamed
           beauty on foot with Daffar Tours and Travel. Our walking safaris
