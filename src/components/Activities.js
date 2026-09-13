@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import {  ArrowRight,  Bird,  Camera,  Compass,  Fish,  Footprints,  Mountain,  Users,  Waves,  Wind,} from "lucide-react";
 
 import kenya from "../assets/kenya.jpg";
+import walk from "../assets/walk.jpg";
 import gorilla from "../assets/gorilla.jpg";
 import tanzania1 from "../assets/tanzania1.jpg";
 import samburu from "../assets/samburu.jpg";
@@ -583,7 +584,7 @@ export default function Activities() {
   number="05" 
   label="On Foot • Nature" 
   title="Guided Nature Walks" 
-  image="https://www.asiliaafrica.com/wp-content/smush-webp/2024/04/Asilia-walking-safari-Tanzania-1-800x800.jpg.webp"
+  image={walk}
   imageAlt="Guided nature walk through the African wilderness"
   reverse 
   dark 
