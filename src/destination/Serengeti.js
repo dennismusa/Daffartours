@@ -1161,7 +1161,7 @@ function Serengeti() {
                 </p>
 
                 <p className="mt-1 text-sm text-white/60">
-                  Kenya and TZ • East Africa
+                  Nairobi,Kenya and Arusha, Tanzania
                 </p>
 
               </div>

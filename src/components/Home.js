@@ -1906,7 +1906,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
           <div className="absolute bottom-0 left-0 right-0 p-6">
 
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5c45d]">
-              Northern Kenya
+              Northern Tanzania
             </span>
 
             <h3 className="mt-2 text-3xl font-black text-white">
@@ -3026,7 +3026,7 @@ const [itinerarySearch, setItinerarySearch] = useState("");
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya and TZ • East Africa
+                        Nairobi,Kenya and Arusha, Tanzania
                       </p>
 
                     </div>

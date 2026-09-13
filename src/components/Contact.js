@@ -226,11 +226,11 @@ ${formData.message}
               </h3>
 
               <p className="mt-1 text-gray-500 text-sm">
-                Find Daffar Tours & Travel in Nairobi and Arusha TZ.
+                Find Daffar Tours & Travel in Nairobi,Kenya and Arusha, Tanzania.
               </p>
 
               <p className="mt-4 text-[#0D4825] font-bold">
-                Muindi Mbingu St, Nairobi and Arusha TZ
+                Muindi Mbingu St, Nairobi
               </p>
 
             </div>
@@ -672,7 +672,7 @@ ${formData.message}
                 Visit Our
 
                 <span className="block text-[#F39A08]">
-                  Nairobi Office and Arusha TZ
+                  Nairobi Office and Arusha Tanzania
                 </span>
 
               </h2>
@@ -699,7 +699,7 @@ ${formData.message}
                     </h3>
 
                     <p className="mt-1 text-gray-500 text-sm">
-                      Muindi Mbingu St, Nairobi, Kenya and Arusha TZ
+                      Muindi Mbingu St, Nairobi, Kenya and Arusha Tanzania
                     </p>
 
                   </div>
@@ -1200,7 +1200,7 @@ ${formData.message}
                 </p>
 
                 <p className="mt-1 text-sm text-white/60">
-                  Kenya and TZ • East Africa
+                  Nairobi,Kenya and Arusha, Tanzania
                 </p>
 
               </div>

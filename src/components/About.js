@@ -710,6 +710,9 @@ const About = () => {
 {/* ============================================================
     OUR SAFARI VEHICLES
 ============================================================ */}
+{/* ============================================================
+    OUR SAFARI VEHICLES
+============================================================ */}
 <section
   id="our-safari-vehicles"
   className="relative overflow-hidden bg-[#082D19] py-20 text-white sm:py-24 lg:py-32"
@@ -717,7 +720,7 @@ const About = () => {
   {/* ============================================================
       BACKGROUND DECORATION
   ============================================================ */}
-  <div className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-[#F5A623]/10 blur-[140px]" />
+  <div className="pointer-events-none absolute -right-40 top-10 h-[500px] w-[500px] rounded-full bg-[#F5A623]/10 blur-[140px]" />
 
   <div className="pointer-events-none absolute -left-40 bottom-0 h-[450px] w-[450px] rounded-full bg-[#0D4825]/70 blur-[120px]" />
 
@@ -744,7 +747,7 @@ const About = () => {
       <p className="max-w-xl text-base leading-8 text-white/65 lg:text-lg">
         Our safari vehicles are selected and prepared to provide comfortable,
         practical and reliable travel while giving you an exceptional view of
-        Kenya and East Africa's wildlife and landscapes.
+        Kenya and East Africa&apos;s wildlife and landscapes.
       </p>
 
     </div>
@@ -753,12 +756,12 @@ const About = () => {
     {/* ============================================================
         MAIN VEHICLE SHOWCASE
     ============================================================ */}
-    <div className="relative mt-16">
+    <div className="mt-16 grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-stretch">
 
       {/* ============================================================
           VEHICLE IMAGE
       ============================================================ */}
-      <div className="group relative h-[430px] overflow-hidden rounded-[2rem] shadow-2xl sm:h-[520px] lg:h-[650px]">
+      <div className="group relative min-h-[520px] overflow-hidden rounded-[2.5rem] shadow-2xl sm:min-h-[600px] lg:min-h-[680px]">
 
         <img
           src={cruiser1}
@@ -776,28 +779,32 @@ const About = () => {
         />
 
         {/* Image overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#041b10]/90 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#041b10] via-[#041b10]/20 to-transparent" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-transparent" />
 
 
         {/* ============================================================
             IMAGE TEXT
         ============================================================ */}
-        <div className="absolute bottom-8 left-7 right-7 sm:bottom-10 sm:left-10 sm:right-10">
+        <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-10 lg:p-12">
 
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5A623]">
-            Safari Transport
-          </p>
+          <div className="max-w-2xl">
 
-          <h3 className="mt-3 max-w-3xl font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
-            Every seat is a front-row seat to the wild.
-          </h3>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5A623]">
+              Safari Transport
+            </p>
 
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-            Travel through Kenya and East Africa in vehicles designed around
-            wildlife viewing, photography, comfort and adventure.
-          </p>
+            <h3 className="mt-3 font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+              Every seat is a front-row seat to the wild.
+            </h3>
+
+            <p className="mt-4 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+              Travel through Kenya and East Africa in vehicles designed around
+              wildlife viewing, photography, comfort and adventure.
+            </p>
+
+          </div>
 
         </div>
 
@@ -805,45 +812,42 @@ const About = () => {
 
 
       {/* ============================================================
-          FLOATING FEATURE PANEL
+          VEHICLE FEATURES CARD
       ============================================================ */}
       <div
         className="
-          relative
-          mx-4
-          -mt-10
-          rounded-3xl
+          flex
+          flex-col
+          rounded-[2.5rem]
           border
           border-white/10
           bg-[#0D4825]
           p-7
           shadow-2xl
-          sm:mx-8
           sm:p-9
-          lg:absolute
-          lg:bottom-8
-          lg:right-8
-          lg:mt-0
-          lg:w-[460px]
+          lg:p-8
+          xl:p-10
         "
       >
 
-        {/* Panel heading */}
-        <div className="flex items-center justify-between gap-4">
+        {/* Card heading */}
+        <div className="flex items-start justify-between gap-5">
 
           <div>
+
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F5A623]">
               Vehicle Features
             </p>
 
-            <h3 className="mt-2 font-serif text-2xl text-white sm:text-3xl">
+            <h3 className="mt-3 font-serif text-2xl leading-tight text-white sm:text-3xl">
               Explore With Comfort & Confidence
             </h3>
+
           </div>
 
           <div
             className="
-              hidden
+              flex
               h-12
               w-12
               flex-shrink-0
@@ -853,9 +857,9 @@ const About = () => {
               border
               border-[#F5A623]/30
               bg-[#F5A623]/10
-              text-xl
+              text-sm
+              font-bold
               text-[#F5A623]
-              sm:flex
             "
           >
             4×4
@@ -867,37 +871,40 @@ const About = () => {
         {/* ============================================================
             FEATURES
         ============================================================ */}
-        <div className="mt-7 divide-y divide-white/10">
+        <div className="mt-8 divide-y divide-white/10">
 
           {/* FEATURE 01 */}
-          <div className="flex gap-5 py-5 first:pt-0">
+          <div className="flex gap-4 py-5 first:pt-0">
 
             <span className="font-serif text-2xl text-[#F5A623]">
               01
             </span>
 
-            <div>
+            <div className="min-w-0">
+
               <h4 className="font-semibold text-white">
                 Safari-Ready
               </h4>
 
               <p className="mt-1 text-sm leading-6 text-white/55">
-                Designed for game drives and exploring Kenya and East Africa's
+                Built for game drives and exploring Kenya and East Africa&apos;s
                 diverse terrain.
               </p>
+
             </div>
 
           </div>
 
 
           {/* FEATURE 02 */}
-          <div className="flex gap-5 py-5">
+          <div className="flex gap-4 py-5">
 
             <span className="font-serif text-2xl text-[#F5A623]">
               02
             </span>
 
-            <div>
+            <div className="min-w-0">
+
               <h4 className="font-semibold text-white">
                 Pop-Up Roof
               </h4>
@@ -906,19 +913,21 @@ const About = () => {
                 Enjoy panoramic wildlife viewing and unobstructed opportunities
                 for photography.
               </p>
+
             </div>
 
           </div>
 
 
           {/* FEATURE 03 */}
-          <div className="flex gap-5 py-5">
+          <div className="flex gap-4 py-5">
 
             <span className="font-serif text-2xl text-[#F5A623]">
               03
             </span>
 
-            <div>
+            <div className="min-w-0">
+
               <h4 className="font-semibold text-white">
                 Six Guest Capacity
               </h4>
@@ -927,40 +936,44 @@ const About = () => {
                 Spacious seating designed to provide comfortable viewing with
                 a window seat for every guest.
               </p>
+
             </div>
 
           </div>
 
 
           {/* FEATURE 04 */}
-          <div className="flex gap-5 py-5">
+          <div className="flex gap-4 py-5">
 
             <span className="font-serif text-2xl text-[#F5A623]">
               04
             </span>
 
-            <div>
+            <div className="min-w-0">
+
               <h4 className="font-semibold text-white">
                 Onboard Charging
               </h4>
 
               <p className="mt-1 text-sm leading-6 text-white/55">
-                Charging ports with UK-style sockets help keep your devices
-                ready throughout your safari.
+                Charging ports help keep your devices ready throughout your
+                safari.
               </p>
+
             </div>
 
           </div>
 
 
           {/* FEATURE 05 */}
-          <div className="flex gap-5 pt-5">
+          <div className="flex gap-4 pt-5">
 
             <span className="font-serif text-2xl text-[#F5A623]">
               05
             </span>
 
-            <div>
+            <div className="min-w-0">
+
               <h4 className="font-semibold text-white">
                 Experienced Drivers
               </h4>
@@ -969,7 +982,34 @@ const About = () => {
                 Professional drivers familiar with safari routes, destinations
                 and wildlife viewing opportunities.
               </p>
+
             </div>
+
+          </div>
+
+        </div>
+
+
+        {/* ============================================================
+            CARD BOTTOM
+        ============================================================ */}
+        <div className="mt-auto pt-8">
+
+          <div className="h-px bg-white/10" />
+
+          <div className="mt-6 flex flex-wrap gap-2">
+
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[10px] font-semibold uppercase tracking-wider text-white/60">
+              4×4 Land Cruiser
+            </span>
+
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[10px] font-semibold uppercase tracking-wider text-white/60">
+              Pop-Up Roof
+            </span>
+
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[10px] font-semibold uppercase tracking-wider text-white/60">
+              Photography Ready
+            </span>
 
           </div>
 
@@ -983,52 +1023,56 @@ const About = () => {
     {/* ============================================================
         VEHICLE INFORMATION
     ============================================================ */}
-    <div className="mt-16 grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-[1fr_auto] lg:items-end">
+    <div className="mt-16 border-t border-white/10 pt-10">
 
-      <div className="max-w-4xl">
+      <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
 
-        <p className="text-lg leading-8 text-white/65 sm:text-xl">
-          Our Toyota Land Cruiser 4x4 safari vehicles are specially adapted
-          for comfort, safety, wildlife viewing and photography. Whether you
-          are crossing the savannahs of Kenya and Tanzania or travelling
-          through the remarkable landscapes of Uganda and Rwanda, our vehicles
-          are prepared to make every journey smooth and enjoyable.
-        </p>
+        <div className="max-w-4xl">
 
-        <div className="mt-6 flex flex-wrap gap-3">
+          <p className="text-lg leading-8 text-white/65 sm:text-xl">
+            Our Toyota Land Cruiser 4x4 safari vehicles are specially adapted
+            for comfort, safety, wildlife viewing and photography. Whether you
+            are crossing the savannahs of Kenya and Tanzania or travelling
+            through the remarkable landscapes of Uganda and Rwanda, our vehicles
+            are prepared to make every journey smooth and enjoyable.
+          </p>
 
-          <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
-            4×4 Land Cruisers
-          </span>
+          <div className="mt-6 flex flex-wrap gap-3">
 
-          <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
-            Pop-Up Roof
-          </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
+              4×4 Land Cruisers
+            </span>
 
-          <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
-            Photography Ready
-          </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
+              Pop-Up Roof
+            </span>
 
-          <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
-            Six Guests
-          </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
+              Photography Ready
+            </span>
+
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/65">
+              Six Guests
+            </span>
+
+          </div>
 
         </div>
 
-      </div>
 
+        {/* ============================================================
+            BRAND STATEMENT
+        ============================================================ */}
+        <div className="lg:text-right">
 
-      {/* ============================================================
-          BRAND STATEMENT
-      ============================================================ */}
-      <div className="lg:text-right">
+          <div className="font-serif text-2xl text-[#F5A623]">
+            Go Further
+          </div>
 
-        <div className="font-serif text-2xl text-[#F5A623]">
-          Go Further
-        </div>
+          <div className="mt-1 text-sm font-medium text-white/40">
+            With Daffar.
+          </div>
 
-        <div className="mt-1 text-sm font-medium text-white/40">
-          With Daffar.
         </div>
 
       </div>
@@ -1041,7 +1085,9 @@ const About = () => {
     ============================================================ */}
     <div className="mt-12 grid gap-4 sm:grid-cols-3">
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+      {/* COMFORT */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.06]">
+
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5A623]">
           Comfort
         </p>
@@ -1049,10 +1095,13 @@ const About = () => {
         <p className="mt-2 text-sm leading-6 text-white/55">
           Designed for relaxed travel even on longer safari drives.
         </p>
+
       </div>
 
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+      {/* WILDLIFE */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.06]">
+
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5A623]">
           Wildlife
         </p>
@@ -1060,10 +1109,13 @@ const About = () => {
         <p className="mt-2 text-sm leading-6 text-white/55">
           Open viewing areas make it easier to experience wildlife up close.
         </p>
+
       </div>
 
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+      {/* CONFIDENCE */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.06]">
+
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F5A623]">
           Confidence
         </p>
@@ -1072,6 +1124,7 @@ const About = () => {
           Reliable safari transport supported by experienced drivers and
           careful vehicle preparation.
         </p>
+
       </div>
 
     </div>
@@ -1651,7 +1704,7 @@ const About = () => {
                   </span>
 
                   <span className="mt-1 block text-white/60">
-                    Kenya and TZ • East Africa
+                    Nairobi,Kenya and Arusha, Tanzania
                   </span>
                 </div>
 

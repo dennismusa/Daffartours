@@ -1277,7 +1277,7 @@ export default function Activities() {
                   </span>
 
                   <span className="mt-1 block text-white/60">
-                    Kenya and TZ • East Africa
+                    Nairobi,Kenya and Arusha, Tanzania
                   </span>
                 </div>
 

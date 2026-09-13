@@ -36,7 +36,7 @@ function Navbar() {
     ["wildebeest Migration", "/wildebeestsafaris"],
     ["Tailor-made safaris ", "/Tailormadesafaris"],
     ["Flying Safaris", "/Birdingsafaris"],
-    ["Climbing Safaris ","/Treckingsafaris",    ],
+    ["Mountain Trekking Safaris ","/Treckingsafaris",    ],
     ["BeachHolidays Safaris", "/Beachholidayssafaris"],
     ["Photography Safaris", "/Photographysafaris"],
     ["Honeymoon Safaris", "/Honeymoonsafaris"],

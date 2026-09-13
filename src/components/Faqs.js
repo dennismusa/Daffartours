@@ -1287,7 +1287,7 @@ function FAQs() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya • East Africa
+                        Nairobi,Kenya and Arusha, Tanzania
                       </p>
 
                     </div>
@@ -1496,7 +1496,7 @@ function FAQs() {
               </div>
 
               <p className="text-xs text-white/25">
-                Kenya • Africa
+                Nairobi,Kenya and Arusha, Tanzania
               </p>
 
             </div>

@@ -3592,7 +3592,7 @@ export default function SafariItineraries() {
       <h2 className="mt-6 font-serif text-4xl font-bold leading-tight text-[#0b4224] sm:text-5xl lg:text-6xl">
         10-Day Great Wildebeest Migration
         <span className="block text-[#dba33a]">
-          Mara River Crossing & Serengeti
+          And Mara River Crossing Safari
         </span>
       </h2>
 
@@ -7132,7 +7132,7 @@ export default function SafariItineraries() {
                       </p>
 
                       <p className="mt-1 text-sm text-white/60">
-                        Kenya and TZ • East Africa
+                        Nairobi,Kenya and Arusha, Tanzania
                       </p>
 
                     </div>
