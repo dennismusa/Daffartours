@@ -35,8 +35,8 @@ function Navbar() {
   const safariItineraries = [
     ["wildebeest Migration", "/wildebeestsafaris"],
     ["Tailor-made safaris ", "/Tailormadesafaris"],
-    ["Birding Safaris", "/Birdingsafaris"],
-    ["Trecking Safaris ","/Treckingsafaris",    ],
+    ["Flying Safaris", "/Birdingsafaris"],
+    ["Climbing Safaris ","/Treckingsafaris",    ],
     ["BeachHolidays Safaris", "/Beachholidayssafaris"],
     ["Photography Safaris", "/Photographysafaris"],
     ["Honeymoon Safaris", "/Honeymoonsafaris"],
