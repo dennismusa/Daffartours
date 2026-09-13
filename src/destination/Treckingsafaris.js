@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
-import kili1 from "../assets/kili1.jpg";
-import kili2 from "../assets/kili2.jpg";
-import kili3 from "../assets/kili3.jpg";
-import kili4 from "../assets/kili4.jpg";
+//import kili1 from "../assets/kili1.jpg";
+//import kili2 from "../assets/kili2.jpg";
+//import kili3 from "../assets/kili3.jpg";
+//import kili4 from "../assets/kili4.jpg";
 import climbingkili from "../assets/climbingkili.jpg";
 /* ============================================================
    REUSABLE COMPONENTS
