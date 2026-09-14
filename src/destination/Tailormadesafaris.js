@@ -1812,7 +1812,7 @@ export default function SafariItineraries() {
       <h2 className="text-3xl font-black leading-tight tracking-tight text-[#082D19] sm:text-4xl lg:text-5xl">
         4-Day Masai Mara & Lake Nakuru
         <span className="block text-[#F39A08]">
-          Luxury Experience
+          National Park Luxury
         </span>
       </h2>
 

@@ -27,7 +27,7 @@ import Tarangire from "./destination/Tarangire";
 import Zanzibar from "./destination/Zanzibar";
 
 import Beachholidayssafaris from "./destination/Beachholidayssafaris";
-import Birdingsafaris from "./destination/Birdingsafaris";
+import Flyingsafaris from "./destination/Flyingsafaris";
 import Honeymoonsafaris from "./destination/Honeymoonsafaris";
 import Photographysafaris from "./destination/Photographysafaris";
 import Tailormadesafaris from "./destination/Tailormadesafaris";
@@ -75,7 +75,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route  path="/Beachholidayssafaris"  element={<Beachholidayssafaris />}/>
-          <Route  path="/Birdingsafaris"  element={<Birdingsafaris />}/>
+          <Route  path="/Flyingsafaris"  element={<Flyingsafaris />}/>
            <Route  path="/Honeymoonsafaris"  element={<Honeymoonsafaris />}/>
           <Route  path="/Photographysafaris"  element={<Photographysafaris />}/>
           <Route  path="/Tailormadesafaris"  element={<Tailormadesafaris />}/>

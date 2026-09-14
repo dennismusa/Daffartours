@@ -7,6 +7,7 @@ import watamu3 from "../assets/watamu3.jpg";
 import diani1 from "../assets/diani1.jpg";
 import diani2 from "../assets/diani2.jpg";
 import diani4 from "../assets/diani4.jpg";
+import diani5 from "../assets/diani5.jpg";
 
 import zanzibar1 from "../assets/zanzibar1.jpg";
 import zanzibar2 from "../assets/zanzibar2.jpg";
@@ -883,7 +884,7 @@ export default function SafariItineraries() {
           <div className="relative min-h-[340px] overflow-hidden lg:min-h-[450px]">
 
             <img
-              src={diani1}
+              src={diani5}
               alt="Journey from Nairobi to Diani Beach"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
             />
@@ -2007,7 +2008,7 @@ export default function SafariItineraries() {
           <div className="relative order-1 min-h-[320px] overflow-hidden lg:order-2 lg:min-h-[430px]">
 
             <img
-              src={zanzibar4}
+              src={zanzibar2}
               alt="Historic Stone Town Zanzibar"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
             />
@@ -3484,7 +3485,7 @@ export default function SafariItineraries() {
         <div className="group overflow-hidden rounded-[1.8rem] border border-gray-100 bg-white shadow-lg">
           <div className="relative h-64 overflow-hidden">
             <img
-              src="https://cdn.getyourguide.com/img/location/5c9d1f2e7c2d7.jpeg"
+              src={diani5}
               alt="Anse Source d'Argent La Digue Seychelles"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               onError={(e) => {
