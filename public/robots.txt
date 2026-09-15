@@ -1,4 +1,6 @@
+
 User-agent: *
 Allow: /
 
-Sitemap: https://dengrayadventures.com/sitemap.xml
+Sitemap: https://daffar.co.ke/sitemap.xml
+
